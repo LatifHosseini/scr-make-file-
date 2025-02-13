@@ -1,0 +1,15 @@
+Making dependencies for
+    ../../code/Stubs/BrsAsrMain.c
+    ../../code/Stubs/EcuM.c
+    ../../code/Stubs/Os.c
+    ../../code/Stubs/Rte.c
+    ../../code/Stubs/Stubs.c
+    ../../code/int/src/BrsHw.c
+    ../../code/int/src/ScrDioPort.c
+    ../../code/int/src/ScrEcuResetHndl.c
+    ../../code/int/src/ScrGenEthWULPulse.c
+    ../../code/int/src/ScrMain.c
+    ../../code/int/src/ScrStateMngmt.c
+    ../../code/int/src/ScrWakeUpDetection.c
+    ../../code/int/src/ScrWakeupEcu.c
+    ../../code/int/src/ScrWakeupHndl.c

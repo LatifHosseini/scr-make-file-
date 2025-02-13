@@ -1,0 +1,154 @@
+	; Module start
+	.compiler_version	"TASKING VX-toolset for 8051: C compiler v6.3r1 Build 19041558 SN 09466227"
+	.compiler_invocation	"c51 -Ml --registerbank=0 --core=scr2g -D__CPU__=tc39x -DBRS_DERIVATIVE_tc39x -DBRS_CPU_CORE_ -DBRS_OS_USECASE_BRS -DBRS_PLATFORM_XC800 -DBRS_COMP_TASKING -I../../code/int/inc -I../../code/stubs -I../build/bsw/_common -Ic:/progra~1/tasking/tricor~1.3r1/c51/include -Igendata -Iinclude -ps --fp-model=clnrTz -g2 -o obj\\Stubs.src ../../code/Stubs/Stubs.c"
+	.compiler_name		"c51"
+'code_SchM_Task'	.segment	code cluster('SchM_Task')
+	.rseg	'code_SchM_Task'	code cluster('SchM_Task')
+	.public	_SchM_Task
+; Function _SchM_Task
+_12:
+_SchM_Task:
+	.using 0
+_3:
+	ret
+_13:
+	; End of function
+	; End of section
+
+	.calls	'_SchM_Task','',2
+'.debug_info'	.segment	debug
+	.rseg	'.debug_info'	debug
+_5:
+	.dl	271
+	.dw	3
+	.dl	_6
+	.db	4
+_4:
+	.db	1
+	.db	'../../code/Stubs/Stubs.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_7
+	.db	2
+	.db	'void',0,3,8
+	.dl	141
+	.db	4
+	.db	'__prof_adm',0,1,1,1
+	.dl	147
+	.db	5
+	.db	'unsigned int',0,2,7,4
+	.db	'__codeptr',0,1,1,1
+	.dl	172
+	.db	5
+	.db	'unsigned char',0,1,8,4
+	.db	'uint8',0,2,101,40
+	.dl	206
+	.db	5
+	.db	'unsigned short int',0,2,7,4
+	.db	'uint16',0,2,103,40
+	.dl	237
+	.db	0
+	; End of section
+
+'.debug_abbrev'	.segment	debug
+	.rseg	'.debug_abbrev'	debug
+_6:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,59,0,3,8,0,0,3,15,0,51,15,73,19,0,0,4,22,0,3,8,58,15,59
+	.db	15,57,15,73,19,0,0,5,36,0,3,8,11,15,62,15,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug
+	.rseg	'.debug_line'	debug
+_7:
+	.dl	_15-_14
+_14:
+	.dw	3
+	.dl	_17-_16
+_16:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/Stubs/Stubs.c',0,0,0,0
+	.db	'..\\..\\code\\Stubs\\Platform_Types.h',0,0,0,0,0
+_17:
+_15:
+	; End of section
+
+'.debug_info'	.segment	debug cluster('SchM_Task')
+	.rseg	'.debug_info'	debug cluster('SchM_Task')
+_8:
+	.dl	192
+	.dw	3
+	.dl	_9
+	.db	4,1
+	.db	'../../code/Stubs/Stubs.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_11,_10
+	.db	2
+	.dl	_4
+	.db	3
+	.db	'SchM_Task',0,1,5,6,10,132,128,4,1,1
+	.dl	_3,_13,_2
+	.db	2,145,0,4
+	.dl	_3,_13
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('SchM_Task')
+	.rseg	'.debug_abbrev'	debug cluster('SchM_Task')
+_9:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('SchM_Task')
+	.rseg	'.debug_line'	debug cluster('SchM_Task')
+_10:
+	.dl	_19-_18
+_18:
+	.dw	3
+	.dl	_21-_20
+_20:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/Stubs/Stubs.c',0,0,0,0,0
+_21:
+	.db	5,1,7,0,5,2
+	.dl	_3
+	.db	3,6,1,7,9
+	.dw	_13-_3
+	.db	0,1,1
+_19:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('SchM_Task')
+	.rseg	'.debug_ranges'	debug cluster('SchM_Task')
+_11:
+	.dl	-1,_12,0,_13-_12,0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('SchM_Task')
+	.rseg	'.debug_loc'	debug cluster('SchM_Task')
+_2:
+	.dl	-1,_3,0,_13-_3
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_frame'	.segment	debug
+	.rseg	'.debug_frame'	debug
+_22:
+	.dl	64
+	.dl	-1
+	.db	3,0,1,1,145,1,15,10,123,0,54,8,020H,36,34,9,-2,34,22,145,1,14,49,34,148,02H,18,56,37,22,8,0ffH,26,56,36
+	.db	34,8,10,22,11,3,19,123,126,8,12,8,16,8,17,8,18,8,19,8,144,1,0,0,0
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('SchM_Task')
+	.rseg	'.debug_frame'	debug cluster('SchM_Task')
+	.dl	32
+	.dl	_22,_3,_13-_3
+	.db	8,7,8,8,8,9,8,0,8,1,8,2,8,3,8,4,8,5,8,6
+	; End of section
+
+	; Module end
+	.end

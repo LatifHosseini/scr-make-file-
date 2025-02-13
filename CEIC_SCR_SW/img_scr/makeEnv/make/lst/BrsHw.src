@@ -1,0 +1,4497 @@
+	; Module start
+	.compiler_version	"TASKING VX-toolset for 8051: C compiler v6.3r1 Build 19041558 SN 09466227"
+	.compiler_invocation	"c51 -Ml --registerbank=0 --core=scr2g -D__CPU__=tc39x -DBRS_DERIVATIVE_tc39x -DBRS_CPU_CORE_ -DBRS_OS_USECASE_BRS -DBRS_PLATFORM_XC800 -DBRS_COMP_TASKING -I../../code/int/inc -I../../code/stubs -I../build/bsw/_common -Ic:/progra~1/tasking/tricor~1.3r1/c51/include -Igendata -Iinclude -ps --fp-model=clnrTz -g2 -o obj\\BrsHw.src ../../code/int/src/BrsHw.c"
+	.compiler_name		"c51"
+'code_BrsHwWatchdogInitPowerOn'	.segment	code cluster('BrsHwWatchdogInitPowerOn')
+	.rseg	'code_BrsHwWatchdogInitPowerOn'	code cluster('BrsHwWatchdogInitPowerOn')
+	.public	_BrsHwWatchdogInitPowerOn
+; Function _BrsHwWatchdogInitPowerOn
+_42:
+_BrsHwWatchdogInitPowerOn:
+	.using 0
+_7:
+	ret
+_43:
+	; End of function
+	; End of section
+
+'code_BrsHwPllInitPowerOn'	.segment	code cluster('BrsHwPllInitPowerOn')
+	.rseg	'code_BrsHwPllInitPowerOn'	code cluster('BrsHwPllInitPowerOn')
+	.public	_BrsHwPllInitPowerOn
+; Function _BrsHwPllInitPowerOn
+_48:
+_BrsHwPllInitPowerOn:
+	.using 0
+_9:
+	ret
+_49:
+	; End of function
+	; End of section
+
+'code_BrsHwPortInitPowerOn'	.segment	code cluster('BrsHwPortInitPowerOn')
+	.rseg	'code_BrsHwPortInitPowerOn'	code cluster('BrsHwPortInitPowerOn')
+	.public	_BrsHwPortInitPowerOn
+; Function _BrsHwPortInitPowerOn
+_54:
+_BrsHwPortInitPowerOn:
+	.using 0
+_11:
+	gjmp	_DioPortInit
+_55:
+	; End of function
+	; End of section
+
+'code_BrsHwTimeBaseInitPowerOn'	.segment	code cluster('BrsHwTimeBaseInitPowerOn')
+	.rseg	'code_BrsHwTimeBaseInitPowerOn'	code cluster('BrsHwTimeBaseInitPowerOn')
+	.public	_BrsHwTimeBaseInitPowerOn
+; Function _BrsHwTimeBaseInitPowerOn
+_60:
+_BrsHwTimeBaseInitPowerOn:
+	.using 0
+_13:
+	mov	R6,241
+_167:
+	mov	R7,#1
+_168:
+	clr	A
+	mov	R5,#248
+	gcall	__STOREBC
+	mov	241,A
+_169:
+	mov	R6,251
+_170:
+	clr	A
+	mov	R7,A
+_171:
+	mov	A,#2
+	mov	R5,#251
+	gcall	__STOREBC
+	mov	251,A
+_172:
+	mov	R6,209
+_173:
+	gcall	_$cocofun_2
+_174:
+	mov	209,A
+_175:
+	clr	A
+	mov	226,A
+_176:
+	mov	227,A
+_177:
+	mov	228,A
+_178:
+	mov	229,A
+_179:
+	mov	230,#32
+_180:
+	mov	231,#78
+_181:
+	mov	232,A
+_182:
+	mov	233,A
+_183:
+	mov	242,A
+_184:
+	mov	R6,225
+_185:
+	mov	R7,#1
+_186:
+	mov	A,#4
+	mov	R5,#239
+	gcall	_$cocofun_1
+_187:
+	mov	A,#2
+	mov	R5,#251
+	gcall	_$cocofun_1
+_188:
+	mov	A,#1
+	mov	R5,#253
+	gcall	_$cocofun_1
+_189:
+	clr	A
+	mov	R5,#254
+	gcall	__STOREBC
+	mov	225,A
+_190:
+	mov	R6,241
+_191:
+	clr	A
+	mov	R7,A
+_192:
+	mov	R5,#248
+	gcall	__STOREBC
+	mov	241,A
+_193:
+	gjmp	_WupInit
+_61:
+	; End of function
+	; End of section
+
+'code__cocofun_2'	.segment	code cluster('$cocofun_2')
+	.rseg	'code__cocofun_2'	code cluster('$cocofun_2')
+; Function _$cocofun_2
+_120:
+_$cocofun_2:
+; Function body _$cocofun_2, coco_iter:0
+	.using 0
+_15:
+	mov	R7,#1
+_368:
+	mov	A,#7
+	mov	R5,#127
+	gjmp	__STOREBC
+_121:
+	; End of function
+	; End of section
+
+'code__cocofun_1'	.segment	code cluster('$cocofun_1')
+	.rseg	'code__cocofun_1'	code cluster('$cocofun_1')
+; Function _$cocofun_1
+_114:
+_$cocofun_1:
+; Function body _$cocofun_1, coco_iter:0
+	.using 0
+_17:
+	gcall	__STOREBC
+	mov	225,A
+_361:
+	mov	R6,225
+_362:
+	mov	R7,#1
+_363:
+	ret
+_115:
+	; End of function
+	; End of section
+
+'$interrupt_107'	.segment	code at(0x6b) cluster('$interrupt_107')
+	.rseg	'$interrupt_107'	code at(0x6b) cluster('$interrupt_107')
+	.public	_$interrupt_107
+_$interrupt_107:
+	gjmp	_BrsHwTimeBaseInterrupt
+	; End of section
+
+'code_BrsHwTimeBaseInterrupt'	.segment	code cluster('BrsHwTimeBaseInterrupt')
+	.rseg	'code_BrsHwTimeBaseInterrupt'	code cluster('BrsHwTimeBaseInterrupt')
+	.public	_BrsHwTimeBaseInterrupt
+; Function _BrsHwTimeBaseInterrupt
+_108:
+_BrsHwTimeBaseInterrupt:
+	.using 0
+_19:
+	push	ACC
+_139:
+	push	DPL
+_140:
+	push	DPH
+_141:
+	push	PSW
+_142:
+	mov	PSW,#0
+_354:
+	mov	DPTR,#_gbBrsMainIsrMilliSecondFlag
+	movx	A,@DPTR
+_355:
+	inc	A
+	movx	@DPTR,A
+_356:
+	pop	PSW
+_143:
+	pop	DPH
+_144:
+	pop	DPL
+_145:
+	pop	ACC
+_146:
+	reti
+_109:
+	; End of function
+	; End of section
+
+'code_BrsHwDisableInterruptAtPowerOn'	.segment	code cluster('BrsHwDisableInterruptAtPowerOn')
+	.rseg	'code_BrsHwDisableInterruptAtPowerOn'	code cluster('BrsHwDisableInterruptAtPowerOn')
+	.public	_BrsHwDisableInterruptAtPowerOn
+; Function _BrsHwDisableInterruptAtPowerOn
+_66:
+_BrsHwDisableInterruptAtPowerOn:
+	.using 0
+_21:
+	mov	DPTR,#_bBrsHwIntDiCounter
+_198:
+	clr	A
+	movx	@DPTR,A
+_199:
+	mov	R6,216
+_200:
+	mov	R7,A
+_201:
+	mov	A,#7
+	mov	R5,#127
+	gcall	__STOREBC
+	mov	216,A
+_202:
+	ret
+_67:
+	; End of function
+	; End of section
+
+'code_BrsHwEnableInterruptAtPowerOn'	.segment	code cluster('BrsHwEnableInterruptAtPowerOn')
+	.rseg	'code_BrsHwEnableInterruptAtPowerOn'	code cluster('BrsHwEnableInterruptAtPowerOn')
+	.public	_BrsHwEnableInterruptAtPowerOn
+; Function _BrsHwEnableInterruptAtPowerOn
+_72:
+_BrsHwEnableInterruptAtPowerOn:
+	.using 0
+_23:
+	mov	R6,216
+_207:
+	gcall	_$cocofun_2
+_208:
+	mov	216,A
+_209:
+	ret
+_73:
+	; End of function
+	; End of section
+
+'code_BrsHwConfigureInterruptsAtPowerOn'	.segment	code cluster('BrsHwConfigureInterruptsAtPowerOn')
+	.rseg	'code_BrsHwConfigureInterruptsAtPowerOn'	code cluster('BrsHwConfigureInterruptsAtPowerOn')
+	.public	_BrsHwConfigureInterruptsAtPowerOn
+; Function _BrsHwConfigureInterruptsAtPowerOn
+_78:
+_BrsHwConfigureInterruptsAtPowerOn:
+	.using 0
+_25:
+	ret
+_79:
+	; End of function
+	; End of section
+
+'code_BrsHwDisableInterrupt'	.segment	code cluster('BrsHwDisableInterrupt')
+	.rseg	'code_BrsHwDisableInterrupt'	code cluster('BrsHwDisableInterrupt')
+	.public	_BrsHwDisableInterrupt
+; Function _BrsHwDisableInterrupt
+_84:
+_BrsHwDisableInterrupt:
+	.using 0
+_27:
+	mov	DPTR,#_bBrsHwIntDiCounter
+	movx	A,@DPTR
+	mov	R0,A
+_218:
+	gjnz	_2
+_219:
+	mov	A,#7
+	mov	R5,#127
+	mov	R7,216
+	gcall	__LDBC
+	mov	AR1,R7
+_220:
+	mov	A,#7
+	mov	R5,#127
+_221:
+	mov	R6,216
+_222:
+	mov	R7,#0
+_223:
+	gcall	__STOREBC
+	mov	216,A
+_224:
+	mov	DPTR,#_wBrsHwSavedPSW
+_225:
+	clr	A
+	movx	@DPTR,A
+	mov	A,R1
+	inc	DPTR
+	movx	@DPTR,A
+_2:
+	inc	R0
+_226:
+	mov	DPTR,#_bBrsHwIntDiCounter
+_227:
+	mov	A,R0
+	movx	@DPTR,A
+_228:
+	ret
+_85:
+	; End of function
+	; End of section
+
+'code_BrsHwRestoreInterrupt'	.segment	code cluster('BrsHwRestoreInterrupt')
+	.rseg	'code_BrsHwRestoreInterrupt'	code cluster('BrsHwRestoreInterrupt')
+	.public	_BrsHwRestoreInterrupt
+; Function _BrsHwRestoreInterrupt
+_90:
+_BrsHwRestoreInterrupt:
+	.using 0
+_29:
+	mov	DPTR,#_bBrsHwIntDiCounter
+	movx	A,@DPTR
+_233:
+	gjnz	_3
+_234:
+	mov	R2,#1
+	mov	R3,#134
+_235:
+	mov	R5,#1
+_236:
+	mov	R7,#3
+_237:
+	gcall	_BrsMainExceptionHandler
+_3:
+	mov	DPTR,#_bBrsHwIntDiCounter
+	movx	A,@DPTR
+_238:
+	dec	A
+	movx	@DPTR,A
+_239:
+	movx	A,@DPTR
+_240:
+	gjnz	_4
+_241:
+	mov	DPTR,#_wBrsHwSavedPSW+1
+	movx	A,@DPTR
+	mov	R7,A
+_242:
+	mov	A,#7
+	mov	R5,#127
+_243:
+	mov	R6,216
+_244:
+	gcall	__STOREBC
+	mov	216,A
+_4:
+	ret
+_91:
+	; End of function
+	; End of section
+
+'code_BrsHwSoftwareResetECU'	.segment	code cluster('BrsHwSoftwareResetECU')
+	.rseg	'code_BrsHwSoftwareResetECU'	code cluster('BrsHwSoftwareResetECU')
+	.public	_BrsHwSoftwareResetECU
+; Function _BrsHwSoftwareResetECU
+_96:
+_BrsHwSoftwareResetECU:
+	.using 0
+_31:
+	gcall	_BrsHwDisableInterrupt
+_5:
+	gjmp	_5
+_97:
+	; End of function
+	; End of section
+
+'code_BrsHwTime100NOP'	.segment	code cluster('BrsHwTime100NOP')
+	.rseg	'code_BrsHwTime100NOP'	code cluster('BrsHwTime100NOP')
+	.public	_BrsHwTime100NOP
+; Function _BrsHwTime100NOP
+_102:
+_BrsHwTime100NOP:
+	.using 0
+_33:
+	gcall	_BrsHwDisableInterrupt
+_253:
+	NOP
+_254:
+	NOP
+_255:
+	NOP
+_256:
+	NOP
+_257:
+	NOP
+_258:
+	NOP
+_259:
+	NOP
+_260:
+	NOP
+_261:
+	NOP
+_262:
+	NOP
+_263:
+	NOP
+_264:
+	NOP
+_265:
+	NOP
+_266:
+	NOP
+_267:
+	NOP
+_268:
+	NOP
+_269:
+	NOP
+_270:
+	NOP
+_271:
+	NOP
+_272:
+	NOP
+_273:
+	NOP
+_274:
+	NOP
+_275:
+	NOP
+_276:
+	NOP
+_277:
+	NOP
+_278:
+	NOP
+_279:
+	NOP
+_280:
+	NOP
+_281:
+	NOP
+_282:
+	NOP
+_283:
+	NOP
+_284:
+	NOP
+_285:
+	NOP
+_286:
+	NOP
+_287:
+	NOP
+_288:
+	NOP
+_289:
+	NOP
+_290:
+	NOP
+_291:
+	NOP
+_292:
+	NOP
+_293:
+	NOP
+_294:
+	NOP
+_295:
+	NOP
+_296:
+	NOP
+_297:
+	NOP
+_298:
+	NOP
+_299:
+	NOP
+_300:
+	NOP
+_301:
+	NOP
+_302:
+	NOP
+_303:
+	NOP
+_304:
+	NOP
+_305:
+	NOP
+_306:
+	NOP
+_307:
+	NOP
+_308:
+	NOP
+_309:
+	NOP
+_310:
+	NOP
+_311:
+	NOP
+_312:
+	NOP
+_313:
+	NOP
+_314:
+	NOP
+_315:
+	NOP
+_316:
+	NOP
+_317:
+	NOP
+_318:
+	NOP
+_319:
+	NOP
+_320:
+	NOP
+_321:
+	NOP
+_322:
+	NOP
+_323:
+	NOP
+_324:
+	NOP
+_325:
+	NOP
+_326:
+	NOP
+_327:
+	NOP
+_328:
+	NOP
+_329:
+	NOP
+_330:
+	NOP
+_331:
+	NOP
+_332:
+	NOP
+_333:
+	NOP
+_334:
+	NOP
+_335:
+	NOP
+_336:
+	NOP
+_337:
+	NOP
+_338:
+	NOP
+_339:
+	NOP
+_340:
+	NOP
+_341:
+	NOP
+_342:
+	NOP
+_343:
+	NOP
+_344:
+	NOP
+_345:
+	NOP
+_346:
+	NOP
+_347:
+	NOP
+_348:
+	NOP
+_349:
+	gjmp	_BrsHwRestoreInterrupt
+_103:
+	; End of function
+	; End of section
+
+'xdata_kBrsHwMainVersion'	.segment	xdata init cluster('kBrsHwMainVersion')
+	.rseg	'xdata_kBrsHwMainVersion'	xdata init cluster('kBrsHwMainVersion')
+	.public	_kBrsHwMainVersion
+_kBrsHwMainVersion:
+	.db	2
+	; End of section
+
+'xdata_kBrsHwSubVersion'	.segment	xdata init cluster('kBrsHwSubVersion')
+	.rseg	'xdata_kBrsHwSubVersion'	xdata init cluster('kBrsHwSubVersion')
+	.public	_kBrsHwSubVersion
+_kBrsHwSubVersion:
+	.db	0
+	; End of section
+
+'xdata_kBrsHwBugfixVersion'	.segment	xdata init cluster('kBrsHwBugfixVersion')
+	.rseg	'xdata_kBrsHwBugfixVersion'	xdata init cluster('kBrsHwBugfixVersion')
+	.public	_kBrsHwBugfixVersion
+_kBrsHwBugfixVersion:
+	.db	0
+	; End of section
+
+'xdata_bBrsHwIntDiCounter'	.segment	xdata clear cluster('bBrsHwIntDiCounter')
+	.rseg	'xdata_bBrsHwIntDiCounter'	xdata clear cluster('bBrsHwIntDiCounter')
+_bBrsHwIntDiCounter:
+	.ds	1
+	; End of section
+
+'xdata_wBrsHwSavedPSW'	.segment	xdata clear cluster('wBrsHwSavedPSW')
+	.rseg	'xdata_wBrsHwSavedPSW'	xdata clear cluster('wBrsHwSavedPSW')
+_wBrsHwSavedPSW:
+	.ds	2
+	; End of section
+
+	.calls	'_BrsHwTimeBaseInitPowerOn','__STOREBC'
+	.calls	'_$cocofun_2','__STOREBC'
+	.calls	'_$cocofun_1','__STOREBC'
+	.calls	'_BrsHwDisableInterruptAtPowerOn','__STOREBC'
+	.calls	'_BrsHwDisableInterrupt','__LDBC'
+	.calls	'_BrsHwDisableInterrupt','__STOREBC'
+	.calls	'_BrsHwRestoreInterrupt','__STOREBC'
+	.calls	'_BrsHwPortInitPowerOn','_DioPortInit'
+	.calls	'_BrsHwTimeBaseInitPowerOn','_$cocofun_2'
+	.calls	'_BrsHwTimeBaseInitPowerOn','_$cocofun_1'
+	.calls	'_BrsHwTimeBaseInitPowerOn','_WupInit'
+	.calls	'_BrsHwEnableInterruptAtPowerOn','_$cocofun_2'
+	.calls	'_BrsHwRestoreInterrupt','_BrsMainExceptionHandler'
+	.calls	'_BrsHwSoftwareResetECU','_BrsHwDisableInterrupt'
+	.calls	'_BrsHwTime100NOP','_BrsHwDisableInterrupt'
+	.calls	'_BrsHwTime100NOP','_BrsHwRestoreInterrupt'
+	.calls	'_BrsHwWatchdogInitPowerOn','',2
+	.calls	'_BrsHwPllInitPowerOn','',2
+	.calls	'_BrsHwPortInitPowerOn','',2
+	.calls	'_BrsHwTimeBaseInitPowerOn','',2
+	.calls	'_$cocofun_2','',2
+	.calls	'_$cocofun_1','',2
+	.calls	'_BrsHwTimeBaseInterrupt','',6
+	.calls	'_BrsHwDisableInterruptAtPowerOn','',2
+	.calls	'_BrsHwEnableInterruptAtPowerOn','',2
+	.calls	'_BrsHwConfigureInterruptsAtPowerOn','',2
+	.calls	'_BrsHwDisableInterrupt','',2
+	.calls	'_BrsHwRestoreInterrupt','',2
+	.calls	'_BrsHwSoftwareResetECU','',2
+	.calls	'_BrsHwTime100NOP','',2
+	.extrn	code(_DioPortInit)
+	.extrn	code(_WupInit)
+	.extrn	xdata(_gbBrsMainIsrMilliSecondFlag)
+	.extrn	code(_BrsMainExceptionHandler)
+	.extrn	code(__STOREBC)
+	.extrn	code(__LDBC)
+'.debug_info'	.segment	debug
+	.rseg	'.debug_info'	debug
+_35:
+	.dl	18727
+	.dw	3
+	.dl	_36
+	.db	4
+_34:
+	.db	1
+	.db	'../../code/int/src/BrsHw.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_37
+_133:
+	.db	2
+	.db	'unsigned short int',0,2,7,3
+	.db	'DioPortInit',0,1,64,6,10,132,128,4,1,1,1,3
+	.db	'WupInit',0,2,26,6,10,132,128,4,1,1,1
+_138:
+	.db	2
+	.db	'unsigned char',0,1,8,4
+	.db	'BrsMainExceptionHandler',0,3,176,1,6,10,132,128,4,1,1,1,5
+	.db	'ErrorCode',0,3,176,1,36,8
+	.dl	207
+	.db	5
+	.db	'ModuleCode',0,3,176,1,53,8
+	.dl	207
+	.db	5
+	.db	'LineNumber',0,3,176,1,72,8
+	.dl	143
+	.db	0,6
+	.db	'.interrupt_107',0,4,158,2,31,10,132,128,4,1,7
+	.db	'void',0,8,8
+	.dl	348
+	.db	9
+	.db	'__prof_adm',0,4,1,1
+	.dl	354
+	.db	2
+	.db	'unsigned int',0,2,7,9
+	.db	'__codeptr',0,4,1,1
+	.dl	379
+	.db	9
+	.db	'uint8',0,5,101,40
+	.dl	207
+	.db	9
+	.db	'uint16',0,5,103,40
+	.dl	143
+	.db	2
+	.db	'unsigned long int',0,4,7,9
+	.db	'uint32',0,5,105,40
+	.dl	442
+_135:
+	.db	10
+	.dl	207
+_136:
+	.db	10
+	.dl	207
+_137:
+	.db	10
+	.dl	207
+	.db	9
+	.db	'Ifx_UReg_8Bit',0,6,42,24
+	.dl	207
+	.db	2
+	.db	'char',0,1,6,9
+	.db	'Ifx_SReg_8Bit',0,6,45,24
+	.dl	515
+	.db	11
+	.db	'_Ifx_SCR_ACC_Bits',0,7,75,16,1,12
+	.db	'ACC',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_ACC_Bits',0,7,78,3
+	.dl	545
+	.db	11
+	.db	'_Ifx_SCR_ADCOMP_CON_Bits',0,7,81,16,1,12
+	.db	'ADCENREQ',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'ADCEN',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'ADCIEN',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'ADCCHSEL',0,1
+	.dl	207
+	.db	2,3,2,35,0,12
+	.db	'VF',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'EOCSAMPLE',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'SOC',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_ADCOMP_CON_Bits',0,7,90,3
+	.dl	609
+	.db	11
+	.db	'_Ifx_SCR_ADCOMP_RES_Bits',0,7,93,16,1,12
+	.db	'ADRES',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_ADCOMP_RES_Bits',0,7,96,3
+	.dl	797
+	.db	11
+	.db	'_Ifx_SCR_B_Bits',0,7,99,16,1,12
+	.db	'B',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_B_Bits',0,7,102,3
+	.dl	877
+	.db	11
+	.db	'_Ifx_SCR_DATA_CTRL_Bits',0,7,105,16,1,12
+	.db	'DATA',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_DATA_CTRL_Bits',0,7,108,3
+	.dl	935
+	.db	11
+	.db	'_Ifx_SCR_DBG_MODSUSP_Bits',0,7,111,16,1,12
+	.db	'WDTSUSP',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'RTCSUSP',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'T2SUSP',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'CCTSUSP',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'reserved_4',0,1
+	.dl	207
+	.db	4,0,2,35,0,0,9
+	.db	'Ifx_SCR_DBG_MODSUSP_Bits',0,7,118,3
+	.dl	1012
+	.db	11
+	.db	'_Ifx_SCR_DPH_Bits',0,7,121,16,1,12
+	.db	'DPH',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_DPH_Bits',0,7,124,3
+	.dl	1174
+	.db	11
+	.db	'_Ifx_SCR_DPL_Bits',0,7,127,16,1,12
+	.db	'DPL',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_DPL_Bits',0,7,130,1,3
+	.dl	1238
+	.db	11
+	.db	'_Ifx_SCR_EO_Bits',0,7,133,1,16,1,12
+	.db	'DPSEL',0,1
+	.dl	207
+	.db	3,5,2,35,0,12
+	.db	'reserved_3',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'TRAP_EN',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'reserved_5',0,1
+	.dl	207
+	.db	3,0,2,35,0,0,9
+	.db	'Ifx_SCR_EO_Bits',0,7,139,1,3
+	.dl	1303
+	.db	11
+	.db	'_Ifx_SCR_EXICON0_Bits',0,7,142,1,16,1,12
+	.db	'EXINT0',0,1
+	.dl	207
+	.db	2,6,2,35,0,12
+	.db	'EXINT1',0,1
+	.dl	207
+	.db	2,4,2,35,0,12
+	.db	'EXINT2',0,1
+	.dl	207
+	.db	2,2,2,35,0,12
+	.db	'EXINT3',0,1
+	.dl	207
+	.db	2,0,2,35,0,0,9
+	.db	'Ifx_SCR_EXICON0_Bits',0,7,148,1,3
+	.dl	1432
+	.db	11
+	.db	'_Ifx_SCR_EXICON1_Bits',0,7,151,1,16,1,12
+	.db	'EXINT4',0,1
+	.dl	207
+	.db	2,6,2,35,0,12
+	.db	'EXINT5',0,1
+	.dl	207
+	.db	2,4,2,35,0,12
+	.db	'EXINT6',0,1
+	.dl	207
+	.db	2,2,2,35,0,12
+	.db	'EXINT7',0,1
+	.dl	207
+	.db	2,0,2,35,0,0,9
+	.db	'Ifx_SCR_EXICON1_Bits',0,7,157,1,3
+	.dl	1563
+	.db	11
+	.db	'_Ifx_SCR_EXICON2_Bits',0,7,160,1,16,1,12
+	.db	'EXINT8',0,1
+	.dl	207
+	.db	2,6,2,35,0,12
+	.db	'EXINT9',0,1
+	.dl	207
+	.db	2,4,2,35,0,12
+	.db	'EXINT10',0,1
+	.dl	207
+	.db	2,2,2,35,0,12
+	.db	'EXINT11',0,1
+	.dl	207
+	.db	2,0,2,35,0,0,9
+	.db	'Ifx_SCR_EXICON2_Bits',0,7,166,1,3
+	.dl	1694
+	.db	11
+	.db	'_Ifx_SCR_EXICON3_Bits',0,7,169,1,16,1,12
+	.db	'EXINT12',0,1
+	.dl	207
+	.db	2,6,2,35,0,12
+	.db	'EXINT13',0,1
+	.dl	207
+	.db	2,4,2,35,0,12
+	.db	'EXINT14',0,1
+	.dl	207
+	.db	2,2,2,35,0,12
+	.db	'EXINT15',0,1
+	.dl	207
+	.db	2,0,2,35,0,0,9
+	.db	'Ifx_SCR_EXICON3_Bits',0,7,175,1,3
+	.dl	1827
+	.db	11
+	.db	'_Ifx_SCR_IEN0_Bits',0,7,178,1,16,1,12
+	.db	'EX0',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'ET0',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'EX1',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'ET1',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'ES',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'ET2',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'reserved_6',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'EA',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_IEN0_Bits',0,7,188,1,3
+	.dl	1962
+	.db	11
+	.db	'_Ifx_SCR_IEN1_Bits',0,7,191,1,16,1,12
+	.db	'EWCAN',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'ESSC',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'EX2',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'EXM',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'ECCIP0',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'ECCIP1',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'ECCIP2',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'ECCIP3',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_IEN1_Bits',0,7,201,1,3
+	.dl	2140
+	.db	11
+	.db	'_Ifx_SCR_IO_PAGE_Bits',0,7,204,1,16,1,12
+	.db	'PAGE',0,1
+	.dl	207
+	.db	3,5,2,35,0,12
+	.db	'reserved_3',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'STNR',0,1
+	.dl	207
+	.db	2,2,2,35,0,12
+	.db	'OP',0,1
+	.dl	207
+	.db	2,0,2,35,0,0,9
+	.db	'Ifx_SCR_IO_PAGE_Bits',0,7,210,1,3
+	.dl	2328
+	.db	11
+	.db	'_Ifx_SCR_IP_Bits',0,7,213,1,16,1,12
+	.db	'PX0',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'PT0',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'PX1',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'PT1',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'PS',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'PT2',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'reserved_6',0,1
+	.dl	207
+	.db	2,0,2,35,0,0,9
+	.db	'Ifx_SCR_IP_Bits',0,7,222,1,3
+	.dl	2455
+	.db	11
+	.db	'_Ifx_SCR_IP1_Bits',0,7,225,1,16,1,12
+	.db	'PWCAN',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'PSSC',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'PX2',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'PXM',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'PCCIP0',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'PCCIP1',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'PCCIP2',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'PCCIP3',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_IP1_Bits',0,7,235,1,3
+	.dl	2615
+	.db	11
+	.db	'_Ifx_SCR_IPH_Bits',0,7,238,1,16,1,12
+	.db	'PX0H',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'PT0H',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'PX1H',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'PT1H',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'PSH',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'PT2H',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'reserved_6',0,1
+	.dl	207
+	.db	2,0,2,35,0,0,9
+	.db	'Ifx_SCR_IPH_Bits',0,7,247,1,3
+	.dl	2801
+	.db	11
+	.db	'_Ifx_SCR_IPH1_Bits',0,7,250,1,16,1,12
+	.db	'PWCANH',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'PSSCH',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'PX2H',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'PXMH',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'PCCIP0H',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'PCCIP1H',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'PCCIP2H',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'PCCIP3H',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_IPH1_Bits',0,7,132,2,3
+	.dl	2969
+	.db	11
+	.db	'_Ifx_SCR_IRCON0_Bits',0,7,135,2,16,1,12
+	.db	'reserved_0',0,1
+	.dl	207
+	.db	2,6,2,35,0,12
+	.db	'EXINT2',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'EXINT3',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'EXINT4',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'EXINT5',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'EXINT6',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'EXINT7',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_IRCON0_Bits',0,7,144,2,3
+	.dl	3165
+	.db	11
+	.db	'_Ifx_SCR_IRCON1_Bits',0,7,147,2,16,1,12
+	.db	'EIR',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'TIR',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'RIR',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'reserved_3',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'ADCIR',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'RER',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'RFR',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'reserved_7',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_IRCON1_Bits',0,7,157,2,3
+	.dl	3352
+	.db	11
+	.db	'_Ifx_SCR_IRCON2_Bits',0,7,160,2,16,1,12
+	.db	'EXINT8',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'EXINT9',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'EXINT10',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'EXINT11',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'EXINT12',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'EXINT13',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'EXINT14',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'EXINT15',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_IRCON2_Bits',0,7,170,2,3
+	.dl	3545
+	.db	11
+	.db	'_Ifx_SCR_MODPISEL0_Bits',0,7,173,2,16,1,12
+	.db	'URRIS',0,1
+	.dl	207
+	.db	4,4,2,35,0,12
+	.db	'WCANRXDIS',0,1
+	.dl	207
+	.db	4,0,2,35,0,0,9
+	.db	'Ifx_SCR_MODPISEL0_Bits',0,7,177,2,3
+	.dl	3752
+	.db	11
+	.db	'_Ifx_SCR_MODPISEL1_Bits',0,7,180,2,16,1,12
+	.db	'reserved_0',0,1
+	.dl	207
+	.db	2,6,2,35,0,12
+	.db	'EXINT0IS',0,1
+	.dl	207
+	.db	2,4,2,35,0,12
+	.db	'EXINT1IS',0,1
+	.dl	207
+	.db	2,2,2,35,0,12
+	.db	'EXINT2IS',0,1
+	.dl	207
+	.db	2,0,2,35,0,0,9
+	.db	'Ifx_SCR_MODPISEL1_Bits',0,7,186,2,3
+	.dl	3853
+	.db	11
+	.db	'_Ifx_SCR_MODPISEL2_Bits',0,7,189,2,16,1,12
+	.db	'T2CC0EXINT3IS',0,1
+	.dl	207
+	.db	2,6,2,35,0,12
+	.db	'T2CC1EXINT4IS',0,1
+	.dl	207
+	.db	2,4,2,35,0,12
+	.db	'T2CC2EXINT5IS',0,1
+	.dl	207
+	.db	2,2,2,35,0,12
+	.db	'T2CC3EXINT6IS',0,1
+	.dl	207
+	.db	2,0,2,35,0,0,9
+	.db	'Ifx_SCR_MODPISEL2_Bits',0,7,195,2,3
+	.dl	3998
+	.db	11
+	.db	'_Ifx_SCR_MODPISEL3_Bits',0,7,198,2,16,1,12
+	.db	'T2EXIS',0,1
+	.dl	207
+	.db	3,5,2,35,0,12
+	.db	'T2IS',0,1
+	.dl	207
+	.db	2,3,2,35,0,12
+	.db	'CIS',0,1
+	.dl	207
+	.db	3,0,2,35,0,0,9
+	.db	'Ifx_SCR_MODPISEL3_Bits',0,7,203,2,3
+	.dl	4161
+	.db	11
+	.db	'_Ifx_SCR_MODPISEL4_Bits',0,7,206,2,16,1,12
+	.db	'MIS',0,1
+	.dl	207
+	.db	3,5,2,35,0,12
+	.db	'SIS',0,1
+	.dl	207
+	.db	3,2,2,35,0,12
+	.db	'reserved_6',0,1
+	.dl	207
+	.db	2,0,2,35,0,0,9
+	.db	'Ifx_SCR_MODPISEL4_Bits',0,7,211,2,3
+	.dl	4273
+	.db	11
+	.db	'_Ifx_SCR_MODPISEL5_Bits',0,7,214,2,16,1,12
+	.db	'T1IS',0,1
+	.dl	207
+	.db	2,6,2,35,0,12
+	.db	'T0IS',0,1
+	.dl	207
+	.db	2,4,2,35,0,12
+	.db	'reserved_4',0,1
+	.dl	207
+	.db	4,0,2,35,0,0,9
+	.db	'Ifx_SCR_MODPISEL5_Bits',0,7,219,2,3
+	.dl	4388
+	.db	11
+	.db	'_Ifx_SCR_NMICON_Bits',0,7,222,2,16,1,12
+	.db	'NMIWDT',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'NMIRAMECC',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'NMIEXTNMI',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'NMIOCDS',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'NMIMAINC',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'reserved_5',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'NMIWKP',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'SCRINTTC',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_NMICON_Bits',0,7,232,2,3
+	.dl	4505
+	.db	11
+	.db	'_Ifx_SCR_NMISR_Bits',0,7,235,2,16,1,12
+	.db	'FNMIWDT',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'FNMIRAMECC',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'FNMIEXTNMI',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'FNMIOCDS',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'FNMIMAINC',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'reserved_5',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'FNMIWKP',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'reserved_7',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_NMISR_Bits',0,7,245,2,3
+	.dl	4721
+	.db	11
+	.db	'_Ifx_SCR_PASSWD_Bits',0,7,248,2,16,1,12
+	.db	'MODE',0,1
+	.dl	207
+	.db	2,6,2,35,0,12
+	.db	'PROTECT_S',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'PASS',0,1
+	.dl	207
+	.db	5,0,2,35,0,0,9
+	.db	'Ifx_SCR_PASSWD_Bits',0,7,253,2,3
+	.dl	4943
+	.db	11
+	.db	'_Ifx_SCR_PCON_Bits',0,7,128,3,16,1,12
+	.db	'IDLE',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'reserved_1',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'GF0',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'GF1',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'reserved_4',0,1
+	.dl	207
+	.db	3,1,2,35,0,12
+	.db	'SMOD',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_PCON_Bits',0,7,136,3,3
+	.dl	5053
+	.db	11
+	.db	'_Ifx_SCR_PSW_Bits',0,7,139,3,16,1,12
+	.db	'P',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'F1',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'OV',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'RS',0,1
+	.dl	207
+	.db	2,3,2,35,0,12
+	.db	'F0',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'AC',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'CY',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_PSW_Bits',0,7,148,3,3
+	.dl	5212
+	.db	11
+	.db	'_Ifx_SCR_P_IN_Bits',0,7,151,3,16,1,12
+	.db	'P0',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'P1',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'P2',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'P3',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'P4',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'P5',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'P6',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'P7',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_P_IN_Bits',0,7,161,3,3
+	.dl	5360
+	.db	11
+	.db	'_Ifx_SCR_P_IOCR_Bits',0,7,164,3,16,1,12
+	.db	'reserved_0',0,1
+	.dl	207
+	.db	3,5,2,35,0,12
+	.db	'PC',0,1
+	.dl	207
+	.db	5,0,2,35,0,0,9
+	.db	'Ifx_SCR_P_IOCR_Bits',0,7,168,3,3
+	.dl	5525
+	.db	11
+	.db	'_Ifx_SCR_P_OMCR_Bits',0,7,171,3,16,1,12
+	.db	'PCL0',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'PCL1',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'PCL2',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'PCL3',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'PCL4',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'PCL5',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'PCL6',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'PCL7',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_P_OMCR_Bits',0,7,181,3,3
+	.dl	5618
+	.db	11
+	.db	'_Ifx_SCR_P_OMSR_Bits',0,7,184,3,16,1,12
+	.db	'PS0',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'PS1',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'PS2',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'PS3',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'PS4',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'PS5',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'PS6',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'PS7',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_P_OMSR_Bits',0,7,194,3,3
+	.dl	5803
+	.db	11
+	.db	'_Ifx_SCR_P_OMTR_Bits',0,7,197,3,16,1,12
+	.db	'PTL0',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'PTL1',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'PTL2',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'PTL3',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'PTL4',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'PTL5',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'PTL6',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'PTL7',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_P_OMTR_Bits',0,7,207,3,3
+	.dl	5980
+	.db	11
+	.db	'_Ifx_SCR_P_OUT_Bits',0,7,210,3,16,1,12
+	.db	'P0',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'P1',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'P2',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'P3',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'P4',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'P5',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'P6',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'P7',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_P_OUT_Bits',0,7,220,3,3
+	.dl	6165
+	.db	11
+	.db	'_Ifx_SCR_P_PDISC_Bits',0,7,223,3,16,1,12
+	.db	'PDIS0',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'PDIS1',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'PDIS2',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'PDIS3',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'PDIS4',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'PDIS5',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'PDIS6',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'PDIS7',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_P_PDISC_Bits',0,7,233,3,3
+	.dl	6332
+	.db	11
+	.db	'_Ifx_SCR_P_PDR0_Bits',0,7,236,3,16,1,12
+	.db	'PD0',0,1
+	.dl	207
+	.db	2,6,2,35,0,12
+	.db	'PL0',0,1
+	.dl	207
+	.db	2,4,2,35,0,12
+	.db	'PD1',0,1
+	.dl	207
+	.db	2,2,2,35,0,12
+	.db	'PL1',0,1
+	.dl	207
+	.db	2,0,2,35,0,0,9
+	.db	'Ifx_SCR_P_PDR0_Bits',0,7,242,3,3
+	.dl	6527
+	.db	11
+	.db	'_Ifx_SCR_P_PDR2_Bits',0,7,245,3,16,1,12
+	.db	'PD2',0,1
+	.dl	207
+	.db	2,6,2,35,0,12
+	.db	'PL2',0,1
+	.dl	207
+	.db	2,4,2,35,0,12
+	.db	'PD3',0,1
+	.dl	207
+	.db	2,2,2,35,0,12
+	.db	'PL3',0,1
+	.dl	207
+	.db	2,0,2,35,0,0,9
+	.db	'Ifx_SCR_P_PDR2_Bits',0,7,251,3,3
+	.dl	6644
+	.db	11
+	.db	'_Ifx_SCR_P_PDR4_Bits',0,7,254,3,16,1,12
+	.db	'PD4',0,1
+	.dl	207
+	.db	2,6,2,35,0,12
+	.db	'PL4',0,1
+	.dl	207
+	.db	2,4,2,35,0,12
+	.db	'PD5',0,1
+	.dl	207
+	.db	2,2,2,35,0,12
+	.db	'PL5',0,1
+	.dl	207
+	.db	2,0,2,35,0,0,9
+	.db	'Ifx_SCR_P_PDR4_Bits',0,7,132,4,3
+	.dl	6761
+	.db	11
+	.db	'_Ifx_SCR_P_PDR6_Bits',0,7,135,4,16,1,12
+	.db	'PD6',0,1
+	.dl	207
+	.db	2,6,2,35,0,12
+	.db	'PL6',0,1
+	.dl	207
+	.db	2,4,2,35,0,12
+	.db	'PD7',0,1
+	.dl	207
+	.db	2,2,2,35,0,12
+	.db	'PL7',0,1
+	.dl	207
+	.db	2,0,2,35,0,0,9
+	.db	'Ifx_SCR_P_PDR6_Bits',0,7,141,4,3
+	.dl	6878
+	.db	11
+	.db	'_Ifx_SCR_RTC_CNT_Bits',0,7,144,4,16,1,12
+	.db	'CNT_VAL',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_RTC_CNT_Bits',0,7,147,4,3
+	.dl	6995
+	.db	11
+	.db	'_Ifx_SCR_RTC_CON_Bits',0,7,150,4,16,1,12
+	.db	'RTCC',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'RTCCLKSEL',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'RTPBYP',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'RTCCT',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'ECRTC',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'RTC32SEL',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'CFRTC',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'INIT32',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_RTC_CON_Bits',0,7,160,4,3
+	.dl	7073
+	.db	11
+	.db	'_Ifx_SCR_RTC_CR_Bits',0,7,163,4,16,1,12
+	.db	'CC_VAL',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_RTC_CR_Bits',0,7,166,4,3
+	.dl	7276
+	.db	11
+	.db	'_Ifx_SCR_SCRINTEXCHG_Bits',0,7,169,4,16,1,12
+	.db	'SCRINT',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_SCRINTEXCHG_Bits',0,7,172,4,3
+	.dl	7351
+	.db	11
+	.db	'_Ifx_SCR_SCU_CMCON_Bits',0,7,175,4,16,1,12
+	.db	'DIV',0,1
+	.dl	207
+	.db	4,4,2,35,0,12
+	.db	'OSCWAKE',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'OSCPD',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'reserved_6',0,1
+	.dl	207
+	.db	2,0,2,35,0,0,9
+	.db	'Ifx_SCR_SCU_CMCON_Bits',0,7,181,4,3
+	.dl	7436
+	.db	11
+	.db	'_Ifx_SCR_SCU_MODIEN_Bits',0,7,184,4,16,1,12
+	.db	'EIREN',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'TIREN',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'RIREN',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'FEEN',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'FFEN',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'reserved_5',0,1
+	.dl	207
+	.db	3,0,2,35,0,0,9
+	.db	'Ifx_SCR_SCU_MODIEN_Bits',0,7,192,4,3
+	.dl	7572
+	.db	11
+	.db	'_Ifx_SCR_SCU_MRSTST_Bits',0,7,195,4,16,1,12
+	.db	'SMURST',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'RST',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'reserved_2',0,1
+	.dl	207
+	.db	6,0,2,35,0,0,9
+	.db	'Ifx_SCR_SCU_MRSTST_Bits',0,7,200,4,3
+	.dl	7742
+	.db	11
+	.db	'_Ifx_SCR_SCU_PAGE_Bits',0,7,203,4,16,1,12
+	.db	'PAGE',0,1
+	.dl	207
+	.db	3,5,2,35,0,12
+	.db	'reserved_3',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'STNR',0,1
+	.dl	207
+	.db	2,2,2,35,0,12
+	.db	'OP',0,1
+	.dl	207
+	.db	2,0,2,35,0,0,9
+	.db	'Ifx_SCR_SCU_PAGE_Bits',0,7,209,4,3
+	.dl	7862
+	.db	11
+	.db	'_Ifx_SCR_SCU_PMCON1_Bits',0,7,212,4,16,1,12
+	.db	'SSC_DIS',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'T2CCU_DIS',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'RTC_DIS',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'WCAN_DIS',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'WDT_DIS',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'LIN_DIS',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'OCDS_DIS',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'reserved_7',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_SCU_PMCON1_Bits',0,7,222,4,3
+	.dl	7991
+	.db	11
+	.db	'_Ifx_SCR_SCU_RSTCON_Bits',0,7,225,4,16,1,12
+	.db	'ECCRSTEN',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'WDTRSTEN',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'reserved_2',0,1
+	.dl	207
+	.db	5,1,2,35,0,12
+	.db	'SWRQ',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_SCU_RSTCON_Bits',0,7,231,4,3
+	.dl	8215
+	.db	11
+	.db	'_Ifx_SCR_SCU_RSTST_Bits',0,7,234,4,16,1,12
+	.db	'ECCRST',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'WDTRST',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'SOFTRST',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'reserved_3',0,1
+	.dl	207
+	.db	5,0,2,35,0,0,9
+	.db	'Ifx_SCR_SCU_RSTST_Bits',0,7,240,4,3
+	.dl	8358
+	.db	11
+	.db	'_Ifx_SCR_SCU_SR_Bits',0,7,243,4,16,1,12
+	.db	'reserved_0',0,1
+	.dl	207
+	.db	3,5,2,35,0,12
+	.db	'STBY',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'reserved_4',0,1
+	.dl	207
+	.db	4,0,2,35,0,0,9
+	.db	'Ifx_SCR_SCU_SR_Bits',0,7,248,4,3
+	.dl	8498
+	.db	11
+	.db	'_Ifx_SCR_SCU_STDBYWKP_Bits',0,7,251,4,16,1,12
+	.db	'SCRWKP',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'RTCWKSEL',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'WCANWKSEL',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'WDTWKSEL',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'ECCWKSEL',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'reserved_5',0,1
+	.dl	207
+	.db	3,0,2,35,0,0,9
+	.db	'Ifx_SCR_SCU_STDBYWKP_Bits',0,7,131,5,3
+	.dl	8615
+	.db	11
+	.db	'_Ifx_SCR_SP_Bits',0,7,134,5,16,1,12
+	.db	'SP',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_SP_Bits',0,7,137,5,3
+	.dl	8805
+	.db	11
+	.db	'_Ifx_SCR_SSC_BRH_Bits',0,7,140,5,16,1,12
+	.db	'BR_VALUE',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_SSC_BRH_Bits',0,7,143,5,3
+	.dl	8868
+	.db	11
+	.db	'_Ifx_SCR_SSC_BRL_Bits',0,7,146,5,16,1,12
+	.db	'BR_VALUE',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_SSC_BRL_Bits',0,7,149,5,3
+	.dl	8947
+	.db	11
+	.db	'_Ifx_SCR_SSC_CONOH_Bits',0,7,152,5,16,1,12
+	.db	'TE',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'RE',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'RFE',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'BE',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'BSY',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'RFF',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'MS',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'EN',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_SSC_CONOH_Bits',0,7,162,5,3
+	.dl	9026
+	.db	11
+	.db	'_Ifx_SCR_SSC_CONOL_Bits',0,7,165,5,16,1,12
+	.db	'BC',0,1
+	.dl	207
+	.db	4,4,2,35,0,12
+	.db	'reserved_4',0,1
+	.dl	207
+	.db	4,0,2,35,0,0,9
+	.db	'Ifx_SCR_SSC_CONOL_Bits',0,7,169,5,3
+	.dl	9204
+	.db	11
+	.db	'_Ifx_SCR_SSC_CONPH_Bits',0,7,172,5,16,1,12
+	.db	'TEN',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'REN',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'reserved_2',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'BEN',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'reserved_4',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'reserved_5',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'MS',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'EN',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_SSC_CONPH_Bits',0,7,182,5,3
+	.dl	9303
+	.db	11
+	.db	'_Ifx_SCR_SSC_CONPL_Bits',0,7,185,5,16,1,12
+	.db	'BM',0,1
+	.dl	207
+	.db	3,5,2,35,0,12
+	.db	'reserved_3',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'HB',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'PH',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'PO',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'LB',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_SSC_CONPL_Bits',0,7,193,5,3
+	.dl	9505
+	.db	11
+	.db	'_Ifx_SCR_SSC_RBL_Bits',0,7,196,5,16,1,12
+	.db	'RB_VALUE',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_SSC_RBL_Bits',0,7,199,5,3
+	.dl	9660
+	.db	11
+	.db	'_Ifx_SCR_SSC_TBL_Bits',0,7,202,5,16,1,12
+	.db	'TB_VALUE',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_SSC_TBL_Bits',0,7,205,5,3
+	.dl	9739
+	.db	11
+	.db	'_Ifx_SCR_SYSCON0_Bits',0,7,208,5,16,1,12
+	.db	'RMAP',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'reserved_1',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'AMSEL',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'reserved_3',0,1
+	.dl	207
+	.db	5,0,2,35,0,0,9
+	.db	'Ifx_SCR_SYSCON0_Bits',0,7,214,5,3
+	.dl	9818
+	.db	11
+	.db	'_Ifx_SCR_T01_TCON_Bits',0,7,217,5,16,1,12
+	.db	'IT0',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'IE0',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'IT1',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'IE1',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'TR0',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'TF0',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'TR1',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'TF1',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_T01_TCON_Bits',0,7,227,5,3
+	.dl	9954
+	.db	11
+	.db	'_Ifx_SCR_T01_TH0_Bits',0,7,230,5,16,1,12
+	.db	'VAL',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_T01_TH0_Bits',0,7,233,5,3
+	.dl	10135
+	.db	11
+	.db	'_Ifx_SCR_T01_TH1_Bits',0,7,236,5,16,1,12
+	.db	'VAL',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_T01_TH1_Bits',0,7,239,5,3
+	.dl	10209
+	.db	11
+	.db	'_Ifx_SCR_T01_TL0_Bits',0,7,242,5,16,1,12
+	.db	'VAL',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_T01_TL0_Bits',0,7,245,5,3
+	.dl	10283
+	.db	11
+	.db	'_Ifx_SCR_T01_TL1_Bits',0,7,248,5,16,1,12
+	.db	'VAL',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_T01_TL1_Bits',0,7,251,5,3
+	.dl	10357
+	.db	11
+	.db	'_Ifx_SCR_T01_TMOD_Bits',0,7,254,5,16,1,12
+	.db	'T0M',0,1
+	.dl	207
+	.db	2,6,2,35,0,12
+	.db	'T0S',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'GATE0',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'T1M',0,1
+	.dl	207
+	.db	2,2,2,35,0,12
+	.db	'T1S',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'GATE1',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_T01_TMOD_Bits',0,7,134,6,3
+	.dl	10431
+	.db	11
+	.db	'_Ifx_SCR_T2CCU_CC02_CCXH_Bits',0,7,137,6,16,1,12
+	.db	'CCVALH',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_T2CCU_CC02_CCXH_Bits',0,7,140,6,3
+	.dl	10586
+	.db	11
+	.db	'_Ifx_SCR_T2CCU_CC02_CCXL_Bits',0,7,143,6,16,1,12
+	.db	'CCVALL',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_T2CCU_CC02_CCXL_Bits',0,7,146,6,3
+	.dl	10679
+	.db	11
+	.db	'_Ifx_SCR_T2CCU_CC35_CCXH_Bits',0,7,149,6,16,1,12
+	.db	'CCVALH',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_T2CCU_CC35_CCXH_Bits',0,7,152,6,3
+	.dl	10772
+	.db	11
+	.db	'_Ifx_SCR_T2CCU_CC35_CCXL_Bits',0,7,155,6,16,1,12
+	.db	'CCVALL',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_T2CCU_CC35_CCXL_Bits',0,7,158,6,3
+	.dl	10865
+	.db	11
+	.db	'_Ifx_SCR_T2CCU_CCEN_Bits',0,7,161,6,16,1,12
+	.db	'CCM0',0,1
+	.dl	207
+	.db	2,6,2,35,0,12
+	.db	'CCM1',0,1
+	.dl	207
+	.db	2,4,2,35,0,12
+	.db	'CCM2',0,1
+	.dl	207
+	.db	2,2,2,35,0,12
+	.db	'CCM3',0,1
+	.dl	207
+	.db	2,0,2,35,0,0,9
+	.db	'Ifx_SCR_T2CCU_CCEN_Bits',0,7,167,6,3
+	.dl	10958
+	.db	11
+	.db	'_Ifx_SCR_T2CCU_CCTBSEL_Bits',0,7,170,6,16,1,12
+	.db	'CCTB0',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'CCTB1',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'CCTB2',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'CCTB3',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'CCTB4',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'CCTB5',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'CCTTOV',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'CASC',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_T2CCU_CCTBSEL_Bits',0,7,180,6,3
+	.dl	11087
+	.db	11
+	.db	'_Ifx_SCR_T2CCU_CCTCON_Bits',0,7,183,6,16,1,12
+	.db	'CCTST',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'TIMSYN',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'CCTOVEN',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'CCTOVF',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'CCTPRE',0,1
+	.dl	207
+	.db	4,0,2,35,0,0,9
+	.db	'Ifx_SCR_T2CCU_CCTCON_Bits',0,7,190,6,3
+	.dl	11294
+	.db	11
+	.db	'_Ifx_SCR_T2CCU_CCTDTCH_Bits',0,7,193,6,16,1,12
+	.db	'DTE0',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'DTE1',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'DTE2',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'DTLEV',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'DTR0',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'DTR1',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'DTR2',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'DTRES',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_T2CCU_CCTDTCH_Bits',0,7,203,6,3
+	.dl	11453
+	.db	11
+	.db	'_Ifx_SCR_T2CCU_CCTDTCL_Bits',0,7,206,6,16,1,12
+	.db	'DTM',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_T2CCU_CCTDTCL_Bits',0,7,209,6,3
+	.dl	11654
+	.db	11
+	.db	'_Ifx_SCR_T2CCU_CCTH_Bits',0,7,212,6,16,1,12
+	.db	'CCT',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_T2CCU_CCTH_Bits',0,7,215,6,3
+	.dl	11740
+	.db	11
+	.db	'_Ifx_SCR_T2CCU_CCTL_Bits',0,7,218,6,16,1,12
+	.db	'CCT',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_T2CCU_CCTL_Bits',0,7,221,6,3
+	.dl	11820
+	.db	11
+	.db	'_Ifx_SCR_T2CCU_CCTRELH_Bits',0,7,224,6,16,1,12
+	.db	'CCTREL',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_T2CCU_CCTRELH_Bits',0,7,227,6,3
+	.dl	11900
+	.db	11
+	.db	'_Ifx_SCR_T2CCU_CCTRELL_Bits',0,7,230,6,16,1,12
+	.db	'CCTREL',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_T2CCU_CCTRELL_Bits',0,7,233,6,3
+	.dl	11989
+	.db	11
+	.db	'_Ifx_SCR_T2CCU_COCON_Bits',0,7,236,6,16,1,12
+	.db	'COMOD',0,1
+	.dl	207
+	.db	2,6,2,35,0,12
+	.db	'POLA',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'POLB',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'CM4F',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'CM5F',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'CCM4',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'CCM5',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_T2CCU_COCON_Bits',0,7,245,6,3
+	.dl	12078
+	.db	11
+	.db	'_Ifx_SCR_T2CCU_COSHDW_Bits',0,7,248,6,16,1,12
+	.db	'COOUT0',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'COOUT1',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'COOUT2',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'COOUT3',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'COOUT4',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'COOUT5',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'TXOV',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'ENSHDW',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_T2CCU_COSHDW_Bits',0,7,130,7,3
+	.dl	12258
+	.db	11
+	.db	'_Ifx_SCR_T2CCU_PAGE_Bits',0,7,133,7,16,1,12
+	.db	'PAGE',0,1
+	.dl	207
+	.db	3,5,2,35,0,12
+	.db	'reserved_3',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'STNR',0,1
+	.dl	207
+	.db	2,2,2,35,0,12
+	.db	'OP',0,1
+	.dl	207
+	.db	2,0,2,35,0,0,9
+	.db	'Ifx_SCR_T2CCU_PAGE_Bits',0,7,139,7,3
+	.dl	12469
+	.db	11
+	.db	'_Ifx_SCR_T2_CON_Bits',0,7,142,7,16,1,12
+	.db	'CP_RL2',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'C_T2',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'TR2',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'EXEN2',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'reserved_4',0,1
+	.dl	207
+	.db	2,2,2,35,0,12
+	.db	'EXF2',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'TF2',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_T2_CON_Bits',0,7,151,7,3
+	.dl	12602
+	.db	11
+	.db	'_Ifx_SCR_T2_CON1_Bits',0,7,154,7,16,1,12
+	.db	'EXF2EN',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'TF2EN',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'reserved_2',0,1
+	.dl	207
+	.db	6,0,2,35,0,0,9
+	.db	'Ifx_SCR_T2_CON1_Bits',0,7,159,7,3
+	.dl	12778
+	.db	11
+	.db	'_Ifx_SCR_T2_MOD_Bits',0,7,162,7,16,1,12
+	.db	'DCEN',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'T2PRE',0,1
+	.dl	207
+	.db	3,4,2,35,0,12
+	.db	'PREN',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'EDGESEL',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'T2RHEN',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'T2REGS',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_T2_MOD_Bits',0,7,170,7,3
+	.dl	12894
+	.db	11
+	.db	'_Ifx_SCR_T2_RC2H_Bits',0,7,173,7,16,1,12
+	.db	'RC2',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_T2_RC2H_Bits',0,7,176,7,3
+	.dl	13055
+	.db	11
+	.db	'_Ifx_SCR_T2_RC2L_Bits',0,7,179,7,16,1,12
+	.db	'RC2',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_T2_RC2L_Bits',0,7,182,7,3
+	.dl	13129
+	.db	11
+	.db	'_Ifx_SCR_T2_T2H_Bits',0,7,185,7,16,1,12
+	.db	'THL2',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_T2_T2H_Bits',0,7,188,7,3
+	.dl	13203
+	.db	11
+	.db	'_Ifx_SCR_T2_T2L_Bits',0,7,191,7,16,1,12
+	.db	'THL2',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_T2_T2L_Bits',0,7,194,7,3
+	.dl	13276
+	.db	11
+	.db	'_Ifx_SCR_TCINTEXCHG_Bits',0,7,197,7,16,1,12
+	.db	'TCINT',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_TCINTEXCHG_Bits',0,7,200,7,3
+	.dl	13349
+	.db	11
+	.db	'_Ifx_SCR_UART_BCON_Bits',0,7,203,7,16,1,12
+	.db	'R',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'BRPRE',0,1
+	.dl	207
+	.db	3,4,2,35,0,12
+	.db	'BRDIS',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'reserved_5',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'BGSEL',0,1
+	.dl	207
+	.db	2,0,2,35,0,0,9
+	.db	'Ifx_SCR_UART_BCON_Bits',0,7,210,7,3
+	.dl	13431
+	.db	11
+	.db	'_Ifx_SCR_UART_BGH_Bits',0,7,213,7,16,1,12
+	.db	'BR_VALUE',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_UART_BGH_Bits',0,7,216,7,3
+	.dl	13580
+	.db	11
+	.db	'_Ifx_SCR_UART_BGL_Bits',0,7,219,7,16,1,12
+	.db	'FD_SEL',0,1
+	.dl	207
+	.db	5,3,2,35,0,12
+	.db	'BR_VALUE',0,1
+	.dl	207
+	.db	3,0,2,35,0,0,9
+	.db	'Ifx_SCR_UART_BGL_Bits',0,7,223,7,3
+	.dl	13661
+	.db	11
+	.db	'_Ifx_SCR_UART_LINST_Bits',0,7,226,7,16,1,12
+	.db	'reserved_0',0,1
+	.dl	207
+	.db	3,5,2,35,0,12
+	.db	'BRK',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'EOFSYN',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'ERRSYN',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'SYNEN',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'reserved_7',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_UART_LINST_Bits',0,7,234,7,3
+	.dl	13760
+	.db	11
+	.db	'_Ifx_SCR_UART_SBUF_Bits',0,7,237,7,16,1,12
+	.db	'VAL',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_UART_SBUF_Bits',0,7,240,7,3
+	.dl	13937
+	.db	11
+	.db	'_Ifx_SCR_UART_SCON_Bits',0,7,243,7,16,1,12
+	.db	'RI',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'TI',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'RB8',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'TB8',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'REN',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'SM2',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'SM01',0,1
+	.dl	207
+	.db	2,0,2,35,0,0,9
+	.db	'Ifx_SCR_UART_SCON_Bits',0,7,252,7,3
+	.dl	14015
+	.db	11
+	.db	'_Ifx_SCR_WCAN_BTL1_CTRL_Bits',0,7,255,7,16,1,12
+	.db	'TBIT',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_WCAN_BTL1_CTRL_Bits',0,7,130,8,3
+	.dl	14182
+	.db	11
+	.db	'_Ifx_SCR_WCAN_BTL2_CTRL_Bits',0,7,133,8,16,1,12
+	.db	'SP',0,1
+	.dl	207
+	.db	6,2,2,35,0,12
+	.db	'BRP',0,1
+	.dl	207
+	.db	2,0,2,35,0,0,9
+	.db	'Ifx_SCR_WCAN_BTL2_CTRL_Bits',0,7,137,8,3
+	.dl	14271
+	.db	11
+	.db	'_Ifx_SCR_WCAN_CDR_CTRL_Bits',0,7,140,8,16,1,12
+	.db	'CDREN',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'reserved_1',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'ESF',0,1
+	.dl	207
+	.db	2,4,2,35,0,12
+	.db	'reserved_4',0,1
+	.dl	207
+	.db	4,0,2,35,0,0,9
+	.db	'Ifx_SCR_WCAN_CDR_CTRL_Bits',0,7,146,8,3
+	.dl	14373
+	.db	11
+	.db	'_Ifx_SCR_WCAN_CDR_LOWER_CTRL_Bits',0,7,149,8,16,1,12
+	.db	'LOWER',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_WCAN_CDR_LOWER_CTRL_Bits',0,7,152,8,3
+	.dl	14520
+	.db	11
+	.db	'_Ifx_SCR_WCAN_CDR_MEAS_HIGH_Bits',0,7,155,8,16,1,12
+	.db	'HIGH',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_WCAN_CDR_MEAS_HIGH_Bits',0,7,158,8,3
+	.dl	14620
+	.db	11
+	.db	'_Ifx_SCR_WCAN_CDR_MEAS_LOW_Bits',0,7,161,8,16,1,12
+	.db	'LOW',0,1
+	.dl	207
+	.db	6,2,2,35,0,12
+	.db	'reserved_6',0,1
+	.dl	207
+	.db	2,0,2,35,0,0,9
+	.db	'Ifx_SCR_WCAN_CDR_MEAS_LOW_Bits',0,7,165,8,3
+	.dl	14717
+	.db	11
+	.db	'_Ifx_SCR_WCAN_CDR_UPPER_CTRL_Bits',0,7,168,8,16,1,12
+	.db	'UPPER',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_WCAN_CDR_UPPER_CTRL_Bits',0,7,171,8,3
+	.dl	14833
+	.db	11
+	.db	'_Ifx_SCR_WCAN_CFG_Bits',0,7,174,8,16,1,12
+	.db	'WCAN_EN',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'reserved_1',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'SELWK_EN',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'CCE',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'reserved_4',0,1
+	.dl	207
+	.db	4,0,2,35,0,0,9
+	.db	'Ifx_SCR_WCAN_CFG_Bits',0,7,181,8,3
+	.dl	14933
+	.db	11
+	.db	'_Ifx_SCR_WCAN_DLC_CTRL_Bits',0,7,184,8,16,1,12
+	.db	'DLC',0,1
+	.dl	207
+	.db	4,4,2,35,0,12
+	.db	'reserved_4',0,1
+	.dl	207
+	.db	4,0,2,35,0,0,9
+	.db	'Ifx_SCR_WCAN_DLC_CTRL_Bits',0,7,188,8,3
+	.dl	15092
+	.db	11
+	.db	'_Ifx_SCR_WCAN_FD_CTRL_Bits',0,7,191,8,16,1,12
+	.db	'FDEN',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'FDFILT',0,1
+	.dl	207
+	.db	3,4,2,35,0,12
+	.db	'reserved_4',0,1
+	.dl	207
+	.db	4,0,2,35,0,0,9
+	.db	'Ifx_SCR_WCAN_FD_CTRL_Bits',0,7,196,8,3
+	.dl	15200
+	.db	11
+	.db	'_Ifx_SCR_WCAN_FRMERRCNT_Bits',0,7,199,8,16,1,12
+	.db	'ECNT',0,1
+	.dl	207
+	.db	6,2,2,35,0,12
+	.db	'FDEC_DIS',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'ECNTCLR',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_WCAN_FRMERRCNT_Bits',0,7,204,8,3
+	.dl	15325
+	.db	11
+	.db	'_Ifx_SCR_WCAN_ID0_CTRL_Bits',0,7,207,8,16,1,12
+	.db	'ID',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_WCAN_ID0_CTRL_Bits',0,7,210,8,3
+	.dl	15453
+	.db	11
+	.db	'_Ifx_SCR_WCAN_ID1_CTRL_Bits',0,7,213,8,16,1,12
+	.db	'ID',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_WCAN_ID1_CTRL_Bits',0,7,216,8,3
+	.dl	15538
+	.db	11
+	.db	'_Ifx_SCR_WCAN_ID2_CTRL_Bits',0,7,219,8,16,1,12
+	.db	'ID',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_WCAN_ID2_CTRL_Bits',0,7,222,8,3
+	.dl	15623
+	.db	11
+	.db	'_Ifx_SCR_WCAN_ID3_CTRL_Bits',0,7,225,8,16,1,12
+	.db	'IDE',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'reserved_1',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'ID',0,1
+	.dl	207
+	.db	5,1,2,35,0,12
+	.db	'reserved_7',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_WCAN_ID3_CTRL_Bits',0,7,231,8,3
+	.dl	15708
+	.db	11
+	.db	'_Ifx_SCR_WCAN_INTESCLR0_Bits',0,7,234,8,16,1,12
+	.db	'reserved_0',0,1
+	.dl	207
+	.db	2,6,2,35,0,12
+	.db	'SYSERRCLR',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'CANTOCLR',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'ECOFLCLR',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'MORCCLR',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'ERSELCLR',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'WUPCLR',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_WCAN_INTESCLR0_Bits',0,7,243,8,3
+	.dl	15852
+	.db	11
+	.db	'_Ifx_SCR_WCAN_INTESCLR1_Bits',0,7,246,8,16,1,12
+	.db	'WUFCLR',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'SYNCCLR',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'reserved_2',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'CANSILCLR',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'reserved_4',0,1
+	.dl	207
+	.db	4,0,2,35,0,0,9
+	.db	'Ifx_SCR_WCAN_INTESCLR1_Bits',0,7,253,8,3
+	.dl	16065
+	.db	11
+	.db	'_Ifx_SCR_WCAN_INTESTAT0_Bits',0,7,128,9,16,1,12
+	.db	'SWACK',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'MODE',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'SYSERR',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'CANTO',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'ECOFL',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'MORC',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'ERSEL',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'WUP',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_WCAN_INTESTAT0_Bits',0,7,138,9,3
+	.dl	16240
+	.db	11
+	.db	'_Ifx_SCR_WCAN_INTESTAT1_Bits',0,7,141,9,16,1,12
+	.db	'WUF',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'SYNC',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'SWKSET',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'CANSIL',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'FDF',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'RXDF',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'RXDS',0,1
+	.dl	207
+	.db	1,1,2,35,0,12
+	.db	'reserved_7',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_WCAN_INTESTAT1_Bits',0,7,151,9,3
+	.dl	16446
+	.db	11
+	.db	'_Ifx_SCR_WCAN_INTMRSLT_Bits',0,7,154,9,16,1,12
+	.db	'CANTOMASK',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'ERRMASK',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'WUFMASK',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'WUPMASK',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'reserved_4',0,1
+	.dl	207
+	.db	4,0,2,35,0,0,9
+	.db	'Ifx_SCR_WCAN_INTMRSLT_Bits',0,7,161,9,3
+	.dl	16655
+	.db	11
+	.db	'_Ifx_SCR_WCAN_MASK_ID0_CTRL_Bits',0,7,164,9,16,1,12
+	.db	'MID',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_WCAN_MASK_ID0_CTRL_Bits',0,7,167,9,3
+	.dl	16826
+	.db	11
+	.db	'_Ifx_SCR_WCAN_MASK_ID1_CTRL_Bits',0,7,170,9,16,1,12
+	.db	'MID',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_WCAN_MASK_ID1_CTRL_Bits',0,7,173,9,3
+	.dl	16922
+	.db	11
+	.db	'_Ifx_SCR_WCAN_MASK_ID2_CTRL_Bits',0,7,176,9,16,1,12
+	.db	'MID',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_WCAN_MASK_ID2_CTRL_Bits',0,7,179,9,3
+	.dl	17018
+	.db	11
+	.db	'_Ifx_SCR_WCAN_MASK_ID3_CTRL_Bits',0,7,182,9,16,1,12
+	.db	'reserved_0',0,1
+	.dl	207
+	.db	2,6,2,35,0,12
+	.db	'MID',0,1
+	.dl	207
+	.db	5,1,2,35,0,12
+	.db	'reserved_7',0,1
+	.dl	207
+	.db	1,0,2,35,0,0,9
+	.db	'Ifx_SCR_WCAN_MASK_ID3_CTRL_Bits',0,7,187,9,3
+	.dl	17114
+	.db	11
+	.db	'_Ifx_SCR_WCAN_PAGE_Bits',0,7,190,9,16,1,12
+	.db	'PAGE',0,1
+	.dl	207
+	.db	3,5,2,35,0,12
+	.db	'reserved_3',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'STNR',0,1
+	.dl	207
+	.db	2,2,2,35,0,12
+	.db	'OP',0,1
+	.dl	207
+	.db	2,0,2,35,0,0,9
+	.db	'Ifx_SCR_WCAN_PAGE_Bits',0,7,196,9,3
+	.dl	17254
+	.db	11
+	.db	'_Ifx_SCR_WDT_CON_Bits',0,7,199,9,16,1,12
+	.db	'WDTIN',0,1
+	.dl	207
+	.db	1,7,2,35,0,12
+	.db	'WDTRS',0,1
+	.dl	207
+	.db	1,6,2,35,0,12
+	.db	'WDTEN',0,1
+	.dl	207
+	.db	1,5,2,35,0,12
+	.db	'WDTCLK',0,1
+	.dl	207
+	.db	1,4,2,35,0,12
+	.db	'WDTPR',0,1
+	.dl	207
+	.db	1,3,2,35,0,12
+	.db	'WINBEN',0,1
+	.dl	207
+	.db	1,2,2,35,0,12
+	.db	'reserved_6',0,1
+	.dl	207
+	.db	2,0,2,35,0,0,9
+	.db	'Ifx_SCR_WDT_CON_Bits',0,7,208,9,3
+	.dl	17385
+	.db	11
+	.db	'_Ifx_SCR_WDT_H_Bits',0,7,211,9,16,1,12
+	.db	'WDT',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_WDT_H_Bits',0,7,214,9,3
+	.dl	17570
+	.db	11
+	.db	'_Ifx_SCR_WDT_L_Bits',0,7,217,9,16,1,12
+	.db	'WDT',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_WDT_L_Bits',0,7,220,9,3
+	.dl	17640
+	.db	11
+	.db	'_Ifx_SCR_WDT_REL_Bits',0,7,223,9,16,1,12
+	.db	'WDTREL',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_WDT_REL_Bits',0,7,226,9,3
+	.dl	17710
+	.db	11
+	.db	'_Ifx_SCR_WDT_WINB_Bits',0,7,229,9,16,1,12
+	.db	'WDTWINB',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_WDT_WINB_Bits',0,7,232,9,3
+	.dl	17787
+	.db	11
+	.db	'_Ifx_SCR_XADDRH_Bits',0,7,235,9,16,1,12
+	.db	'ADDRH',0,1
+	.dl	207
+	.db	8,0,2,35,0,0,9
+	.db	'Ifx_SCR_XADDRH_Bits',0,7,238,9,3
+	.dl	17867
+	.db	13,7,150,10,9,1,14
+	.db	'U',0
+	.dl	207
+	.db	1,2,35,0,14
+	.db	'I',0
+	.dl	515
+	.db	1,2,35,0,14
+	.db	'B',0
+	.dl	935
+	.db	1,2,35,0,0,9
+	.db	'Ifx_SCR_DATA_CTRL',0,7,155,10,3
+	.dl	17941
+	.db	13,7,142,12,9,1,14
+	.db	'U',0
+	.dl	207
+	.db	1,2,35,0,14
+	.db	'I',0
+	.dl	515
+	.db	1,2,35,0,14
+	.db	'B',0
+	.dl	5525
+	.db	1,2,35,0,0,9
+	.db	'Ifx_SCR_P_IOCR',0,7,147,12,3
+	.dl	18008
+	.db	13,7,166,12,9,1,14
+	.db	'U',0
+	.dl	207
+	.db	1,2,35,0,14
+	.db	'I',0
+	.dl	515
+	.db	1,2,35,0,14
+	.db	'B',0
+	.dl	5980
+	.db	1,2,35,0,0,9
+	.db	'Ifx_SCR_P_OMTR',0,7,171,12,3
+	.dl	18072
+	.db	13,7,182,12,9,1,14
+	.db	'U',0
+	.dl	207
+	.db	1,2,35,0,14
+	.db	'I',0
+	.dl	515
+	.db	1,2,35,0,14
+	.db	'B',0
+	.dl	6332
+	.db	1,2,35,0,0,9
+	.db	'Ifx_SCR_P_PDISC',0,7,187,12,3
+	.dl	18136
+	.db	13,7,198,12,9,1,14
+	.db	'U',0
+	.dl	207
+	.db	1,2,35,0,14
+	.db	'I',0
+	.dl	515
+	.db	1,2,35,0,14
+	.db	'B',0
+	.dl	6644
+	.db	1,2,35,0,0,9
+	.db	'Ifx_SCR_P_PDR2',0,7,203,12,3
+	.dl	18201
+	.db	13,7,206,12,9,1,14
+	.db	'U',0
+	.dl	207
+	.db	1,2,35,0,14
+	.db	'I',0
+	.dl	515
+	.db	1,2,35,0,14
+	.db	'B',0
+	.dl	6761
+	.db	1,2,35,0,0,9
+	.db	'Ifx_SCR_P_PDR4',0,7,211,12,3
+	.dl	18265
+	.db	13,7,214,12,9,1,14
+	.db	'U',0
+	.dl	207
+	.db	1,2,35,0,14
+	.db	'I',0
+	.dl	515
+	.db	1,2,35,0,14
+	.db	'B',0
+	.dl	6878
+	.db	1,2,35,0,0,9
+	.db	'Ifx_SCR_P_PDR6',0,7,219,12,3
+	.dl	18329
+	.db	13,7,198,14,9,1,14
+	.db	'U',0
+	.dl	207
+	.db	1,2,35,0,14
+	.db	'I',0
+	.dl	515
+	.db	1,2,35,0,14
+	.db	'B',0
+	.dl	10586
+	.db	1,2,35,0,0,9
+	.db	'Ifx_SCR_T2CCU_CC02_CCXH',0,7,203,14,3
+	.dl	18393
+	.db	13,7,206,14,9,1,14
+	.db	'U',0
+	.dl	207
+	.db	1,2,35,0,14
+	.db	'I',0
+	.dl	515
+	.db	1,2,35,0,14
+	.db	'B',0
+	.dl	10679
+	.db	1,2,35,0,0,9
+	.db	'Ifx_SCR_T2CCU_CC02_CCXL',0,7,211,14,3
+	.dl	18466
+	.db	13,7,214,14,9,1,14
+	.db	'U',0
+	.dl	207
+	.db	1,2,35,0,14
+	.db	'I',0
+	.dl	515
+	.db	1,2,35,0,14
+	.db	'B',0
+	.dl	10772
+	.db	1,2,35,0,0,9
+	.db	'Ifx_SCR_T2CCU_CC35_CCXH',0,7,219,14,3
+	.dl	18539
+	.db	13,7,222,14,9,1,14
+	.db	'U',0
+	.dl	207
+	.db	1,2,35,0,14
+	.db	'I',0
+	.dl	515
+	.db	1,2,35,0,14
+	.db	'B',0
+	.dl	10865
+	.db	1,2,35,0,0,9
+	.db	'Ifx_SCR_T2CCU_CC35_CCXL',0,7,227,14,3
+	.dl	18612
+	.db	15
+	.dl	207
+	.db	16
+	.db	'gbBrsMainIsrMilliSecondFlag',0,3,146,1,24,8
+	.dl	18685
+	.db	1,1,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug
+	.rseg	'.debug_abbrev'	debug
+_36:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,36,0,3,8,11,15,62,15,0,0,3,46,0,3,8,58,15,59,15,57,15
+	.db	51,15,54,15,39,12,63,12,60,12,0,0,4,46,1,3,8,58,15,59,15,57,15,51,15,54,15,39,12,63,12,60,12,0,0,5,5,0
+	.db	3,8,58,15,59,15,57,15,51,15,73,19,0,0,6,46,0,3,8,58,15,59,15,57,15,51,15,54,15,63,12,0,0,7,59,0,3,8,0
+	.db	0,8,15,0,51,15,73,19,0,0,9,22,0,3,8,58,15,59,15,57,15,73,19,0,0,10,38,0,73,19,0,0,11,19,1,3,8,58,15,59
+	.db	15,57,15,11,15,0,0,12,13,0,3,8,11,15,73,19,13,15,12,15,56,9,0,0,13,23,1,58,15,59,15,57,15,11,15,0,0,14
+	.db	13,0,3,8,73,19,11,15,56,9,0,0,15,53,0,73,19,0,0,16,52,0,3,8,58,15,59,15,57,15,51,15,73,19,63,12,60,12
+	.db	0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug
+	.rseg	'.debug_line'	debug
+_37:
+	.dl	_148-_147
+_147:
+	.dw	3
+	.dl	_150-_149
+_149:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'..\\..\\code\\int\\inc\\ScrDioPort.h',0,0,0,0
+	.db	'..\\..\\code\\int\\inc\\ScrWakeUpDetection.h',0,0,0,0
+	.db	'..\\..\\code\\stubs\\BrsAsrMain.h',0,0,0,0
+	.db	'../../code/int/src/BrsHw.c',0,0,0,0
+	.db	'..\\..\\code\\stubs\\Platform_Types.h',0,0,0,0
+	.db	'..\\..\\code\\int\\inc\\Ifx_TypesReg.h',0,0,0,0
+	.db	'..\\..\\code\\int\\inc\\IfxScr_regdef.h',0,0,0,0,0
+_150:
+_148:
+	; End of section
+
+'.debug_info'	.segment	debug cluster('BrsHwWatchdogInitPowerOn')
+	.rseg	'.debug_info'	debug cluster('BrsHwWatchdogInitPowerOn')
+_38:
+	.dl	210
+	.dw	3
+	.dl	_39
+	.db	4,1
+	.db	'../../code/int/src/BrsHw.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_41,_40
+	.db	2
+	.dl	_34
+	.db	3
+	.db	'BrsHwWatchdogInitPowerOn',0,1,201,1,6,10,132,128,4,1,1
+	.dl	_7,_43,_6
+	.db	2,145,0,4
+	.dl	_7,_43
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('BrsHwWatchdogInitPowerOn')
+	.rseg	'.debug_abbrev'	debug cluster('BrsHwWatchdogInitPowerOn')
+_39:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('BrsHwWatchdogInitPowerOn')
+	.rseg	'.debug_line'	debug cluster('BrsHwWatchdogInitPowerOn')
+_40:
+	.dl	_152-_151
+_151:
+	.dw	3
+	.dl	_154-_153
+_153:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/BrsHw.c',0,0,0,0,0
+_154:
+	.db	5,1,7,0,5,2
+	.dl	_7
+	.db	3,202,1,1,7,9
+	.dw	_43-_7
+	.db	0,1,1
+_152:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('BrsHwWatchdogInitPowerOn')
+	.rseg	'.debug_ranges'	debug cluster('BrsHwWatchdogInitPowerOn')
+_41:
+	.dl	-1,_42,0,_43-_42,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('BrsHwPllInitPowerOn')
+	.rseg	'.debug_info'	debug cluster('BrsHwPllInitPowerOn')
+_44:
+	.dl	205
+	.dw	3
+	.dl	_45
+	.db	4,1
+	.db	'../../code/int/src/BrsHw.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_47,_46
+	.db	2
+	.dl	_34
+	.db	3
+	.db	'BrsHwPllInitPowerOn',0,1,215,1,6,10,132,128,4,1,1
+	.dl	_9,_49,_8
+	.db	2,145,0,4
+	.dl	_9,_49
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('BrsHwPllInitPowerOn')
+	.rseg	'.debug_abbrev'	debug cluster('BrsHwPllInitPowerOn')
+_45:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('BrsHwPllInitPowerOn')
+	.rseg	'.debug_line'	debug cluster('BrsHwPllInitPowerOn')
+_46:
+	.dl	_156-_155
+_155:
+	.dw	3
+	.dl	_158-_157
+_157:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/BrsHw.c',0,0,0,0,0
+_158:
+	.db	5,1,7,0,5,2
+	.dl	_9
+	.db	3,216,1,1,7,9
+	.dw	_49-_9
+	.db	0,1,1
+_156:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('BrsHwPllInitPowerOn')
+	.rseg	'.debug_ranges'	debug cluster('BrsHwPllInitPowerOn')
+_47:
+	.dl	-1,_48,0,_49-_48,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('BrsHwPortInitPowerOn')
+	.rseg	'.debug_info'	debug cluster('BrsHwPortInitPowerOn')
+_50:
+	.dl	206
+	.dw	3
+	.dl	_51
+	.db	4,1
+	.db	'../../code/int/src/BrsHw.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_53,_52
+	.db	2
+	.dl	_34
+	.db	3
+	.db	'BrsHwPortInitPowerOn',0,1,229,1,6,10,132,128,4,1,1
+	.dl	_11,_55,_10
+	.db	2,145,0,4
+	.dl	_11,_55
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('BrsHwPortInitPowerOn')
+	.rseg	'.debug_abbrev'	debug cluster('BrsHwPortInitPowerOn')
+_51:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('BrsHwPortInitPowerOn')
+	.rseg	'.debug_line'	debug cluster('BrsHwPortInitPowerOn')
+_52:
+	.dl	_160-_159
+_159:
+	.dw	3
+	.dl	_162-_161
+_161:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/BrsHw.c',0,0,0,0,0
+_162:
+	.db	5,15,7,0,5,2
+	.dl	_11
+	.db	3,230,1,1,5,1,9
+	.dw	_55-_11
+	.db	3,1,0,1,1
+_160:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('BrsHwPortInitPowerOn')
+	.rseg	'.debug_ranges'	debug cluster('BrsHwPortInitPowerOn')
+_53:
+	.dl	-1,_54,0,_55-_54,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('BrsHwTimeBaseInitPowerOn')
+	.rseg	'.debug_info'	debug cluster('BrsHwTimeBaseInitPowerOn')
+_56:
+	.dl	206
+	.dw	3
+	.dl	_57
+	.db	4,1
+	.db	'../../code/int/src/BrsHw.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_59,_58
+	.db	2
+	.dl	_34
+	.db	3
+	.db	'BrsHwTimeBaseInitPowerOn',0,1,246,1,6,10,132,128,4,1,1
+	.dl	_13,_61,_12
+	.db	2,145,0,4
+	.dl	_132
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('BrsHwTimeBaseInitPowerOn')
+	.rseg	'.debug_abbrev'	debug cluster('BrsHwTimeBaseInitPowerOn')
+_57:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,85,6,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('BrsHwTimeBaseInitPowerOn')
+	.rseg	'.debug_line'	debug cluster('BrsHwTimeBaseInitPowerOn')
+_58:
+	.dl	_164-_163
+_163:
+	.dw	3
+	.dl	_166-_165
+_165:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/BrsHw.c',0,0,0,0,0
+_166:
+	.db	5,17,7,0,5,2
+	.dl	_13
+	.db	3,247,1,1,5,25,9
+	.dw	_167-_13
+	.db	1,5,23,9
+	.dw	_168-_167
+	.db	1,5,19,9
+	.dw	_169-_168
+	.db	3,2,1,5,30,9
+	.dw	_170-_169
+	.db	1,5,28,9
+	.dw	_171-_170
+	.db	1,5,13,9
+	.dw	_172-_171
+	.db	3,1,1,5,23,9
+	.dw	_173-_172
+	.db	1,5,21,9
+	.dw	_174-_173
+	.db	1,5,18,9
+	.dw	_175-_174
+	.db	3,1,1,9
+	.dw	_176-_175
+	.db	3,1,1,9
+	.dw	_177-_176
+	.db	3,1,1,9
+	.dw	_178-_177
+	.db	3,1,1,5,17,9
+	.dw	_179-_178
+	.db	3,1,1,9
+	.dw	_180-_179
+	.db	3,1,1,9
+	.dw	_181-_180
+	.db	3,1,1,9
+	.dw	_182-_181
+	.db	3,1,1,5,15,9
+	.dw	_183-_182
+	.db	3,2,1,5,16,9
+	.dw	_184-_183
+	.db	3,2,1,5,25,9
+	.dw	_185-_184
+	.db	1,5,23,9
+	.dw	_186-_185
+	.db	1,5,24,9
+	.dw	_187-_186
+	.db	3,1,1,5,27,9
+	.dw	_188-_187
+	.db	3,1,1,5,22,9
+	.dw	_189-_188
+	.db	3,1,1,5,17,9
+	.dw	_190-_189
+	.db	3,2,1,5,25,9
+	.dw	_191-_190
+	.db	1,5,23,9
+	.dw	_192-_191
+	.db	1,5,11,9
+	.dw	_193-_192
+	.db	3,2,1,5,1,9
+	.dw	_61-_193
+	.db	3,1,0,1,1
+_164:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('BrsHwTimeBaseInitPowerOn')
+	.rseg	'.debug_ranges'	debug cluster('BrsHwTimeBaseInitPowerOn')
+_59:
+	.dl	-1,_60,0,_61-_60,0,0
+_132:
+	.dl	-1,_13,0,_61-_13,-1,_15,0,_121-_15,-1,_17,0,_115-_17,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('BrsHwDisableInterruptAtPowerOn')
+	.rseg	'.debug_info'	debug cluster('BrsHwDisableInterruptAtPowerOn')
+_62:
+	.dl	216
+	.dw	3
+	.dl	_63
+	.db	4,1
+	.db	'../../code/int/src/BrsHw.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_65,_64
+	.db	2
+	.dl	_34
+	.db	3
+	.db	'BrsHwDisableInterruptAtPowerOn',0,1,174,2,6,10,132,128,4,1,1
+	.dl	_21,_67,_20
+	.db	2,145,0,4
+	.dl	_21,_67
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('BrsHwDisableInterruptAtPowerOn')
+	.rseg	'.debug_abbrev'	debug cluster('BrsHwDisableInterruptAtPowerOn')
+_63:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('BrsHwDisableInterruptAtPowerOn')
+	.rseg	'.debug_line'	debug cluster('BrsHwDisableInterruptAtPowerOn')
+_64:
+	.dl	_195-_194
+_194:
+	.dw	3
+	.dl	_197-_196
+_196:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/BrsHw.c',0,0,0,0,0
+_197:
+	.db	5,3,7,0,5,2
+	.dl	_21
+	.db	3,175,2,1,5,22,9
+	.dw	_198-_21
+	.db	1,5,13,9
+	.dw	_199-_198
+	.db	3,1,1,5,19,9
+	.dw	_200-_199
+	.db	1,5,17,9
+	.dw	_201-_200
+	.db	1,5,1,9
+	.dw	_202-_201
+	.db	3,1,1,7,9
+	.dw	_67-_202
+	.db	0,1,1
+_195:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('BrsHwDisableInterruptAtPowerOn')
+	.rseg	'.debug_ranges'	debug cluster('BrsHwDisableInterruptAtPowerOn')
+_65:
+	.dl	-1,_66,0,_67-_66,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('BrsHwEnableInterruptAtPowerOn')
+	.rseg	'.debug_info'	debug cluster('BrsHwEnableInterruptAtPowerOn')
+_68:
+	.dl	215
+	.dw	3
+	.dl	_69
+	.db	4,1
+	.db	'../../code/int/src/BrsHw.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_71,_70
+	.db	2
+	.dl	_34
+	.db	3
+	.db	'BrsHwEnableInterruptAtPowerOn',0,1,190,2,6,10,132,128,4,1,1
+	.dl	_23,_73,_22
+	.db	2,145,0,4
+	.dl	_23,_73
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('BrsHwEnableInterruptAtPowerOn')
+	.rseg	'.debug_abbrev'	debug cluster('BrsHwEnableInterruptAtPowerOn')
+_69:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('BrsHwEnableInterruptAtPowerOn')
+	.rseg	'.debug_line'	debug cluster('BrsHwEnableInterruptAtPowerOn')
+_70:
+	.dl	_204-_203
+_203:
+	.dw	3
+	.dl	_206-_205
+_205:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/BrsHw.c',0,0,0,0,0
+_206:
+	.db	5,13,7,0,5,2
+	.dl	_23
+	.db	3,191,2,1,5,19,9
+	.dw	_207-_23
+	.db	1,5,17,9
+	.dw	_208-_207
+	.db	1,5,1,9
+	.dw	_209-_208
+	.db	3,1,1,7,9
+	.dw	_73-_209
+	.db	0,1,1
+_204:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('BrsHwEnableInterruptAtPowerOn')
+	.rseg	'.debug_ranges'	debug cluster('BrsHwEnableInterruptAtPowerOn')
+_71:
+	.dl	-1,_72,0,_73-_72,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('BrsHwConfigureInterruptsAtPowerOn')
+	.rseg	'.debug_info'	debug cluster('BrsHwConfigureInterruptsAtPowerOn')
+_74:
+	.dl	219
+	.dw	3
+	.dl	_75
+	.db	4,1
+	.db	'../../code/int/src/BrsHw.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_77,_76
+	.db	2
+	.dl	_34
+	.db	3
+	.db	'BrsHwConfigureInterruptsAtPowerOn',0,1,205,2,6,10,132,128,4,1,1
+	.dl	_25,_79,_24
+	.db	2,145,0,4
+	.dl	_25,_79
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('BrsHwConfigureInterruptsAtPowerOn')
+	.rseg	'.debug_abbrev'	debug cluster('BrsHwConfigureInterruptsAtPowerOn')
+_75:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('BrsHwConfigureInterruptsAtPowerOn')
+	.rseg	'.debug_line'	debug cluster('BrsHwConfigureInterruptsAtPowerOn')
+_76:
+	.dl	_211-_210
+_210:
+	.dw	3
+	.dl	_213-_212
+_212:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/BrsHw.c',0,0,0,0,0
+_213:
+	.db	5,1,7,0,5,2
+	.dl	_25
+	.db	3,208,2,1,7,9
+	.dw	_79-_25
+	.db	0,1,1
+_211:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('BrsHwConfigureInterruptsAtPowerOn')
+	.rseg	'.debug_ranges'	debug cluster('BrsHwConfigureInterruptsAtPowerOn')
+_77:
+	.dl	-1,_78,0,_79-_78,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('BrsHwDisableInterrupt')
+	.rseg	'.debug_info'	debug cluster('BrsHwDisableInterrupt')
+_80:
+	.dl	234
+	.dw	3
+	.dl	_81
+	.db	4,1
+	.db	'../../code/int/src/BrsHw.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_83,_82
+	.db	2
+	.dl	_34
+	.db	3
+	.db	'BrsHwDisableInterrupt',0,1,225,2,6,10,132,128,4,1,1
+	.dl	_27,_85,_26
+	.db	2,145,0,4
+	.dl	_27,_85
+	.db	5
+	.db	'localOldPSW',0,1,227,2,10,8
+	.dl	_133,_134
+	.db	0,0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('BrsHwDisableInterrupt')
+	.rseg	'.debug_abbrev'	debug cluster('BrsHwDisableInterrupt')
+_81:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,51,15,73,16
+	.db	2,6,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('BrsHwDisableInterrupt')
+	.rseg	'.debug_line'	debug cluster('BrsHwDisableInterrupt')
+_82:
+	.dl	_215-_214
+_214:
+	.dw	3
+	.dl	_217-_216
+_216:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/BrsHw.c',0,0,0,0,0
+_217:
+	.db	5,6,7,0,5,2
+	.dl	_27
+	.db	3,230,2,1,5,3,9
+	.dw	_218-_27
+	.db	1,5,29,7,9
+	.dw	_219-_218
+	.db	3,2,1,5,19,9
+	.dw	_220-_219
+	.db	3,1,1,5,15,9
+	.dw	_221-_220
+	.db	1,5,21,9
+	.dw	_222-_221
+	.db	1,5,19,9
+	.dw	_223-_222
+	.db	1,5,5,9
+	.dw	_224-_223
+	.db	3,1,1,5,20,9
+	.dw	_225-_224
+	.db	1,5,21,9
+	.dw	_2-_225
+	.db	3,3,1,5,3,9
+	.dw	_226-_2
+	.db	1,5,21,9
+	.dw	_227-_226
+	.db	1,5,1,9
+	.dw	_228-_227
+	.db	3,1,1,7,9
+	.dw	_85-_228
+	.db	0,1,1
+_215:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('BrsHwDisableInterrupt')
+	.rseg	'.debug_ranges'	debug cluster('BrsHwDisableInterrupt')
+_83:
+	.dl	-1,_84,0,_85-_84,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('BrsHwRestoreInterrupt')
+	.rseg	'.debug_info'	debug cluster('BrsHwRestoreInterrupt')
+_86:
+	.dl	207
+	.dw	3
+	.dl	_87
+	.db	4,1
+	.db	'../../code/int/src/BrsHw.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_89,_88
+	.db	2
+	.dl	_34
+	.db	3
+	.db	'BrsHwRestoreInterrupt',0,1,128,3,6,10,132,128,4,1,1
+	.dl	_29,_91,_28
+	.db	2,145,0,4
+	.dl	_29,_91
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('BrsHwRestoreInterrupt')
+	.rseg	'.debug_abbrev'	debug cluster('BrsHwRestoreInterrupt')
+_87:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('BrsHwRestoreInterrupt')
+	.rseg	'.debug_line'	debug cluster('BrsHwRestoreInterrupt')
+_88:
+	.dl	_230-_229
+_229:
+	.dw	3
+	.dl	_232-_231
+_231:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/BrsHw.c',0,0,0,0,0
+_232:
+	.db	5,6,7,0,5,2
+	.dl	_29
+	.db	3,131,3,1,5,3,9
+	.dw	_233-_29
+	.db	1,5,86,7,9
+	.dw	_234-_233
+	.db	3,2,1,5,63,9
+	.dw	_235-_234
+	.db	1,5,30,9
+	.dw	_236-_235
+	.db	1,5,86,9
+	.dw	_237-_236
+	.db	1,5,3,9
+	.dw	_3-_237
+	.db	3,3,1,5,21,9
+	.dw	_238-_3
+	.db	1,5,6,9
+	.dw	_239-_238
+	.db	3,1,1,5,3,9
+	.dw	_240-_239
+	.db	1,5,21,7,9
+	.dw	_241-_240
+	.db	3,2,1,5,19,9
+	.dw	_242-_241
+	.db	1,5,15,9
+	.dw	_243-_242
+	.db	1,5,19,9
+	.dw	_244-_243
+	.db	1,5,1,9
+	.dw	_4-_244
+	.db	3,2,1,7,9
+	.dw	_91-_4
+	.db	0,1,1
+_230:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('BrsHwRestoreInterrupt')
+	.rseg	'.debug_ranges'	debug cluster('BrsHwRestoreInterrupt')
+_89:
+	.dl	-1,_90,0,_91-_90,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('BrsHwSoftwareResetECU')
+	.rseg	'.debug_info'	debug cluster('BrsHwSoftwareResetECU')
+_92:
+	.dl	207
+	.dw	3
+	.dl	_93
+	.db	4,1
+	.db	'../../code/int/src/BrsHw.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_95,_94
+	.db	2
+	.dl	_34
+	.db	3
+	.db	'BrsHwSoftwareResetECU',0,1,154,3,6,10,132,128,4,1,1
+	.dl	_31,_97,_30
+	.db	2,145,0,4
+	.dl	_31,_97
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('BrsHwSoftwareResetECU')
+	.rseg	'.debug_abbrev'	debug cluster('BrsHwSoftwareResetECU')
+_93:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('BrsHwSoftwareResetECU')
+	.rseg	'.debug_line'	debug cluster('BrsHwSoftwareResetECU')
+_94:
+	.dl	_246-_245
+_245:
+	.dw	3
+	.dl	_248-_247
+_247:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/BrsHw.c',0,0,0,0,0
+_248:
+	.db	5,24,7,0,5,2
+	.dl	_31
+	.db	3,155,3,1,5,11,9
+	.dw	_5-_31
+	.db	3,4,1,5,1,9
+	.dw	_97-_5
+	.db	3,4,0,1,1
+_246:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('BrsHwSoftwareResetECU')
+	.rseg	'.debug_ranges'	debug cluster('BrsHwSoftwareResetECU')
+_95:
+	.dl	-1,_96,0,_97-_96,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('BrsHwTime100NOP')
+	.rseg	'.debug_info'	debug cluster('BrsHwTime100NOP')
+_98:
+	.dl	201
+	.dw	3
+	.dl	_99
+	.db	4,1
+	.db	'../../code/int/src/BrsHw.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_101,_100
+	.db	2
+	.dl	_34
+	.db	3
+	.db	'BrsHwTime100NOP',0,1,180,3,6,10,132,128,4,1,1
+	.dl	_33,_103,_32
+	.db	2,145,0,4
+	.dl	_33,_103
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('BrsHwTime100NOP')
+	.rseg	'.debug_abbrev'	debug cluster('BrsHwTime100NOP')
+_99:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('BrsHwTime100NOP')
+	.rseg	'.debug_line'	debug cluster('BrsHwTime100NOP')
+_100:
+	.dl	_250-_249
+_249:
+	.dw	3
+	.dl	_252-_251
+_251:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/BrsHw.c',0,0,0,0,0
+_252:
+	.db	5,24,7,0,5,2
+	.dl	_33
+	.db	3,181,3,1,5,3,9
+	.dw	_253-_33
+	.db	3,2,1,5,18,9
+	.dw	_254-_253
+	.db	1,5,33,9
+	.dw	_255-_254
+	.db	1,5,48,9
+	.dw	_256-_255
+	.db	1,5,63,9
+	.dw	_257-_256
+	.db	1,5,78,9
+	.dw	_258-_257
+	.db	1,5,3,9
+	.dw	_259-_258
+	.db	3,1,1,5,18,9
+	.dw	_260-_259
+	.db	1,5,33,9
+	.dw	_261-_260
+	.db	1,5,48,9
+	.dw	_262-_261
+	.db	1,5,63,9
+	.dw	_263-_262
+	.db	1,5,78,9
+	.dw	_264-_263
+	.db	1,5,3,9
+	.dw	_265-_264
+	.db	3,1,1,5,18,9
+	.dw	_266-_265
+	.db	1,5,33,9
+	.dw	_267-_266
+	.db	1,5,48,9
+	.dw	_268-_267
+	.db	1,5,63,9
+	.dw	_269-_268
+	.db	1,5,78,9
+	.dw	_270-_269
+	.db	1,5,3,9
+	.dw	_271-_270
+	.db	3,1,1,5,18,9
+	.dw	_272-_271
+	.db	1,5,33,9
+	.dw	_273-_272
+	.db	1,5,48,9
+	.dw	_274-_273
+	.db	1,5,63,9
+	.dw	_275-_274
+	.db	1,5,78,9
+	.dw	_276-_275
+	.db	1,5,3,9
+	.dw	_277-_276
+	.db	3,1,1,5,18,9
+	.dw	_278-_277
+	.db	1,5,33,9
+	.dw	_279-_278
+	.db	1,5,48,9
+	.dw	_280-_279
+	.db	1,5,63,9
+	.dw	_281-_280
+	.db	1,5,78,9
+	.dw	_282-_281
+	.db	1,5,3,9
+	.dw	_283-_282
+	.db	3,1,1,5,18,9
+	.dw	_284-_283
+	.db	1,5,33,9
+	.dw	_285-_284
+	.db	1,5,48,9
+	.dw	_286-_285
+	.db	1,5,63,9
+	.dw	_287-_286
+	.db	1,5,78,9
+	.dw	_288-_287
+	.db	1,5,3,9
+	.dw	_289-_288
+	.db	3,1,1,5,18,9
+	.dw	_290-_289
+	.db	1,5,33,9
+	.dw	_291-_290
+	.db	1,5,48,9
+	.dw	_292-_291
+	.db	1,5,63,9
+	.dw	_293-_292
+	.db	1,5,78,9
+	.dw	_294-_293
+	.db	1,5,3,9
+	.dw	_295-_294
+	.db	3,1,1,5,18,9
+	.dw	_296-_295
+	.db	1,5,33,9
+	.dw	_297-_296
+	.db	1,5,48,9
+	.dw	_298-_297
+	.db	1,5,63,9
+	.dw	_299-_298
+	.db	1,5,78,9
+	.dw	_300-_299
+	.db	1,5,3,9
+	.dw	_301-_300
+	.db	3,1,1,5,18,9
+	.dw	_302-_301
+	.db	1,5,33,9
+	.dw	_303-_302
+	.db	1,5,48,9
+	.dw	_304-_303
+	.db	1,5,63,9
+	.dw	_305-_304
+	.db	1,5,78,9
+	.dw	_306-_305
+	.db	1,5,3,9
+	.dw	_307-_306
+	.db	3,1,1,5,18,9
+	.dw	_308-_307
+	.db	1,5,33,9
+	.dw	_309-_308
+	.db	1,5,48,9
+	.dw	_310-_309
+	.db	1,5,63,9
+	.dw	_311-_310
+	.db	1,5,78,9
+	.dw	_312-_311
+	.db	1,5,3,9
+	.dw	_313-_312
+	.db	3,1,1,5,18,9
+	.dw	_314-_313
+	.db	1,5,33,9
+	.dw	_315-_314
+	.db	1,5,48,9
+	.dw	_316-_315
+	.db	1,5,63,9
+	.dw	_317-_316
+	.db	1,5,78,9
+	.dw	_318-_317
+	.db	1,5,3,9
+	.dw	_319-_318
+	.db	3,1,1,5,18,9
+	.dw	_320-_319
+	.db	1,5,33,9
+	.dw	_321-_320
+	.db	1,5,48,9
+	.dw	_322-_321
+	.db	1,5,63,9
+	.dw	_323-_322
+	.db	1,5,78,9
+	.dw	_324-_323
+	.db	1,5,3,9
+	.dw	_325-_324
+	.db	3,1,1,5,18,9
+	.dw	_326-_325
+	.db	1,5,33,9
+	.dw	_327-_326
+	.db	1,5,48,9
+	.dw	_328-_327
+	.db	1,5,63,9
+	.dw	_329-_328
+	.db	1,5,78,9
+	.dw	_330-_329
+	.db	1,5,3,9
+	.dw	_331-_330
+	.db	3,1,1,5,18,9
+	.dw	_332-_331
+	.db	1,5,33,9
+	.dw	_333-_332
+	.db	1,5,48,9
+	.dw	_334-_333
+	.db	1,5,63,9
+	.dw	_335-_334
+	.db	1,5,78,9
+	.dw	_336-_335
+	.db	1,5,3,9
+	.dw	_337-_336
+	.db	3,1,1,5,18,9
+	.dw	_338-_337
+	.db	1,5,33,9
+	.dw	_339-_338
+	.db	1,5,48,9
+	.dw	_340-_339
+	.db	1,5,63,9
+	.dw	_341-_340
+	.db	1,5,78,9
+	.dw	_342-_341
+	.db	1,5,3,9
+	.dw	_343-_342
+	.db	3,1,1,5,18,9
+	.dw	_344-_343
+	.db	1,5,33,9
+	.dw	_345-_344
+	.db	1,5,48,9
+	.dw	_346-_345
+	.db	1,5,63,9
+	.dw	_347-_346
+	.db	1,5,78,9
+	.dw	_348-_347
+	.db	1,5,24,9
+	.dw	_349-_348
+	.db	3,2,1,5,1,9
+	.dw	_103-_349
+	.db	3,1,0,1,1
+_250:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('BrsHwTime100NOP')
+	.rseg	'.debug_ranges'	debug cluster('BrsHwTime100NOP')
+_101:
+	.dl	-1,_102,0,_103-_102,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('BrsHwTimeBaseInterrupt')
+	.rseg	'.debug_info'	debug cluster('BrsHwTimeBaseInterrupt')
+_104:
+	.dl	208
+	.dw	3
+	.dl	_105
+	.db	4,1
+	.db	'../../code/int/src/BrsHw.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_107,_106
+	.db	2
+	.dl	_34
+	.db	3
+	.db	'BrsHwTimeBaseInterrupt',0,1,158,2,31,10,196,129,4,1,1
+	.dl	_19,_109,_18
+	.db	2,145,0,4
+	.dl	_19,_109
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('BrsHwTimeBaseInterrupt')
+	.rseg	'.debug_abbrev'	debug cluster('BrsHwTimeBaseInterrupt')
+_105:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('BrsHwTimeBaseInterrupt')
+	.rseg	'.debug_line'	debug cluster('BrsHwTimeBaseInterrupt')
+_106:
+	.dl	_351-_350
+_350:
+	.dw	3
+	.dl	_353-_352
+_352:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/BrsHw.c',0,0,0,0,0
+_353:
+	.db	5,31,7,0,5,2
+	.dl	_19
+	.db	3,157,2,1,5,3,9
+	.dw	_354-_19
+	.db	3,2,1,5,30,9
+	.dw	_355-_354
+	.db	1,5,1,9
+	.dw	_356-_355
+	.db	3,1,1,9
+	.dw	_109-_356
+	.db	0,1,1
+_351:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('BrsHwTimeBaseInterrupt')
+	.rseg	'.debug_ranges'	debug cluster('BrsHwTimeBaseInterrupt')
+_107:
+	.dl	-1,_108,0,_109-_108,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('$cocofun_1')
+	.rseg	'.debug_info'	debug cluster('$cocofun_1')
+_110:
+	.dl	184
+	.dw	3
+	.dl	_111
+	.db	4,1
+	.db	'../../code/int/src/BrsHw.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_113,_112
+	.db	2
+	.dl	_34
+	.db	3
+	.db	'.cocofun_1',0,1,246,1,6,10,132,128,4
+	.dl	_17,_115,_16
+	.db	2,145,0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('$cocofun_1')
+	.rseg	'.debug_abbrev'	debug cluster('$cocofun_1')
+_111:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,0,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,17,1,18,1,64,6,42,9,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('$cocofun_1')
+	.rseg	'.debug_line'	debug cluster('$cocofun_1')
+_112:
+	.dl	_358-_357
+_357:
+	.dw	3
+	.dl	_360-_359
+_359:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/BrsHw.c',0,0,0,0,0
+_360:
+	.db	5,23,7,0,5,2
+	.dl	_17
+	.db	3,134,2,1,5,16,9
+	.dw	_361-_17
+	.db	3,1,1,5,26,9
+	.dw	_362-_361
+	.db	1,9
+	.dw	_115-_362
+	.db	0,1,1,5,24,0,5,2
+	.dl	_17
+	.db	3,135,2,1,5,16,9
+	.dw	_361-_17
+	.db	3,1,1,5,29,9
+	.dw	_362-_361
+	.db	1,5,26,9
+	.dw	_363-_362
+	.db	3,127,1,7,9
+	.dw	_115-_363
+	.db	0,1,1,5,27,0,5,2
+	.dl	_17
+	.db	3,136,2,1,5,16,9
+	.dw	_361-_17
+	.db	3,1,1,5,24,9
+	.dw	_362-_361
+	.db	1,5,26,9
+	.dw	_363-_362
+	.db	3,126,1,7,9
+	.dw	_115-_363
+	.db	0,1,1
+_358:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('$cocofun_1')
+	.rseg	'.debug_ranges'	debug cluster('$cocofun_1')
+_113:
+	.dl	-1,_114,0,_115-_114,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('$cocofun_2')
+	.rseg	'.debug_info'	debug cluster('$cocofun_2')
+_116:
+	.dl	184
+	.dw	3
+	.dl	_117
+	.db	4,1
+	.db	'../../code/int/src/BrsHw.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_119,_118
+	.db	2
+	.dl	_34
+	.db	3
+	.db	'.cocofun_2',0,1,246,1,6,10,132,128,4
+	.dl	_15,_121,_14
+	.db	2,145,0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('$cocofun_2')
+	.rseg	'.debug_abbrev'	debug cluster('$cocofun_2')
+_117:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,0,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,17,1,18,1,64,6,42,9,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('$cocofun_2')
+	.rseg	'.debug_line'	debug cluster('$cocofun_2')
+_118:
+	.dl	_365-_364
+_364:
+	.dw	3
+	.dl	_367-_366
+_366:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/BrsHw.c',0,0,0,0,0
+_367:
+	.db	5,23,7,0,5,2
+	.dl	_15
+	.db	3,250,1,1,5,21,9
+	.dw	_368-_15
+	.db	1,9
+	.dw	_121-_368
+	.db	0,1,1,5,19,0,5,2
+	.dl	_15
+	.db	3,191,2,1,5,17,9
+	.dw	_368-_15
+	.db	1,9
+	.dw	_121-_368
+	.db	0,1,1
+_365:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('$cocofun_2')
+	.rseg	'.debug_ranges'	debug cluster('$cocofun_2')
+_119:
+	.dl	-1,_120,0,_121-_120,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('kBrsHwMainVersion')
+	.rseg	'.debug_info'	debug cluster('kBrsHwMainVersion')
+_122:
+	.dl	181
+	.dw	3
+	.dl	_123
+	.db	4,1
+	.db	'../../code/int/src/BrsHw.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1,2
+	.dl	_34
+	.db	3
+	.db	'kBrsHwMainVersion',0,4,143,1,13,8
+	.dl	_135
+	.db	1,10,3
+	.dl	_kBrsHwMainVersion
+	.db	56,8,020H,36,33,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('kBrsHwMainVersion')
+	.rseg	'.debug_abbrev'	debug cluster('kBrsHwMainVersion')
+_123:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,51,15,73,16,63
+	.db	12,2,9,0,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('kBrsHwSubVersion')
+	.rseg	'.debug_info'	debug cluster('kBrsHwSubVersion')
+_124:
+	.dl	180
+	.dw	3
+	.dl	_125
+	.db	4,1
+	.db	'../../code/int/src/BrsHw.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1,2
+	.dl	_34
+	.db	3
+	.db	'kBrsHwSubVersion',0,4,144,1,13,8
+	.dl	_136
+	.db	1,10,3
+	.dl	_kBrsHwSubVersion
+	.db	56,8,020H,36,33,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('kBrsHwSubVersion')
+	.rseg	'.debug_abbrev'	debug cluster('kBrsHwSubVersion')
+_125:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,51,15,73,16,63
+	.db	12,2,9,0,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('kBrsHwBugfixVersion')
+	.rseg	'.debug_info'	debug cluster('kBrsHwBugfixVersion')
+_126:
+	.dl	183
+	.dw	3
+	.dl	_127
+	.db	4,1
+	.db	'../../code/int/src/BrsHw.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1,2
+	.dl	_34
+	.db	3
+	.db	'kBrsHwBugfixVersion',0,4,145,1,13,8
+	.dl	_137
+	.db	1,10,3
+	.dl	_kBrsHwBugfixVersion
+	.db	56,8,020H,36,33,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('kBrsHwBugfixVersion')
+	.rseg	'.debug_abbrev'	debug cluster('kBrsHwBugfixVersion')
+_127:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,51,15,73,16,63
+	.db	12,2,9,0,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('bBrsHwIntDiCounter')
+	.rseg	'.debug_info'	debug cluster('bBrsHwIntDiCounter')
+_128:
+	.dl	181
+	.dw	3
+	.dl	_129
+	.db	4,1
+	.db	'../../code/int/src/BrsHw.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1,2
+	.dl	_34
+	.db	3
+	.db	'bBrsHwIntDiCounter',0,4,157,1,14,8
+	.dl	_138
+	.db	10,3
+	.dl	_bBrsHwIntDiCounter
+	.db	56,8,020H,36,33,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('bBrsHwIntDiCounter')
+	.rseg	'.debug_abbrev'	debug cluster('bBrsHwIntDiCounter')
+_129:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,51,15,73,16,2,9
+	.db	0,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('wBrsHwSavedPSW')
+	.rseg	'.debug_info'	debug cluster('wBrsHwSavedPSW')
+_130:
+	.dl	177
+	.dw	3
+	.dl	_131
+	.db	4,1
+	.db	'../../code/int/src/BrsHw.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1,2
+	.dl	_34
+	.db	3
+	.db	'wBrsHwSavedPSW',0,4,164,1,15,8
+	.dl	_133
+	.db	10,3
+	.dl	_wBrsHwSavedPSW
+	.db	56,8,020H,36,33,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('wBrsHwSavedPSW')
+	.rseg	'.debug_abbrev'	debug cluster('wBrsHwSavedPSW')
+_131:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,51,15,73,16,2,9
+	.db	0,0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('$cocofun_1')
+	.rseg	'.debug_loc'	debug cluster('$cocofun_1')
+_16:
+	.dl	-1,_17,0,_115-_17
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('$cocofun_2')
+	.rseg	'.debug_loc'	debug cluster('$cocofun_2')
+_14:
+	.dl	-1,_15,0,_121-_15
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('BrsHwConfigureInterruptsAtPowerOn')
+	.rseg	'.debug_loc'	debug cluster('BrsHwConfigureInterruptsAtPowerOn')
+_24:
+	.dl	-1,_25,0,_79-_25
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('BrsHwDisableInterrupt')
+	.rseg	'.debug_loc'	debug cluster('BrsHwDisableInterrupt')
+_26:
+	.dl	-1,_27,0,_85-_27
+	.dw	2
+	.db	123,0
+	.dl	0,0
+_134:
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('BrsHwDisableInterruptAtPowerOn')
+	.rseg	'.debug_loc'	debug cluster('BrsHwDisableInterruptAtPowerOn')
+_20:
+	.dl	-1,_21,0,_67-_21
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('BrsHwEnableInterruptAtPowerOn')
+	.rseg	'.debug_loc'	debug cluster('BrsHwEnableInterruptAtPowerOn')
+_22:
+	.dl	-1,_23,0,_73-_23
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('BrsHwPllInitPowerOn')
+	.rseg	'.debug_loc'	debug cluster('BrsHwPllInitPowerOn')
+_8:
+	.dl	-1,_9,0,_49-_9
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('BrsHwPortInitPowerOn')
+	.rseg	'.debug_loc'	debug cluster('BrsHwPortInitPowerOn')
+_10:
+	.dl	-1,_11,0,_55-_11
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('BrsHwRestoreInterrupt')
+	.rseg	'.debug_loc'	debug cluster('BrsHwRestoreInterrupt')
+_28:
+	.dl	-1,_29,0,_91-_29
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('BrsHwSoftwareResetECU')
+	.rseg	'.debug_loc'	debug cluster('BrsHwSoftwareResetECU')
+_30:
+	.dl	-1,_31,0,_97-_31
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('BrsHwTime100NOP')
+	.rseg	'.debug_loc'	debug cluster('BrsHwTime100NOP')
+_32:
+	.dl	-1,_33,0,_103-_33
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('BrsHwTimeBaseInitPowerOn')
+	.rseg	'.debug_loc'	debug cluster('BrsHwTimeBaseInitPowerOn')
+_12:
+	.dl	-1,_13,0,_61-_13
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('BrsHwTimeBaseInterrupt')
+	.rseg	'.debug_loc'	debug cluster('BrsHwTimeBaseInterrupt')
+_18:
+	.dl	-1,_19,0,_139-_19
+	.dw	2
+	.db	123,0
+	.dl	_139-_19,_140-_19
+	.dw	2
+	.db	123,127
+	.dl	_140-_19,_141-_19
+	.dw	2
+	.db	123,126
+	.dl	_141-_19,_142-_19
+	.dw	2
+	.db	123,125
+	.dl	_142-_19,_143-_19
+	.dw	2
+	.db	123,124
+	.dl	_143-_19,_144-_19
+	.dw	2
+	.db	123,125
+	.dl	_144-_19,_145-_19
+	.dw	2
+	.db	123,126
+	.dl	_145-_19,_146-_19
+	.dw	2
+	.db	123,127
+	.dl	_146-_19,_109-_19
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('BrsHwWatchdogInitPowerOn')
+	.rseg	'.debug_loc'	debug cluster('BrsHwWatchdogInitPowerOn')
+_6:
+	.dl	-1,_7,0,_43-_7
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_frame'	.segment	debug
+	.rseg	'.debug_frame'	debug
+_369:
+	.dl	64
+	.dl	-1
+	.db	3,0,1,1,145,1,15,10,123,0,54,8,020H,36,34,9,-2,34,22,145,1,14,49,34,148,02H,18,56,37,22,8,0ffH,26,56,36
+	.db	34,8,10,22,11,3,19,123,126,8,12,8,16,8,17,8,18,8,19,8,144,1,0,0,0
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('BrsHwWatchdogInitPowerOn')
+	.rseg	'.debug_frame'	debug cluster('BrsHwWatchdogInitPowerOn')
+	.dl	32
+	.dl	_369,_7,_43-_7
+	.db	8,7,8,8,8,9,8,0,8,1,8,2,8,3,8,4,8,5,8,6
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('BrsHwPllInitPowerOn')
+	.rseg	'.debug_frame'	debug cluster('BrsHwPllInitPowerOn')
+	.dl	32
+	.dl	_369,_9,_49-_9
+	.db	8,7,8,8,8,9,8,0,8,1,8,2,8,3,8,4,8,5,8,6
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('BrsHwPortInitPowerOn')
+	.rseg	'.debug_frame'	debug cluster('BrsHwPortInitPowerOn')
+	.dl	12
+	.dl	_369,_11,_55-_11
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('BrsHwTimeBaseInitPowerOn')
+	.rseg	'.debug_frame'	debug cluster('BrsHwTimeBaseInitPowerOn')
+	.dl	12
+	.dl	_369,_13,_61-_13
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('$cocofun_2')
+	.rseg	'.debug_frame'	debug cluster('$cocofun_2')
+	.dl	32
+	.dl	_369,_15,_121-_15
+	.db	8,7,8,8,8,9,8,0,8,1,8,2,8,3,8,4,8,5,8,6
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('$cocofun_1')
+	.rseg	'.debug_frame'	debug cluster('$cocofun_1')
+	.dl	32
+	.dl	_369,_17,_115-_17
+	.db	8,7,8,8,8,9,8,0,8,1,8,2,8,3,8,4,8,5,8,6
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('BrsHwDisableInterruptAtPowerOn')
+	.rseg	'.debug_frame'	debug cluster('BrsHwDisableInterruptAtPowerOn')
+	.dl	24
+	.dl	_369,_21,_67-_21
+	.db	8,9,8,0,8,1,8,2,8,3,8,4
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('BrsHwEnableInterruptAtPowerOn')
+	.rseg	'.debug_frame'	debug cluster('BrsHwEnableInterruptAtPowerOn')
+	.dl	24
+	.dl	_369,_23,_73-_23
+	.db	8,9,8,0,8,1,8,2,8,3,8,4
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('BrsHwConfigureInterruptsAtPowerOn')
+	.rseg	'.debug_frame'	debug cluster('BrsHwConfigureInterruptsAtPowerOn')
+	.dl	32
+	.dl	_369,_25,_79-_25
+	.db	8,7,8,8,8,9,8,0,8,1,8,2,8,3,8,4,8,5,8,6
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('BrsHwDisableInterrupt')
+	.rseg	'.debug_frame'	debug cluster('BrsHwDisableInterrupt')
+	.dl	20
+	.dl	_369,_27,_85-_27
+	.db	8,9,8,2,8,3,8,4
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('BrsHwRestoreInterrupt')
+	.rseg	'.debug_frame'	debug cluster('BrsHwRestoreInterrupt')
+	.dl	12
+	.dl	_369,_29,_91-_29
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('BrsHwSoftwareResetECU')
+	.rseg	'.debug_frame'	debug cluster('BrsHwSoftwareResetECU')
+	.dl	20
+	.dl	_369,_31,_97-_31
+	.db	8,9,8,2,8,3,8,4
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('BrsHwTime100NOP')
+	.rseg	'.debug_frame'	debug cluster('BrsHwTime100NOP')
+	.dl	12
+	.dl	_369,_33,_103-_33
+	; End of section
+
+'.debug_frame'	.segment	debug
+	.rseg	'.debug_frame'	debug
+_370:
+	.dl	84
+	.dl	-1
+	.db	3,0,1,1,145,1,15,10,123,0,54,8,020H,36,34,9,-2,34,22,145,1,14,49,34,148,02H,18,56,37,22,8,0ffH,26,56,36
+	.db	34,8,7,8,8,8,9,8,0,8,1,8,2,8,3,8,4,8,5,8,6,8,10,22,11,3,19,123,126,8,12,8,16,8,17,8,18,8,19,8,144,1,0
+	.db	0,0
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('BrsHwTimeBaseInterrupt')
+	.rseg	'.debug_frame'	debug cluster('BrsHwTimeBaseInterrupt')
+	.dl	204
+	.dl	_370,_19,_109-_19
+	.db	4
+	.dl	_139-_19
+	.db	15,10,123,0,54,8,020H,36,34,9,-3,34,22,11,3,19,123,125,136,6,4
+	.dl	_140-_139
+	.db	15,10,123,0,54,8,020H,36,34,9,-4,34,22,11,3,19,123,124,4
+	.dl	_141-_140
+	.db	15,10,123,0,54,8,020H,36,34,9,-5,34,22,11,3,19,123,123,4
+	.dl	_142-_141
+	.db	15,10,123,0,54,8,020H,36,34,9,-6,34,22,11,3,19,123,122,138,3,4
+	.dl	_143-_142
+	.db	15,10,123,0,54,8,020H,36,34,9,-5,34,22,11,3,19,123,123,202,4
+	.dl	_144-_143
+	.db	15,10,123,0,54,8,020H,36,34,9,-4,34,22,11,3,19,123,124,4
+	.dl	_145-_144
+	.db	15,10,123,0,54,8,020H,36,34,9,-3,34,22,11,3,19,123,125,4
+	.dl	_146-_145
+	.db	15,10,123,0,54,8,020H,36,34,9,-2,34,22,11,3,19,123,126,200,0,0
+	; End of section
+
+	; Module end
+	.end

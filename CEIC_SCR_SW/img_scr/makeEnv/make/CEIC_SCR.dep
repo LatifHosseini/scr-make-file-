@@ -1,0 +1,141 @@
+# this file is generated automatically by MakeSupport
+
+obj/BrsAsrMain.o: ../../code/Stubs/BrsAsrMain.c Makefile.config  \
+ ../../code/Stubs/BrsAsrMain.h ../../code/Stubs/BrsCfg.h \
+ ../../code/Stubs/Std_Types.h ../../code/Stubs/Platform_Types.h \
+ ../../code/int/inc/Compiler.h ../../code/stubs/Compiler_Cfg.h \
+ ../../code/Stubs/VGenEnableSwitches.h ../../code/Stubs/Os.h \
+ ../../code/int/inc/BrsHw.h ../../code/stubs/BrsCfg.h \
+ ../../code/stubs/Std_Types.h ../../code/Stubs/EcuM.h \
+ ../../code/int/inc/ScrMain.h ../../code/Stubs/MemMap.h
+obj/EcuM.o: ../../code/Stubs/EcuM.c Makefile.config  ../../code/Stubs/BrsCfg.h \
+ ../../code/Stubs/Std_Types.h ../../code/Stubs/Platform_Types.h \
+ ../../code/int/inc/Compiler.h ../../code/stubs/Compiler_Cfg.h \
+ ../../code/Stubs/VGenEnableSwitches.h ../../code/Stubs/EcuM.h \
+ ../../code/Stubs/Os.h ../../code/int/inc/BrsHw.h \
+ ../../code/stubs/BrsCfg.h ../../code/stubs/Std_Types.h \
+ ../../code/Stubs/Rte_Main.h
+obj/Os.o: ../../code/Stubs/Os.c Makefile.config  ../../code/Stubs/Os.h \
+ ../../code/int/inc/BrsHw.h ../../code/stubs/BrsCfg.h \
+ ../../code/stubs/Std_Types.h ../../code/stubs/Platform_Types.h \
+ ../../code/int/inc/Compiler.h ../../code/stubs/Compiler_Cfg.h \
+ ../../code/stubs/VGenEnableSwitches.h ../../code/Stubs/BrsAsrMain.h \
+ ../../code/Stubs/BrsCfg.h ../../code/Stubs/EcuM.h
+obj/Rte.o: ../../code/Stubs/Rte.c Makefile.config  ../../code/Stubs/BrsCfg.h \
+ ../../code/Stubs/Std_Types.h ../../code/Stubs/Platform_Types.h \
+ ../../code/int/inc/Compiler.h ../../code/stubs/Compiler_Cfg.h \
+ ../../code/Stubs/VGenEnableSwitches.h ../../code/Stubs/Rte_Main.h \
+ ../../code/Stubs/Os.h ../../code/int/inc/BrsHw.h \
+ ../../code/stubs/BrsCfg.h ../../code/stubs/Std_Types.h \
+ ../../code/Stubs/BrsAsrMain.h ../../code/Stubs/EcuM.h
+obj/Stubs.o: ../../code/Stubs/Stubs.c Makefile.config  ../../code/Stubs/Std_Types.h \
+ ../../code/Stubs/Platform_Types.h ../../code/int/inc/Compiler.h \
+ ../../code/stubs/Compiler_Cfg.h ../../code/int/inc/BrsHw.h \
+ ../../code/stubs/BrsCfg.h ../../code/stubs/Std_Types.h \
+ ../../code/stubs/VGenEnableSwitches.h ../../code/Stubs/SchM.h
+obj/BrsHw.o: ../../code/int/src/BrsHw.c Makefile.config  ../../code/int/inc/BrsHw.h \
+ ../../code/stubs/BrsCfg.h ../../code/stubs/Std_Types.h \
+ ../../code/stubs/Platform_Types.h ../../code/int/inc/Compiler.h \
+ ../../code/stubs/Compiler_Cfg.h ../../code/stubs/VGenEnableSwitches.h \
+ ../../code/int/inc/Ifx_reg.h ../../code/int/inc/IfxScr_reg.h \
+ ../../code/int/inc/IfxScr_regdef.h ../../code/int/inc/Ifx_TypesReg.h \
+ ../../code/int/inc/IfxScr_bf.h ../../code/int/inc/ScrDioPort.h \
+ ../../code/int/inc/ScrWakeUpDetection.h ../../code/stubs/BrsMain.h \
+ ../../code/stubs/BrsAsrMain.h ../../code/stubs/Os.h \
+ ../../code/stubs/EcuM.h
+obj/ScrDioPort.o: ../../code/int/src/ScrDioPort.c Makefile.config  \
+ ../../code/int/inc/ScrDioPort.h ../../code/stubs/Std_Types.h \
+ ../../code/stubs/Platform_Types.h ../../code/int/inc/Compiler.h \
+ ../../code/stubs/Compiler_Cfg.h ../../code/int/inc/BrsHw.h \
+ ../../code/stubs/BrsCfg.h ../../code/stubs/VGenEnableSwitches.h \
+ ../../code/int/inc/Ifx_reg.h ../../code/int/inc/IfxScr_reg.h \
+ ../../code/int/inc/IfxScr_regdef.h ../../code/int/inc/Ifx_TypesReg.h \
+ ../../code/int/inc/IfxScr_bf.h
+obj/ScrEcuResetHndl.o: ../../code/int/src/ScrEcuResetHndl.c Makefile.config  \
+ ../../code/int/inc/BrsHw.h ../../code/stubs/BrsCfg.h \
+ ../../code/stubs/Std_Types.h ../../code/stubs/Platform_Types.h \
+ ../../code/int/inc/Compiler.h ../../code/stubs/Compiler_Cfg.h \
+ ../../code/stubs/VGenEnableSwitches.h ../../code/int/inc/Ifx_reg.h \
+ ../../code/int/inc/IfxScr_reg.h ../../code/int/inc/IfxScr_regdef.h \
+ ../../code/int/inc/Ifx_TypesReg.h ../../code/int/inc/IfxScr_bf.h \
+ ../../code/int/inc/ScrTricoreIf.h ../../code/int/inc/TricoreScrIf.h \
+ ../../code/int/inc/ScrWakeupEcu.h \
+ ../../code/int/inc/ScrEcuResetHndl.h
+obj/ScrGenEthWULPulse.o: ../../code/int/src/ScrGenEthWULPulse.c Makefile.config  \
+ ../../code/int/inc/BrsHw.h ../../code/stubs/BrsCfg.h \
+ ../../code/stubs/Std_Types.h ../../code/stubs/Platform_Types.h \
+ ../../code/int/inc/Compiler.h ../../code/stubs/Compiler_Cfg.h \
+ ../../code/stubs/VGenEnableSwitches.h ../../code/int/inc/Ifx_reg.h \
+ ../../code/int/inc/IfxScr_reg.h ../../code/int/inc/IfxScr_regdef.h \
+ ../../code/int/inc/Ifx_TypesReg.h ../../code/int/inc/IfxScr_bf.h \
+ ../../code/int/inc/ScrTricoreIf.h ../../code/int/inc/TricoreScrIf.h \
+ ../../code/int/inc/ScrDioPort.h \
+ ../../code/int/inc/ScrWakeUpDetection.h \
+ ../../code/int/inc/ScrGenEthWULPulse.h \
+ ../../code/int/inc/ScrWakeupEcu.h
+obj/ScrMain.o: ../../code/int/src/ScrMain.c Makefile.config  ../../code/int/inc/ScrMain.h \
+ ../../code/int/inc/BrsHw.h ../../code/stubs/BrsCfg.h \
+ ../../code/stubs/Std_Types.h ../../code/stubs/Platform_Types.h \
+ ../../code/int/inc/Compiler.h ../../code/stubs/Compiler_Cfg.h \
+ ../../code/stubs/VGenEnableSwitches.h \
+ ../../code/int/inc/ScrTricoreIf.h ../../code/int/inc/TricoreScrIf.h \
+ ../../code/int/inc/ScrWakeupEcu.h ../../code/int/inc/ScrWakeUpHndl.h \
+ ../../code/int/inc/ScrStateMngmt.h \
+ ../../code/int/inc/ScrEcuResetHndl.h \
+ ../../code/int/inc/ScrGenEthWULPulse.h
+obj/ScrStateMngmt.o: ../../code/int/src/ScrStateMngmt.c Makefile.config  \
+ ../../code/int/inc/BrsHw.h ../../code/stubs/BrsCfg.h \
+ ../../code/stubs/Std_Types.h ../../code/stubs/Platform_Types.h \
+ ../../code/int/inc/Compiler.h ../../code/stubs/Compiler_Cfg.h \
+ ../../code/stubs/VGenEnableSwitches.h ../../code/int/inc/Ifx_reg.h \
+ ../../code/int/inc/IfxScr_reg.h ../../code/int/inc/IfxScr_regdef.h \
+ ../../code/int/inc/Ifx_TypesReg.h ../../code/int/inc/IfxScr_bf.h \
+ ../../code/int/inc/ScrTricoreIf.h ../../code/int/inc/TricoreScrIf.h \
+ ../../code/int/inc/ScrWakeupHndl.h ../../code/int/inc/ScrStateMngmt.h \
+ ../../code/int/inc/ScrGenEthWULPulse.h \
+ ../../code/int/inc/ScrWakeUpDetection.h \
+ ../../code/int/inc/ScrDioPort.h ../../code/int/inc/ScrWakeupEcu.h
+obj/ScrWakeUpDetection.o: ../../code/int/src/ScrWakeUpDetection.c Makefile.config  \
+ ../../code/int/inc/BrsHw.h ../../code/stubs/BrsCfg.h \
+ ../../code/stubs/Std_Types.h ../../code/stubs/Platform_Types.h \
+ ../../code/int/inc/Compiler.h ../../code/stubs/Compiler_Cfg.h \
+ ../../code/stubs/VGenEnableSwitches.h ../../code/int/inc/Ifx_reg.h \
+ ../../code/int/inc/IfxScr_reg.h ../../code/int/inc/IfxScr_regdef.h \
+ ../../code/int/inc/Ifx_TypesReg.h ../../code/int/inc/IfxScr_bf.h \
+ ../../code/int/inc/ScrTricoreIf.h ../../code/int/inc/TricoreScrIf.h \
+ ../../code/int/inc/ScrWakeupHndl.h ../../code/int/inc/ScrWakeupEcu.h \
+ ../../code/int/inc/ScrWakeUpDetection.h \
+ ../../code/int/inc/ScrDioPort.h ../../code/int/inc/ScrStateMngmt.h
+obj/ScrWakeupEcu.o: ../../code/int/src/ScrWakeupEcu.c Makefile.config  \
+ ../../code/int/inc/BrsHw.h ../../code/stubs/BrsCfg.h \
+ ../../code/stubs/Std_Types.h ../../code/stubs/Platform_Types.h \
+ ../../code/int/inc/Compiler.h ../../code/stubs/Compiler_Cfg.h \
+ ../../code/stubs/VGenEnableSwitches.h ../../code/int/inc/Ifx_reg.h \
+ ../../code/int/inc/IfxScr_reg.h ../../code/int/inc/IfxScr_regdef.h \
+ ../../code/int/inc/Ifx_TypesReg.h ../../code/int/inc/IfxScr_bf.h \
+ ../../code/int/inc/ScrDioPort.h ../../code/int/inc/ScrWakeupEcu.h \
+ ../../code/int/inc/ScrTricoreIf.h ../../code/int/inc/TricoreScrIf.h \
+ ../../code/int/inc/ScrGenEthWULPulse.h \
+ ../../code/int/inc/ScrWakeUpDetection.h
+obj/ScrWakeupHndl.o: ../../code/int/src/ScrWakeupHndl.c Makefile.config  \
+ ../../code/int/inc/BrsHw.h ../../code/stubs/BrsCfg.h \
+ ../../code/stubs/Std_Types.h ../../code/stubs/Platform_Types.h \
+ ../../code/int/inc/Compiler.h ../../code/stubs/Compiler_Cfg.h \
+ ../../code/stubs/VGenEnableSwitches.h ../../code/int/inc/Ifx_reg.h \
+ ../../code/int/inc/IfxScr_reg.h ../../code/int/inc/IfxScr_regdef.h \
+ ../../code/int/inc/Ifx_TypesReg.h ../../code/int/inc/IfxScr_bf.h \
+ ../../code/int/inc/ScrTricoreIf.h ../../code/int/inc/TricoreScrIf.h \
+ ../../code/int/inc/ScrWakeupEcu.h ../../code/int/inc/ScrStateMngmt.h \
+ ../../code/int/inc/ScrWakeupHndl.h \
+ ../../code/int/inc/ScrGenEthWULPulse.h \
+ ../../code/int/inc/ScrDioPort.h
+
+# Manual file dependencies
+             
+
+# Assembler file dependencies
+
+
+
+
+lib/libCEIC_SCR.lib:  

@@ -1,0 +1,128 @@
+<file name="ScrWakeupEcu.c">
+  <function name="ScrEthWupCallback" linkage="external">
+    <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="71" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="73" column="3" />
+    </block>
+    <block lfreq="0.45">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="75" column="33" />
+    </block>
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="77" column="3" />
+    </block>
+    <block lfreq="0.45">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="79" column="33" />
+    </block>
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="82" column="35" />
+    </block>
+    <call callee="DioPortWrite" lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="83" column="16" />
+    </call>
+  </function>
+  <function name="ScrCanWupCallback" linkage="external">
+    <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="85" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="87" column="30" />
+    </block>
+  </function>
+  <function name="ScrFrWupCallback" linkage="external">
+    <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="94" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="96" column="29" />
+    </block>
+  </function>
+  <function name="ScrLinWupCallback" linkage="external">
+    <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="103" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="105" column="30" />
+    </block>
+  </function>
+  <function name="ScrWupCallback" linkage="external">
+    <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="112" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="115" column="35" />
+    </block>
+    <call callee="DioPortWrite" lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="116" column="16" />
+    </call>
+  </function>
+  <function name="ScrKeepSwitchAwake" linkage="external">
+    <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="118" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="120" column="45" />
+    </block>
+    <call callee="DioPortWrite" lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="121" column="16" />
+    </call>
+  </function>
+  <function name="ScrHandleWakeup" linkage="internal">
+    <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="135" column="13" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="139" column="27" />
+    </block>
+    <call callee="WupGetData" lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="139" column="25" />
+    </call>
+    <block lfreq="0.45">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="141" column="64" />
+    </block>
+    <block lfreq="0.26">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="143" column="33" />
+    </block>
+    <block lfreq="0.12">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="149" column="21" />
+    </block>
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="154" column="7" />
+    </block>
+    <block lfreq="0.45">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="154" column="64" />
+    </block>
+    <block lfreq="0.26">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="156" column="33" />
+    </block>
+    <block lfreq="0.12">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="162" column="21" />
+    </block>
+  </function>
+  <function name="ScrResetPmicHandler" linkage="external">
+    <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="178" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="180" column="25" />
+    </block>
+    <call callee="DioPortWrite" lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="181" column="15" />
+    </call>
+  </function>
+  <function name="ScrHandlePmic" linkage="internal">
+    <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="194" column="13" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="197" column="3" />
+    </block>
+    <block lfreq="0.57">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="199" column="24" />
+    </block>
+    <call callee="DioPortWrite" lfreq="0.57">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="200" column="18" />
+    </call>
+    <block lfreq="0.43">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="205" column="40" />
+    </block>
+    <call callee="DioPortWrite" lfreq="0.43">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="205" column="18" />
+    </call>
+  </function>
+  <function name="ScrWakeupEcuTask50" linkage="external">
+    <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="242" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="244" column="21" />
+    </block>
+    <call callee="ScrHandleWakeup" lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="244" column="19" />
+    </call>
+    <call callee="ScrHandlePmic" lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupEcu.c" line="245" column="17" />
+    </call>
+  </function>
+</file>

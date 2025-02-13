@@ -1,0 +1,86 @@
+<file name="BrsAsrMain.c">
+  <function name="BrsAsrMainInit" linkage="external">
+    <srcPos file="../../code/Stubs/BrsAsrMain.c" line="267" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/Stubs/BrsAsrMain.c" line="288" column="25" />
+    </block>
+    <call callee="BrsHwPortInitPowerOn" lfreq="1.00">
+      <srcPos file="../../code/Stubs/BrsAsrMain.c" line="288" column="23" />
+    </call>
+    <call callee="BrsHwTimeBaseInitPowerOn" lfreq="1.00">
+      <srcPos file="../../code/Stubs/BrsAsrMain.c" line="304" column="27" />
+    </call>
+  </function>
+  <function name="Default_Init_Taskfunc" linkage="external">
+    <srcPos file="../../code/Stubs/BrsAsrMain.c" line="336" column="1" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/Stubs/BrsAsrMain.c" line="349" column="20" />
+    </block>
+    <call callee="EcuM_StartupTwo" lfreq="1.00">
+      <srcPos file="../../code/Stubs/BrsAsrMain.c" line="349" column="18" />
+    </call>
+  </function>
+  <function name="BrsAsrMainCyclic1ms" linkage="internal">
+    <srcPos file="../../code/Stubs/BrsAsrMain.c" line="372" column="13" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/Stubs/BrsAsrMain.c" line="374" column="27" />
+    </block>
+    <call callee="Scr1msTask" lfreq="1.00">
+      <srcPos file="../../code/Stubs/BrsAsrMain.c" line="384" column="14" />
+    </call>
+    <block lfreq="0.22">
+      <srcPos file="../../code/Stubs/BrsAsrMain.c" line="388" column="19" />
+    </block>
+    <call callee="Scr10msTask" lfreq="0.22">
+      <srcPos file="../../code/Stubs/BrsAsrMain.c" line="388" column="17" />
+    </call>
+    <block lfreq="1.00">
+      <srcPos file="../../code/Stubs/BrsAsrMain.c" line="395" column="3" />
+    </block>
+    <block lfreq="0.19">
+      <srcPos file="../../code/Stubs/BrsAsrMain.c" line="397" column="19" />
+    </block>
+    <call callee="Scr50msTask" lfreq="0.19">
+      <srcPos file="../../code/Stubs/BrsAsrMain.c" line="397" column="17" />
+    </call>
+  </function>
+  <function name="BrsAsrMainTaskfunc" linkage="external">
+    <srcPos file="../../code/Stubs/BrsAsrMain.c" line="430" column="1" />
+    <block lfreq="1000000028.28">
+      <srcPos file="../../code/Stubs/BrsAsrMain.c" line="447" column="5" />
+    </block>
+    <block lfreq="120000003.39">
+      <srcPos file="../../code/Stubs/BrsAsrMain.c" line="449" column="39" />
+    </block>
+    <call callee="BrsAsrMainCyclic1ms" lfreq="120000003.39">
+      <srcPos file="../../code/Stubs/BrsAsrMain.c" line="452" column="26" />
+    </call>
+  </function>
+  <function name="BrsMainExceptionHandler" linkage="external">
+    <srcPos file="../../code/Stubs/BrsAsrMain.c" line="507" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/Stubs/BrsAsrMain.c" line="524" column="24" />
+    </block>
+    <call callee="BrsHwDisableInterrupt" lfreq="1.00">
+      <srcPos file="../../code/Stubs/BrsAsrMain.c" line="525" column="24" />
+    </call>
+    <block lfreq="8.33">
+      <srcPos file="../../code/Stubs/BrsAsrMain.c" line="526" column="32" />
+    </block>
+  </function>
+  <function name="main" linkage="external">
+    <srcPos file="../../code/Stubs/BrsAsrMain.c" line="546" column="5" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/Stubs/BrsAsrMain.c" line="549" column="35" />
+    </block>
+    <call callee="BrsHwDisableInterruptAtPowerOn" lfreq="1.00">
+      <srcPos file="../../code/Stubs/BrsAsrMain.c" line="549" column="33" />
+    </call>
+    <call callee="BrsAsrMainInit" lfreq="1.00">
+      <srcPos file="../../code/Stubs/BrsAsrMain.c" line="552" column="17" />
+    </call>
+    <call callee="EcuM_Init" lfreq="1.00">
+      <srcPos file="../../code/Stubs/BrsAsrMain.c" line="554" column="12" />
+    </call>
+  </function>
+</file>

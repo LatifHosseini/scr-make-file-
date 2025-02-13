@@ -1,0 +1,44 @@
+<file name="ScrEcuResetHndl.c">
+  <function name="ScrCheckEcuResetRequest" linkage="external">
+    <srcPos file="../../code/int/src/ScrEcuResetHndl.c" line="61" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrEcuResetHndl.c" line="63" column="3" />
+    </block>
+    <block lfreq="0.19">
+      <srcPos file="../../code/int/src/ScrEcuResetHndl.c" line="65" column="30" />
+    </block>
+    <call callee="ScrResetPmicHandler" lfreq="0.19">
+      <srcPos file="../../code/int/src/ScrEcuResetHndl.c" line="66" column="24" />
+    </call>
+  </function>
+  <function name="ScrEcuResetHndlTask1" linkage="external">
+    <srcPos file="../../code/int/src/ScrEcuResetHndl.c" line="80" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrEcuResetHndl.c" line="84" column="29" />
+    </block>
+    <call callee="ScrCheckEcuResetRequest" lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrEcuResetHndl.c" line="84" column="27" />
+    </call>
+    <block lfreq="0.50">
+      <srcPos file="../../code/int/src/ScrEcuResetHndl.c" line="89" column="5" />
+    </block>
+    <block lfreq="0.22">
+      <srcPos file="../../code/int/src/ScrEcuResetHndl.c" line="91" column="31" />
+    </block>
+    <block lfreq="0.50">
+      <srcPos file="../../code/int/src/ScrEcuResetHndl.c" line="95" column="5" />
+    </block>
+    <block lfreq="0.31">
+      <srcPos file="../../code/int/src/ScrEcuResetHndl.c" line="97" column="7" />
+    </block>
+    <block lfreq="0.07">
+      <srcPos file="../../code/int/src/ScrEcuResetHndl.c" line="99" column="26" />
+    </block>
+    <call callee="ScrWupCallback" lfreq="0.07">
+      <srcPos file="../../code/int/src/ScrEcuResetHndl.c" line="99" column="24" />
+    </call>
+    <block lfreq="0.31">
+      <srcPos file="../../code/int/src/ScrEcuResetHndl.c" line="101" column="18" />
+    </block>
+  </function>
+</file>

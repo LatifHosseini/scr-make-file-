@@ -1,0 +1,1049 @@
+	; Module start
+	.compiler_version	"TASKING VX-toolset for 8051: C compiler v6.3r1 Build 19041558 SN 09466227"
+	.compiler_invocation	"c51 -Ml --registerbank=0 --core=scr2g -D__CPU__=tc39x -DBRS_DERIVATIVE_tc39x -DBRS_CPU_CORE_ -DBRS_OS_USECASE_BRS -DBRS_PLATFORM_XC800 -DBRS_COMP_TASKING -I../../code/int/inc -I../../code/stubs -I../build/bsw/_common -Ic:/progra~1/tasking/tricor~1.3r1/c51/include -Igendata -Iinclude -ps --fp-model=clnrTz -g2 -o obj\\BrsAsrMain.src ../../code/Stubs/BrsAsrMain.c"
+	.compiler_name		"c51"
+'code_BrsAsrMainInit'	.segment	code cluster('BrsAsrMainInit')
+	.rseg	'code_BrsAsrMainInit'	code cluster('BrsAsrMainInit')
+	.public	_BrsAsrMainInit
+; Function _BrsAsrMainInit
+_30:
+_BrsAsrMainInit:
+	.using 0
+_10:
+	gcall	_BrsHwPortInitPowerOn
+_94:
+	mov	DPTR,#_gbBrsMainIsrMilliSecondFlag
+_95:
+	clr	A
+	movx	@DPTR,A
+_96:
+	gcall	_BrsHwTimeBaseInitPowerOn
+_97:
+	mov	DPTR,#_wBrsMainCallCounter1ms
+_98:
+	clr	A
+	movx	@DPTR,A
+	inc	DPTR
+	movx	@DPTR,A
+_99:
+	mov	DPTR,#_bBrsMainToggleLedCounter
+_100:
+	movx	@DPTR,A
+_101:
+	ret
+_31:
+	; End of function
+	; End of section
+
+'code_Default_Init_Taskfunc'	.segment	code cluster('Default_Init_Taskfunc')
+	.rseg	'code_Default_Init_Taskfunc'	code cluster('Default_Init_Taskfunc')
+	.public	_Default_Init_Taskfunc
+; Function _Default_Init_Taskfunc
+_36:
+_Default_Init_Taskfunc:
+	.using 0
+_12:
+	gjmp	_EcuM_StartupTwo
+_37:
+	; End of function
+	; End of section
+
+'code_BrsAsrMainCyclic1ms'	.segment	code cluster('BrsAsrMainCyclic1ms')
+	.rseg	'code_BrsAsrMainCyclic1ms'	code cluster('BrsAsrMainCyclic1ms')
+; Function _BrsAsrMainCyclic1ms
+_60:
+_BrsAsrMainCyclic1ms:
+	.using 0
+_14:
+	mov	DPTR,#_wBrsMainCallCounter1ms
+	movx	A,@DPTR
+	mov	R0,A
+	inc	DPTR
+	movx	A,@DPTR
+	mov	R1,A
+_135:
+	inc	R1
+	gcjne	R1,#0,_8
+	inc	R0
+_8:
+	mov	DPTR,#_wBrsMainCallCounter1ms
+_136:
+	mov	A,R0
+	movx	@DPTR,A
+	mov	A,R1
+	inc	DPTR
+	movx	@DPTR,A
+_137:
+	gcall	_Scr1msTask
+_138:
+	gcall	_$cocofun_1
+_139:
+	mov	R5,#10
+_140:
+	gcall	__UDIVI
+	mov	A,R5
+	orl	A,R4
+_141:
+	gjnz	_2
+_142:
+	gcall	_Scr10msTask
+_2:
+	gcall	_$cocofun_1
+_143:
+	mov	R5,#50
+_144:
+	gcall	__UDIVI
+_145:
+	gcjne	R5,#5,_3
+_146:
+	gcjne	R4,#0,_3
+_147:
+	gcall	_Scr50msTask
+_148:
+	mov	DPTR,#_bBrsMainToggleLedCounter
+	movx	A,@DPTR
+_149:
+	inc	A
+	movx	@DPTR,A
+_3:
+	ret
+_61:
+	; End of function
+	; End of section
+
+'code__cocofun_1'	.segment	code cluster('$cocofun_1')
+	.rseg	'code__cocofun_1'	code cluster('$cocofun_1')
+; Function _$cocofun_1
+_66:
+_$cocofun_1:
+; Function body _$cocofun_1, coco_iter:0
+	.using 0
+_16:
+	mov	DPTR,#_wBrsMainCallCounter1ms
+	movx	A,@DPTR
+	mov	R6,A
+	inc	DPTR
+	movx	A,@DPTR
+	mov	R7,A
+_154:
+	clr	A
+	mov	R4,A
+_155:
+	ret
+_67:
+	; End of function
+	; End of section
+
+'code_BrsAsrMainTaskfunc'	.segment	code cluster('BrsAsrMainTaskfunc')
+	.rseg	'code_BrsAsrMainTaskfunc'	code cluster('BrsAsrMainTaskfunc')
+	.public	_BrsAsrMainTaskfunc
+; Function _BrsAsrMainTaskfunc
+_42:
+_BrsAsrMainTaskfunc:
+	.using 0
+_4:
+_5:
+	mov	DPTR,#_gbBrsMainIsrMilliSecondFlag
+	movx	A,@DPTR
+_110:
+	gjz	_5
+_111:
+	mov	DPTR,#_gbBrsMainIsrMilliSecondFlag
+_112:
+	clr	A
+	movx	@DPTR,A
+_113:
+	gcall	_BrsAsrMainCyclic1ms
+_114:
+	gjmp	_4
+_43:
+	; End of function
+	; End of section
+
+'_BrsMainExceptionHandler'	.segment	xdata overlay('stack_xdata') cluster('BrsMainExceptionHandler')
+	.rseg	'_BrsMainExceptionHandler'	xdata overlay('stack_xdata') cluster('BrsMainExceptionHandler')
+__999001_$3:
+	.ds	1
+	; End of section
+
+'code_BrsMainExceptionHandler'	.segment	code cluster('BrsMainExceptionHandler')
+	.rseg	'code_BrsMainExceptionHandler'	code cluster('BrsMainExceptionHandler')
+	.public	_BrsMainExceptionHandler
+; Function _BrsMainExceptionHandler
+_48:
+_BrsMainExceptionHandler:
+	.using 0
+_19:
+	mov	DPTR,#__999001_$3
+_119:
+	clr	A
+	movx	@DPTR,A
+_120:
+	gcall	_BrsHwDisableInterrupt
+_85:
+	mov	DPTR,#__999001_$3
+_6:
+	movx	A,@DPTR
+_121:
+	gjz	_6
+_122:
+	ret
+_49:
+	; End of function
+	; End of section
+
+'code_main'	.segment	code cluster('main')
+	.rseg	'code_main'	code cluster('main')
+	.public	_main
+; Function _main
+_54:
+_main:
+	.using 0
+_21:
+	gcall	_BrsHwDisableInterruptAtPowerOn
+_127:
+	gcall	_BrsAsrMainInit
+_128:
+	gcall	_EcuM_Init
+_129:
+	clr	A
+	mov	R7,A
+	mov	R6,A
+_130:
+	ret
+_55:
+	; End of function
+	; End of section
+
+'xdata_gbBrsMainIsrMilliSecondFlag'	.segment	xdata clear cluster('gbBrsMainIsrMilliSecondFlag')
+	.rseg	'xdata_gbBrsMainIsrMilliSecondFlag'	xdata clear cluster('gbBrsMainIsrMilliSecondFlag')
+	.public	_gbBrsMainIsrMilliSecondFlag
+_gbBrsMainIsrMilliSecondFlag:
+	.ds	1
+	; End of section
+
+'xdata_wBrsMainCallCounter1ms'	.segment	xdata clear cluster('wBrsMainCallCounter1ms')
+	.rseg	'xdata_wBrsMainCallCounter1ms'	xdata clear cluster('wBrsMainCallCounter1ms')
+_wBrsMainCallCounter1ms:
+	.ds	2
+	; End of section
+
+'xdata_bBrsMainToggleLedCounter'	.segment	xdata clear cluster('bBrsMainToggleLedCounter')
+	.rseg	'xdata_bBrsMainToggleLedCounter'	xdata clear cluster('bBrsMainToggleLedCounter')
+_bBrsMainToggleLedCounter:
+	.ds	1
+	; End of section
+
+	.calls	'_BrsAsrMainCyclic1ms','__UDIVI'
+	.calls	'_BrsAsrMainInit','_BrsHwPortInitPowerOn'
+	.calls	'_BrsAsrMainInit','_BrsHwTimeBaseInitPowerOn'
+	.calls	'_Default_Init_Taskfunc','_EcuM_StartupTwo'
+	.calls	'_BrsAsrMainCyclic1ms','_Scr1msTask'
+	.calls	'_BrsAsrMainCyclic1ms','_$cocofun_1'
+	.calls	'_BrsAsrMainCyclic1ms','_Scr10msTask'
+	.calls	'_BrsAsrMainCyclic1ms','_Scr50msTask'
+	.calls	'_BrsAsrMainTaskfunc','_BrsAsrMainCyclic1ms'
+	.calls	'_BrsMainExceptionHandler','_BrsHwDisableInterrupt'
+	.calls	'_main','_BrsHwDisableInterruptAtPowerOn'
+	.calls	'_main','_BrsAsrMainInit'
+	.calls	'_main','_EcuM_Init'
+	.calls	'_BrsAsrMainInit','',2
+	.calls	'_Default_Init_Taskfunc','',2
+	.calls	'_BrsAsrMainCyclic1ms','',2
+	.calls	'_$cocofun_1','',2
+	.calls	'_BrsAsrMainTaskfunc','',2
+	.calls	'_BrsMainExceptionHandler','',2
+	.calls	'_main','',2
+	.extrn	code(_BrsHwPortInitPowerOn)
+	.extrn	code(_BrsHwTimeBaseInitPowerOn)
+	.extrn	code(_BrsHwDisableInterruptAtPowerOn)
+	.extrn	code(_BrsHwDisableInterrupt)
+	.extrn	code(_EcuM_Init)
+	.extrn	code(_EcuM_StartupTwo)
+	.extrn	code(_Scr1msTask)
+	.extrn	code(_Scr10msTask)
+	.extrn	code(_Scr50msTask)
+	.extrn	code(__start)
+	.extrn	code(__UDIVI)
+'.debug_info'	.segment	debug
+	.rseg	'.debug_info'	debug
+_23:
+	.dl	597
+	.dw	3
+	.dl	_24
+	.db	4
+_22:
+	.db	1
+	.db	'../../code/Stubs/BrsAsrMain.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_25
+	.db	2
+	.db	'BrsHwPortInitPowerOn',0,1,162,1,6,10,132,128,4,1,1,1,2
+	.db	'BrsHwTimeBaseInitPowerOn',0,1,179,1,6,10,132,128,4,1,1,1,2
+	.db	'BrsHwDisableInterruptAtPowerOn',0,1,207,1,6,10,132,128,4,1,1,1,2
+	.db	'BrsHwDisableInterrupt',0,1,247,1,6,10,132,128,4,1,1,1,2
+	.db	'EcuM_Init',0,2,40,6,10,132,128,4,1,1,1,2
+	.db	'EcuM_StartupTwo',0,2,41,6,10,132,128,4,1,1,1
+_74:
+	.db	3
+	.db	'unsigned char',0,1,8
+_77:
+	.db	3
+	.db	'unsigned short int',0,2,7
+_79:
+	.db	4
+	.dl	341
+_81:
+	.db	3
+	.db	'int',0,2,5,2
+	.db	'Scr1msTask',0,3,11,6,10,132,128,4,1,1,1,2
+	.db	'Scr10msTask',0,3,12,6,10,132,128,4,1,1,1,2
+	.db	'Scr50msTask',0,3,13,6,10,132,128,4,1,1,1,5
+	.db	'void',0,6,8
+	.dl	460
+	.db	7
+	.db	'__prof_adm',0,4,1,1
+	.dl	466
+	.db	3
+	.db	'unsigned int',0,2,7,7
+	.db	'__codeptr',0,4,1,1
+	.dl	491
+	.db	7
+	.db	'uint8',0,5,101,40
+	.dl	341
+	.db	7
+	.db	'uint16',0,5,103,40
+	.dl	358
+	.db	3
+	.db	'unsigned long int',0,4,7,7
+	.db	'uint32',0,5,105,40
+	.dl	554
+_83:
+	.db	4
+	.dl	341
+_84:
+	.db	4
+	.dl	358
+	.db	0
+	; End of section
+
+'.debug_abbrev'	.segment	debug
+	.rseg	'.debug_abbrev'	debug
+_24:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,46,0,3,8,58,15,59,15,57,15,51,15,54,15,39,12,63,12,60
+	.db	12,0,0,3,36,0,3,8,11,15,62,15,0,0,4,53,0,73,19,0,0,5,59,0,3,8,0,0,6,15,0,51,15,73,19,0,0,7,22,0,3,8,58
+	.db	15,59,15,57,15,73,19,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug
+	.rseg	'.debug_line'	debug
+_25:
+	.dl	_87-_86
+_86:
+	.dw	3
+	.dl	_89-_88
+_88:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'..\\..\\code\\int\\inc\\BrsHw.h',0,0,0,0
+	.db	'..\\..\\code\\Stubs\\EcuM.h',0,0,0,0
+	.db	'..\\..\\code\\int\\inc\\ScrMain.h',0,0,0,0
+	.db	'../../code/Stubs/BrsAsrMain.c',0,0,0,0
+	.db	'..\\..\\code\\Stubs\\Platform_Types.h',0,0,0,0,0
+_89:
+_87:
+	; End of section
+
+'.debug_info'	.segment	debug cluster('BrsAsrMainInit')
+	.rseg	'.debug_info'	debug cluster('BrsAsrMainInit')
+_26:
+	.dl	203
+	.dw	3
+	.dl	_27
+	.db	4,1
+	.db	'../../code/Stubs/BrsAsrMain.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_29,_28
+	.db	2
+	.dl	_22
+	.db	3
+	.db	'BrsAsrMainInit',0,1,139,2,6,10,132,128,4,1,1
+	.dl	_10,_31,_9
+	.db	2,145,0,4
+	.dl	_10,_31
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('BrsAsrMainInit')
+	.rseg	'.debug_abbrev'	debug cluster('BrsAsrMainInit')
+_27:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('BrsAsrMainInit')
+	.rseg	'.debug_line'	debug cluster('BrsAsrMainInit')
+_28:
+	.dl	_91-_90
+_90:
+	.dw	3
+	.dl	_93-_92
+_92:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/Stubs/BrsAsrMain.c',0,0,0,0,0
+_93:
+	.db	5,23,7,0,5,2
+	.dl	_10
+	.db	3,159,2,1,5,3,9
+	.dw	_94-_10
+	.db	3,10,1,5,31,9
+	.dw	_95-_94
+	.db	1,5,27,9
+	.dw	_96-_95
+	.db	3,6,1,5,3,9
+	.dw	_97-_96
+	.db	3,4,1,5,28,9
+	.dw	_98-_97
+	.db	1,5,3,9
+	.dw	_99-_98
+	.db	3,2,1,5,28,9
+	.dw	_100-_99
+	.db	1,5,1,9
+	.dw	_101-_100
+	.db	3,13,1,7,9
+	.dw	_31-_101
+	.db	0,1,1
+_91:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('BrsAsrMainInit')
+	.rseg	'.debug_ranges'	debug cluster('BrsAsrMainInit')
+_29:
+	.dl	-1,_30,0,_31-_30,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('Default_Init_Taskfunc')
+	.rseg	'.debug_info'	debug cluster('Default_Init_Taskfunc')
+_32:
+	.dl	210
+	.dw	3
+	.dl	_33
+	.db	4,1
+	.db	'../../code/Stubs/BrsAsrMain.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_35,_34
+	.db	2
+	.dl	_22
+	.db	3
+	.db	'Default_Init_Taskfunc',0,1,208,2,1,10,132,128,4,1,1
+	.dl	_12,_37,_11
+	.db	2,145,0,4
+	.dl	_12,_37
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('Default_Init_Taskfunc')
+	.rseg	'.debug_abbrev'	debug cluster('Default_Init_Taskfunc')
+_33:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('Default_Init_Taskfunc')
+	.rseg	'.debug_line'	debug cluster('Default_Init_Taskfunc')
+_34:
+	.dl	_103-_102
+_102:
+	.dw	3
+	.dl	_105-_104
+_104:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/Stubs/BrsAsrMain.c',0,0,0,0,0
+_105:
+	.db	5,18,7,0,5,2
+	.dl	_12
+	.db	3,220,2,1,5,1,9
+	.dw	_37-_12
+	.db	3,3,0,1,1
+_103:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('Default_Init_Taskfunc')
+	.rseg	'.debug_ranges'	debug cluster('Default_Init_Taskfunc')
+_35:
+	.dl	-1,_36,0,_37-_36,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('BrsAsrMainTaskfunc')
+	.rseg	'.debug_info'	debug cluster('BrsAsrMainTaskfunc')
+_38:
+	.dl	207
+	.dw	3
+	.dl	_39
+	.db	4,1
+	.db	'../../code/Stubs/BrsAsrMain.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_41,_40
+	.db	2
+	.dl	_22
+	.db	3
+	.db	'BrsAsrMainTaskfunc',0,1,174,3,1,10,132,128,4,1,1
+	.dl	_4,_43,_17
+	.db	2,145,0,4
+	.dl	_4,_43
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('BrsAsrMainTaskfunc')
+	.rseg	'.debug_abbrev'	debug cluster('BrsAsrMainTaskfunc')
+_39:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('BrsAsrMainTaskfunc')
+	.rseg	'.debug_line'	debug cluster('BrsAsrMainTaskfunc')
+_40:
+	.dl	_107-_106
+_106:
+	.dw	3
+	.dl	_109-_108
+_108:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/Stubs/BrsAsrMain.c',0,0,0,0,0
+_109:
+	.db	5,9,7,0,5,2
+	.dl	_5
+	.db	3,190,3,1,5,5,9
+	.dw	_110-_5
+	.db	1,5,7,7,9
+	.dw	_111-_110
+	.db	3,2,1,5,35,9
+	.dw	_112-_111
+	.db	1,5,26,9
+	.dw	_113-_112
+	.db	3,3,1,5,8,9
+	.dw	_114-_113
+	.db	3,114,1,5,1,9
+	.dw	_43-_114
+	.db	3,20,0,1,1
+_107:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('BrsAsrMainTaskfunc')
+	.rseg	'.debug_ranges'	debug cluster('BrsAsrMainTaskfunc')
+_41:
+	.dl	-1,_42,0,_43-_42,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('BrsMainExceptionHandler')
+	.rseg	'.debug_info'	debug cluster('BrsMainExceptionHandler')
+_44:
+	.dl	318
+	.dw	3
+	.dl	_45
+	.db	4,1
+	.db	'../../code/Stubs/BrsAsrMain.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_47,_46
+	.db	2
+	.dl	_22
+	.db	3
+	.db	'BrsMainExceptionHandler',0,1,251,3,6,10,132,128,4,1,1
+	.dl	_19,_49,_18
+	.db	2,145,0,4
+	.db	'ErrorCode',0,1,251,3,36,8
+	.dl	_74,_75
+	.db	4
+	.db	'ModuleCode',0,1,251,3,53,8
+	.dl	_74,_76
+	.db	4
+	.db	'LineNumber',0,1,251,3,72,8
+	.dl	_77,_78
+	.db	5
+	.dl	_19,_49
+	.db	6
+	.db	'BrsMain_Continue',0,1,139,4,18,8
+	.dl	_79,_80
+	.db	0,0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('BrsMainExceptionHandler')
+	.rseg	'.debug_abbrev'	debug cluster('BrsMainExceptionHandler')
+_45:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,5,0,3,8,58,15,59,15,57,15,51,15,73,16,2,6,0,0,5,11,1,17,1
+	.db	18,1,0,0,6,52,0,3,8,58,15,59,15,57,15,51,15,73,16,2,6,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('BrsMainExceptionHandler')
+	.rseg	'.debug_line'	debug cluster('BrsMainExceptionHandler')
+_46:
+	.dl	_116-_115
+_115:
+	.dw	3
+	.dl	_118-_117
+_117:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/Stubs/BrsAsrMain.c',0,0,0,0,0
+_118:
+	.db	5,3,7,0,5,2
+	.dl	_19
+	.db	3,139,4,1,5,20,9
+	.dw	_119-_19
+	.db	1,5,24,9
+	.dw	_120-_119
+	.db	3,1,1,5,10,9
+	.dw	_85-_120
+	.db	3,1,1,5,32,9
+	.dw	_121-_85
+	.db	1,5,1,7,9
+	.dw	_122-_121
+	.db	3,8,1,7,9
+	.dw	_49-_122
+	.db	0,1,1
+_116:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('BrsMainExceptionHandler')
+	.rseg	'.debug_ranges'	debug cluster('BrsMainExceptionHandler')
+_47:
+	.dl	-1,_48,0,_49-_48,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('main')
+	.rseg	'.debug_info'	debug cluster('main')
+_50:
+	.dl	197
+	.dw	3
+	.dl	_51
+	.db	4,1
+	.db	'../../code/Stubs/BrsAsrMain.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_53,_52
+	.db	2
+	.dl	_22
+	.db	3
+	.db	'main',0,1,162,4,5,10
+	.dl	_81
+	.db	132,128,4,1,1
+	.dl	_21,_55,_20
+	.db	2,145,0,4
+	.dl	_21,_55
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('main')
+	.rseg	'.debug_abbrev'	debug cluster('main')
+_51:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	73,16,54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('main')
+	.rseg	'.debug_line'	debug cluster('main')
+_52:
+	.dl	_124-_123
+_123:
+	.dw	3
+	.dl	_126-_125
+_125:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/Stubs/BrsAsrMain.c',0,0,0,0,0
+_126:
+	.db	5,33,7,0,5,2
+	.dl	_21
+	.db	3,164,4,1,5,17,9
+	.dw	_127-_21
+	.db	3,3,1,5,12,9
+	.dw	_128-_127
+	.db	3,2,1,5,10,9
+	.dw	_129-_128
+	.db	3,2,1,5,1,9
+	.dw	_130-_129
+	.db	3,1,1,7,9
+	.dw	_55-_130
+	.db	0,1,1
+_124:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('main')
+	.rseg	'.debug_ranges'	debug cluster('main')
+_53:
+	.dl	-1,_54,0,_55-_54,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('BrsAsrMainCyclic1ms')
+	.rseg	'.debug_info'	debug cluster('BrsAsrMainCyclic1ms')
+_56:
+	.dl	203
+	.dw	3
+	.dl	_57
+	.db	4,1
+	.db	'../../code/Stubs/BrsAsrMain.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_59,_58
+	.db	2
+	.dl	_22
+	.db	3
+	.db	'BrsAsrMainCyclic1ms',0,1,244,2,13,10,132,128,4,1
+	.dl	_14,_61,_13
+	.db	2,145,0,4
+	.dl	_82
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('BrsAsrMainCyclic1ms')
+	.rseg	'.debug_abbrev'	debug cluster('BrsAsrMainCyclic1ms')
+_57:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,17,1,18,1,64,6,42,9,0,0,4,11,0,85,6,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('BrsAsrMainCyclic1ms')
+	.rseg	'.debug_line'	debug cluster('BrsAsrMainCyclic1ms')
+_58:
+	.dl	_132-_131
+_131:
+	.dw	3
+	.dl	_134-_133
+_133:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/Stubs/BrsAsrMain.c',0,0,0,0,0
+_134:
+	.db	5,3,7,0,5,2
+	.dl	_14
+	.db	3,245,2,1,5,25,9
+	.dw	_135-_14
+	.db	1,5,3,9
+	.dw	_8-_135
+	.db	1,5,25,9
+	.dw	_136-_8
+	.db	1,5,14,9
+	.dw	_137-_136
+	.db	3,10,1,5,8,9
+	.dw	_138-_137
+	.db	3,2,1,5,33,9
+	.dw	_139-_138
+	.db	1,5,31,9
+	.dw	_140-_139
+	.db	1,5,3,9
+	.dw	_141-_140
+	.db	1,5,17,7,9
+	.dw	_142-_141
+	.db	3,2,1,5,8,9
+	.dw	_2-_142
+	.db	3,7,1,5,33,9
+	.dw	_143-_2
+	.db	1,5,31,9
+	.dw	_144-_143
+	.db	1,5,3,9
+	.dw	_145-_144
+	.db	1,7,9
+	.dw	_146-_145
+	.db	1,5,17,7,9
+	.dw	_147-_146
+	.db	3,2,1,5,5,9
+	.dw	_148-_147
+	.db	3,3,1,5,29,9
+	.dw	_149-_148
+	.db	1,5,1,9
+	.dw	_3-_149
+	.db	3,16,1,7,9
+	.dw	_61-_3
+	.db	0,1,1
+_132:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('BrsAsrMainCyclic1ms')
+	.rseg	'.debug_ranges'	debug cluster('BrsAsrMainCyclic1ms')
+_59:
+	.dl	-1,_60,0,_61-_60,0,0
+_82:
+	.dl	-1,_14,0,_61-_14,-1,_16,0,_67-_16,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('$cocofun_1')
+	.rseg	'.debug_info'	debug cluster('$cocofun_1')
+_62:
+	.dl	187
+	.dw	3
+	.dl	_63
+	.db	4,1
+	.db	'../../code/Stubs/BrsAsrMain.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_65,_64
+	.db	2
+	.dl	_22
+	.db	3
+	.db	'.cocofun_1',0,1,244,2,13,10,132,128,4
+	.dl	_16,_67,_15
+	.db	2,145,0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('$cocofun_1')
+	.rseg	'.debug_abbrev'	debug cluster('$cocofun_1')
+_63:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,0,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,17,1,18,1,64,6,42,9,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('$cocofun_1')
+	.rseg	'.debug_line'	debug cluster('$cocofun_1')
+_64:
+	.dl	_151-_150
+_150:
+	.dw	3
+	.dl	_153-_152
+_152:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/Stubs/BrsAsrMain.c',0,0,0,0,0
+_153:
+	.db	5,8,7,0,5,2
+	.dl	_16
+	.db	3,129,3,1,5,33,9
+	.dw	_154-_16
+	.db	1,9
+	.dw	_67-_154
+	.db	0,1,1,5,8,0,5,2
+	.dl	_16
+	.db	3,138,3,1,5,33,9
+	.dw	_154-_16
+	.db	1,9
+	.dw	_155-_154
+	.db	3,119,1,7,9
+	.dw	_67-_155
+	.db	0,1,1
+_151:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('$cocofun_1')
+	.rseg	'.debug_ranges'	debug cluster('$cocofun_1')
+_65:
+	.dl	-1,_66,0,_67-_66,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('gbBrsMainIsrMilliSecondFlag')
+	.rseg	'.debug_info'	debug cluster('gbBrsMainIsrMilliSecondFlag')
+_68:
+	.dl	194
+	.dw	3
+	.dl	_69
+	.db	4,1
+	.db	'../../code/Stubs/BrsAsrMain.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1,2
+	.dl	_22
+	.db	3
+	.db	'gbBrsMainIsrMilliSecondFlag',0,4,200,1,17,8
+	.dl	_83
+	.db	1,10,3
+	.dl	_gbBrsMainIsrMilliSecondFlag
+	.db	56,8,020H,36,33,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('gbBrsMainIsrMilliSecondFlag')
+	.rseg	'.debug_abbrev'	debug cluster('gbBrsMainIsrMilliSecondFlag')
+_69:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,51,15,73,16,63
+	.db	12,2,9,0,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('wBrsMainCallCounter1ms')
+	.rseg	'.debug_info'	debug cluster('wBrsMainCallCounter1ms')
+_70:
+	.dl	188
+	.dw	3
+	.dl	_71
+	.db	4,1
+	.db	'../../code/Stubs/BrsAsrMain.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1,2
+	.dl	_22
+	.db	3
+	.db	'wBrsMainCallCounter1ms',0,4,218,1,24,8
+	.dl	_84
+	.db	10,3
+	.dl	_wBrsMainCallCounter1ms
+	.db	56,8,020H,36,33,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('wBrsMainCallCounter1ms')
+	.rseg	'.debug_abbrev'	debug cluster('wBrsMainCallCounter1ms')
+_71:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,51,15,73,16,2,9
+	.db	0,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('bBrsMainToggleLedCounter')
+	.rseg	'.debug_info'	debug cluster('bBrsMainToggleLedCounter')
+_72:
+	.dl	190
+	.dw	3
+	.dl	_73
+	.db	4,1
+	.db	'../../code/Stubs/BrsAsrMain.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1,2
+	.dl	_22
+	.db	3
+	.db	'bBrsMainToggleLedCounter',0,4,230,1,14,8
+	.dl	_74
+	.db	10,3
+	.dl	_bBrsMainToggleLedCounter
+	.db	56,8,020H,36,33,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('bBrsMainToggleLedCounter')
+	.rseg	'.debug_abbrev'	debug cluster('bBrsMainToggleLedCounter')
+_73:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,51,15,73,16,2,9
+	.db	0,0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('$cocofun_1')
+	.rseg	'.debug_loc'	debug cluster('$cocofun_1')
+_15:
+	.dl	-1,_16,0,_67-_16
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('BrsAsrMainCyclic1ms')
+	.rseg	'.debug_loc'	debug cluster('BrsAsrMainCyclic1ms')
+_13:
+	.dl	-1,_14,0,_61-_14
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('BrsAsrMainInit')
+	.rseg	'.debug_loc'	debug cluster('BrsAsrMainInit')
+_9:
+	.dl	-1,_10,0,_31-_10
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('BrsAsrMainTaskfunc')
+	.rseg	'.debug_loc'	debug cluster('BrsAsrMainTaskfunc')
+_17:
+	.dl	-1,_4,0,_43-_4
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('BrsMainExceptionHandler')
+	.rseg	'.debug_loc'	debug cluster('BrsMainExceptionHandler')
+_18:
+	.dl	-1,_19,0,_49-_19
+	.dw	2
+	.db	123,0
+	.dl	0,0
+_80:
+	.dl	-1,_19,0,_49-_19
+	.dw	10
+	.db	3
+	.dl	__999001_$3
+	.db	56,8,020H,36,33
+	.dl	0,0
+_75:
+	.dl	-1,_19,0,_85-_19
+	.dw	1
+	.db	87
+	.dl	0,0
+_78:
+	.dl	-1,_19,0,_85-_19
+	.dw	6
+	.db	82,147,1,83,147,1
+	.dl	0,0
+_76:
+	.dl	-1,_19,0,_85-_19
+	.dw	1
+	.db	85
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('Default_Init_Taskfunc')
+	.rseg	'.debug_loc'	debug cluster('Default_Init_Taskfunc')
+_11:
+	.dl	-1,_12,0,_37-_12
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('main')
+	.rseg	'.debug_loc'	debug cluster('main')
+_20:
+	.dl	-1,_21,0,_55-_21
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_frame'	.segment	debug
+	.rseg	'.debug_frame'	debug
+_156:
+	.dl	64
+	.dl	-1
+	.db	3,0,1,1,145,1,15,10,123,0,54,8,020H,36,34,9,-2,34,22,145,1,14,49,34,148,02H,18,56,37,22,8,0ffH,26,56,36
+	.db	34,8,10,22,11,3,19,123,126,8,12,8,16,8,17,8,18,8,19,8,144,1,0,0,0
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('BrsAsrMainInit')
+	.rseg	'.debug_frame'	debug cluster('BrsAsrMainInit')
+	.dl	12
+	.dl	_156,_10,_31-_10
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('Default_Init_Taskfunc')
+	.rseg	'.debug_frame'	debug cluster('Default_Init_Taskfunc')
+	.dl	12
+	.dl	_156,_12,_37-_12
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('BrsAsrMainCyclic1ms')
+	.rseg	'.debug_frame'	debug cluster('BrsAsrMainCyclic1ms')
+	.dl	12
+	.dl	_156,_14,_61-_14
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('$cocofun_1')
+	.rseg	'.debug_frame'	debug cluster('$cocofun_1')
+	.dl	32
+	.dl	_156,_16,_67-_16
+	.db	8,7,8,8,8,9,8,0,8,1,8,2,8,3,8,4,8,5,8,6
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('BrsAsrMainTaskfunc')
+	.rseg	'.debug_frame'	debug cluster('BrsAsrMainTaskfunc')
+	.dl	12
+	.dl	_156,_4,_43-_4
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('BrsMainExceptionHandler')
+	.rseg	'.debug_frame'	debug cluster('BrsMainExceptionHandler')
+	.dl	12
+	.dl	_156,_19,_49-_19
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('main')
+	.rseg	'.debug_frame'	debug cluster('main')
+	.dl	12
+	.dl	_156,_21,_55-_21
+	; End of section
+
+	; Module end
+	.end

@@ -1,0 +1,7 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>$title</title>
+<link href="vector.css" rel="stylesheet" type="text/css">
+<a href="http://www.vector-informatik.de/index.html">
+<p align="right"><img src="http://www-serv.vi.vector.int/intranet/global_contents/images/intranet.gif" alt="Vector Informatik" border="0"></p>
+</head><body>

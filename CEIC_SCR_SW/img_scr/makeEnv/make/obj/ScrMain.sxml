@@ -1,0 +1,35 @@
+<file name="ScrMain.c">
+  <function name="Scr1msTask" linkage="external">
+    <srcPos file="../../code/int/src/ScrMain.c" line="58" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrMain.c" line="60" column="26" />
+    </block>
+    <call callee="ScrWakeupHndlTask1" lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrMain.c" line="60" column="24" />
+    </call>
+    <call callee="ScrEcuResetHndlTask1" lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrMain.c" line="61" column="26" />
+    </call>
+  </function>
+  <function name="Scr10msTask" linkage="external">
+    <srcPos file="../../code/int/src/ScrMain.c" line="67" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrMain.c" line="69" column="27" />
+    </block>
+    <call callee="ScrStateMngmtTask10" lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrMain.c" line="69" column="25" />
+    </call>
+    <call callee="ScrGenEthWULTask10" lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrMain.c" line="70" column="24" />
+    </call>
+  </function>
+  <function name="Scr50msTask" linkage="external">
+    <srcPos file="../../code/int/src/ScrMain.c" line="73" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrMain.c" line="75" column="26" />
+    </block>
+    <call callee="ScrWakeupEcuTask50" lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrMain.c" line="75" column="24" />
+    </call>
+  </function>
+</file>

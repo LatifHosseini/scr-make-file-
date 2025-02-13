@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?><html><title>MISRA Summary - PRJ00022290_CEIC_MB_img_scr</title><style type="text/css">
+        body
+        {
+        background-color: #e5e5e5;
+        font-family: Verdana,Arial,Helvetica;
+        font-size:10pt;
+        }
+
+        td,th
+        {
+        border-color: lightgrey;
+        border-style: none;
+        font-family: Verdana,Arial,Helvetica;
+        font-size:10pt;
+        vertical-align:top;
+        }
+
+        table
+        {
+        border-color: lightgrey;
+        border-style: none;
+        border-spacing: 1;
+        border-collapse: collapse;
+        table-layout: fixed;
+        max-width: 100%;
+        width: 100%;
+        }
+
+        table tr
+        {
+        border-width: 1px 0 1px 0;
+        border-top-style: solid;
+        border-bottom-style: solid;
+        }
+
+        td
+        {
+        margin: 0;
+        padding: 3px;
+        border-width: 1px 1px 0 0;
+        word-wrap: break-word;
+        }
+
+        .th0 {
+        background-color: #b70032;
+        height: 2px;
+        font-size: 18px;
+        color: #ffffff
+        }
+
+        .th1 {
+        background-color: grey;
+        height: 2px;
+        font-size: 14px;
+        color: #ffffff
+        }
+      </style><body><a name="top" /><a name="testplan" /><h1>MISRA C 2012 Summary Report - PRJ00022290_CEIC_MB_img_scr [Milestone1]</h1><br /><table border="0" width="100%"><colgroup><col width="25%" /><col width="75%" /></colgroup><tr><td class="th0" colspan="2">General Information</td></tr><tr><td bgcolor="darkgray">Scope</td><td>PRJ00022290_CEIC_MB_img_scr [Milestone1]</td></tr><tr><td bgcolor="darkgray">Test person</td><td>vikaagz</td></tr><tr><td bgcolor="darkgray">Test date</td><td>19.03.2022 20:43</td></tr><tr><td bgcolor="darkgray">Rationale</td><td>This is a customer overview documentation for MISRA deviations and their justification for the tested scope.</td></tr><tr><td bgcolor="darkgray">Links</td><td><a href="http://www.misra.org.uk/">http://www.misra.org.uk/</a></td></tr></table><br /><a name="TestResult" /><table border="0" width="100%"><colgroup><col width="100%" /></colgroup><tr><td class="th0">MISRA Compliance Result</td></tr><tr><td bgcolor="lime">accepted</td></tr></table><br /><a name="TestPlan_Object" /><table border="0" width="100%"><colgroup><col width="25%" /><col width="75%" /></colgroup><tr><td class="th0" colspan="2">Test Elements</td></tr><tr><td colspan="2">See the Test Summary Report</td></tr></table><br /><table border="0" width="100%"><colgroup><col width="10%" /><col width="90%" /></colgroup><tr><td class="th0" colspan="2">Test Environment</td></tr><tr><td bgcolor="darkgray">Version</td><td>
+PRQA Framework version 2.2.0.9151-qax
+</td></tr><tr><td bgcolor="darkgray">Option</td><td></td></tr><tr><td bgcolor="darkgray">Personality files</td><td>
+acf: based on template acf file provided with CDK 20.12.01 
+<br />cct: based on template cct file provided with CDK 20.12.01 <br />rcf: based on template rcf file provided with CDK 20.12.01 </td></tr><tr><td bgcolor="darkgray">Analyzed files</td><td></td></tr></table><br /><table border="0" width="100%"><colgroup><col width="10%" /><col width="10%" /><col width="10%" /><col width="10%" /><col width="60%" /></colgroup><tr><td class="th0" colspan="5">QAC Summary for all configurations</td></tr><tr bgcolor="darkgray"><td>MISRA rule</td><td>Number of configurations with deviations</td><td>Sum of deviations for all configurations</td><td>Max deviations per configuration</td><td>Justifications</td></tr><tr><td>Rule2.1</td><td>1/1</td><td>1</td><td>1</td><td><table border="0" width="100%"><colgroup><col width="20%" /><col width="80%" /></colgroup><tr><td>BrsAsrMain.c</td><td>MD_MSR_14.1 This code should never reach here<br /></td></tr></table></td></tr><tr><td>Rule6.1</td><td>1/1</td><td>1</td><td>1</td><td><table border="0" width="100%"><colgroup><col width="20%" /><col width="80%" /></colgroup><tr><td>ScrWakeupEcu.c</td><td>Compiler supports unsigned char bitfield defines<br /></td></tr></table></td></tr><tr><td>Rule20.1</td><td>1/1</td><td>4</td><td>4</td><td><table border="0" width="100%"><colgroup><col width="20%" /><col width="80%" /></colgroup><tr><td>BrsAsrMain.c</td><td>MD_MSR_MemMap<br /></td></tr></table></td></tr><tr><td>Rule1.2</td><td>1/1</td><td>1</td><td>1</td><td><table border="0" width="100%"><colgroup><col width="20%" /><col width="80%" /></colgroup><tr><td>ScrWakeupEcu.c</td><td>Compiler supports unsigned char bitfield defines<br /></td></tr></table></td></tr><tr><td>Rule2.2</td><td>1/1</td><td>18</td><td>18</td><td><table border="0" width="100%"><colgroup><col width="20%" /><col width="80%" /></colgroup><tr><td>Os.c</td><td>MD_MSR_DummyStmt<br /></td></tr><tr><td>ScrWakeUpDetection.c</td><td>This function sets internal register<br /></td></tr></table></td></tr><tr><td>Rule10.3</td><td>1/1</td><td>1</td><td>1</td><td><table border="0" width="100%"><colgroup><col width="20%" /><col width="80%" /></colgroup><tr><td>ScrDioPort.c</td><td>MD_MSR_AutosarBoolean<br /></td></tr></table></td></tr><tr><td>Rule8.4</td><td>1/1</td><td>11</td><td>11</td><td><table border="0" width="100%"><colgroup><col width="20%" /><col width="80%" /></colgroup><tr><td>ScrWakeUpDetection.c</td><td>This ISR function definition is only needed in this way<br /></td></tr><tr><td>BrsHw.c</td><td>This ISR function definition is only needed in this way<br /></td></tr><tr><td>ScrGenEthWULPulse.c</td><td>This global variable is need in a ISR function for fast porecudre<br /></td></tr></table></td></tr><tr><td>Rule11.4</td><td>1/1</td><td>174</td><td>174</td><td><table border="0" width="100%"><colgroup><col width="20%" /><col width="80%" /></colgroup><tr><td>BrsHw.c</td><td><a href="#MD_FBL_0303_MemoryMappedRegAccess">MD_FBL_0303_MemoryMappedRegAccess</a><br /></td></tr><tr><td>ScrWakeupHndl.c</td><td><a href="#MD_FBL_0303_MemoryMappedRegAccess">MD_FBL_0303_MemoryMappedRegAccess</a><br /></td></tr><tr><td>ScrStateMngmt.c</td><td><a href="#MD_FBL_0303_MemoryMappedRegAccess">MD_FBL_0303_MemoryMappedRegAccess</a><br /></td></tr><tr><td>ScrEcuResetHndl.c</td><td><a href="#MD_FBL_0303_MemoryMappedRegAccess">MD_FBL_0303_MemoryMappedRegAccess</a><br /></td></tr><tr><td>ScrDioPort.c</td><td><a href="#MD_FBL_0303_MemoryMappedRegAccess">MD_FBL_0303_MemoryMappedRegAccess</a><br /></td></tr><tr><td>ScrWakeUpDetection.c</td><td><a href="#MD_FBL_0303_MemoryMappedRegAccess">MD_FBL_0303_MemoryMappedRegAccess</a><br />This function sets internal register<br />This ISR function definition is only needed in this way<br /></td></tr></table></td></tr><tr><td>Rule20.5</td><td>1/1</td><td>1</td><td>1</td><td><table border="0" width="100%"><colgroup><col width="20%" /><col width="80%" /></colgroup><tr><td>ScrEcuResetHndl.c</td><td>MD_MSR_Undef<br /></td></tr></table></td></tr><tr><td>Rule2.7</td><td>1/1</td><td>3</td><td>3</td><td><table border="0" width="100%"><colgroup><col width="20%" /><col width="80%" /></colgroup><tr><td>BrsAsrMain.c</td><td>Function parameter not used<br /></td></tr></table></td></tr><tr><td>Rule17.8</td><td>1/1</td><td>6</td><td>6</td><td><table border="0" width="100%"><colgroup><col width="20%" /><col width="80%" /></colgroup><tr><td>Os.c</td><td>MD_MSR_DummyStmt<br /></td></tr></table></td></tr><tr><td>Rule20.10</td><td>1/1</td><td>2</td><td>2</td><td><table border="0" width="100%"><colgroup><col width="20%" /><col width="80%" /></colgroup><tr><td>Os.h</td><td>MD_MSR_Rule20.10_0342<br /></td></tr></table></td></tr></table><br /><table border="0" width="100%"><colgroup><col width="10%" /><col width="30%" /><col width="30%" /><col width="20%" /><col width="10%" /></colgroup><tr><td class="th0" colspan="5">Justifications</td></tr><tr bgcolor="darkgray"><td>Id</td><td>Reason</td><td>Potential risks</td><td>Prevention of risks</td><td>Result</td></tr><tr><td><a name="MD_PJStd_Rte_3417">MD_PJStd_Rte_3417</a></td><td>It is possible for the RTE generator to generate API calls for sender-receiver communication with a direct assignment ('function elision'). In this case, the  RTE generator creates a comma expression to ensure that the invoking component still receives a return value.</td><td>None.</td><td>Not applicable. A comma expression is valid, legal C and the elision cannot be achieved without a comma expression.</td><td rowspan="2" bgcolor="lime">ok</td></tr><tr><td><a name="MD_PJStd_Rte_3426">MD_PJStd_Rte_3426</a></td><td>It is possible for the RTE generator to generate API calls for sender-receiver communication with a direct assignment ('function elision'). In this case, the  RTE generator creates a comma expression to ensure that the invoking component still receives a return value.</td><td>None.</td><td>Not applicable. A comma expression is valid, legal C and the elision cannot be achieved without a comma expression.</td></tr></table>
+      Refer to Vector MISRA compliance documentation "AN-ISC-8-1225" for additional information and justifications for MD_MSR_.<br />
+      Refer to technical reference "MICROSAR ComStackLib" for justifications of MD_CSL_.
+      <br /><br /><table border="0" width="100%"><colgroup><col width="70%" /><col width="10%" /><col width="10%" /><col width="10%" /></colgroup><tr><td class="th0" colspan="4">Overview of tested configurations (1)</td></tr><tr bgcolor="darkgray"><td>Configuration reference</td><td>Date</td><td>Tester</td><td>Result</td></tr><tr><td></td><td>19.03.2022 20:43</td><td>vikaagz</td><td bgcolor="lime">ok</td></tr></table><br /><small>StyleSheetVersion 1.07.00</small></body></html>

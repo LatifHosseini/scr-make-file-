@@ -1,0 +1,242 @@
+<file name="ScrWakeupHndl.c">
+  <function name="DisableADCUnit" linkage="internal">
+    <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="75" column="13" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="77" column="22" />
+    </block>
+    <block lfreq="8.33">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="79" column="39" />
+    </block>
+  </function>
+  <function name="GetADCvalue" linkage="internal">
+    <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="85" column="14" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="88" column="24" />
+    </block>
+    <block lfreq="8.33">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="90" column="38" />
+    </block>
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="92" column="30" />
+    </block>
+  </function>
+  <function name="EnableADCUnit" linkage="internal">
+    <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="100" column="13" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="104" column="22" />
+    </block>
+    <block lfreq="8.33">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="106" column="39" />
+    </block>
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="108" column="33" />
+    </block>
+    <block lfreq="5.92">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="109" column="23" />
+    </block>
+    <block lfreq="-1.00">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="109" column="18" />
+    </block>
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="111" column="22" />
+    </block>
+    <call callee="GetADCvalue" lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="111" column="20" />
+    </call>
+  </function>
+  <function name="StartTimerValidateWUL1" linkage="external">
+    <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="126" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="128" column="40" />
+    </block>
+    <block lfreq="0.22">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="131" column="36" />
+    </block>
+    <call callee="ScrWakeupHndl_ResetADCstate" lfreq="0.22">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="131" column="34" />
+    </call>
+  </function>
+  <function name="StartTimerValidateWUL2" linkage="external">
+    <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="135" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="137" column="40" />
+    </block>
+    <block lfreq="0.22">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="140" column="36" />
+    </block>
+    <call callee="ScrWakeupHndl_ResetADCstate" lfreq="0.22">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="140" column="34" />
+    </call>
+  </function>
+  <function name="SetFirstWakeupSource" linkage="external">
+    <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="155" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="157" column="3" />
+    </block>
+    <block lfreq="0.45">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="159" column="32" />
+    </block>
+  </function>
+  <function name="GetFirstWakeupSource" linkage="external">
+    <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="174" column="11" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="176" column="3" />
+    </block>
+  </function>
+  <function name="ScrWakeupHndlTask1" linkage="external">
+    <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="191" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="197" column="3" />
+    </block>
+    <block lfreq="0.25">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="200" column="23" />
+    </block>
+    <call callee="EnableADCUnit" lfreq="0.25">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="201" column="23" />
+    </call>
+    <call callee="DioPortWrite" lfreq="0.25">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="202" column="22" />
+    </call>
+    <block lfreq="0.25">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="207" column="42" />
+    </block>
+    <call callee="GetADCvalue" lfreq="0.25">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="207" column="40" />
+    </call>
+    <block lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="211" column="57" />
+    </block>
+    <call callee="DioPortWrite" lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="211" column="26" />
+    </call>
+    <block lfreq="0.25">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="219" column="41" />
+    </block>
+    <call callee="GetADCvalue" lfreq="0.25">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="219" column="39" />
+    </call>
+    <block lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="223" column="30" />
+    </block>
+    <call callee="DisableADCUnit" lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="223" column="28" />
+    </call>
+    <call callee="DioPortWrite" lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="224" column="26" />
+    </call>
+    <block lfreq="0.02">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="229" column="44" />
+    </block>
+    <block lfreq="0.02">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="233" column="35" />
+    </block>
+    <block lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="221" column="9" />
+    </block>
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="243" column="3" />
+    </block>
+    <block lfreq="0.45">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="246" column="53" />
+    </block>
+    <block lfreq="0.55">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="254" column="34" />
+    </block>
+    <block lfreq="0.30">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="254" column="116" />
+    </block>
+    <block lfreq="0.40">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="254" column="131" />
+    </block>
+    <block lfreq="0.15">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="254" column="131" />
+    </block>
+    <block lfreq="0.55">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="254" column="145" />
+    </block>
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="257" column="3" />
+    </block>
+    <block lfreq="0.62">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="259" column="5" />
+    </block>
+    <block lfreq="0.14">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="261" column="11" />
+    </block>
+    <call callee="DioPortRead" lfreq="0.14">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="261" column="24" />
+    </call>
+    <block lfreq="0.11">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="261" column="54" />
+    </block>
+    <block lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="263" column="33" />
+    </block>
+    <call callee="ScrEthWupCallback" lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="263" column="27" />
+    </call>
+    <call callee="ScrGenerateWULPattern" lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="264" column="31" />
+    </call>
+    <call callee="SetFirstWakeupSource" lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="265" column="30" />
+    </call>
+    <block lfreq="0.03">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="269" column="24" />
+    </block>
+    <block lfreq="0.09">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="274" column="32" />
+    </block>
+    <call callee="ScrStateMngmtStandby" lfreq="0.09">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="274" column="30" />
+    </call>
+    <block lfreq="0.62">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="277" column="26" />
+    </block>
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="280" column="3" />
+    </block>
+    <block lfreq="0.62">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="282" column="5" />
+    </block>
+    <block lfreq="0.14">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="284" column="11" />
+    </block>
+    <call callee="DioPortRead" lfreq="0.14">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="284" column="24" />
+    </call>
+    <block lfreq="0.11">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="284" column="53" />
+    </block>
+    <block lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="286" column="33" />
+    </block>
+    <call callee="ScrEthWupCallback" lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="286" column="27" />
+    </call>
+    <call callee="ScrGenerateWULPattern" lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="287" column="31" />
+    </call>
+    <call callee="SetFirstWakeupSource" lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="288" column="30" />
+    </call>
+    <block lfreq="0.03">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="292" column="24" />
+    </block>
+    <block lfreq="0.09">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="297" column="32" />
+    </block>
+    <call callee="ScrStateMngmtStandby" lfreq="0.09">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="297" column="30" />
+    </call>
+    <block lfreq="0.62">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="300" column="26" />
+    </block>
+  </function>
+  <function name="ScrWakeupHndl_ResetADCstate" linkage="external">
+    <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="317" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeupHndl.c" line="319" column="28" />
+    </block>
+  </function>
+</file>

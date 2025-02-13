@@ -1,0 +1,353 @@
+	; Module start
+	.compiler_version	"TASKING VX-toolset for 8051: C compiler v6.3r1 Build 19041558 SN 09466227"
+	.compiler_invocation	"c51 -Ml --registerbank=0 --core=scr2g -D__CPU__=tc39x -DBRS_DERIVATIVE_tc39x -DBRS_CPU_CORE_ -DBRS_OS_USECASE_BRS -DBRS_PLATFORM_XC800 -DBRS_COMP_TASKING -I../../code/int/inc -I../../code/stubs -I../build/bsw/_common -Ic:/progra~1/tasking/tricor~1.3r1/c51/include -Igendata -Iinclude -ps --fp-model=clnrTz -g2 -o obj\\Rte.src ../../code/Stubs/Rte.c"
+	.compiler_name		"c51"
+'code_SchM_Init'	.segment	code cluster('SchM_Init')
+	.rseg	'code_SchM_Init'	code cluster('SchM_Init')
+	.public	_SchM_Init
+; Function _SchM_Init
+_17:
+_SchM_Init:
+	.using 0
+_5:
+	ret
+_18:
+	; End of function
+	; End of section
+
+'code_Rte_Start'	.segment	code cluster('Rte_Start')
+	.rseg	'code_Rte_Start'	code cluster('Rte_Start')
+	.public	_Rte_Start
+; Function _Rte_Start
+_23:
+_Rte_Start:
+	.using 0
+_7:
+	gjmp	_BrsAsrMainTaskfunc
+_24:
+	; End of function
+	; End of section
+
+'code_SchMTaskfunc'	.segment	code cluster('SchMTaskfunc')
+	.rseg	'code_SchMTaskfunc'	code cluster('SchMTaskfunc')
+	.public	_SchMTaskfunc
+; Function _SchMTaskfunc
+_29:
+_SchMTaskfunc:
+	.using 0
+_2:
+_3:
+	mov	DPTR,#_gbBrsMainIsrMilliSecondFlag
+	movx	A,@DPTR
+_47:
+	gjz	_3
+_48:
+	mov	DPTR,#_gbBrsMainIsrMilliSecondFlag
+_49:
+	clr	A
+	movx	@DPTR,A
+_50:
+	gjmp	_2
+_30:
+	; End of function
+	; End of section
+
+	.calls	'_Rte_Start','_BrsAsrMainTaskfunc'
+	.calls	'_SchM_Init','',2
+	.calls	'_Rte_Start','',2
+	.calls	'_SchMTaskfunc','',2
+	.extrn	xdata(_gbBrsMainIsrMilliSecondFlag)
+	.extrn	code(_BrsAsrMainTaskfunc)
+'.debug_info'	.segment	debug
+	.rseg	'.debug_info'	debug
+_10:
+	.dl	381
+	.dw	3
+	.dl	_11
+	.db	4
+_9:
+	.db	1
+	.db	'../../code/Stubs/Rte.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_12
+	.db	2
+	.db	'BrsAsrMainTaskfunc',0,1,167,1,1,10,132,128,4,1,1,1,3
+	.db	'void',0,4,8
+	.dl	170
+	.db	5
+	.db	'__prof_adm',0,2,1,1
+	.dl	176
+	.db	6
+	.db	'unsigned int',0,2,7,5
+	.db	'__codeptr',0,2,1,1
+	.dl	201
+	.db	6
+	.db	'unsigned char',0,1,8,5
+	.db	'uint8',0,3,101,40
+	.dl	235
+	.db	6
+	.db	'unsigned short int',0,2,7,5
+	.db	'uint16',0,3,103,40
+	.dl	266
+	.db	6
+	.db	'unsigned long int',0,4,7,5
+	.db	'uint32',0,3,105,40
+	.dl	303
+	.db	7
+	.dl	235
+	.db	8
+	.db	'gbBrsMainIsrMilliSecondFlag',0,1,146,1,24,8
+	.dl	339
+	.db	1,1,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug
+	.rseg	'.debug_abbrev'	debug
+_11:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,46,0,3,8,58,15,59,15,57,15,51,15,54,15,39,12,63,12,60
+	.db	12,0,0,3,59,0,3,8,0,0,4,15,0,51,15,73,19,0,0,5,22,0,3,8,58,15,59,15,57,15,73,19,0,0,6,36,0,3,8,11,15,62
+	.db	15,0,0,7,53,0,73,19,0,0,8,52,0,3,8,58,15,59,15,57,15,51,15,73,19,63,12,60,12,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug
+	.rseg	'.debug_line'	debug
+_12:
+	.dl	_32-_31
+_31:
+	.dw	3
+	.dl	_34-_33
+_33:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'..\\..\\code\\Stubs\\BrsAsrMain.h',0,0,0,0
+	.db	'../../code/Stubs/Rte.c',0,0,0,0
+	.db	'..\\..\\code\\Stubs\\Platform_Types.h',0,0,0,0,0
+_34:
+_32:
+	; End of section
+
+'.debug_info'	.segment	debug cluster('SchM_Init')
+	.rseg	'.debug_info'	debug cluster('SchM_Init')
+_13:
+	.dl	190
+	.dw	3
+	.dl	_14
+	.db	4,1
+	.db	'../../code/Stubs/Rte.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_16,_15
+	.db	2
+	.dl	_9
+	.db	3
+	.db	'SchM_Init',0,1,72,6,10,132,128,4,1,1
+	.dl	_5,_18,_4
+	.db	2,145,0,4
+	.dl	_5,_18
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('SchM_Init')
+	.rseg	'.debug_abbrev'	debug cluster('SchM_Init')
+_14:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('SchM_Init')
+	.rseg	'.debug_line'	debug cluster('SchM_Init')
+_15:
+	.dl	_36-_35
+_35:
+	.dw	3
+	.dl	_38-_37
+_37:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/Stubs/Rte.c',0,0,0,0,0
+_38:
+	.db	5,1,7,0,5,2
+	.dl	_5
+	.db	3,202,0,1,7,9
+	.dw	_18-_5
+	.db	0,1,1
+_36:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('SchM_Init')
+	.rseg	'.debug_ranges'	debug cluster('SchM_Init')
+_16:
+	.dl	-1,_17,0,_18-_17,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('Rte_Start')
+	.rseg	'.debug_info'	debug cluster('Rte_Start')
+_19:
+	.dl	190
+	.dw	3
+	.dl	_20
+	.db	4,1
+	.db	'../../code/Stubs/Rte.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_22,_21
+	.db	2
+	.dl	_9
+	.db	3
+	.db	'Rte_Start',0,1,77,6,10,132,128,4,1,1
+	.dl	_7,_24,_6
+	.db	2,145,0,4
+	.dl	_7,_24
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('Rte_Start')
+	.rseg	'.debug_abbrev'	debug cluster('Rte_Start')
+_20:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('Rte_Start')
+	.rseg	'.debug_line'	debug cluster('Rte_Start')
+_21:
+	.dl	_40-_39
+_39:
+	.dw	3
+	.dl	_42-_41
+_41:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/Stubs/Rte.c',0,0,0,0,0
+_42:
+	.db	5,21,7,0,5,2
+	.dl	_7
+	.db	3,212,0,1,5,1,9
+	.dw	_24-_7
+	.db	3,5,0,1,1
+_40:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('Rte_Start')
+	.rseg	'.debug_ranges'	debug cluster('Rte_Start')
+_22:
+	.dl	-1,_23,0,_24-_23,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('SchMTaskfunc')
+	.rseg	'.debug_info'	debug cluster('SchMTaskfunc')
+_25:
+	.dl	193
+	.dw	3
+	.dl	_26
+	.db	4,1
+	.db	'../../code/Stubs/Rte.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_28,_27
+	.db	2
+	.dl	_9
+	.db	3
+	.db	'SchMTaskfunc',0,1,103,1,10,132,128,4,1,1
+	.dl	_2,_30,_8
+	.db	2,145,0,4
+	.dl	_2,_30
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('SchMTaskfunc')
+	.rseg	'.debug_abbrev'	debug cluster('SchMTaskfunc')
+_26:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('SchMTaskfunc')
+	.rseg	'.debug_line'	debug cluster('SchMTaskfunc')
+_27:
+	.dl	_44-_43
+_43:
+	.dw	3
+	.dl	_46-_45
+_45:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/Stubs/Rte.c',0,0,0,0,0
+_46:
+	.db	5,9,7,0,5,2
+	.dl	_3
+	.db	3,247,0,1,5,5,9
+	.dw	_47-_3
+	.db	1,5,7,7,9
+	.dw	_48-_47
+	.db	3,2,1,5,35,9
+	.dw	_49-_48
+	.db	1,5,8,9
+	.dw	_50-_49
+	.db	3,117,1,5,1,9
+	.dw	_30-_50
+	.db	3,15,0,1,1
+_44:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('SchMTaskfunc')
+	.rseg	'.debug_ranges'	debug cluster('SchMTaskfunc')
+_28:
+	.dl	-1,_29,0,_30-_29,0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('Rte_Start')
+	.rseg	'.debug_loc'	debug cluster('Rte_Start')
+_6:
+	.dl	-1,_7,0,_24-_7
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('SchMTaskfunc')
+	.rseg	'.debug_loc'	debug cluster('SchMTaskfunc')
+_8:
+	.dl	-1,_2,0,_30-_2
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('SchM_Init')
+	.rseg	'.debug_loc'	debug cluster('SchM_Init')
+_4:
+	.dl	-1,_5,0,_18-_5
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_frame'	.segment	debug
+	.rseg	'.debug_frame'	debug
+_51:
+	.dl	64
+	.dl	-1
+	.db	3,0,1,1,145,1,15,10,123,0,54,8,020H,36,34,9,-2,34,22,145,1,14,49,34,148,02H,18,56,37,22,8,0ffH,26,56,36
+	.db	34,8,10,22,11,3,19,123,126,8,12,8,16,8,17,8,18,8,19,8,144,1,0,0,0
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('SchM_Init')
+	.rseg	'.debug_frame'	debug cluster('SchM_Init')
+	.dl	32
+	.dl	_51,_5,_18-_5
+	.db	8,7,8,8,8,9,8,0,8,1,8,2,8,3,8,4,8,5,8,6
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('Rte_Start')
+	.rseg	'.debug_frame'	debug cluster('Rte_Start')
+	.dl	12
+	.dl	_51,_7,_24-_7
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('SchMTaskfunc')
+	.rseg	'.debug_frame'	debug cluster('SchMTaskfunc')
+	.dl	32
+	.dl	_51,_2,_30-_2
+	.db	8,7,8,9,8,0,8,1,8,2,8,3,8,4,8,5,8,6,0,0
+	; End of section
+
+	; Module end
+	.end

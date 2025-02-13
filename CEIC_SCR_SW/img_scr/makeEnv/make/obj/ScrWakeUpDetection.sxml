@@ -1,0 +1,416 @@
+<file name="ScrWakeUpDetection.c">
+  <function name="Timer1OverflowInt" linkage="external">
+    <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="71" column="30" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="73" column="27" />
+    </block>
+  </function>
+  <function name="Timer0OverflowInt" linkage="external">
+    <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="87" column="30" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="89" column="27" />
+    </block>
+  </function>
+  <function name="Multiplexer" linkage="external">
+    <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="104" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="106" column="18" />
+    </block>
+    <call callee="DioPortRead" lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="119" column="30" />
+    </call>
+    <block lfreq="0.55">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="122" column="38" />
+    </block>
+    <call callee="SetFirstWakeupSource" lfreq="0.55">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="122" column="34" />
+    </call>
+    <block lfreq="0.45">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="126" column="50" />
+    </block>
+    <call callee="DioPortRead" lfreq="0.45">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="126" column="34" />
+    </call>
+    <block lfreq="0.04">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="129" column="49" />
+    </block>
+    <call callee="SetFirstWakeupSource" lfreq="0.04">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="129" column="38" />
+    </call>
+    <block lfreq="13.74">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="136" column="21" />
+    </block>
+    <block lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="139" column="62" />
+    </block>
+    <call callee="DioPortWrite" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="139" column="42" />
+    </call>
+    <call callee="DioPortWrite" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="140" column="42" />
+    </call>
+    <call callee="DioPortWrite" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="141" column="42" />
+    </call>
+    <call callee="BrsHwTime100NOP" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="142" column="44" />
+    </call>
+    <call callee="DioPortRead" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="144" column="50" />
+    </call>
+    <block lfreq="0.33">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="147" column="61" />
+    </block>
+    <call callee="SetFirstWakeupSource" lfreq="0.33">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="147" column="54" />
+    </call>
+    <block lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="152" column="62" />
+    </block>
+    <call callee="DioPortWrite" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="152" column="42" />
+    </call>
+    <call callee="DioPortWrite" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="153" column="42" />
+    </call>
+    <call callee="DioPortWrite" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="154" column="42" />
+    </call>
+    <call callee="BrsHwTime100NOP" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="155" column="44" />
+    </call>
+    <call callee="DioPortRead" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="157" column="50" />
+    </call>
+    <block lfreq="0.33">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="160" column="61" />
+    </block>
+    <call callee="SetFirstWakeupSource" lfreq="0.33">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="160" column="54" />
+    </call>
+    <block lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="165" column="62" />
+    </block>
+    <call callee="DioPortWrite" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="165" column="42" />
+    </call>
+    <call callee="DioPortWrite" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="166" column="42" />
+    </call>
+    <call callee="DioPortWrite" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="167" column="42" />
+    </call>
+    <call callee="BrsHwTime100NOP" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="168" column="44" />
+    </call>
+    <call callee="DioPortRead" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="170" column="50" />
+    </call>
+    <block lfreq="0.33">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="173" column="61" />
+    </block>
+    <call callee="SetFirstWakeupSource" lfreq="0.33">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="173" column="54" />
+    </call>
+    <block lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="178" column="62" />
+    </block>
+    <call callee="DioPortWrite" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="178" column="42" />
+    </call>
+    <call callee="DioPortWrite" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="179" column="42" />
+    </call>
+    <call callee="DioPortWrite" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="180" column="42" />
+    </call>
+    <call callee="BrsHwTime100NOP" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="181" column="44" />
+    </call>
+    <call callee="DioPortRead" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="183" column="50" />
+    </call>
+    <block lfreq="0.33">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="186" column="61" />
+    </block>
+    <call callee="SetFirstWakeupSource" lfreq="0.33">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="186" column="54" />
+    </call>
+    <block lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="191" column="62" />
+    </block>
+    <call callee="DioPortWrite" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="191" column="42" />
+    </call>
+    <call callee="DioPortWrite" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="192" column="42" />
+    </call>
+    <call callee="DioPortWrite" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="193" column="42" />
+    </call>
+    <call callee="BrsHwTime100NOP" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="194" column="44" />
+    </call>
+    <call callee="DioPortRead" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="196" column="50" />
+    </call>
+    <block lfreq="0.33">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="199" column="66" />
+    </block>
+    <call callee="SetFirstWakeupSource" lfreq="0.33">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="199" column="54" />
+    </call>
+    <block lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="204" column="62" />
+    </block>
+    <call callee="DioPortWrite" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="204" column="42" />
+    </call>
+    <call callee="DioPortWrite" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="205" column="42" />
+    </call>
+    <call callee="DioPortWrite" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="206" column="42" />
+    </call>
+    <call callee="BrsHwTime100NOP" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="207" column="44" />
+    </call>
+    <call callee="DioPortRead" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="209" column="50" />
+    </call>
+    <block lfreq="0.33">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="212" column="65" />
+    </block>
+    <call callee="SetFirstWakeupSource" lfreq="0.33">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="212" column="54" />
+    </call>
+    <block lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="217" column="62" />
+    </block>
+    <call callee="DioPortWrite" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="217" column="42" />
+    </call>
+    <call callee="DioPortWrite" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="218" column="42" />
+    </call>
+    <call callee="DioPortWrite" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="219" column="42" />
+    </call>
+    <call callee="BrsHwTime100NOP" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="220" column="44" />
+    </call>
+    <call callee="DioPortRead" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="222" column="50" />
+    </call>
+    <block lfreq="0.33">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="225" column="59" />
+    </block>
+    <call callee="SetFirstWakeupSource" lfreq="0.33">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="225" column="54" />
+    </call>
+    <block lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="230" column="62" />
+    </block>
+    <call callee="DioPortWrite" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="230" column="42" />
+    </call>
+    <call callee="DioPortWrite" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="231" column="42" />
+    </call>
+    <call callee="DioPortWrite" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="232" column="42" />
+    </call>
+    <call callee="BrsHwTime100NOP" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="233" column="44" />
+    </call>
+    <call callee="DioPortRead" lfreq="1.51">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="235" column="50" />
+    </call>
+    <block lfreq="0.33">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="238" column="59" />
+    </block>
+    <call callee="SetFirstWakeupSource" lfreq="0.33">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="238" column="54" />
+    </call>
+    <block lfreq="2.66">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="239" column="47" />
+    </block>
+    <block lfreq="13.60">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="134" column="36" />
+    </block>
+    <block lfreq="0.86">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="251" column="5" />
+    </block>
+    <call callee="GetFirstWakeupSource" lfreq="0.86">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="251" column="29" />
+    </call>
+    <block lfreq="0.43">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="254" column="31" />
+    </block>
+    <call callee="ScrStateMngmtStandby" lfreq="0.43">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="254" column="29" />
+    </call>
+    <block lfreq="0.43">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="258" column="25" />
+    </block>
+    <call callee="ScrWupCallback" lfreq="0.43">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="258" column="23" />
+    </call>
+  </function>
+  <function name="Ext0IntWakeupLine1" linkage="external">
+    <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="273" column="30" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="275" column="25" />
+    </block>
+    <call callee="ScrActivate100MHz" lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="275" column="23" />
+    </call>
+    <block lfreq="0.50">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="281" column="32" />
+    </block>
+    <block lfreq="0.11">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="291" column="38" />
+    </block>
+    <call callee="StartTimerValidateWUL1" lfreq="0.11">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="291" column="36" />
+    </call>
+    <block lfreq="0.50">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="293" column="33" />
+    </block>
+    <block lfreq="0.50">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="300" column="32" />
+    </block>
+    <block lfreq="0.22">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="305" column="36" />
+    </block>
+    <block lfreq="0.50">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="309" column="39" />
+    </block>
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="320" column="33" />
+    </block>
+  </function>
+  <function name="Ext4IntWakeupLine2" linkage="external">
+    <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="337" column="30" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="339" column="5" />
+    </block>
+    <block lfreq="0.19">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="341" column="29" />
+    </block>
+    <call callee="ScrActivate100MHz" lfreq="0.19">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="341" column="27" />
+    </call>
+    <block lfreq="0.09">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="347" column="36" />
+    </block>
+    <block lfreq="0.02">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="357" column="42" />
+    </block>
+    <call callee="StartTimerValidateWUL2" lfreq="0.02">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="357" column="40" />
+    </call>
+    <block lfreq="0.09">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="359" column="37" />
+    </block>
+    <block lfreq="0.09">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="366" column="36" />
+    </block>
+    <block lfreq="0.04">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="371" column="40" />
+    </block>
+    <block lfreq="0.09">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="375" column="43" />
+    </block>
+    <block lfreq="0.19">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="386" column="37" />
+    </block>
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="390" column="5" />
+    </block>
+    <block lfreq="0.19">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="393" column="29" />
+    </block>
+    <call callee="ScrActivate100MHz" lfreq="0.19">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="393" column="27" />
+    </call>
+    <block lfreq="0.04">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="398" column="27" />
+    </block>
+    <call callee="Multiplexer" lfreq="0.04">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="398" column="25" />
+    </call>
+  </function>
+  <function name="Ext2IntCan5Wakeup" linkage="external">
+    <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="434" column="30" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="436" column="25" />
+    </block>
+    <call callee="ScrActivate100MHz" lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="436" column="23" />
+    </call>
+    <call callee="ScrCanWupCallback" lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="439" column="23" />
+    </call>
+    <call callee="SetFirstWakeupSource" lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="440" column="26" />
+    </call>
+  </function>
+  <function name="Ext11IntLinWakeup" linkage="external">
+    <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="479" column="31" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="481" column="5" />
+    </block>
+    <block lfreq="0.19">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="483" column="29" />
+    </block>
+    <call callee="ScrActivate100MHz" lfreq="0.19">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="483" column="27" />
+    </call>
+    <call callee="ScrLinWupCallback" lfreq="0.19">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="486" column="27" />
+    </call>
+    <call callee="SetFirstWakeupSource" lfreq="0.19">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="487" column="30" />
+    </call>
+  </function>
+  <function name="Ext14IntFrWakeup" linkage="external">
+    <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="503" column="31" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="505" column="5" />
+    </block>
+    <block lfreq="0.19">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="507" column="29" />
+    </block>
+    <call callee="ScrActivate100MHz" lfreq="0.19">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="507" column="27" />
+    </call>
+    <call callee="ScrFrWupCallback" lfreq="0.19">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="509" column="26" />
+    </call>
+    <call callee="SetFirstWakeupSource" lfreq="0.19">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="510" column="30" />
+    </call>
+  </function>
+  <function name="WupInit" linkage="external">
+    <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="525" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="527" column="28" />
+    </block>
+  </function>
+  <function name="ScrActivate100MHz" linkage="external">
+    <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="645" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="647" column="5" />
+    </block>
+    <block lfreq="0.45">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="649" column="33" />
+    </block>
+  </function>
+  <function name="WupGetData" linkage="external">
+    <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="659" column="12" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrWakeUpDetection.c" line="661" column="5" />
+    </block>
+  </function>
+</file>

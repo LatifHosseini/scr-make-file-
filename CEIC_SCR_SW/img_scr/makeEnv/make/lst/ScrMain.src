@@ -1,0 +1,365 @@
+	; Module start
+	.compiler_version	"TASKING VX-toolset for 8051: C compiler v6.3r1 Build 19041558 SN 09466227"
+	.compiler_invocation	"c51 -Ml --registerbank=0 --core=scr2g -D__CPU__=tc39x -DBRS_DERIVATIVE_tc39x -DBRS_CPU_CORE_ -DBRS_OS_USECASE_BRS -DBRS_PLATFORM_XC800 -DBRS_COMP_TASKING -I../../code/int/inc -I../../code/stubs -I../build/bsw/_common -Ic:/progra~1/tasking/tricor~1.3r1/c51/include -Igendata -Iinclude -ps --fp-model=clnrTz -g2 -o obj\\ScrMain.src ../../code/int/src/ScrMain.c"
+	.compiler_name		"c51"
+'code_Scr1msTask'	.segment	code cluster('Scr1msTask')
+	.rseg	'code_Scr1msTask'	code cluster('Scr1msTask')
+	.public	_Scr1msTask
+; Function _Scr1msTask
+_16:
+_Scr1msTask:
+	.using 0
+_3:
+	gcall	_ScrWakeupHndlTask1
+_38:
+	gcall	_ScrEcuResetHndlTask1
+_39:
+	mov	DPTR,#_ScrAliveCounter
+	movx	A,@DPTR
+_40:
+	inc	A
+	movx	@DPTR,A
+_41:
+	ret
+_17:
+	; End of function
+	; End of section
+
+'code_Scr10msTask'	.segment	code cluster('Scr10msTask')
+	.rseg	'code_Scr10msTask'	code cluster('Scr10msTask')
+	.public	_Scr10msTask
+; Function _Scr10msTask
+_22:
+_Scr10msTask:
+	.using 0
+_5:
+	gcall	_ScrStateMngmtTask10
+_46:
+	gjmp	_ScrGenEthWULTask10
+_23:
+	; End of function
+	; End of section
+
+'code_Scr50msTask'	.segment	code cluster('Scr50msTask')
+	.rseg	'code_Scr50msTask'	code cluster('Scr50msTask')
+	.public	_Scr50msTask
+; Function _Scr50msTask
+_28:
+_Scr50msTask:
+	.using 0
+_7:
+	gjmp	_ScrWakeupEcuTask50
+_29:
+	; End of function
+	; End of section
+
+	.calls	'_Scr1msTask','_ScrWakeupHndlTask1'
+	.calls	'_Scr1msTask','_ScrEcuResetHndlTask1'
+	.calls	'_Scr10msTask','_ScrStateMngmtTask10'
+	.calls	'_Scr10msTask','_ScrGenEthWULTask10'
+	.calls	'_Scr50msTask','_ScrWakeupEcuTask50'
+	.calls	'_Scr1msTask','',2
+	.calls	'_Scr10msTask','',2
+	.calls	'_Scr50msTask','',2
+	.extrn	xdata(_ScrAliveCounter)
+	.extrn	code(_ScrWakeupEcuTask50)
+	.extrn	code(_ScrWakeupHndlTask1)
+	.extrn	code(_ScrStateMngmtTask10)
+	.extrn	code(_ScrEcuResetHndlTask1)
+	.extrn	code(_ScrGenEthWULTask10)
+'.debug_info'	.segment	debug
+	.rseg	'.debug_info'	debug
+_9:
+	.dl	455
+	.dw	3
+	.dl	_10
+	.db	4
+_8:
+	.db	1
+	.db	'../../code/int/src/ScrMain.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_11
+	.db	2
+	.db	'ScrWakeupEcuTask50',0,1,17,6,10,132,128,4,1,1,1,2
+	.db	'ScrWakeupHndlTask1',0,2,15,6,10,132,128,4,1,1,1,2
+	.db	'ScrStateMngmtTask10',0,3,14,6,10,132,128,4,1,1,1,2
+	.db	'ScrEcuResetHndlTask1',0,4,15,6,10,132,128,4,1,1,1,2
+	.db	'ScrGenEthWULTask10',0,5,21,6,10,132,128,4,1,1,1,3
+	.db	'void',0,4,8
+	.dl	298
+	.db	5
+	.db	'__prof_adm',0,6,1,1
+	.dl	304
+	.db	6
+	.db	'unsigned int',0,2,7,5
+	.db	'__codeptr',0,6,1,1
+	.dl	329
+	.db	6
+	.db	'unsigned char',0,1,8,5
+	.db	'uint8',0,7,101,40
+	.dl	363
+	.db	6
+	.db	'unsigned short int',0,2,7,5
+	.db	'uint16',0,7,103,40
+	.dl	394
+	.db	7
+	.db	'ScrAliveCounter',0,8,84,14,8
+	.dl	363
+	.db	1,1,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug
+	.rseg	'.debug_abbrev'	debug
+_10:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,46,0,3,8,58,15,59,15,57,15,51,15,54,15,39,12,63,12,60
+	.db	12,0,0,3,59,0,3,8,0,0,4,15,0,51,15,73,19,0,0,5,22,0,3,8,58,15,59,15,57,15,73,19,0,0,6,36,0,3,8,11,15,62
+	.db	15,0,0,7,52,0,3,8,58,15,59,15,57,15,51,15,73,19,63,12,60,12,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug
+	.rseg	'.debug_line'	debug
+_11:
+	.dl	_31-_30
+_30:
+	.dw	3
+	.dl	_33-_32
+_32:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'..\\..\\code\\int\\inc\\ScrWakeupEcu.h',0,0,0,0
+	.db	'..\\..\\code\\int\\inc\\ScrWakeUpHndl.h',0,0,0,0
+	.db	'..\\..\\code\\int\\inc\\ScrStateMngmt.h',0,0,0,0
+	.db	'..\\..\\code\\int\\inc\\ScrEcuResetHndl.h',0,0,0,0
+	.db	'..\\..\\code\\int\\inc\\ScrGenEthWULPulse.h',0,0,0,0
+	.db	'../../code/int/src/ScrMain.c',0,0,0,0
+	.db	'..\\..\\code\\stubs\\Platform_Types.h',0,0,0,0
+	.db	'..\\..\\code\\int\\inc\\TricoreScrIf.h',0,0,0,0,0
+_33:
+_31:
+	; End of section
+
+'.debug_info'	.segment	debug cluster('Scr1msTask')
+	.rseg	'.debug_info'	debug cluster('Scr1msTask')
+_12:
+	.dl	197
+	.dw	3
+	.dl	_13
+	.db	4,1
+	.db	'../../code/int/src/ScrMain.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_15,_14
+	.db	2
+	.dl	_8
+	.db	3
+	.db	'Scr1msTask',0,1,58,6,10,132,128,4,1,1
+	.dl	_3,_17,_2
+	.db	2,145,0,4
+	.dl	_3,_17
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('Scr1msTask')
+	.rseg	'.debug_abbrev'	debug cluster('Scr1msTask')
+_13:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('Scr1msTask')
+	.rseg	'.debug_line'	debug cluster('Scr1msTask')
+_14:
+	.dl	_35-_34
+_34:
+	.dw	3
+	.dl	_37-_36
+_36:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/ScrMain.c',0,0,0,0,0
+_37:
+	.db	5,24,7,0,5,2
+	.dl	_3
+	.db	3,59,1,5,26,9
+	.dw	_38-_3
+	.db	3,1,1,5,5,9
+	.dw	_39-_38
+	.db	3,3,1,5,20,9
+	.dw	_40-_39
+	.db	1,5,1,9
+	.dw	_41-_40
+	.db	3,1,1,7,9
+	.dw	_17-_41
+	.db	0,1,1
+_35:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('Scr1msTask')
+	.rseg	'.debug_ranges'	debug cluster('Scr1msTask')
+_15:
+	.dl	-1,_16,0,_17-_16,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('Scr10msTask')
+	.rseg	'.debug_info'	debug cluster('Scr10msTask')
+_18:
+	.dl	198
+	.dw	3
+	.dl	_19
+	.db	4,1
+	.db	'../../code/int/src/ScrMain.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_21,_20
+	.db	2
+	.dl	_8
+	.db	3
+	.db	'Scr10msTask',0,1,67,6,10,132,128,4,1,1
+	.dl	_5,_23,_4
+	.db	2,145,0,4
+	.dl	_5,_23
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('Scr10msTask')
+	.rseg	'.debug_abbrev'	debug cluster('Scr10msTask')
+_19:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('Scr10msTask')
+	.rseg	'.debug_line'	debug cluster('Scr10msTask')
+_20:
+	.dl	_43-_42
+_42:
+	.dw	3
+	.dl	_45-_44
+_44:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/ScrMain.c',0,0,0,0,0
+_45:
+	.db	5,25,7,0,5,2
+	.dl	_5
+	.db	3,196,0,1,5,24,9
+	.dw	_46-_5
+	.db	3,1,1,5,1,9
+	.dw	_23-_46
+	.db	3,1,0,1,1
+_43:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('Scr10msTask')
+	.rseg	'.debug_ranges'	debug cluster('Scr10msTask')
+_21:
+	.dl	-1,_22,0,_23-_22,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('Scr50msTask')
+	.rseg	'.debug_info'	debug cluster('Scr50msTask')
+_24:
+	.dl	198
+	.dw	3
+	.dl	_25
+	.db	4,1
+	.db	'../../code/int/src/ScrMain.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_27,_26
+	.db	2
+	.dl	_8
+	.db	3
+	.db	'Scr50msTask',0,1,73,6,10,132,128,4,1,1
+	.dl	_7,_29,_6
+	.db	2,145,0,4
+	.dl	_7,_29
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('Scr50msTask')
+	.rseg	'.debug_abbrev'	debug cluster('Scr50msTask')
+_25:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('Scr50msTask')
+	.rseg	'.debug_line'	debug cluster('Scr50msTask')
+_26:
+	.dl	_48-_47
+_47:
+	.dw	3
+	.dl	_50-_49
+_49:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/ScrMain.c',0,0,0,0,0
+_50:
+	.db	5,24,7,0,5,2
+	.dl	_7
+	.db	3,202,0,1,5,1,9
+	.dw	_29-_7
+	.db	3,1,0,1,1
+_48:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('Scr50msTask')
+	.rseg	'.debug_ranges'	debug cluster('Scr50msTask')
+_27:
+	.dl	-1,_28,0,_29-_28,0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('Scr10msTask')
+	.rseg	'.debug_loc'	debug cluster('Scr10msTask')
+_4:
+	.dl	-1,_5,0,_23-_5
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('Scr1msTask')
+	.rseg	'.debug_loc'	debug cluster('Scr1msTask')
+_2:
+	.dl	-1,_3,0,_17-_3
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('Scr50msTask')
+	.rseg	'.debug_loc'	debug cluster('Scr50msTask')
+_6:
+	.dl	-1,_7,0,_29-_7
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_frame'	.segment	debug
+	.rseg	'.debug_frame'	debug
+_51:
+	.dl	64
+	.dl	-1
+	.db	3,0,1,1,145,1,15,10,123,0,54,8,020H,36,34,9,-2,34,22,145,1,14,49,34,148,02H,18,56,37,22,8,0ffH,26,56,36
+	.db	34,8,10,22,11,3,19,123,126,8,12,8,16,8,17,8,18,8,19,8,144,1,0,0,0
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('Scr1msTask')
+	.rseg	'.debug_frame'	debug cluster('Scr1msTask')
+	.dl	12
+	.dl	_51,_3,_17-_3
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('Scr10msTask')
+	.rseg	'.debug_frame'	debug cluster('Scr10msTask')
+	.dl	12
+	.dl	_51,_5,_23-_5
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('Scr50msTask')
+	.rseg	'.debug_frame'	debug cluster('Scr50msTask')
+	.dl	12
+	.dl	_51,_7,_29-_7
+	; End of section
+
+	; Module end
+	.end
