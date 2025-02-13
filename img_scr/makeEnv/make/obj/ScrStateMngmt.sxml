@@ -1,0 +1,104 @@
+<file name="ScrStateMngmt.c">
+  <function name="ScrStateMngmtTask10" linkage="external">
+    <srcPos file="../../code/int/src/ScrStateMngmt.c" line="80" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="82" column="3" />
+    </block>
+    <block lfreq="0.20">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="93" column="7" />
+    </block>
+    <block lfreq="0.04">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="95" column="37" />
+    </block>
+    <call callee="SetDioPortsForSleepOperation" lfreq="0.04">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="99" column="37" />
+    </call>
+    <call callee="ScrGenReset" lfreq="0.04">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="100" column="21" />
+    </call>
+    <block lfreq="0.20">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="107" column="7" />
+    </block>
+    <block lfreq="0.04">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="109" column="27" />
+    </block>
+    <call callee="ScrWupCallback" lfreq="0.04">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="109" column="25" />
+    </call>
+    <block lfreq="0.20">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="113" column="7" />
+    </block>
+    <block lfreq="0.10">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="115" column="11" />
+    </block>
+    <block lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="117" column="15" />
+    </block>
+    <block lfreq="0.01">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="119" column="50" />
+    </block>
+    <call callee="SetFirstWakeupSource" lfreq="0.01">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="119" column="40" />
+    </call>
+    <block lfreq="0.04">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="123" column="20" />
+    </block>
+    <block lfreq="0.02">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="125" column="50" />
+    </block>
+    <call callee="SetFirstWakeupSource" lfreq="0.02">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="125" column="40" />
+    </call>
+    <block lfreq="0.03">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="126" column="47" />
+    </block>
+    <call callee="ScrResetPmicHandler" lfreq="0.03">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="127" column="38" />
+    </call>
+    <block lfreq="0.02">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="131" column="32" />
+    </block>
+    <call callee="Multiplexer" lfreq="0.02">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="131" column="30" />
+    </call>
+    <block lfreq="0.10">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="134" column="43" />
+    </block>
+    <block lfreq="0.20">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="138" column="22" />
+    </block>
+    <block lfreq="0.09">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="142" column="33" />
+    </block>
+    <block lfreq="0.20">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="156" column="7" />
+    </block>
+    <block lfreq="0.09">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="158" column="33" />
+    </block>
+    <block lfreq="0.29">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="166" column="27" />
+    </block>
+    <call callee="SetDioPortsForNormalOperation" lfreq="0.29">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="168" column="38" />
+    </call>
+  </function>
+  <function name="ScrStateMngmtStandby" linkage="external">
+    <srcPos file="../../code/int/src/ScrStateMngmt.c" line="188" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="191" column="3" />
+    </block>
+    <block lfreq="0.45">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="193" column="33" />
+    </block>
+    <block lfreq="0.20">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="196" column="40" />
+    </block>
+    <block lfreq="0.45">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="198" column="23" />
+    </block>
+    <call callee="SetDioPortsForSleepOperation" lfreq="0.45">
+      <srcPos file="../../code/int/src/ScrStateMngmt.c" line="199" column="33" />
+    </call>
+  </function>
+</file>

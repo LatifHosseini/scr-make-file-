@@ -1,0 +1,151 @@
+###############################################################################
+#  Makefile.project.part.defines
+###############################################################################
+# MakeSupport type: AUTOSAR
+
+
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# Root of the project (dir where the additionally used components reside) from the
+# scope of the makefile location.
+# E.g. makefile is located under
+#    d:\usr\develop\can\PAG\HC08\COSMIC\testsuit\appl
+# and the components like drv, il reside under
+#    d:\usr\develop\can\PAG\HC08\COSMIC
+# The root is given (relative to the Makefile)
+#    ROOT = ..\..
+#------------------------------------------------------------------------------
+# For PreIntegration test of delivery description ROOT = ..\..\FilesForBrsDevelopment
+ROOT = ..\build
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# $(GENTOOL_DIR) contains the path to your version.info file
+# E.g.:    GENTOOL_DIR = $(ROOT)\Generators\Components
+#------------------------------------------------------------------------------
+# For PreIntegration test of delivery description GENTOOL_DIR = $(ROOT)
+GENTOOL_DIR = $(ROOT)
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# Version of Makefile.project.part.defines
+#------------------------------------------------------------------------------
+MPPD_VERSION = 32
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# Path to which *.obj, *.err, *.lst will be moved/generated
+#------------------------------------------------------------------------------
+OBJ_PATH = obj
+ERR_PATH = err
+LST_PATH = lst
+LOG_PATH = log
+LIB_PATH = lib
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# Redirect error output to stdout (and not only to *.err files)
+#------------------------------------------------------------------------------
+ERR_TO_STDOUT = 1
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# $(GENDATA_DIR) contains the directory into which the ecu specific data is
+# generated
+# E.g.: GENDATA_DIR = GenData
+#------------------------------------------------------------------------------
+GENDATA_DIR = GenData
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# $(GENDATA_OS_DIR) contains the directory into which the ecu osspecific data is
+# generated
+# E.g.: GENDATA_OS_DIR = GenDataOs
+#------------------------------------------------------------------------------
+GENDATA_OS_DIR = $(GENDATA_DIR)
+
+#------------------------------------------------------------------------------
+# Use Autosar Makefiles
+#------------------------------------------------------------------------------
+USE_AUTOSAR_MAKE = 1
+
+#------------------------------------------------------------------------------
+# Subfolder of components (mandatory BSW with konStruct 1.7.xx or newer)
+#------------------------------------------------------------------------------
+GLOBAL_COMP_DIR = BSW
+
+#------------------------------------------------------------------------------
+# Os root path only for defining dependencies in ASR mak files.
+#------------------------------------------------------------------------------
+ROOT_OS_PATH = $(subst \,/,$(ROOT)/$(AUTOSAROS_PATH))
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# $(TGFGENDATA_DIR) contains the directory into which the Test Generator
+# Framework data is generated
+# E.g.: TGFGENDATA_DIR = TGFGenData
+#------------------------------------------------------------------------------
+TGFGENDATA_DIR =
+
+ifneq ($(TGFGENDATA_DIR),)
+include $(TGFGENDATA_DIR)\Makefile.Appl
+endif
+
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# Is AutosarOs used in this project (0 = false, 1 = true)
+#------------------------------------------------------------------------------
+AUTOSAROS_USED                                                   = 0
+AUTOSAROS_PATH                                                   = BSW\Os
+
+
+
+###############################################################################
+#  Modules
+###############################################################################
+MODULE_LIST_PROJECT += 
+
+
+
+###############################################################################
+#  Application (Appl)
+###############################################################################
+# zBrs_AsrEmbeddedRunTimeSystem@Impl_Stubs
+APP_SOURCE_LST += ..\..\code\Stubs\EcuM.c
+APP_SOURCE_LST += ..\..\code\Stubs\Os.c
+APP_SOURCE_LST += ..\..\code\Stubs\Rte.c
+APP_SOURCE_LST += ..\..\code\Stubs\Stubs.c
+
+
+# zBrs_AsrEmbeddedRunTimeSystem@Impl_BrsAsr
+APP_SOURCE_LST += ..\..\code\Stubs\BrsAsrMain.c
+
+
+# zBrs_AsrEmbeddedRunTimeSystem@SampleConfigs
+
+
+# zBrs_MakeSupport@ReleaseSheet
+
+
+# zBrs_MakeSupport@Implementation
+
+
+# zBrs_Hw@root
+APP_SOURCE_LST += ..\..\code\int\src\BrsHw.c
+
+APP_SOURCE_LST += ..\..\code\int\src\ScrMain.c
+APP_SOURCE_LST += ..\..\code\int\src\ScrWakeUpDetection.c
+APP_SOURCE_LST += ..\..\code\int\src\ScrDioPort.c
+APP_SOURCE_LST += ..\..\code\int\src\ScrWakeupHndl.c
+APP_SOURCE_LST += ..\..\code\int\src\ScrWakeupEcu.c
+APP_SOURCE_LST += ..\..\code\int\src\ScrGenEthWULPulse.c
+APP_SOURCE_LST += ..\..\code\int\src\ScrEcuResetHndl.c
+APP_SOURCE_LST += ..\..\code\int\src\ScrStateMngmt.c
+
+
+ADDITIONAL_INCLUDES += Include
+ADDITIONAL_INCLUDES += ..\..\code\int\inc
+ADDITIONAL_INCLUDES += ..\..\code\Stubs
+

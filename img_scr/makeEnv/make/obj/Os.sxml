@@ -1,0 +1,38 @@
+<file name="Os.c">
+  <function name="Os_InitMemory" linkage="external">
+    <srcPos file="../../code/Stubs/Os.c" line="93" column="6" />
+  </function>
+  <function name="Os_Init" linkage="external">
+    <srcPos file="../../code/Stubs/Os.c" line="96" column="6" />
+  </function>
+  <function name="ShutdownOS" linkage="external">
+    <srcPos file="../../code/Stubs/Os.c" line="100" column="6" />
+  </function>
+  <function name="SetRelAlarm" linkage="external">
+    <srcPos file="../../code/Stubs/Os.c" line="106" column="6" />
+  </function>
+  <function name="CancelAlarm" linkage="external">
+    <srcPos file="../../code/Stubs/Os.c" line="113" column="6" />
+  </function>
+  <function name="osInitialize" linkage="external">
+    <srcPos file="../../code/Stubs/Os.c" line="118" column="6" />
+  </function>
+  <function name="Schedule" linkage="external">
+    <srcPos file="../../code/Stubs/Os.c" line="121" column="6" />
+  </function>
+  <function name="StartOS" linkage="external">
+    <srcPos file="../../code/Stubs/Os.c" line="124" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/Stubs/Os.c" line="128" column="20" />
+    </block>
+    <call callee="BrsHwEnableInterruptAtPowerOn" lfreq="1.00">
+      <srcPos file="../../code/Stubs/Os.c" line="129" column="32" />
+    </call>
+    <call callee="Default_Init_Taskfunc" lfreq="1.00">
+      <srcPos file="../../code/Stubs/Os.c" line="131" column="24" />
+    </call>
+    <call callee="BrsAsrMainTaskfunc" lfreq="1.00">
+      <srcPos file="../../code/Stubs/Os.c" line="133" column="21" />
+    </call>
+  </function>
+</file>

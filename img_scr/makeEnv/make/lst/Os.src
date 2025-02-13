@@ -1,0 +1,938 @@
+	; Module start
+	.compiler_version	"TASKING VX-toolset for 8051: C compiler v6.3r1 Build 19041558 SN 09466227"
+	.compiler_invocation	"c51 -Ml --registerbank=0 --core=scr2g -D__CPU__=tc39x -DBRS_DERIVATIVE_tc39x -DBRS_CPU_CORE_ -DBRS_OS_USECASE_BRS -DBRS_PLATFORM_XC800 -DBRS_COMP_TASKING -I../../code/int/inc -I../../code/stubs -I../build/bsw/_common -Ic:/progra~1/tasking/tricor~1.3r1/c51/include -Igendata -Iinclude -ps --fp-model=clnrTz -g2 -o obj\\Os.src ../../code/Stubs/Os.c"
+	.compiler_name		"c51"
+'code_Os_InitMemory'	.segment	code cluster('Os_InitMemory')
+	.rseg	'code_Os_InitMemory'	code cluster('Os_InitMemory')
+	.public	_Os_InitMemory
+; Function _Os_InitMemory
+_26:
+_Os_InitMemory:
+	.using 0
+_3:
+	ret
+_27:
+	; End of function
+	; End of section
+
+'code_Os_Init'	.segment	code cluster('Os_Init')
+	.rseg	'code_Os_Init'	code cluster('Os_Init')
+	.public	_Os_Init
+; Function _Os_Init
+_32:
+_Os_Init:
+	.using 0
+_5:
+	ret
+_33:
+	; End of function
+	; End of section
+
+'code_ShutdownOS'	.segment	code cluster('ShutdownOS')
+	.rseg	'code_ShutdownOS'	code cluster('ShutdownOS')
+	.public	_ShutdownOS
+; Function _ShutdownOS
+_56:
+_ShutdownOS:
+	.using 0
+_7:
+	ret
+_57:
+	; End of function
+	; End of section
+
+'_SetRelAlarm'	.segment	xdata overlay('stack_xdata') cluster('SetRelAlarm')
+	.rseg	'_SetRelAlarm'	xdata overlay('stack_xdata') cluster('SetRelAlarm')
+	.public	_$param_SetRelAlarm
+_$param_SetRelAlarm:
+	.ds	8
+	; End of section
+
+'code_SetRelAlarm'	.segment	code cluster('SetRelAlarm')
+	.rseg	'code_SetRelAlarm'	code cluster('SetRelAlarm')
+	.public	_SetRelAlarm
+; Function _SetRelAlarm
+_62:
+_SetRelAlarm:
+	.using 0
+_9:
+	ret
+_63:
+	; End of function
+	; End of section
+
+'code_CancelAlarm'	.segment	code cluster('CancelAlarm')
+	.rseg	'code_CancelAlarm'	code cluster('CancelAlarm')
+	.public	_CancelAlarm
+; Function _CancelAlarm
+_68:
+_CancelAlarm:
+	.using 0
+_11:
+	ret
+_69:
+	; End of function
+	; End of section
+
+'code_osInitialize'	.segment	code cluster('osInitialize')
+	.rseg	'code_osInitialize'	code cluster('osInitialize')
+	.public	_osInitialize
+; Function _osInitialize
+_38:
+_osInitialize:
+	.using 0
+_13:
+	ret
+_39:
+	; End of function
+	; End of section
+
+'code_Schedule'	.segment	code cluster('Schedule')
+	.rseg	'code_Schedule'	code cluster('Schedule')
+	.public	_Schedule
+; Function _Schedule
+_44:
+_Schedule:
+	.using 0
+_15:
+	ret
+_45:
+	; End of function
+	; End of section
+
+'code_StartOS'	.segment	code cluster('StartOS')
+	.rseg	'code_StartOS'	code cluster('StartOS')
+	.public	_StartOS
+; Function _StartOS
+_50:
+_StartOS:
+	.using 0
+_17:
+	gcall	_BrsHwEnableInterruptAtPowerOn
+_84:
+	gcall	_Default_Init_Taskfunc
+_109:
+	gjmp	_BrsAsrMainTaskfunc
+_51:
+	; End of function
+	; End of section
+
+'xdata_OsAppMode'	.segment	xdata init cluster('OsAppMode')
+	.rseg	'xdata_OsAppMode'	xdata init cluster('OsAppMode')
+	.public	_OsAppMode
+_OsAppMode:
+	.db	1
+	; End of section
+
+'xdata_Rte_Al_TE2_OsTask_0_255ms'	.segment	xdata init cluster('Rte_Al_TE2_OsTask_0_255ms')
+	.rseg	'xdata_Rte_Al_TE2_OsTask_0_255ms'	xdata init cluster('Rte_Al_TE2_OsTask_0_255ms')
+	.public	_Rte_Al_TE2_OsTask_0_255ms
+_Rte_Al_TE2_OsTask_0_255ms:
+	.db	1
+	; End of section
+
+'xdata_Rte_Al_TE2_Default_BSW_Async_Task_0_10ms'	.segment	xdata init cluster('Rte_Al_TE2_Default_BSW_Async_Task_0_10ms')
+	.rseg	'xdata_Rte_Al_TE2_Default_BSW_Async_Task_0_10ms'	xdata init cluster('Rte_Al_TE2_Default_BSW_Async_Task_0_10ms')
+	.public	_Rte_Al_TE2_Default_BSW_Async_Task_0_10ms
+_Rte_Al_TE2_Default_BSW_Async_Task_0_10ms:
+	.db	2
+	; End of section
+
+	.calls	'_StartOS','_BrsHwEnableInterruptAtPowerOn'
+	.calls	'_StartOS','_Default_Init_Taskfunc'
+	.calls	'_StartOS','_BrsAsrMainTaskfunc'
+	.calls	'_Os_InitMemory','',2
+	.calls	'_Os_Init','',2
+	.calls	'_ShutdownOS','',2
+	.calls	'_SetRelAlarm','',2
+	.calls	'_CancelAlarm','',2
+	.calls	'_osInitialize','',2
+	.calls	'_Schedule','',2
+	.calls	'_StartOS','',2
+	.extrn	code(_BrsHwEnableInterruptAtPowerOn)
+	.extrn	code(_Default_Init_Taskfunc)
+	.extrn	code(_BrsAsrMainTaskfunc)
+'.debug_info'	.segment	debug
+	.rseg	'.debug_info'	debug
+_19:
+	.dl	492
+	.dw	3
+	.dl	_20
+	.db	4
+_18:
+	.db	1
+	.db	'../../code/Stubs/Os.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_21
+	.db	2
+	.db	'BrsHwEnableInterruptAtPowerOn',0,1,219,1,6,10,132,128,4,1,1,1
+_76:
+	.db	3
+	.db	'unsigned char',0,1,8
+_80:
+	.db	3
+	.db	'unsigned long int',0,4,7,2
+	.db	'Default_Init_Taskfunc',0,2,160,1,1,10,132,128,4,1,1,1,2
+	.db	'BrsAsrMainTaskfunc',0,2,167,1,1,10,132,128,4,1,1,1,4
+	.db	'void',0,5,8
+	.dl	283
+	.db	6
+	.db	'__prof_adm',0,3,1,1
+	.dl	289
+	.db	3
+	.db	'unsigned int',0,2,7,6
+	.db	'__codeptr',0,3,1,1
+	.dl	314
+	.db	6
+	.db	'uint8',0,4,101,40
+	.dl	180
+	.db	3
+	.db	'unsigned short int',0,2,7,6
+	.db	'uint16',0,4,103,40
+	.dl	362
+	.db	6
+	.db	'uint32',0,4,105,40
+	.dl	197
+	.db	6
+	.db	'Std_ReturnType',0,5,132,1,15
+	.dl	180
+	.db	6
+	.db	'AppModeType',0,6,51,15
+	.dl	180
+	.db	6
+	.db	'CounterType',0,6,54,15
+	.dl	180
+	.db	6
+	.db	'TickType',0,6,57,16
+	.dl	197
+	.db	0
+	; End of section
+
+'.debug_abbrev'	.segment	debug
+	.rseg	'.debug_abbrev'	debug
+_20:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,46,0,3,8,58,15,59,15,57,15,51,15,54,15,39,12,63,12,60
+	.db	12,0,0,3,36,0,3,8,11,15,62,15,0,0,4,59,0,3,8,0,0,5,15,0,51,15,73,19,0,0,6,22,0,3,8,58,15,59,15,57,15,73
+	.db	19,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug
+	.rseg	'.debug_line'	debug
+_21:
+	.dl	_86-_85
+_85:
+	.dw	3
+	.dl	_88-_87
+_87:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'..\\..\\code\\int\\inc\\BrsHw.h',0,0,0,0
+	.db	'..\\..\\code\\Stubs\\BrsAsrMain.h',0,0,0,0
+	.db	'../../code/Stubs/Os.c',0,0,0,0
+	.db	'..\\..\\code\\stubs\\Platform_Types.h',0,0,0,0
+	.db	'..\\..\\code\\stubs\\Std_Types.h',0,0,0,0
+	.db	'..\\..\\code\\Stubs\\Os.h',0,0,0,0,0
+_88:
+_86:
+	; End of section
+
+'.debug_info'	.segment	debug cluster('Os_InitMemory')
+	.rseg	'.debug_info'	debug cluster('Os_InitMemory')
+_22:
+	.dl	193
+	.dw	3
+	.dl	_23
+	.db	4,1
+	.db	'../../code/Stubs/Os.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_25,_24
+	.db	2
+	.dl	_18
+	.db	3
+	.db	'Os_InitMemory',0,1,93,6,10,132,128,4,1,1
+	.dl	_3,_27,_2
+	.db	2,145,0,4
+	.dl	_3,_27
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('Os_InitMemory')
+	.rseg	'.debug_abbrev'	debug cluster('Os_InitMemory')
+_23:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('Os_InitMemory')
+	.rseg	'.debug_line'	debug cluster('Os_InitMemory')
+_24:
+	.dl	_90-_89
+_89:
+	.dw	3
+	.dl	_92-_91
+_91:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/Stubs/Os.c',0,0,0,0,0
+_92:
+	.db	5,2,7,0,5,2
+	.dl	_3
+	.db	3,221,0,1,7,9
+	.dw	_27-_3
+	.db	0,1,1
+_90:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('Os_InitMemory')
+	.rseg	'.debug_ranges'	debug cluster('Os_InitMemory')
+_25:
+	.dl	-1,_26,0,_27-_26,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('Os_Init')
+	.rseg	'.debug_info'	debug cluster('Os_Init')
+_28:
+	.dl	187
+	.dw	3
+	.dl	_29
+	.db	4,1
+	.db	'../../code/Stubs/Os.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_31,_30
+	.db	2
+	.dl	_18
+	.db	3
+	.db	'Os_Init',0,1,96,6,10,132,128,4,1,1
+	.dl	_5,_33,_4
+	.db	2,145,0,4
+	.dl	_5,_33
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('Os_Init')
+	.rseg	'.debug_abbrev'	debug cluster('Os_Init')
+_29:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('Os_Init')
+	.rseg	'.debug_line'	debug cluster('Os_Init')
+_30:
+	.dl	_94-_93
+_93:
+	.dw	3
+	.dl	_96-_95
+_95:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/Stubs/Os.c',0,0,0,0,0
+_96:
+	.db	5,2,7,0,5,2
+	.dl	_5
+	.db	3,224,0,1,7,9
+	.dw	_33-_5
+	.db	0,1,1
+_94:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('Os_Init')
+	.rseg	'.debug_ranges'	debug cluster('Os_Init')
+_31:
+	.dl	-1,_32,0,_33-_32,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('osInitialize')
+	.rseg	'.debug_info'	debug cluster('osInitialize')
+_34:
+	.dl	192
+	.dw	3
+	.dl	_35
+	.db	4,1
+	.db	'../../code/Stubs/Os.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_37,_36
+	.db	2
+	.dl	_18
+	.db	3
+	.db	'osInitialize',0,1,118,6,10,132,128,4,1,1
+	.dl	_13,_39,_12
+	.db	2,145,0,4
+	.dl	_13,_39
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('osInitialize')
+	.rseg	'.debug_abbrev'	debug cluster('osInitialize')
+_35:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('osInitialize')
+	.rseg	'.debug_line'	debug cluster('osInitialize')
+_36:
+	.dl	_98-_97
+_97:
+	.dw	3
+	.dl	_100-_99
+_99:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/Stubs/Os.c',0,0,0,0,0
+_100:
+	.db	5,2,7,0,5,2
+	.dl	_13
+	.db	3,246,0,1,7,9
+	.dw	_39-_13
+	.db	0,1,1
+_98:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('osInitialize')
+	.rseg	'.debug_ranges'	debug cluster('osInitialize')
+_37:
+	.dl	-1,_38,0,_39-_38,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('Schedule')
+	.rseg	'.debug_info'	debug cluster('Schedule')
+_40:
+	.dl	188
+	.dw	3
+	.dl	_41
+	.db	4,1
+	.db	'../../code/Stubs/Os.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_43,_42
+	.db	2
+	.dl	_18
+	.db	3
+	.db	'Schedule',0,1,121,6,10,132,128,4,1,1
+	.dl	_15,_45,_14
+	.db	2,145,0,4
+	.dl	_15,_45
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('Schedule')
+	.rseg	'.debug_abbrev'	debug cluster('Schedule')
+_41:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('Schedule')
+	.rseg	'.debug_line'	debug cluster('Schedule')
+_42:
+	.dl	_102-_101
+_101:
+	.dw	3
+	.dl	_104-_103
+_103:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/Stubs/Os.c',0,0,0,0,0
+_104:
+	.db	5,2,7,0,5,2
+	.dl	_15
+	.db	3,249,0,1,7,9
+	.dw	_45-_15
+	.db	0,1,1
+_102:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('Schedule')
+	.rseg	'.debug_ranges'	debug cluster('Schedule')
+_43:
+	.dl	-1,_44,0,_45-_44,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('StartOS')
+	.rseg	'.debug_info'	debug cluster('StartOS')
+_46:
+	.dl	208
+	.dw	3
+	.dl	_47
+	.db	4,1
+	.db	'../../code/Stubs/Os.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_49,_48
+	.db	2
+	.dl	_18
+	.db	3
+	.db	'StartOS',0,1,124,6,10,132,128,4,1,1
+	.dl	_17,_51,_16
+	.db	2,145,0,4
+	.db	'appMode',0,1,124,20,8
+	.dl	_76,_77
+	.db	5
+	.dl	_17,_51
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('StartOS')
+	.rseg	'.debug_abbrev'	debug cluster('StartOS')
+_47:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,5,0,3,8,58,15,59,15,57,15,51,15,73,16,2,6,0,0,5,11,0,17,1
+	.db	18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('StartOS')
+	.rseg	'.debug_line'	debug cluster('StartOS')
+_48:
+	.dl	_106-_105
+_105:
+	.dw	3
+	.dl	_108-_107
+_107:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/Stubs/Os.c',0,0,0,0,0
+_108:
+	.db	5,32,7,0,5,2
+	.dl	_17
+	.db	3,128,1,1,5,24,9
+	.dw	_84-_17
+	.db	3,2,1,5,21,9
+	.dw	_109-_84
+	.db	3,2,1,5,1,9
+	.dw	_51-_109
+	.db	3,1,0,1,1
+_106:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('StartOS')
+	.rseg	'.debug_ranges'	debug cluster('StartOS')
+_49:
+	.dl	-1,_50,0,_51-_50,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('ShutdownOS')
+	.rseg	'.debug_info'	debug cluster('ShutdownOS')
+_52:
+	.dl	211
+	.dw	3
+	.dl	_53
+	.db	4,1
+	.db	'../../code/Stubs/Os.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_55,_54
+	.db	2
+	.dl	_18
+	.db	3
+	.db	'ShutdownOS',0,1,100,6,10,132,128,4,1,1
+	.dl	_7,_57,_6
+	.db	2,145,0,4
+	.db	'ErrCode',0,1,100,32,8
+	.dl	_76,_78
+	.db	5
+	.dl	_7,_57
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('ShutdownOS')
+	.rseg	'.debug_abbrev'	debug cluster('ShutdownOS')
+_53:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,5,0,3,8,58,15,59,15,57,15,51,15,73,16,2,6,0,0,5,11,0,17,1
+	.db	18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('ShutdownOS')
+	.rseg	'.debug_line'	debug cluster('ShutdownOS')
+_54:
+	.dl	_111-_110
+_110:
+	.dw	3
+	.dl	_113-_112
+_112:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/Stubs/Os.c',0,0,0,0,0
+_113:
+	.db	5,1,7,0,5,2
+	.dl	_7
+	.db	3,230,0,1,7,9
+	.dw	_57-_7
+	.db	0,1,1
+_111:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('ShutdownOS')
+	.rseg	'.debug_ranges'	debug cluster('ShutdownOS')
+_55:
+	.dl	-1,_56,0,_57-_56,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('SetRelAlarm')
+	.rseg	'.debug_info'	debug cluster('SetRelAlarm')
+_58:
+	.dl	258
+	.dw	3
+	.dl	_59
+	.db	4,1
+	.db	'../../code/Stubs/Os.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_61,_60
+	.db	2
+	.dl	_18
+	.db	3
+	.db	'SetRelAlarm',0,1,106,6,10,132,128,4,1,1
+	.dl	_9,_63,_8
+	.db	2,145,0,4
+	.db	'counter',0,1,106,30,8
+	.dl	_76,_79
+	.db	4
+	.db	'ticktype1',0,1,106,48,8
+	.dl	_80,_81
+	.db	4
+	.db	'ticktype2',0,1,106,68,8
+	.dl	_80,_82
+	.db	5
+	.dl	_9,_63
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('SetRelAlarm')
+	.rseg	'.debug_abbrev'	debug cluster('SetRelAlarm')
+_59:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,5,0,3,8,58,15,59,15,57,15,51,15,73,16,2,6,0,0,5,11,0,17,1
+	.db	18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('SetRelAlarm')
+	.rseg	'.debug_line'	debug cluster('SetRelAlarm')
+_60:
+	.dl	_115-_114
+_114:
+	.dw	3
+	.dl	_117-_116
+_116:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/Stubs/Os.c',0,0,0,0,0
+_117:
+	.db	5,1,7,0,5,2
+	.dl	_9
+	.db	3,238,0,1,7,9
+	.dw	_63-_9
+	.db	0,1,1
+_115:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('SetRelAlarm')
+	.rseg	'.debug_ranges'	debug cluster('SetRelAlarm')
+_61:
+	.dl	-1,_62,0,_63-_62,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('CancelAlarm')
+	.rseg	'.debug_info'	debug cluster('CancelAlarm')
+_64:
+	.dl	212
+	.dw	3
+	.dl	_65
+	.db	4,1
+	.db	'../../code/Stubs/Os.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_67,_66
+	.db	2
+	.dl	_18
+	.db	3
+	.db	'CancelAlarm',0,1,113,6,10,132,128,4,1,1
+	.dl	_11,_69,_10
+	.db	2,145,0,4
+	.db	'counter',0,1,113,30,8
+	.dl	_76,_83
+	.db	5
+	.dl	_11,_69
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('CancelAlarm')
+	.rseg	'.debug_abbrev'	debug cluster('CancelAlarm')
+_65:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,5,0,3,8,58,15,59,15,57,15,51,15,73,16,2,6,0,0,5,11,0,17,1
+	.db	18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('CancelAlarm')
+	.rseg	'.debug_line'	debug cluster('CancelAlarm')
+_66:
+	.dl	_119-_118
+_118:
+	.dw	3
+	.dl	_121-_120
+_120:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/Stubs/Os.c',0,0,0,0,0
+_121:
+	.db	5,1,7,0,5,2
+	.dl	_11
+	.db	3,243,0,1,7,9
+	.dw	_69-_11
+	.db	0,1,1
+_119:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('CancelAlarm')
+	.rseg	'.debug_ranges'	debug cluster('CancelAlarm')
+_67:
+	.dl	-1,_68,0,_69-_68,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('OsAppMode')
+	.rseg	'.debug_info'	debug cluster('OsAppMode')
+_70:
+	.dl	167
+	.dw	3
+	.dl	_71
+	.db	4,1
+	.db	'../../code/Stubs/Os.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1,2
+	.dl	_18
+	.db	3
+	.db	'OsAppMode',0,3,78,13,8
+	.dl	_76
+	.db	1,10,3
+	.dl	_OsAppMode
+	.db	56,8,020H,36,33,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('OsAppMode')
+	.rseg	'.debug_abbrev'	debug cluster('OsAppMode')
+_71:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,51,15,73,16,63
+	.db	12,2,9,0,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('Rte_Al_TE2_OsTask_0_255ms')
+	.rseg	'.debug_info'	debug cluster('Rte_Al_TE2_OsTask_0_255ms')
+_72:
+	.dl	183
+	.dw	3
+	.dl	_73
+	.db	4,1
+	.db	'../../code/Stubs/Os.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1,2
+	.dl	_18
+	.db	3
+	.db	'Rte_Al_TE2_OsTask_0_255ms',0,3,81,13,8
+	.dl	_76
+	.db	1,10,3
+	.dl	_Rte_Al_TE2_OsTask_0_255ms
+	.db	56,8,020H,36,33,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('Rte_Al_TE2_OsTask_0_255ms')
+	.rseg	'.debug_abbrev'	debug cluster('Rte_Al_TE2_OsTask_0_255ms')
+_73:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,51,15,73,16,63
+	.db	12,2,9,0,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('Rte_Al_TE2_Default_BSW_Async_Task_0_10ms')
+	.rseg	'.debug_info'	debug cluster('Rte_Al_TE2_Default_BSW_Async_Task_0_10ms')
+_74:
+	.dl	198
+	.dw	3
+	.dl	_75
+	.db	4,1
+	.db	'../../code/Stubs/Os.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1,2
+	.dl	_18
+	.db	3
+	.db	'Rte_Al_TE2_Default_BSW_Async_Task_0_10ms',0,3,82,13,8
+	.dl	_76
+	.db	1,10,3
+	.dl	_Rte_Al_TE2_Default_BSW_Async_Task_0_10ms
+	.db	56,8,020H,36,33,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('Rte_Al_TE2_Default_BSW_Async_Task_0_10ms')
+	.rseg	'.debug_abbrev'	debug cluster('Rte_Al_TE2_Default_BSW_Async_Task_0_10ms')
+_75:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,51,15,73,16,63
+	.db	12,2,9,0,0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('CancelAlarm')
+	.rseg	'.debug_loc'	debug cluster('CancelAlarm')
+_10:
+	.dl	-1,_11,0,_69-_11
+	.dw	2
+	.db	123,0
+	.dl	0,0
+_83:
+	.dl	-1,_11,0,_69-_11
+	.dw	1
+	.db	87
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('Os_Init')
+	.rseg	'.debug_loc'	debug cluster('Os_Init')
+_4:
+	.dl	-1,_5,0,_33-_5
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('Os_InitMemory')
+	.rseg	'.debug_loc'	debug cluster('Os_InitMemory')
+_2:
+	.dl	-1,_3,0,_27-_3
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('Schedule')
+	.rseg	'.debug_loc'	debug cluster('Schedule')
+_14:
+	.dl	-1,_15,0,_45-_15
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('SetRelAlarm')
+	.rseg	'.debug_loc'	debug cluster('SetRelAlarm')
+_8:
+	.dl	-1,_9,0,_63-_9
+	.dw	2
+	.db	123,0
+	.dl	0,0
+_79:
+	.dl	-1,_9,0,_63-_9
+	.dw	1
+	.db	87
+	.dl	0,0
+_81:
+	.dl	-1,_9,0,_63-_9
+	.dw	10
+	.db	3
+	.dl	_$param_SetRelAlarm
+	.db	56,8,020H,36,33
+	.dl	0,0
+_82:
+	.dl	-1,_9,0,_63-_9
+	.dw	12
+	.db	3
+	.dl	_$param_SetRelAlarm
+	.db	56,8,020H,36,33,52,34
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('ShutdownOS')
+	.rseg	'.debug_loc'	debug cluster('ShutdownOS')
+_78:
+	.dl	-1,_7,0,_57-_7
+	.dw	1
+	.db	87
+	.dl	0,0
+_6:
+	.dl	-1,_7,0,_57-_7
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('StartOS')
+	.rseg	'.debug_loc'	debug cluster('StartOS')
+_16:
+	.dl	-1,_17,0,_51-_17
+	.dw	2
+	.db	123,0
+	.dl	0,0
+_77:
+	.dl	-1,_17,0,_84-_17
+	.dw	1
+	.db	87
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('osInitialize')
+	.rseg	'.debug_loc'	debug cluster('osInitialize')
+_12:
+	.dl	-1,_13,0,_39-_13
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_frame'	.segment	debug
+	.rseg	'.debug_frame'	debug
+_122:
+	.dl	64
+	.dl	-1
+	.db	3,0,1,1,145,1,15,10,123,0,54,8,020H,36,34,9,-2,34,22,145,1,14,49,34,148,02H,18,56,37,22,8,0ffH,26,56,36
+	.db	34,8,10,22,11,3,19,123,126,8,12,8,16,8,17,8,18,8,19,8,144,1,0,0,0
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('Os_InitMemory')
+	.rseg	'.debug_frame'	debug cluster('Os_InitMemory')
+	.dl	32
+	.dl	_122,_3,_27-_3
+	.db	8,7,8,8,8,9,8,0,8,1,8,2,8,3,8,4,8,5,8,6
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('Os_Init')
+	.rseg	'.debug_frame'	debug cluster('Os_Init')
+	.dl	32
+	.dl	_122,_5,_33-_5
+	.db	8,7,8,8,8,9,8,0,8,1,8,2,8,3,8,4,8,5,8,6
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('ShutdownOS')
+	.rseg	'.debug_frame'	debug cluster('ShutdownOS')
+	.dl	32
+	.dl	_122,_7,_57-_7
+	.db	8,7,8,8,8,9,8,0,8,1,8,2,8,3,8,4,8,5,8,6
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('SetRelAlarm')
+	.rseg	'.debug_frame'	debug cluster('SetRelAlarm')
+	.dl	32
+	.dl	_122,_9,_63-_9
+	.db	8,7,8,8,8,9,8,0,8,1,8,2,8,3,8,4,8,5,8,6
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('CancelAlarm')
+	.rseg	'.debug_frame'	debug cluster('CancelAlarm')
+	.dl	32
+	.dl	_122,_11,_69-_11
+	.db	8,7,8,8,8,9,8,0,8,1,8,2,8,3,8,4,8,5,8,6
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('osInitialize')
+	.rseg	'.debug_frame'	debug cluster('osInitialize')
+	.dl	32
+	.dl	_122,_13,_39-_13
+	.db	8,7,8,8,8,9,8,0,8,1,8,2,8,3,8,4,8,5,8,6
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('Schedule')
+	.rseg	'.debug_frame'	debug cluster('Schedule')
+	.dl	32
+	.dl	_122,_15,_45-_15
+	.db	8,7,8,8,8,9,8,0,8,1,8,2,8,3,8,4,8,5,8,6
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('StartOS')
+	.rseg	'.debug_frame'	debug cluster('StartOS')
+	.dl	12
+	.dl	_122,_17,_51-_17
+	; End of section
+
+	; Module end
+	.end

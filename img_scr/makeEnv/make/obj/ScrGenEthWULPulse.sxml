@@ -1,0 +1,734 @@
+<file name="ScrGenEthWULPulse.c">
+  <function name="ScrStartEthLineShortMon" linkage="external">
+    <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="132" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="134" column="9" />
+    </block>
+    <block lfreq="0.38">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="134" column="49" />
+    </block>
+    <block lfreq="0.07">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="136" column="58" />
+    </block>
+    <call callee="DioPortRead" lfreq="0.07">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="136" column="45" />
+    </call>
+    <call callee="DioPortRead" lfreq="0.07">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="137" column="45" />
+    </call>
+    <block lfreq="0.03">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="141" column="63" />
+    </block>
+    <block lfreq="0.93">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="144" column="14" />
+    </block>
+    <block lfreq="0.46">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="144" column="54" />
+    </block>
+    <block lfreq="0.09">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="146" column="59" />
+    </block>
+    <call callee="DioPortRead" lfreq="0.09">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="146" column="47" />
+    </call>
+    <call callee="DioPortRead" lfreq="0.09">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="147" column="45" />
+    </call>
+    <block lfreq="0.04">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="151" column="63" />
+    </block>
+  </function>
+  <function name="ScrHndlEthLineShortMonWUL1" linkage="external">
+    <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="171" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="173" column="25" />
+    </block>
+    <call callee="DioPortRead" lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="173" column="39" />
+    </call>
+    <block lfreq="0.50">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="179" column="59" />
+    </block>
+    <block lfreq="0.22">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="181" column="13" />
+    </block>
+    <block lfreq="0.11">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="181" column="68" />
+    </block>
+    <block lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="184" column="38" />
+    </block>
+    <block lfreq="0.02">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="189" column="53" />
+    </block>
+    <block lfreq="0.17">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="197" column="13" />
+    </block>
+    <block lfreq="0.10">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="199" column="21" />
+    </block>
+    <block lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="199" column="76" />
+    </block>
+    <block lfreq="0.02">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="201" column="21" />
+    </block>
+    <block lfreq="0.01">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="203" column="51" />
+    </block>
+    <block lfreq="0.01">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="207" column="50" />
+    </block>
+    <block lfreq="0.08">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="215" column="42" />
+    </block>
+    <block lfreq="0.23">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="179" column="5" />
+    </block>
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="226" column="5" />
+    </block>
+    <block lfreq="0.50">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="228" column="13" />
+    </block>
+    <block lfreq="0.25">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="228" column="50" />
+    </block>
+    <block lfreq="0.38">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="230" column="17" />
+    </block>
+    <block lfreq="0.21">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="230" column="65" />
+    </block>
+    <block lfreq="0.10">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="232" column="35" />
+    </block>
+    <block lfreq="0.06">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="237" column="80" />
+    </block>
+    <block lfreq="0.07">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="239" column="46" />
+    </block>
+    <block lfreq="0.27">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="248" column="42" />
+    </block>
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="253" column="9" />
+    </block>
+    <block lfreq="0.57">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="255" column="44" />
+    </block>
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="258" column="1" />
+    </block>
+  </function>
+  <function name="ScrHndlEthLineShortMonWUL2" linkage="external">
+    <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="271" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="273" column="24" />
+    </block>
+    <call callee="DioPortRead" lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="273" column="38" />
+    </call>
+    <block lfreq="0.50">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="279" column="59" />
+    </block>
+    <block lfreq="0.22">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="281" column="13" />
+    </block>
+    <block lfreq="0.11">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="281" column="66" />
+    </block>
+    <block lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="284" column="38" />
+    </block>
+    <block lfreq="0.02">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="289" column="53" />
+    </block>
+    <block lfreq="0.17">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="297" column="13" />
+    </block>
+    <block lfreq="0.10">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="299" column="21" />
+    </block>
+    <block lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="299" column="74" />
+    </block>
+    <block lfreq="0.02">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="301" column="21" />
+    </block>
+    <block lfreq="0.01">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="303" column="51" />
+    </block>
+    <block lfreq="0.01">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="307" column="50" />
+    </block>
+    <block lfreq="0.08">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="315" column="42" />
+    </block>
+    <block lfreq="0.23">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="279" column="5" />
+    </block>
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="326" column="5" />
+    </block>
+    <block lfreq="0.45">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="328" column="13" />
+    </block>
+    <block lfreq="0.22">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="328" column="50" />
+    </block>
+    <block lfreq="0.34">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="330" column="17" />
+    </block>
+    <block lfreq="0.19">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="330" column="63" />
+    </block>
+    <block lfreq="0.09">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="332" column="35" />
+    </block>
+    <block lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="337" column="80" />
+    </block>
+    <block lfreq="0.07">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="339" column="46" />
+    </block>
+    <block lfreq="0.24">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="348" column="42" />
+    </block>
+    <block lfreq="0.45">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="353" column="9" />
+    </block>
+    <block lfreq="0.20">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="380" column="20" />
+    </block>
+    <block lfreq="0.13">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="380" column="69" />
+    </block>
+    <block lfreq="0.06">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="382" column="20" />
+    </block>
+    <block lfreq="0.04">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="382" column="69" />
+    </block>
+    <block lfreq="0.01">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="386" column="37" />
+    </block>
+    <call callee="WupGetData" lfreq="0.01">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="386" column="50" />
+    </call>
+    <block lfreq="0.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="390" column="67" />
+    </block>
+    <block lfreq="0.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="393" column="27" />
+    </block>
+    <block lfreq="0.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="393" column="75" />
+    </block>
+    <block lfreq="0.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="393" column="75" />
+    </block>
+    <block lfreq="0.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="393" column="170" />
+    </block>
+    <block lfreq="0.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="396" column="58" />
+    </block>
+    <block lfreq="0.01">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="401" column="21" />
+    </block>
+    <block lfreq="0.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="401" column="75" />
+    </block>
+    <block lfreq="0.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="404" column="27" />
+    </block>
+    <block lfreq="0.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="404" column="73" />
+    </block>
+    <block lfreq="0.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="404" column="73" />
+    </block>
+    <block lfreq="0.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="404" column="164" />
+    </block>
+    <block lfreq="0.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="405" column="70" />
+    </block>
+    <block lfreq="0.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="407" column="46" />
+    </block>
+    <block lfreq="0.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="411" column="54" />
+    </block>
+    <block lfreq="0.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="421" column="49" />
+    </block>
+    <block lfreq="0.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="425" column="48" />
+    </block>
+    <block lfreq="0.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="427" column="25" />
+    </block>
+    <block lfreq="0.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="429" column="48" />
+    </block>
+    <block lfreq="0.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="434" column="52" />
+    </block>
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="440" column="9" />
+    </block>
+    <block lfreq="0.62">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="440" column="92" />
+    </block>
+    <block lfreq="0.35">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="442" column="44" />
+    </block>
+    <block lfreq="0.16">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="447" column="43" />
+    </block>
+  </function>
+  <function name="ScrGenerateWULPattern" linkage="external">
+    <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="463" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="465" column="9" />
+    </block>
+    <block lfreq="0.38">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="465" column="51" />
+    </block>
+    <block lfreq="0.07">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="467" column="39" />
+    </block>
+    <call callee="ScrStartEthLineShortMon" lfreq="0.07">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="467" column="33" />
+    </call>
+    <block lfreq="0.04">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="470" column="13" />
+    </block>
+    <block lfreq="0.02">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="472" column="44" />
+    </block>
+    <block lfreq="0.02">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="476" column="54" />
+    </block>
+    <block lfreq="0.07">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="479" column="35" />
+    </block>
+    <call callee="DioPortWrite" lfreq="0.07">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="480" column="22" />
+    </call>
+    <block lfreq="0.93">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="482" column="14" />
+    </block>
+    <block lfreq="0.35">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="482" column="56" />
+    </block>
+    <block lfreq="0.07">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="484" column="39" />
+    </block>
+    <call callee="ScrStartEthLineShortMon" lfreq="0.07">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="484" column="33" />
+    </call>
+    <block lfreq="0.03">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="487" column="13" />
+    </block>
+    <block lfreq="0.02">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="489" column="47" />
+    </block>
+    <block lfreq="0.02">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="493" column="57" />
+    </block>
+    <block lfreq="0.07">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="497" column="14" />
+    </block>
+    <block lfreq="0.04">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="500" column="58" />
+    </block>
+    <block lfreq="0.07">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="503" column="35" />
+    </block>
+    <block lfreq="0.86">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="506" column="10" />
+    </block>
+    <block lfreq="0.33">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="508" column="9" />
+    </block>
+    <block lfreq="0.07">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="510" column="43" />
+    </block>
+    <call callee="ScrStartEthLineShortMon" lfreq="0.07">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="510" column="37" />
+    </call>
+    <block lfreq="0.04">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="513" column="17" />
+    </block>
+    <block lfreq="0.02">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="515" column="48" />
+    </block>
+    <block lfreq="0.02">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="519" column="58" />
+    </block>
+    <block lfreq="0.07">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="522" column="18" />
+    </block>
+    <block lfreq="0.04">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="525" column="62" />
+    </block>
+    <block lfreq="0.07">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="527" column="39" />
+    </block>
+    <call callee="DioPortWrite" lfreq="0.07">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="528" column="26" />
+    </call>
+    <block lfreq="0.26">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="533" column="18" />
+    </block>
+    <block lfreq="0.15">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="535" column="58" />
+    </block>
+    <block lfreq="0.33">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="539" column="9" />
+    </block>
+    <block lfreq="0.18">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="541" column="13" />
+    </block>
+    <block lfreq="0.09">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="543" column="41" />
+    </block>
+    <block lfreq="0.09">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="553" column="41" />
+    </block>
+    <block lfreq="0.15">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="559" column="18" />
+    </block>
+    <block lfreq="0.08">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="561" column="58" />
+    </block>
+    <block lfreq="0.53">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="565" column="10" />
+    </block>
+    <block lfreq="0.10">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="568" column="39" />
+    </block>
+    <call callee="DioPortWrite" lfreq="0.10">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="573" column="22" />
+    </call>
+    <block lfreq="0.17">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="574" column="39" />
+    </block>
+    <call callee="DioPortWrite" lfreq="0.17">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="574" column="22" />
+    </call>
+  </function>
+  <function name="ScrIsWakeupDiagRequested" linkage="external">
+    <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="594" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="601" column="8" />
+    </block>
+    <block lfreq="0.87">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="601" column="74" />
+    </block>
+    <block lfreq="0.30">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="603" column="29" />
+    </block>
+    <call callee="WupGetData" lfreq="0.30">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="603" column="41" />
+    </call>
+    <block lfreq="0.06">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="612" column="36" />
+    </block>
+    <call callee="BrsHwDisableInterrupt" lfreq="0.06">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="612" column="34" />
+    </call>
+    <block lfreq="0.03">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="613" column="70" />
+    </block>
+    <block lfreq="0.02">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="615" column="17" />
+    </block>
+    <block lfreq="0.01">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="618" column="61" />
+    </block>
+    <call callee="ScrGenerateWULPattern" lfreq="0.01">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="618" column="42" />
+    </call>
+    <block lfreq="0.01">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="622" column="39" />
+    </block>
+    <call callee="ScrGenerateWULPattern" lfreq="0.01">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="624" column="42" />
+    </call>
+    <block lfreq="0.06">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="627" column="36" />
+    </block>
+    <call callee="BrsHwRestoreInterrupt" lfreq="0.06">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="627" column="34" />
+    </call>
+    <block lfreq="0.70">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="633" column="12" />
+    </block>
+    <block lfreq="0.57">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="633" column="63" />
+    </block>
+    <block lfreq="0.24">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="636" column="43" />
+    </block>
+    <call callee="DioPortWrite" lfreq="0.24">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="636" column="25" />
+    </call>
+    <call callee="DioPortWrite" lfreq="0.24">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="637" column="25" />
+    </call>
+    <block lfreq="0.11">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="644" column="59" />
+    </block>
+    <block lfreq="0.70">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="647" column="9" />
+    </block>
+    <block lfreq="0.35">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="649" column="13" />
+    </block>
+    <block lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="652" column="39" />
+    </block>
+    <call callee="ScrGenerateWULPattern" lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="654" column="42" />
+    </call>
+    <block lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="658" column="39" />
+    </block>
+    <call callee="ScrGenerateWULPattern" lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="660" column="42" />
+    </call>
+    <block lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="664" column="41" />
+    </block>
+    <call callee="ScrKeepSwitchAwake" lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="664" column="39" />
+    </call>
+    <block lfreq="0.10">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="667" column="39" />
+    </block>
+    <call callee="ScrGenerateWULPattern" lfreq="0.10">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="669" column="42" />
+    </call>
+    <block lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="673" column="40" />
+    </block>
+    <call callee="ScrKeepSwitchAwake" lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="674" column="39" />
+    </call>
+    <block lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="678" column="40" />
+    </block>
+    <call callee="ScrResetPmicHandler" lfreq="0.05">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="679" column="40" />
+    </call>
+  </function>
+  <function name="ScrGenEthWULTask10" linkage="external">
+    <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="701" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="703" column="25" />
+    </block>
+    <block lfreq="0.57">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="710" column="27" />
+    </block>
+    <block lfreq="0.11">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="714" column="43" />
+    </block>
+    <call callee="DioPortWrite" lfreq="0.11">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="714" column="25" />
+    </call>
+    <block lfreq="0.06">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="721" column="58" />
+    </block>
+    <block lfreq="0.03">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="726" column="59" />
+    </block>
+    <block lfreq="0.11">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="712" column="9" />
+    </block>
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="732" column="5" />
+    </block>
+    <block lfreq="0.57">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="736" column="27" />
+    </block>
+    <block lfreq="0.11">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="740" column="42" />
+    </block>
+    <call callee="DioPortWrite" lfreq="0.11">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="740" column="25" />
+    </call>
+    <block lfreq="0.06">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="747" column="58" />
+    </block>
+    <block lfreq="0.03">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="752" column="59" />
+    </block>
+    <block lfreq="0.11">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="738" column="9" />
+    </block>
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="758" column="5" />
+    </block>
+    <block lfreq="0.57">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="760" column="30" />
+    </block>
+    <block lfreq="0.11">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="763" column="31" />
+    </block>
+    <call callee="ScrGenerateWULPattern" lfreq="0.11">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="764" column="34" />
+    </call>
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="768" column="8" />
+    </block>
+    <block lfreq="0.45">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="770" column="23" />
+    </block>
+    <block lfreq="0.10">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="773" column="33" />
+    </block>
+    <call callee="CheckWulPulsLength" lfreq="0.10">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="773" column="31" />
+    </call>
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="777" column="31" />
+    </block>
+    <call callee="ScrIsWakeupDiagRequested" lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="777" column="29" />
+    </call>
+    <call callee="ScrHndlEthLineShortMonWUL1" lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="778" column="31" />
+    </call>
+    <call callee="ScrHndlEthLineShortMonWUL2" lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="779" column="31" />
+    </call>
+    <call callee="DioPortRead" lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="783" column="25" />
+    </call>
+    <block lfreq="0.45">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="785" column="53" />
+    </block>
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="787" column="5" />
+    </block>
+    <call callee="DioPortRead" lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="787" column="25" />
+    </call>
+    <block lfreq="0.45">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="789" column="52" />
+    </block>
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="792" column="41" />
+    </block>
+  </function>
+  <function name="CheckWulPulsLength" linkage="internal">
+    <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="806" column="13" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="812" column="29" />
+    </block>
+    <call callee="WupGetData" lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="812" column="27" />
+    </call>
+    <block lfreq="0.50">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="814" column="69" />
+    </block>
+    <block lfreq="0.25">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="814" column="94" />
+    </block>
+    <block lfreq="0.11">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="814" column="120" />
+    </block>
+    <block lfreq="0.06">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="816" column="13" />
+    </block>
+    <block lfreq="0.04">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="816" column="78" />
+    </block>
+    <block lfreq="0.04">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="818" column="44" />
+    </block>
+    <block lfreq="0.02">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="825" column="75" />
+    </block>
+    <block lfreq="0.02">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="830" column="35" />
+    </block>
+    <block lfreq="0.01">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="834" column="17" />
+    </block>
+    <block lfreq="0.01">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="836" column="47" />
+    </block>
+    <block lfreq="0.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="840" column="50" />
+    </block>
+    <block lfreq="0.06">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="848" column="27" />
+    </block>
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="851" column="9" />
+    </block>
+    <block lfreq="0.50">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="851" column="69" />
+    </block>
+    <block lfreq="0.25">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="851" column="94" />
+    </block>
+    <block lfreq="0.11">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="851" column="121" />
+    </block>
+    <block lfreq="0.06">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="853" column="13" />
+    </block>
+    <block lfreq="0.04">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="853" column="78" />
+    </block>
+    <block lfreq="0.04">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="855" column="44" />
+    </block>
+    <block lfreq="0.02">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="862" column="75" />
+    </block>
+    <block lfreq="0.02">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="867" column="35" />
+    </block>
+    <block lfreq="0.01">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="871" column="17" />
+    </block>
+    <block lfreq="0.01">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="873" column="47" />
+    </block>
+    <block lfreq="0.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="877" column="50" />
+    </block>
+    <block lfreq="0.06">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="885" column="27" />
+    </block>
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="888" column="9" />
+    </block>
+    <block lfreq="0.45">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="890" column="25" />
+    </block>
+    <block lfreq="0.10">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="894" column="45" />
+    </block>
+    <call callee="ScrGenerateWULPattern" lfreq="0.10">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="894" column="35" />
+    </call>
+    <block lfreq="0.35">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="899" column="44" />
+    </block>
+  </function>
+  <function name="ScrGenReset" linkage="external">
+    <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="915" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrGenEthWULPulse.c" line="917" column="36" />
+    </block>
+  </function>
+</file>

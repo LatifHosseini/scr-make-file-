@@ -1,0 +1,389 @@
+<file name="BrsHw.c">
+  <function name="BrsHwWatchdogInitPowerOn" linkage="external">
+    <srcPos file="../../code/int/src/BrsHw.c" line="201" column="6" />
+  </function>
+  <function name="BrsHwPllInitPowerOn" linkage="external">
+    <srcPos file="../../code/int/src/BrsHw.c" line="215" column="6" />
+  </function>
+  <function name="BrsHwPortInitPowerOn" linkage="external">
+    <srcPos file="../../code/int/src/BrsHw.c" line="229" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="231" column="17" />
+    </block>
+    <call callee="DioPortInit" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="231" column="15" />
+    </call>
+  </function>
+  <function name="BrsHwTimeBaseInitPowerOn" linkage="external">
+    <srcPos file="../../code/int/src/BrsHw.c" line="246" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="248" column="27" />
+    </block>
+    <call callee="WupInit" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="270" column="11" />
+    </call>
+  </function>
+  <function name="BrsHwTimeBaseInterrupt" linkage="external">
+    <srcPos file="../../code/int/src/BrsHw.c" line="286" column="31" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="288" column="32" />
+    </block>
+  </function>
+  <function name="BrsHwDisableInterruptAtPowerOn" linkage="external">
+    <srcPos file="../../code/int/src/BrsHw.c" line="302" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="304" column="26" />
+    </block>
+  </function>
+  <function name="BrsHwEnableInterruptAtPowerOn" linkage="external">
+    <srcPos file="../../code/int/src/BrsHw.c" line="318" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="320" column="21" />
+    </block>
+  </function>
+  <function name="BrsHwConfigureInterruptsAtPowerOn" linkage="external">
+    <srcPos file="../../code/int/src/BrsHw.c" line="333" column="6" />
+  </function>
+  <function name="BrsHwDisableInterrupt" linkage="external">
+    <srcPos file="../../code/int/src/BrsHw.c" line="353" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="359" column="3" />
+    </block>
+    <block lfreq="0.45">
+      <srcPos file="../../code/int/src/BrsHw.c" line="361" column="32" />
+    </block>
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="366" column="23" />
+    </block>
+  </function>
+  <function name="BrsHwRestoreInterrupt" linkage="external">
+    <srcPos file="../../code/int/src/BrsHw.c" line="384" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="388" column="3" />
+    </block>
+    <block lfreq="0.22">
+      <srcPos file="../../code/int/src/BrsHw.c" line="390" column="105" />
+    </block>
+    <call callee="BrsMainExceptionHandler" lfreq="0.22">
+      <srcPos file="../../code/int/src/BrsHw.c" line="390" column="28" />
+    </call>
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="393" column="23" />
+    </block>
+    <block lfreq="0.45">
+      <srcPos file="../../code/int/src/BrsHw.c" line="396" column="35" />
+    </block>
+  </function>
+  <function name="BrsHwSoftwareResetECU" linkage="external">
+    <srcPos file="../../code/int/src/BrsHw.c" line="410" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="412" column="26" />
+    </block>
+    <call callee="BrsHwDisableInterrupt" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="412" column="24" />
+    </call>
+    <block lfreq="1000000028.28">
+      <srcPos file="../../code/int/src/BrsHw.c" line="416" column="11" />
+    </block>
+  </function>
+  <function name="BrsHwTime100NOP" linkage="external">
+    <srcPos file="../../code/int/src/BrsHw.c" line="436" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="438" column="26" />
+    </block>
+    <call callee="BrsHwDisableInterrupt" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="438" column="24" />
+    </call>
+    <call callee="__asm.0" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="440" column="15" />
+    </call>
+    <call callee="__asm.1" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="440" column="30" />
+    </call>
+    <call callee="__asm.2" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="440" column="45" />
+    </call>
+    <call callee="__asm.3" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="440" column="60" />
+    </call>
+    <call callee="__asm.4" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="440" column="75" />
+    </call>
+    <call callee="__asm.5" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="440" column="90" />
+    </call>
+    <call callee="__asm.6" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="441" column="15" />
+    </call>
+    <call callee="__asm.7" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="441" column="30" />
+    </call>
+    <call callee="__asm.8" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="441" column="45" />
+    </call>
+    <call callee="__asm.9" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="441" column="60" />
+    </call>
+    <call callee="__asm.10" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="441" column="75" />
+    </call>
+    <call callee="__asm.11" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="441" column="90" />
+    </call>
+    <call callee="__asm.12" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="442" column="15" />
+    </call>
+    <call callee="__asm.13" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="442" column="30" />
+    </call>
+    <call callee="__asm.14" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="442" column="45" />
+    </call>
+    <call callee="__asm.15" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="442" column="60" />
+    </call>
+    <call callee="__asm.16" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="442" column="75" />
+    </call>
+    <call callee="__asm.17" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="442" column="90" />
+    </call>
+    <call callee="__asm.18" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="443" column="15" />
+    </call>
+    <call callee="__asm.19" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="443" column="30" />
+    </call>
+    <call callee="__asm.20" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="443" column="45" />
+    </call>
+    <call callee="__asm.21" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="443" column="60" />
+    </call>
+    <call callee="__asm.22" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="443" column="75" />
+    </call>
+    <call callee="__asm.23" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="443" column="90" />
+    </call>
+    <call callee="__asm.24" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="444" column="15" />
+    </call>
+    <call callee="__asm.25" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="444" column="30" />
+    </call>
+    <call callee="__asm.26" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="444" column="45" />
+    </call>
+    <call callee="__asm.27" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="444" column="60" />
+    </call>
+    <call callee="__asm.28" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="444" column="75" />
+    </call>
+    <call callee="__asm.29" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="444" column="90" />
+    </call>
+    <call callee="__asm.30" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="445" column="15" />
+    </call>
+    <call callee="__asm.31" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="445" column="30" />
+    </call>
+    <call callee="__asm.32" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="445" column="45" />
+    </call>
+    <call callee="__asm.33" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="445" column="60" />
+    </call>
+    <call callee="__asm.34" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="445" column="75" />
+    </call>
+    <call callee="__asm.35" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="445" column="90" />
+    </call>
+    <call callee="__asm.36" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="446" column="15" />
+    </call>
+    <call callee="__asm.37" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="446" column="30" />
+    </call>
+    <call callee="__asm.38" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="446" column="45" />
+    </call>
+    <call callee="__asm.39" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="446" column="60" />
+    </call>
+    <call callee="__asm.40" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="446" column="75" />
+    </call>
+    <call callee="__asm.41" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="446" column="90" />
+    </call>
+    <call callee="__asm.42" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="447" column="15" />
+    </call>
+    <call callee="__asm.43" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="447" column="30" />
+    </call>
+    <call callee="__asm.44" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="447" column="45" />
+    </call>
+    <call callee="__asm.45" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="447" column="60" />
+    </call>
+    <call callee="__asm.46" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="447" column="75" />
+    </call>
+    <call callee="__asm.47" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="447" column="90" />
+    </call>
+    <call callee="__asm.48" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="448" column="15" />
+    </call>
+    <call callee="__asm.49" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="448" column="30" />
+    </call>
+    <call callee="__asm.50" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="448" column="45" />
+    </call>
+    <call callee="__asm.51" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="448" column="60" />
+    </call>
+    <call callee="__asm.52" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="448" column="75" />
+    </call>
+    <call callee="__asm.53" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="448" column="90" />
+    </call>
+    <call callee="__asm.54" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="449" column="15" />
+    </call>
+    <call callee="__asm.55" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="449" column="30" />
+    </call>
+    <call callee="__asm.56" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="449" column="45" />
+    </call>
+    <call callee="__asm.57" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="449" column="60" />
+    </call>
+    <call callee="__asm.58" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="449" column="75" />
+    </call>
+    <call callee="__asm.59" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="449" column="90" />
+    </call>
+    <call callee="__asm.60" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="450" column="15" />
+    </call>
+    <call callee="__asm.61" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="450" column="30" />
+    </call>
+    <call callee="__asm.62" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="450" column="45" />
+    </call>
+    <call callee="__asm.63" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="450" column="60" />
+    </call>
+    <call callee="__asm.64" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="450" column="75" />
+    </call>
+    <call callee="__asm.65" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="450" column="90" />
+    </call>
+    <call callee="__asm.66" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="451" column="15" />
+    </call>
+    <call callee="__asm.67" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="451" column="30" />
+    </call>
+    <call callee="__asm.68" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="451" column="45" />
+    </call>
+    <call callee="__asm.69" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="451" column="60" />
+    </call>
+    <call callee="__asm.70" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="451" column="75" />
+    </call>
+    <call callee="__asm.71" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="451" column="90" />
+    </call>
+    <call callee="__asm.72" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="452" column="15" />
+    </call>
+    <call callee="__asm.73" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="452" column="30" />
+    </call>
+    <call callee="__asm.74" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="452" column="45" />
+    </call>
+    <call callee="__asm.75" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="452" column="60" />
+    </call>
+    <call callee="__asm.76" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="452" column="75" />
+    </call>
+    <call callee="__asm.77" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="452" column="90" />
+    </call>
+    <call callee="__asm.78" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="453" column="15" />
+    </call>
+    <call callee="__asm.79" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="453" column="30" />
+    </call>
+    <call callee="__asm.80" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="453" column="45" />
+    </call>
+    <call callee="__asm.81" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="453" column="60" />
+    </call>
+    <call callee="__asm.82" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="453" column="75" />
+    </call>
+    <call callee="__asm.83" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="453" column="90" />
+    </call>
+    <call callee="__asm.84" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="454" column="15" />
+    </call>
+    <call callee="__asm.85" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="454" column="30" />
+    </call>
+    <call callee="__asm.86" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="454" column="45" />
+    </call>
+    <call callee="__asm.87" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="454" column="60" />
+    </call>
+    <call callee="__asm.88" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="454" column="75" />
+    </call>
+    <call callee="__asm.89" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="454" column="90" />
+    </call>
+    <call callee="__asm.90" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="455" column="15" />
+    </call>
+    <call callee="__asm.91" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="455" column="30" />
+    </call>
+    <call callee="__asm.92" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="455" column="45" />
+    </call>
+    <call callee="__asm.93" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="455" column="60" />
+    </call>
+    <call callee="__asm.94" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="455" column="75" />
+    </call>
+    <call callee="__asm.95" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="455" column="90" />
+    </call>
+    <call callee="BrsHwRestoreInterrupt" lfreq="1.00">
+      <srcPos file="../../code/int/src/BrsHw.c" line="457" column="24" />
+    </call>
+  </function>
+</file>

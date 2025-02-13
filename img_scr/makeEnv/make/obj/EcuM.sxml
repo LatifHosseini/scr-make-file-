@@ -1,0 +1,35 @@
+<file name="EcuM.c">
+  <function name="EcuM_Init" linkage="external">
+    <srcPos file="../../code/Stubs/EcuM.c" line="139" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/Stubs/EcuM.c" line="206" column="33" />
+    </block>
+    <call callee="EcuM_StartOS" lfreq="1.00">
+      <srcPos file="../../code/Stubs/EcuM.c" line="206" column="15" />
+    </call>
+  </function>
+  <function name="EcuM_StartupTwo" linkage="external">
+    <srcPos file="../../code/Stubs/EcuM.c" line="209" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/Stubs/EcuM.c" line="211" column="14" />
+    </block>
+    <call callee="SchM_Init" lfreq="1.00">
+      <srcPos file="../../code/Stubs/EcuM.c" line="211" column="12" />
+    </call>
+    <call callee="Rte_Start" lfreq="1.00">
+      <srcPos file="../../code/Stubs/EcuM.c" line="247" column="12" />
+    </call>
+  </function>
+  <function name="EcuM_Shutdown" linkage="external">
+    <srcPos file="../../code/Stubs/EcuM.c" line="250" column="6" />
+  </function>
+  <function name="EcuM_StartOS" linkage="external">
+    <srcPos file="../../code/Stubs/EcuM.c" line="255" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/Stubs/EcuM.c" line="273" column="19" />
+    </block>
+    <call callee="StartOS" lfreq="1.00">
+      <srcPos file="../../code/Stubs/EcuM.c" line="273" column="10" />
+    </call>
+  </function>
+</file>

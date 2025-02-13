@@ -1,0 +1,5 @@
+<file name="Stubs.c">
+  <function name="SchM_Task" linkage="external">
+    <srcPos file="../../code/Stubs/Stubs.c" line="5" column="6" />
+  </function>
+</file>

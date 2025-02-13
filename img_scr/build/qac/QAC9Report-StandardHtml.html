@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:msxsl="urn:schemas-microsoft-com:xslt"><title>PRJ00022290_CEIC_MB_img_scr Milestone1, </title><meta charset="utf-8" xmlns:sfn="http://www.vector.com/pes/safetyanalysis/functions" /><style type="text/css">
+        body
+        {
+        background-color: #e5e5e5;
+        font-family: Verdana,Arial,Helvetica;
+        font-size:10pt;
+        }
+
+        td,th
+        {
+        border-color: darkgrey;
+        border-style: none;
+        border-width: 1px 0 0 0;
+        font-family: Verdana,Arial,Helvetica;
+        font-size:10pt;
+        vertical-align:top;
+        }
+
+        table
+        {
+        border-color: darkgrey;
+        border-style: none;
+        border-width: 1px 0px 1px 0px;
+        border-spacing: 1;
+        border-collapse: collapse;
+        table-layout: fixed;
+        max-width: 100%;
+        width: 100%;
+        }
+
+        td,th
+        {
+        margin: 0;
+        padding: 3px;
+        border-width: 1px 1px 0 0;
+        word-wrap: break-word;
+        }
+
+        table tr
+        {
+        border-width: 1px 0 1px 0;
+        border-top-style: solid;
+        border-bottom-style: solid;
+        }
+
+        th
+        {
+        text-align:left;
+        background-color: darkgrey;
+        font-weight: normal
+        }
+
+        .th0 {
+        background-color: #b70032;
+        height: 2px;
+        font-size: 18px;
+        color: #ffffff
+        }
+
+        .th1 {
+        background-color: grey;
+        height: 2px;
+        font-size: 14px;
+        color: #ffffff
+        }
+
+        .th2 {
+        background-color: darkgrey;
+        }
+        .th3 {
+        background-color: lightgrey;
+        }
+
+        ul {
+        position:relative;
+        left: -15px;
+        }
+
+        div.MetricBarBase
+        {
+        height: 6px;
+        background-color: #a5a5a5;
+        border-style: none;
+        border-width: 0;
+        }
+
+        div.MetricBarRed
+        {
+        height: 6px;
+        background-color: #CC0000;
+        border-style: none;
+        border-width: 0;
+        }
+
+        div.MetricBarGreen
+        {
+        height: 6px;
+        background-color: #00A000;
+        border-style: none;
+        border-width: 0;
+        }
+
+        div.MetricBarLime
+        {
+        height: 6px;
+        background-color: #00CC00;
+        border-style: none;
+        border-width: 0;
+        }
+
+        img {
+        max-width:100%
+        overflow:scroll
+        opacity:0.5;
+        filter: alpha(opacity=100);
+        }
+
+        [data-tooltip] {
+        position: relative;
+        z-index: 2;
+        cursor: default;
+        }
+        [data-tooltip]:before,
+        [data-tooltip]:after {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        }
+
+        /* Position tooltip above the element */
+        [data-tooltip]:before {
+        position: absolute;
+        bottom: 150%;
+        left: 50%;
+        margin-bottom: 5px;
+        margin-left: -5px;
+        padding: 7px;
+        width: 300px;
+        min-width:50px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius:    3px;
+        border-radius:         3px;
+        background-color: #ffffff;
+        background-color: rgba(255, 255, 255, 0.98);
+        color: #000;
+        content: attr(data-tooltip);
+        text-align: left;
+        white-space: normal;
+        font-size: 10pt;
+        line-height: 1.2;
+        }
+
+        /* Triangle hack to make tooltip look like a speech bubble */
+        [data-tooltip]:after {
+        position: absolute;
+        bottom: 150%;
+        left: 50%;
+        width: 0;
+        border-top: 5px solid #ffffff;
+        border-top: 5px solid rgba(255, 255, 255, 0.98);
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        content: " ";
+        font-size: 0;
+        line-height: 0;
+        }
+
+        /* Show tooltip content on hover */
+        [data-tooltip]:hover:before,
+        [data-tooltip]:hover:after {
+        visibility: visible;
+        opacity: 1;
+        }
+
+        
+
+        /* Format pre sections used for test case and test group descriptions */
+        pre {
+        font-family: Verdana,Arial,Helvetica;
+        font-size:10pt;
+        white-space: pre-wrap; /* css-3 */
+        white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+        white-space: -pre-wrap; /* Opera 4-6 */
+        white-space: -o-pre-wrap; /* Opera 7 */
+        word-wrap: break-word; /* Internet Explorer 5.5+ */
+        }
+
+        /* Used to mark "mouse flyover sections", so that the user sees that additional tooltip/popup information is available */
+        u.dashed {
+        border-bottom: 1px dashed;
+        text-decoration: none;
+        }
+      </style><body><a name="top" /><p align="right"><a href="http://wiki.vi.vector.int/wiki-pes/FileType/.vtr">Help</a></p><a name="testplan" /><h1>
+      Test Report -
+      PRJ00022290_CEIC_MB_img_scr [Milestone1]
+        </h1><h2>Content</h2><a href="#TestPlan_Result" accesskey="1">Test Result</a><br /><a href="#TestPlan_Object" accesskey="2">Test Elements</a><br /><a href="#TestPlan_Overview" accesskey="3">Test Overview</a><br /><a href="#TestPlan_Details" accesskey="4">Test Details</a><br /><a href="#TestPlan_Statistic" accesskey="7">Test Statistic</a><br /><br /><a name="TestPlan_Result" /><table border="0" width="100%"><colgroup><col width="20%" /><col width="80%" /></colgroup><td class="th0" colspan="2">Test Result</td><tr><td>
+          Overall test result
+        </td><td size="4" bgcolor="lime">
+            ok
+            (all "not-ok" testruns are justified)
+          </td></tr><tr><td>
+          Testrun result
+        </td><td size="4" bgcolor="lime">ok</td></tr><tr><td>Testcase coverage</td><td size="4" bgcolor="lime">100% (2/2)</td></tr></table><br /><a name="TestPlan_Object" /><table border="0" width="100%"><colgroup><col width="10%" /><col width="20%" /><col width="35%" /><col width="30%" /><col width="5%" /></colgroup><td class="th0" colspan="6">Test Elements</td><tr bgcolor="darkgray"><td> name </td><td> version </td><td> SVN info </td><td> SVN status </td><td> result </td></tr><tr><td>D:\Prj\PRJ00022290_CEIC_MB\Main\M2_CfgMgmt\Tools\QAC_Toolchain\justifications</td><td><a href="https://vistrpessvn4.vi.vector.int/svn/PRJ00022290_CEIC_MB/Main/trunk/Main/M2_CfgMgmt/Tools/QAC_Toolchain/justifications/PJMisraStandardJustifications.h?p=115">PJMisraStandardJustifications.h</a>
+          (1.01.00)
+          <br /><a href="https://vistrpessvn4.vi.vector.int/svn/PRJ00022290_CEIC_MB/Main/trunk/Main/M2_CfgMgmt/Tools/QAC_Toolchain/justifications/TP_PJMisraConfigurationJustifications.h?p=115">TP_PJMisraConfigurationJustifications.h</a>
+          (1.00.00)
+          <br /><a href="https://vistrpessvn4.vi.vector.int/svn/PRJ00022290_CEIC_MB/Main/trunk/Main/M2_CfgMgmt/Tools/QAC_Toolchain/justifications/TP_PJMisraProjectJustifications.h?p=115">TP_PJMisraProjectJustifications.h</a>
+          (1.01.00)
+          <br /></td><td><b>URL:</b><a href="https://vistrpessvn4.vi.vector.int/svn/PRJ00022290_CEIC_MB/Main/trunk/Main/M2_CfgMgmt/Tools/QAC_Toolchain/justifications">https://vistrpessvn4.vi.vector.int/svn/PRJ00022290_CEIC_MB/Main/trunk/Main/M2_CfgMgmt/Tools/QAC_Toolchain/justifications</a><br /><b>commit:</b>115<br /><b>date:</b>2021-07-20 13:45:25</td><td bgcolor="lime">
+                All tested elements are in the repository.
+              </td><td>19.03.2022 20:42<br />vikaagz</td></tr><tr><td>D:\Prj\PRJ00022290_CEIC_MB\S1_SW\ceic_main\img_scr\code\int\src</td><td><a href="/BrsHw.c?p=">BrsHw.c</a>
+          (2.00.00)
+          <br /><a href="/ScrDioPort.c?p=">ScrDioPort.c</a>
+          (N/A)
+          <br /><a href="/ScrEcuResetHndl.c?p=">ScrEcuResetHndl.c</a>
+          (N/A)
+          <br /><a href="/ScrGenEthWULPulse.c?p=">ScrGenEthWULPulse.c</a>
+          (N/A)
+          <br /><a href="/ScrMain.c?p=">ScrMain.c</a>
+          (N/A)
+          <br /><a href="/ScrStateMngmt.c?p=">ScrStateMngmt.c</a>
+          (N/A)
+          <br /><a href="/ScrTricoreIf.c?p=">ScrTricoreIf.c</a>
+          (N/A)
+          <br /><a href="/ScrWakeUpDetection.c?p=">ScrWakeUpDetection.c</a>
+          (N/A)
+          <br /><a href="/ScrWakeupEcu.c?p=">ScrWakeupEcu.c</a>
+          (N/A)
+          <br /><a href="/ScrWakeupHndl.c?p=">ScrWakeupHndl.c</a>
+          (N/A)
+          <br /></td><td><b>URL:</b><a href=""></a><br /><b>commit:</b><br /><b>date:</b> </td><td bgcolor="red">
+            The tested elements are not under version control.
+          </td><td>19.03.2022 20:42<br />vikaagz</td></tr><tr><td>D:\Prj\PRJ00022290_CEIC_MB\S1_SW\ceic_main\img_scr\code\int\inc</td><td><a href="/BrsHw.h?p=">BrsHw.h</a>
+          (N/A)
+          <br /><a href="/Ifx_reg.h?p=">Ifx_reg.h</a>
+          (N/A)
+          <br /><a href="/Ifx_TypesReg.h?p=">Ifx_TypesReg.h</a>
+          (N/A)
+          <br /><a href="/IfxScr_bf.h?p=">IfxScr_bf.h</a>
+          (N/A)
+          <br /><a href="/IfxScr_reg.h?p=">IfxScr_reg.h</a>
+          (N/A)
+          <br /><a href="/IfxScr_regdef.h?p=">IfxScr_regdef.h</a>
+          (N/A)
+          <br /><a href="/ScrDioPort.h?p=">ScrDioPort.h</a>
+          (N/A)
+          <br /><a href="/ScrEcuResetHndl.h?p=">ScrEcuResetHndl.h</a>
+          (N/A)
+          <br /><a href="/ScrGenEthWULPulse.h?p=">ScrGenEthWULPulse.h</a>
+          (N/A)
+          <br /><a href="/ScrMain.h?p=">ScrMain.h</a>
+          (N/A)
+          <br /><a href="/ScrStateMngmt.h?p=">ScrStateMngmt.h</a>
+          (N/A)
+          <br /><a href="/ScrTricoreIf.h?p=">ScrTricoreIf.h</a>
+          (N/A)
+          <br /><a href="/ScrWakeUpDetection.h?p=">ScrWakeUpDetection.h</a>
+          (N/A)
+          <br /><a href="/ScrWakeupEcu.h?p=">ScrWakeupEcu.h</a>
+          (N/A)
+          <br /><a href="/ScrWakeupHndl.h?p=">ScrWakeupHndl.h</a>
+          (N/A)
+          <br /><a href="/TricoreScrIf.h?p=">TricoreScrIf.h</a>
+          (1.00.00)
+          <br /></td><td><b>URL:</b><a href=""></a><br /><b>commit:</b><br /><b>date:</b> </td><td bgcolor="red">
+            The tested elements are not under version control.
+          </td><td>19.03.2022 20:42<br />vikaagz</td></tr><tr><td>D:\Prj\PRJ00022290_CEIC_MB\S1_SW\ceic_main\img_scr\code\Stubs</td><td><a href="/BrsAsrMain.c?p=">BrsAsrMain.c</a>
+          (1.09.01)
+          <br /><a href="/BrsAsrMain.h?p=">BrsAsrMain.h</a>
+          (N/A)
+          <br /><a href="/BrsCfg.h?p=">BrsCfg.h</a>
+          (1.00.00)
+          <br /><a href="/BrsMain.h?p=">BrsMain.h</a>
+          (N/A)
+          <br /><a href="/BrsTypes.h?p=">BrsTypes.h</a>
+          (N/A)
+          <br /><a href="/Compiler_Cfg.h?p=">Compiler_Cfg.h</a>
+          (N/A)
+          <br /><a href="/EcuM.c?p=">EcuM.c</a>
+          (1.01.06)
+          <br /><a href="/EcuM.h?p=">EcuM.h</a>
+          (N/A)
+          <br /><a href="/MemMap.h?p=">MemMap.h</a>
+          (N/A)
+          <br /><a href="/Os.c?p=">Os.c</a>
+          (1.01.01)
+          <br /><a href="/Os.h?p=">Os.h</a>
+          (N/A)
+          <br /><a href="/Platform_Types.h?p=">Platform_Types.h</a>
+          (1.00.00)
+          <br /><a href="/Rte.c?p=">Rte.c</a>
+          (1.00.06)
+          <br /><a href="/Rte_Main.h?p=">Rte_Main.h</a>
+          (N/A)
+          <br /><a href="/SchM.h?p=">SchM.h</a>
+          (N/A)
+          <br /><a href="/Std_Types.h?p=">Std_Types.h</a>
+          (3.04.04)
+          <br /><a href="/Stubs.c?p=">Stubs.c</a>
+          (N/A)
+          <br /><a href="/VGenEnableSwitches.h?p=">VGenEnableSwitches.h</a>
+          (N/A)
+          <br /></td><td><b>URL:</b><a href=""></a><br /><b>commit:</b><br /><b>date:</b> </td><td bgcolor="red">
+            The tested elements are not under version control.
+          </td><td>19.03.2022 20:42<br />vikaagz</td></tr></table><br /><a name="TestPlan_Overview" /><table border="0" width="100%"><colgroup><col width="2%" /><col width="33%" /><col width="35%" /><col width="5%" /><col width="5%" /><col width="5%" /><col width="5%" /><col width="5%" /><col width="5%" /></colgroup><tr><td class="th0" colspan="8">Test Overview</td><td><a href="#testplan" accesskey="1">Top</a></td></tr><tr bgcolor="darkgray"><td colspan="3" /><td>ok</td><td>fail</td><td>warn</td><td>N/A</td><td>process</td><td>total</td></tr><tr bgcolor="darkgray"><td colspan="10">testcase data</td></tr><tr><td colspan="3">total</td><td bgcolor="lime">2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td></tr><tr bgcolor="darkgray"><td colspan="9">testrun data</td></tr><tr bgcolor="lightgray"><td /><td colspan="2">total</td><td bgcolor="lime">2</td><td /><td /><td /><td /><td bgcolor="lime">2</td></tr><tr><td bgcolor="lime" /><td colspan="2" id="overview_ID0AP0Q"><a href="#ID0AP0Q">1 Unassigned</a></td><td>2</td><td /><td /><td /><td /><td bgcolor="lime">2</td></tr><tr><td bgcolor="lime" /><td id="overview_ID0AS0U">  <a href="#ID0AS0U">[TC:Standard_Embedded.CheckQAC9] </a></td><td>QAC Analysis</td><td bgcolor="lime">1</td><td /><td /><td /><td /><td bgcolor="lime">1</td></tr><tr><td bgcolor="lime" /><td id="overview_ID0A1CDI03CDI">  <a href="#ID0A1CDI03CDI">[TC:Standard_Embedded.QACJustification] </a></td><td>QAC Justification</td><td bgcolor="lime">1</td><td /><td /><td /><td /><td bgcolor="lime">1</td></tr></table><br /><a name="TestPlan_Details" /><table style="table-layout: fixed" border="0" width="100%"><colgroup><col width="20%" /><col width="75%" /><col width="5%" /></colgroup><tr><td class="th0" colspan="2">Test Details</td><td><a href="#testplan" accesskey="1">Top</a></td></tr><tr bgcolor="darkgray"><td>testcase</td><td>details</td><td>result</td></tr><tr><td id="ID0AP0Q" colspan="2"><font size="4">1 Unassigned</font></td><td><a href="#TestPlan_Overview">Test Overview</a></td></tr><tr class="th3"><td id="ID0AS0U"><a id="[TC:Standard_Embedded.CheckQAC9]" /><b>ID: </b>[TC:Standard_Embedded.CheckQAC9]<br /><b>Name: </b>QAC Analysis<br /></td><td><pre>Perform an analysis with QAC.</pre><br /><br /></td><td><a href="#overview_ID0AS0U">Overview</a></td></tr><tr><td>TestRun Overview</td><td><table border="0" width="100%"><colgroup><col width="70%" /><col width="15%" /><col width="10%" /><col width="5%" /></colgroup><tr><td><a href="#Testrun_ID0AS0T_ID0AY02"></a></td><td>19.03.2022 20:43</td><td>vikaagz</td><td bgcolor="lime">ok</td></tr></table></td><td /></tr><tr><td id="Testrun_ID0AS0T_ID0AY02"></td><td>
+        <br /><b>Environment</b><table border="0" width="100%"><colgroup><col width="10%" /><col width="90%" /></colgroup><tr><td bgcolor="darkgray">version</td><td>
+PRQA Framework version 2.2.0.9151-qax
+</td></tr><tr><td bgcolor="darkgray">option</td><td></td></tr><tr><td bgcolor="darkgray">
+            QAC options
+          </td><td><b> Personality Files:</b><br />
+acf: based on template acf file provided with CDK 20.12.01 
+<a href="https://vistrpscsvn1.vi.vector.int/svn/zCommon/zCantate/zCantate_CDK/trunk/Scripts/Prj/QAC9/General2012.acf">
+              [link]
+            </a><br />cct: based on template cct file provided with CDK 20.12.01 <a href="https://vistrpscsvn1.vi.vector.int/svn/zCommon/zCantate/zCantate_CDK/trunk/Scripts/Prj/QAC9/Standard.cct">
+              [link]
+            </a><br />rcf: based on template rcf file provided with CDK 20.12.01 <a href="https://vistrpscsvn1.vi.vector.int/svn/zCommon/zCantate/zCantate_CDK/trunk/Scripts/Prj/QAC9/MISRA2012.rcf">
+              [link]
+            </a><br /><br /><b> Project File: </b><br /></td></tr></table>
+        <br /><b>Log</b><table border="0" width="100%"><colgroup><col width="20%" /><col width="5%" /><col width="5%" /><col width="60%" /><col width="10%" /></colgroup><tr><th>File</th><th>Line</th><th>ID</th><th>Description</th><th>Result</th></tr></table>
+        
+        <br /><b>Summary</b><table border="0" width="100%"><colgroup><col width="5%" /><col width="5%" /><col width="5%" /><col width="35%" /><col width="15%" /><col width="30%" /><col width="5%" /></colgroup><tr><th>MISRA Rule</th><th>#Occurrences</th><th>QAC Rule</th><th>Description</th><th>File</th><th>Justification [justified / suppressed / deviations]</th><th>Result</th></tr><tr><td rowspan="1"><a href="file://///vi.vector.int/DE/STR/Restricted/PES/zCDK/TestReport_References/Code_MsgRef.html#MISRA2012-Rule1.2">Rule1.2</a></td><td rowspan="1">1</td><td id="ID0AY02+0635" rowspan="1">0635</td><td rowspan="1">[E] Bit-fields in this struct/union have been declared with types other than int, signed int, unsigned int or _Bool.</td><td>ScrWakeupEcu.c</td><td align="center">[1/1/1]<br />Compiler supports unsigned char bitfield defines</td><td bgcolor="lime">ok</td></tr><tr><td rowspan="1"><a href="file://///vi.vector.int/DE/STR/Restricted/PES/zCDK/TestReport_References/Code_MsgRef.html#MISRA2012-Rule2.1">Rule2.1</a></td><td rowspan="1">1</td><td id="ID0AY02+2880" rowspan="1">2880</td><td rowspan="1">This code is unreachable.</td><td>BrsAsrMain.c</td><td align="center">[1/1/1]<br /><a href="file://///vi.vector.int/DE/STR/Restricted/PES/zCDK/TestReport_References/Code_MsgRef.html#MD_MSR_14.1 This code should never reach here">MD_MSR_14.1 This code should never reach here</a></td><td bgcolor="lime">ok</td></tr><tr><td rowspan="2"><a href="file://///vi.vector.int/DE/STR/Restricted/PES/zCDK/TestReport_References/Code_MsgRef.html#MISRA2012-Rule2.2">Rule2.2</a></td><td rowspan="2">18</td><td id="ID0AY02+2983" rowspan="1">2983</td><td rowspan="1">This assignment is redundant. The value of this object is never subsequently used.</td><td>Os.c</td><td align="center">[6/6/6]<br /><a href="file://///vi.vector.int/DE/STR/Restricted/PES/zCDK/TestReport_References/Code_MsgRef.html#MD_MSR_DummyStmt">MD_MSR_DummyStmt</a></td><td bgcolor="lime">ok</td></tr><tr><td id="ID0AY02+2987" rowspan="1">2987</td><td rowspan="1">This function call produces no side effects and is redundant.</td><td>ScrWakeUpDetection.c</td><td align="center">[12/12/12]<br />This function sets internal register</td><td bgcolor="lime">ok</td></tr><tr><td rowspan="1"><a href="file://///vi.vector.int/DE/STR/Restricted/PES/zCDK/TestReport_References/Code_MsgRef.html#MISRA2012-Rule2.7">Rule2.7</a></td><td rowspan="1">3</td><td id="ID0AY02+3206" rowspan="1">3206</td><td rowspan="1">The parameter '%s' is not used in this function.</td><td>BrsAsrMain.c</td><td align="center">[3/3/3]<br />Function parameter not used</td><td bgcolor="lime">ok</td></tr><tr><td rowspan="1"><a href="file://///vi.vector.int/DE/STR/Restricted/PES/zCDK/TestReport_References/Code_MsgRef.html#MISRA2012-Rule6.1">Rule6.1</a></td><td rowspan="1">1</td><td id="ID0AY02+0635" rowspan="1">0635</td><td rowspan="1">[E] Bit-fields in this struct/union have been declared with types other than int, signed int, unsigned int or _Bool.</td><td>ScrWakeupEcu.c</td><td align="center">[1/1/1]<br />Compiler supports unsigned char bitfield defines</td><td bgcolor="lime">ok</td></tr><tr><td rowspan="3"><a href="file://///vi.vector.int/DE/STR/Restricted/PES/zCDK/TestReport_References/Code_MsgRef.html#MISRA2012-Rule8.4">Rule8.4</a></td><td rowspan="3">11</td><td id="ID0AY02+3408" rowspan="3">3408</td><td rowspan="3">'%s' has external linkage and is being defined without any previous declaration.</td><td>ScrWakeUpDetection.c</td><td align="center">[9/9/9]<br />This ISR function definition is only needed in this way</td><td bgcolor="lime">ok</td></tr><tr><td>BrsHw.c</td><td align="center">[1/1/1]<br />This ISR function definition is only needed in this way</td><td bgcolor="lime">ok</td></tr><tr><td>ScrGenEthWULPulse.c</td><td align="center">[1/1/1]<br />This global variable is need in a ISR function for fast porecudre</td><td bgcolor="lime">ok</td></tr><tr><td rowspan="1"><a href="file://///vi.vector.int/DE/STR/Restricted/PES/zCDK/TestReport_References/Code_MsgRef.html#MISRA2012-Rule10.3">Rule10.3</a></td><td rowspan="1">1</td><td id="ID0AY02+4404" rowspan="1">4404</td><td rowspan="1">An expression of 'essentially Boolean' type (%1s) is being converted to unsigned type, '%2s' on assignment.</td><td>ScrDioPort.c</td><td align="center">[1/1/1]<br /><a href="file://///vi.vector.int/DE/STR/Restricted/PES/zCDK/TestReport_References/Code_MsgRef.html#MD_MSR_AutosarBoolean">MD_MSR_AutosarBoolean</a></td><td bgcolor="lime">ok</td></tr><tr><td rowspan="6"><a href="file://///vi.vector.int/DE/STR/Restricted/PES/zCDK/TestReport_References/Code_MsgRef.html#MISRA2012-Rule11.4">Rule11.4</a></td><td rowspan="6">174</td><td id="ID0AY02+0303" rowspan="6">0303</td><td rowspan="6">[I] Cast between a pointer to volatile object and an integral type.</td><td>BrsHw.c</td><td align="center">[22/22/22]<br /><a href="#MD_FBL_0303_MemoryMappedRegAccess">MD_FBL_0303_MemoryMappedRegAccess</a></td><td bgcolor="lime">ok</td></tr><tr><td>ScrWakeupHndl.c</td><td align="center">[2/2/2]<br /><a href="#MD_FBL_0303_MemoryMappedRegAccess">MD_FBL_0303_MemoryMappedRegAccess</a></td><td bgcolor="lime">ok</td></tr><tr><td>ScrStateMngmt.c</td><td align="center">[16/16/16]<br /><a href="#MD_FBL_0303_MemoryMappedRegAccess">MD_FBL_0303_MemoryMappedRegAccess</a></td><td bgcolor="lime">ok</td></tr><tr><td>ScrEcuResetHndl.c</td><td align="center">[1/1/1]<br /><a href="#MD_FBL_0303_MemoryMappedRegAccess">MD_FBL_0303_MemoryMappedRegAccess</a></td><td bgcolor="lime">ok</td></tr><tr><td>ScrDioPort.c</td><td align="center">[19/19/19]<br /><a href="#MD_FBL_0303_MemoryMappedRegAccess">MD_FBL_0303_MemoryMappedRegAccess</a></td><td bgcolor="lime">ok</td></tr><tr><td>ScrWakeUpDetection.c</td><td align="center">[114/114/114]<br /><a href="#MD_FBL_0303_MemoryMappedRegAccess">MD_FBL_0303_MemoryMappedRegAccess</a><br />This function sets internal register<br />This ISR function definition is only needed in this way</td><td bgcolor="lime">ok</td></tr><tr><td rowspan="1"><a href="file://///vi.vector.int/DE/STR/Restricted/PES/zCDK/TestReport_References/Code_MsgRef.html#MISRA2012-Rule17.8">Rule17.8</a></td><td rowspan="1">6</td><td id="ID0AY02+1338" rowspan="1">1338</td><td rowspan="1">The parameter '%s' is being modified.</td><td>Os.c</td><td align="center">[6/6/6]<br /><a href="file://///vi.vector.int/DE/STR/Restricted/PES/zCDK/TestReport_References/Code_MsgRef.html#MD_MSR_DummyStmt">MD_MSR_DummyStmt</a></td><td bgcolor="lime">ok</td></tr><tr><td rowspan="1"><a href="file://///vi.vector.int/DE/STR/Restricted/PES/zCDK/TestReport_References/Code_MsgRef.html#MISRA2012-Rule20.1">Rule20.1</a></td><td rowspan="1">4</td><td id="ID0AY02+5087" rowspan="1">5087</td><td rowspan="1">Use of #include directive after code fragment.</td><td>BrsAsrMain.c</td><td align="center">[4/4/4]<br /><a href="file://///vi.vector.int/DE/STR/Restricted/PES/zCDK/TestReport_References/Code_MsgRef.html#MD_MSR_MemMap">MD_MSR_MemMap</a></td><td bgcolor="lime">ok</td></tr><tr><td rowspan="1"><a href="file://///vi.vector.int/DE/STR/Restricted/PES/zCDK/TestReport_References/Code_MsgRef.html#MISRA2012-Rule20.10">Rule20.10</a></td><td rowspan="1">2</td><td id="ID0AY02+0342" rowspan="1">0342</td><td rowspan="1">Using the glue operator '##'.</td><td>Os.h</td><td align="center">[2/2/2]<br /><a href="file://///vi.vector.int/DE/STR/Restricted/PES/zCDK/TestReport_References/Code_MsgRef.html#MD_MSR_Rule20.10_0342">MD_MSR_Rule20.10_0342</a></td><td bgcolor="lime">ok</td></tr><tr><td rowspan="1"><a href="file://///vi.vector.int/DE/STR/Restricted/PES/zCDK/TestReport_References/Code_MsgRef.html#MISRA2012-Rule20.5">Rule20.5</a></td><td rowspan="1">1</td><td id="ID0AY02+0841" rowspan="1">0841</td><td rowspan="1">Using '#undef'.</td><td>ScrEcuResetHndl.c</td><td align="center">[1/1/1]<br /><a href="file://///vi.vector.int/DE/STR/Restricted/PES/zCDK/TestReport_References/Code_MsgRef.html#MD_MSR_Undef">MD_MSR_Undef</a></td><td bgcolor="lime">ok</td></tr></table>
+    Note: Missing justifications (e.g. for generated files) have to be handled in the general test report.<br />
+        <br /><b>File metrics</b><table border="0" width="100%"><colgroup width="27" span="3"><col width="20%" /><col width="5%" /><col width="5%" /><col width="5%" /><col width="5%" /><col width="5%" /><col width="5%" /><col width="5%" /><col width="5%" /><col width="5%" /><col width="5%" /><col width="5%" /><col width="5%" /><col width="5%" /><col width="5%" /><col width="5%" /><col width="5%" /></colgroup><tr bgcolor="darkgray"><td /><td colspan="2">info-only metrics</td><td colspan="14">measured-only metrics</td></tr><tr bgcolor="darkgray"><td>file</td><td>CDN</td><td>*COMF</td><td>BME</td><td>DIF</td><td>ECT</td><td>FCO</td><td>FNC</td><td>M22</td><td>M28</td><td>M33</td><td>SCT</td><td>SHN</td><td>TLN</td><td>TPP</td><td>VAR</td><td>*VOCF</td></tr><tr><td>BrsAsrMain.c</td><td>3.621</td><td>1.088</td><td>1.784</td><td>11.25</td><td>1</td><td>6</td><td>6</td><td>57</td><td>62</td><td>26</td><td>3</td><td>3054</td><td>59</td><td>557</td><td>82</td><td>6.09</td></tr><tr><td>BrsHw.c</td><td>3.919</td><td>0.615</td><td>1.421</td><td>16.50</td><td>4</td><td>-5</td><td>12</td><td>135</td><td>83</td><td>18</td><td>2</td><td>5934</td><td>103</td><td>461</td><td>72</td><td>4.24</td></tr><tr><td>EcuM.c</td><td>1.851</td><td>0.27</td><td>0.771</td><td>10.09</td><td>0</td><td>1</td><td>4</td><td>37</td><td>10</td><td>5</td><td>0</td><td>1843</td><td>18</td><td>277</td><td>64</td><td>6.35</td></tr><tr><td>Os.c</td><td>9.005</td><td>1.75</td><td>0.326</td><td>4.99</td><td>3</td><td>-4</td><td>8</td><td>12</td><td>21</td><td>13</td><td>0</td><td>508</td><td>32</td><td>135</td><td>25</td><td>3.27</td></tr><tr><td>Rte.c</td><td>7.167</td><td>0.889</td><td>0.300</td><td>8.57</td><td>1</td><td>-1</td><td>3</td><td>9</td><td>8</td><td>5</td><td>0</td><td>588</td><td>17</td><td>126</td><td>20</td><td>3.76</td></tr><tr><td>ScrDioPort.c</td><td>4.010</td><td>1.038</td><td>0.378</td><td>15.16</td><td>0</td><td>0</td><td>3</td><td>26</td><td>27</td><td>8</td><td>0</td><td>1068</td><td>59</td><td>153</td><td>22</td><td>4.37</td></tr><tr><td>ScrEcuResetHndl.c</td><td>5.396</td><td>3.143</td><td>0.241</td><td>9.29</td><td>1</td><td>1</td><td>2</td><td>7</td><td>22</td><td>9</td><td>0</td><td>489</td><td>28</td><td>105</td><td>14</td><td>3.03</td></tr><tr><td>ScrGenEthWULPulse.c</td><td bgcolor="#CCEEFF">0.997</td><td>0.417</td><td>1.163</td><td>22.18</td><td>4</td><td>24</td><td>6</td><td>108</td><td>45</td><td>20</td><td>9</td><td>3444</td><td>243</td><td>390</td><td>54</td><td>6.61</td></tr><tr><td>ScrMain.c</td><td>6.429</td><td>2.2</td><td>0.156</td><td>7.83</td><td>0</td><td>3</td><td>3</td><td>5</td><td>11</td><td>0</td><td>0</td><td>149</td><td>14</td><td>73</td><td>8</td><td>3.56</td></tr><tr><td>ScrStateMngmt.c</td><td>3.362</td><td>0.969</td><td>0.375</td><td>13.08</td><td>1</td><td>0</td><td>2</td><td>32</td><td>31</td><td>15</td><td>1</td><td>1236</td><td>66</td><td>152</td><td>25</td><td>3.84</td></tr><tr><td>ScrTricoreIf.c</td><td bgcolor="#CCEEFF">47.140</td><td bgcolor="#33BCFF">Infinity</td><td>0.146</td><td>4.50</td><td>0</td><td>0</td><td>0</td><td>0</td><td>13</td><td>0</td><td>0</td><td>3</td><td>0</td><td>69</td><td>0</td><td>3</td></tr><tr><td>ScrWakeUpDetection.c</td><td>1.555</td><td>0.802</td><td>1.514</td><td>14.54</td><td>1</td><td>25</td><td>12</td><td>162</td><td>130</td><td>86</td><td>1</td><td>7836</td><td>246</td><td>486</td><td>117</td><td>5.2</td></tr><tr><td>ScrWakeupEcu.c</td><td>1.544</td><td>0.784</td><td>0.604</td><td>15.86</td><td>2</td><td>0</td><td>8</td><td>37</td><td>29</td><td>11</td><td>3</td><td>2418</td><td>86</td><td>226</td><td>39</td><td>4.36</td></tr><tr><td>ScrWakeupHndl.c</td><td>3.130</td><td>1.529</td><td>0.390</td><td>9.53</td><td>5</td><td>3</td><td>4</td><td>17</td><td>26</td><td>10</td><td>2</td><td>909</td><td>62</td><td>157</td><td>26</td><td>3.8</td></tr><tr><td>Stubs.c</td><td bgcolor="#CCEEFF">0.000</td><td bgcolor="#33BCFF">NaN</td><td>0.009</td><td>10.09</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>48</td><td>3</td><td>7</td><td>1</td><td>1.63</td></tr></table><table border="0" width="100%"><colgroup><col width="1*" /><col width="1*" /><col width="1*" /></colgroup><tr><td border="0"><small>
+            BME: COCOMO embedded programmer months<br />
+            CDN: comment to code ratio (1..20)<br />
+            DIF: program difficulty<br />
+            ECT: number of external variables<br />
+            FCO: estimated function coupling
+          </small></td><td border="0"><small>
+            FNC: number of function definitions<br />
+            M22: number of statements<br />
+            M28: number of non-header comments<br />
+            M33: number of internal comments<br />
+            SCT: number of static variables
+          </small></td><td border="0"><small>
+            SHN: Shannon information content<br />
+            TLN: total preprocessed source lines<br />
+            TPP: total unpreprocessed source lines<br />
+            VAR: number of identifiers<br />
+            COMF: comment density (M28/M22) (&gt; 0.2)<br />
+            VOCF: Language Scope ((M21+M20)/(OPT+OPN))
+          </small></td></tr></table><br /><b>Function metrics</b><table border="0" width="100%" id="configTable"><colgroup width="5%" span="20"><col width="20%" /><col width="4%" /><col width="4%" /><col width="4%" /><col width="4%" /><col width="4%" /><col width="4%" /><col width="4%" /><col width="4%" /><col width="4%" /><col width="4%" /><col width="4%" /><col width="4%" /><col width="4%" /><col width="4%" /><col width="4%" /><col width="4%" /><col width="4%" /><col width="4%" /><col width="4%" /><col width="4%" /></colgroup><tr bgcolor="darkgray"><td /><td colspan="6">supervised metrics</td><td colspan="4">info-only metrics</td><td colspan="10">measured-only metrics</td></tr><tr bgcolor="darkgray"><td>function</td><td>PTH</td><td>CYC</td><td>CAL</td><td>PAR</td><td>MIF</td><td>BAK</td><td>GTO</td><td>M19</td><td>RET</td><td>ST3</td><td>AV1</td><td>KNT</td><td>LCT</td><td>LIN</td><td>M07</td><td>M29</td><td>SUB</td><td>UNR</td><td>UNV</td><td>XLN</td></tr><tr><td>BrsAsrMainCyclic1ms</td><td>4</td><td>3</td><td>3</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>7</td><td>6</td><td>0</td><td>0</td><td>42</td><td>1</td><td>1</td><td>3</td><td>0</td><td>0</td><td>7</td></tr><tr><td>BrsAsrMainInit</td><td>1</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>5</td><td>14</td><td>0</td><td>0</td><td>54</td><td>1</td><td>1</td><td>2</td><td>0</td><td>0</td><td>6</td></tr><tr><td>BrsAsrMainTaskfunc</td><td>3</td><td>3</td><td>1</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>4</td><td>14</td><td>0</td><td>0</td><td>26</td><td>1</td><td>2</td><td>1</td><td>0</td><td>0</td><td>4</td></tr><tr><td>BrsHwConfigureInterruptsAtPowerOn</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td bgcolor="#CCEEFF">0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>BrsHwDisableInterrupt</td><td>2</td><td>2</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>5</td><td>5</td><td>0</td><td>1</td><td>12</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>5</td></tr><tr><td>BrsHwDisableInterruptAtPowerOn</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>2</td><td>7</td><td>0</td><td>0</td><td>2</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td></tr><tr><td>BrsHwEnableInterruptAtPowerOn</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>10</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td></tr><tr><td>BrsHwPllInitPowerOn</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td bgcolor="#CCEEFF">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>BrsHwPortInitPowerOn</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>6</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td></tr><tr><td>BrsHwRestoreInterrupt</td><td>4</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>5</td><td>5</td><td>0</td><td>0</td><td>12</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>5</td></tr><tr><td>BrsHwSoftwareResetECU</td><td>2</td><td>2</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>4</td><td>0</td><td>0</td><td>8</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>2</td></tr><tr><td>BrsHwTime100NOP</td><td>1</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>2</td><td>5</td><td>0</td><td>0</td><td>20</td><td>1</td><td>0</td><td>2</td><td>0</td><td>0</td><td>18</td></tr><tr><td>BrsHwTimeBaseInitPowerOn</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>18</td><td>6</td><td>0</td><td>0</td><td>23</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>18</td></tr><tr><td>BrsHwTimeBaseInterrupt</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>5</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td></tr><tr><td>BrsHwWatchdogInitPowerOn</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td bgcolor="#CCEEFF">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>BrsMainExceptionHandler</td><td>2</td><td>2</td><td>1</td><td>3</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>3</td><td>10</td><td>0</td><td>1</td><td>25</td><td>1</td><td>1</td><td>1</td><td>0</td><td>3</td><td>3</td></tr><tr><td>CancelAlarm</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>6</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td></tr><tr><td>Default_Init_Taskfunc</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>3</td><td>2</td><td>1</td><td>0</td><td>14</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>2</td></tr><tr><td>DioPortInit</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>11</td><td>6</td><td>0</td><td>0</td><td>19</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>11</td></tr><tr><td>DioPortRead</td><td>2</td><td>2</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td>6</td><td>6</td><td>0</td><td>1</td><td>13</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>7</td></tr><tr><td>DioPortWrite</td><td>4</td><td>4</td><td>0</td><td>2</td><td>2</td><td>0</td><td>0</td><td>0</td><td>1</td><td>11</td><td>5</td><td>0</td><td>2</td><td>27</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>14</td></tr><tr><td>EcuM_Init</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>96</td><td>0</td><td>0</td><td>66</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td></tr><tr><td>EcuM_Shutdown</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td bgcolor="#CCEEFF">0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>EcuM_StartOS</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>2</td><td>21</td><td>0</td><td>0</td><td>19</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td></tr><tr><td>EcuM_StartupTwo</td><td>1</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>2</td><td>26</td><td>0</td><td>0</td><td>37</td><td>1</td><td>1</td><td>2</td><td>0</td><td>0</td><td>2</td></tr><tr><td>Ext0IntWakeupLine1</td><td>3</td><td>3</td><td>3</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>1</td><td>27</td><td>7</td><td>0</td><td>0</td><td>40</td><td>1</td><td>0</td><td>3</td><td>0</td><td>0</td><td>28</td></tr><tr><td>Ext10IntCan2Wakeup</td><td>8</td><td>4</td><td>4</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>15</td><td>5</td><td>0</td><td>0</td><td>26</td><td>1</td><td>0</td><td>9</td><td>0</td><td>0</td><td>15</td></tr><tr><td>Ext14IntFrWakeup</td><td>4</td><td>3</td><td>4</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>10</td><td>5</td><td>0</td><td>0</td><td>16</td><td>1</td><td>0</td><td>6</td><td>0</td><td>0</td><td>10</td></tr><tr><td>Ext1IntCan3Wakeup</td><td>1</td><td>1</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>4</td><td>5</td><td>0</td><td>0</td><td>5</td><td>1</td><td>0</td><td>3</td><td>0</td><td>0</td><td>4</td></tr><tr><td>Ext2IntCan5Wakeup</td><td>1</td><td>1</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>4</td><td>5</td><td>0</td><td>0</td><td>5</td><td>1</td><td>0</td><td>3</td><td>0</td><td>0</td><td>4</td></tr><tr><td>Ext5IntWakeupLine2</td><td>16</td><td>6</td><td>4</td><td>0</td><td>3</td><td>0</td><td>0</td><td>0</td><td>1</td><td>38</td><td>6</td><td>0</td><td>0</td><td>61</td><td>1</td><td>0</td><td>9</td><td>0</td><td>0</td><td>39</td></tr><tr><td>Ext9IntCan1Wakeup</td><td>2</td><td>2</td><td>3</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>5</td><td>5</td><td>0</td><td>0</td><td>8</td><td>1</td><td>0</td><td>3</td><td>0</td><td>0</td><td>5</td></tr><tr><td>main</td><td>1</td><td>1</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>4</td><td>5</td><td>0</td><td>0</td><td>9</td><td>1</td><td>0</td><td>3</td><td>0</td><td>0</td><td>4</td></tr><tr><td>Os_Init</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td bgcolor="#CCEEFF">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Os_InitMemory</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td bgcolor="#CCEEFF">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>osInitialize</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td bgcolor="#CCEEFF">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Rte_Start</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>19</td><td>0</td><td>0</td><td>11</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td></tr><tr><td>Schedule</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td bgcolor="#CCEEFF">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>SchM_Init</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td bgcolor="#CCEEFF">0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>SchM_Task</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td bgcolor="#CCEEFF">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>SchMTaskfunc</td><td>3</td><td>3</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>13</td><td>0</td><td>0</td><td>21</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td></tr><tr><td>Scr10msTask</td><td>1</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>2</td><td>5</td><td>0</td><td>0</td><td>2</td><td>1</td><td>0</td><td>2</td><td>0</td><td>0</td><td>2</td></tr><tr><td>Scr1msTask</td><td>1</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>2</td><td>5</td><td>0</td><td>0</td><td>2</td><td>1</td><td>0</td><td>2</td><td>0</td><td>0</td><td>2</td></tr><tr><td>Scr50msTask</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>6</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td></tr><tr><td>ScrActivate100MHz</td><td>2</td><td>2</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>6</td><td>7</td><td>0</td><td>0</td><td>10</td><td>1</td><td>7</td><td>0</td><td>0</td><td>0</td><td>6</td></tr><tr><td>ScrCanWupCallback</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>18</td><td>0</td><td>0</td><td>6</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td></tr><tr><td>ScrCheckEcuResetRequest</td><td>2</td><td>2</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>2</td><td>4</td><td>0</td><td>0</td><td>4</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>2</td></tr><tr><td>ScrEcuResetHndlTask1</td><td>7</td><td>5</td><td>2</td><td>0</td><td>3</td><td>0</td><td>0</td><td>0</td><td>1</td><td>9</td><td>4</td><td>0</td><td>1</td><td>22</td><td>1</td><td>0</td><td>2</td><td>0</td><td>0</td><td>10</td></tr><tr><td>ScrEthWupCallback</td><td>4</td><td>3</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>6</td><td>5</td><td>0</td><td>0</td><td>11</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>6</td></tr><tr><td>ScrFrWupCallback</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>18</td><td>0</td><td>0</td><td>6</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td></tr><tr><td>ScrGenerateWULPattern</td><td>4</td><td>4</td><td>2</td><td>1</td><td>3</td><td>0</td><td>0</td><td>0</td><td>1</td><td>16</td><td>4</td><td>0</td><td>0</td><td>26</td><td>1</td><td>2</td><td>6</td><td>0</td><td>0</td><td>17</td></tr><tr><td>ScrGenEthWULTask10</td><td>12</td><td>5</td><td>5</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>1</td><td>15</td><td>4</td><td>0</td><td>0</td><td>32</td><td>1</td><td>0</td><td>6</td><td>0</td><td>0</td><td>17</td></tr><tr><td>ScrHandlePmic</td><td>2</td><td>2</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>4</td><td>14</td><td>0</td><td>0</td><td>33</td><td>1</td><td>1</td><td>2</td><td>0</td><td>0</td><td>5</td></tr><tr><td>ScrHandleWakeup</td><td>16</td><td>7</td><td>1</td><td>0</td><td>3</td><td>0</td><td>0</td><td>0</td><td>1</td><td>11</td><td>5</td><td>0</td><td>1</td><td>29</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>11</td></tr><tr><td>ScrHndlEthLineShortMonWUL1</td><td>36</td><td>9</td><td>3</td><td>0</td><td>4</td><td>0</td><td>0</td><td>0</td><td>1</td><td>32</td><td>5</td><td>0</td><td>6</td><td>70</td><td>1</td><td>1</td><td>5</td><td>0</td><td>0</td><td>36</td></tr><tr><td>ScrHndlEthLineShortMonWUL2</td><td>36</td><td>9</td><td>3</td><td>0</td><td>4</td><td>0</td><td>0</td><td>0</td><td>1</td><td>34</td><td>4</td><td>0</td><td>6</td><td>76</td><td>1</td><td>1</td><td>5</td><td>0</td><td>0</td><td>39</td></tr><tr><td>ScrIsWakeupDiagRequested</td><td>8</td><td>4</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>9</td><td>3</td><td>0</td><td>0</td><td>15</td><td>1</td><td>1</td><td>3</td><td>0</td><td>0</td><td>9</td></tr><tr><td>ScrLinWupCallback</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>18</td><td>0</td><td>0</td><td>6</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td></tr><tr><td>ScrStartEthLineShortMon</td><td>3</td><td>3</td><td>1</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>1</td><td>8</td><td>6</td><td>0</td><td>0</td><td>16</td><td>1</td><td>1</td><td>4</td><td>0</td><td>0</td><td>9</td></tr><tr><td>ScrStateMngmtStandby</td><td>2</td><td>2</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>2</td><td>6</td><td>0</td><td>0</td><td>5</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td></tr><tr><td>ScrStateMngmtTask10</td><td>9</td><td>9</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>1</td><td>32</td><td>4</td><td>0</td><td>1</td><td>57</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>38</td></tr><tr><td>ScrWakeupEcuTask50</td><td>1</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>2</td><td>5</td><td>0</td><td>0</td><td>2</td><td>1</td><td>0</td><td>2</td><td>0</td><td>0</td><td>2</td></tr><tr><td>ScrWakeupHndlTask1</td><td>25</td><td>9</td><td>3</td><td>0</td><td>4</td><td>0</td><td>0</td><td>0</td><td>1</td><td>20</td><td>4</td><td>0</td><td>0</td><td>45</td><td>1</td><td>0</td><td>6</td><td>0</td><td>0</td><td>22</td></tr><tr><td>ScrWupCallback</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>2</td><td>7</td><td>0</td><td>0</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>2</td></tr><tr><td>SetFirstWakeupSource</td><td>2</td><td>2</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>2</td><td>6</td><td>0</td><td>0</td><td>4</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td></tr><tr><td>SetRelAlarm</td><td>1</td><td>1</td><td>0</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>3</td><td>4</td><td>0</td><td>0</td><td>3</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td></tr><tr><td>ShutdownOS</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>6</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td></tr><tr><td>StartOS</td><td>1</td><td>1</td><td>3</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>4</td><td>4</td><td>0</td><td>0</td><td>8</td><td>1</td><td>1</td><td>3</td><td>0</td><td>0</td><td>4</td></tr><tr><td>StartTimerValidateWUL1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>5</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td></tr><tr><td>StartTimerValidateWUL2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>5</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td></tr><tr><td>Timer0OverflowInt</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>7</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td></tr><tr><td>Timer1OverflowInt</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>7</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td></tr><tr><td>WupGetData</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>6</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td></tr><tr><td>WupInit</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td bgcolor="#CCEEFF">61</td><td>7</td><td>0</td><td>0</td><td>91</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>61</td></tr></table><table border="0" width="100%"><colgroup><col width="1*" /><col width="1*" /><col width="1*" /></colgroup><tr><td border="0"><small>
+            AV1: average size of function statements<br />
+            BAK: number of backward jumps (0)<br />
+            CAL: number of distinct function calls (0..7)<br />
+            CYC: cyclomatic complexity (1..10)<br />       
+                 (decomposition threshold: 20)<br />
+            GTO: number of GOTOs (0)<br />
+            KNT: knot count<br />
+            LCT: number of local variables declared<br /></small></td><td border="0"><small>
+            LIN: number of maintainable lines of code<br />
+            M07: essential cyclomatic complexity<br />
+            M19: number of exit points (0..1)<br />
+            M29: number of functions calling this function<br />
+            MIF: maximum nesting of control structures (0..4)<br />      
+                 (decomposition threshold: 6)<br />
+            PAR: number of function parameters (0..5)<br />
+            PTH: estimated static path count (1..80)<br />       
+                 (decomposition threshold: 80)<br /></small></td><td border="0"><small>
+            RET: number of function return points (0..1)<br />
+            ST3: number of statements in function (variant 3) (1..50)<br />
+            SUB: number of function calls<br />
+            UNR: number of unreachable statements<br />
+            UNV: number of unused and non-reused variables<br />
+            XLN: number of executable lines
+          </small></td></tr></table>
+        
+      </td><td bgcolor="lime">ok<br />19.03.2022 20:43<br />vikaagz<br /></td></tr><tr class="th3"><td id="ID0A1CDI03CDI"><a id="[TC:Standard_Embedded.QACJustification]" /><b>ID: </b>[TC:Standard_Embedded.QACJustification]<br /><b>Name: </b>QAC Justification<br /></td><td><pre>Justification of QAC rule deviations.  </pre><br /><br /></td><td><a href="#overview_ID0A1CDI03CDI">Overview</a></td></tr><tr><td>TestRun Overview</td><td><table border="0" width="100%"><colgroup><col width="70%" /><col width="15%" /><col width="10%" /><col width="5%" /></colgroup><tr><td><a href="#Testrun_ID0A1CDI02CDI_ID0AADDI0DDDI"></a></td><td>19.03.2022 20:43</td><td>vikaagz</td><td bgcolor="lime">ok</td></tr></table></td><td /></tr><tr><td id="Testrun_ID0A1CDI02CDI_ID0AADDI0DDDI"></td><td>
+        <br /><b>Justifications</b><table border="0" width="100%"><colgroup><col width="10%" /><col width="30%" /><col width="30%" /><col width="30%" /></colgroup><tr bgcolor="darkgray"><th>Name</th><th>Reason</th><th>Potential risks</th><th>Prevention of risks</th></tr><tr><td><a name="MD_PJStd_Rte_3417">MD_PJStd_Rte_3417</a></td><td>It is possible for the RTE generator to generate API calls for sender-receiver communication with a direct assignment ('function elision'). In this case, the  RTE generator creates a comma expression to ensure that the invoking component still receives a return value.</td><td>None.</td><td>Not applicable. A comma expression is valid, legal C and the elision cannot be achieved without a comma expression.</td></tr><tr><td><a name="MD_PJStd_Rte_3426">MD_PJStd_Rte_3426</a></td><td>It is possible for the RTE generator to generate API calls for sender-receiver communication with a direct assignment ('function elision'). In this case, the  RTE generator creates a comma expression to ensure that the invoking component still receives a return value.</td><td>None.</td><td>Not applicable. A comma expression is valid, legal C and the elision cannot be achieved without a comma expression.</td></tr></table>
+        
+        
+          
+          
+          
+          
+          
+          
+          
+          
+        
+        
+      </td><td bgcolor="lime">ok<br />19.03.2022 20:43<br />vikaagz<br /></td></tr></table><br /><a name="TestPlan_Statistic" /><table border="0" width="100%"><colgroup><col width="20%" /><col width="80%" /></colgroup><tr><td class="th0" colspan="2">Test Statistic</td></tr><tr bgcolor="darkgray"><td colspan="2">
+          Testrun Dates (shows when the current testruns have been executed)
+        </td></tr><tr bgcolor="lightgray"><td>
+          Date
+        </td><td>
+          Number of testruns
+        </td></tr><tr><td>19.03.2022</td><td>2</td></tr></table><br /><br /><small>CDK version (biggest used): 20.12.01<br />CDK version (smallest used): 20.12.01<br />Stylesheet version 1.08.00</small></body></html>

@@ -1,0 +1,439 @@
+	; Module start
+	.compiler_version	"TASKING VX-toolset for 8051: C compiler v6.3r1 Build 19041558 SN 09466227"
+	.compiler_invocation	"c51 -Ml --registerbank=0 --core=scr2g -D__CPU__=tc39x -DBRS_DERIVATIVE_tc39x -DBRS_CPU_CORE_ -DBRS_OS_USECASE_BRS -DBRS_PLATFORM_XC800 -DBRS_COMP_TASKING -I../../code/int/inc -I../../code/stubs -I../build/bsw/_common -Ic:/progra~1/tasking/tricor~1.3r1/c51/include -Igendata -Iinclude -ps --fp-model=clnrTz -g2 -o obj\\EcuM.src ../../code/Stubs/EcuM.c"
+	.compiler_name		"c51"
+'code_EcuM_Init'	.segment	code cluster('EcuM_Init')
+	.rseg	'code_EcuM_Init'	code cluster('EcuM_Init')
+	.public	_EcuM_Init
+; Function _EcuM_Init
+_18:
+_EcuM_Init:
+	.using 0
+_3:
+	mov	R7,#1
+	gjmp	_EcuM_StartOS
+_19:
+	; End of function
+	; End of section
+
+'code_EcuM_StartupTwo'	.segment	code cluster('EcuM_StartupTwo')
+	.rseg	'code_EcuM_StartupTwo'	code cluster('EcuM_StartupTwo')
+	.public	_EcuM_StartupTwo
+; Function _EcuM_StartupTwo
+_24:
+_EcuM_StartupTwo:
+	.using 0
+_5:
+	gcall	_SchM_Init
+_52:
+	gjmp	_Rte_Start
+_25:
+	; End of function
+	; End of section
+
+'code_EcuM_Shutdown'	.segment	code cluster('EcuM_Shutdown')
+	.rseg	'code_EcuM_Shutdown'	code cluster('EcuM_Shutdown')
+	.public	_EcuM_Shutdown
+; Function _EcuM_Shutdown
+_30:
+_EcuM_Shutdown:
+	.using 0
+_7:
+	ret
+_31:
+	; End of function
+	; End of section
+
+'code_EcuM_StartOS'	.segment	code cluster('EcuM_StartOS')
+	.rseg	'code_EcuM_StartOS'	code cluster('EcuM_StartOS')
+	.public	_EcuM_StartOS
+; Function _EcuM_StartOS
+_36:
+_EcuM_StartOS:
+	.using 0
+_9:
+	gjmp	_StartOS
+_37:
+	; End of function
+	; End of section
+
+	.calls	'_EcuM_Init','_EcuM_StartOS'
+	.calls	'_EcuM_StartupTwo','_SchM_Init'
+	.calls	'_EcuM_StartupTwo','_Rte_Start'
+	.calls	'_EcuM_StartOS','_StartOS'
+	.calls	'_EcuM_Init','',2
+	.calls	'_EcuM_StartupTwo','',2
+	.calls	'_EcuM_Shutdown','',2
+	.calls	'_EcuM_StartOS','',2
+	.extrn	code(_StartOS)
+	.extrn	code(_SchM_Init)
+	.extrn	code(_Rte_Start)
+'.debug_info'	.segment	debug
+	.rseg	'.debug_info'	debug
+_11:
+	.dl	405
+	.dw	3
+	.dl	_12
+	.db	4
+_10:
+	.db	1
+	.db	'../../code/Stubs/EcuM.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_13
+_38:
+	.db	2
+	.db	'unsigned char',0,1,8,3
+	.db	'StartOS',0,1,96,6,10,132,128,4,1,1,1,4
+	.db	'appMode',0,1,96,20,8
+	.dl	140
+	.db	0,5
+	.db	'SchM_Init',0,2,39,6,10,132,128,4,1,1,1,5
+	.db	'Rte_Start',0,2,40,6,10,132,128,4,1,1,1,6
+	.db	'void',0,7,8
+	.dl	236
+	.db	8
+	.db	'__prof_adm',0,3,1,1
+	.dl	242
+	.db	2
+	.db	'unsigned int',0,2,7,8
+	.db	'__codeptr',0,3,1,1
+	.dl	267
+	.db	8
+	.db	'uint8',0,4,101,40
+	.dl	140
+	.db	2
+	.db	'unsigned short int',0,2,7,8
+	.db	'uint16',0,4,103,40
+	.dl	315
+	.db	2
+	.db	'unsigned long int',0,4,7,8
+	.db	'uint32',0,4,105,40
+	.dl	352
+	.db	8
+	.db	'AppModeType',0,1,51,15
+	.dl	140
+	.db	0
+	; End of section
+
+'.debug_abbrev'	.segment	debug
+	.rseg	'.debug_abbrev'	debug
+_12:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,36,0,3,8,11,15,62,15,0,0,3,46,1,3,8,58,15,59,15,57,15
+	.db	51,15,54,15,39,12,63,12,60,12,0,0,4,5,0,3,8,58,15,59,15,57,15,51,15,73,19,0,0,5,46,0,3,8,58,15,59,15,57
+	.db	15,51,15,54,15,39,12,63,12,60,12,0,0,6,59,0,3,8,0,0,7,15,0,51,15,73,19,0,0,8,22,0,3,8,58,15,59,15,57,15
+	.db	73,19,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug
+	.rseg	'.debug_line'	debug
+_13:
+	.dl	_41-_40
+_40:
+	.dw	3
+	.dl	_43-_42
+_42:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'..\\..\\code\\Stubs\\Os.h',0,0,0,0
+	.db	'..\\..\\code\\Stubs\\Rte_Main.h',0,0,0,0
+	.db	'../../code/Stubs/EcuM.c',0,0,0,0
+	.db	'..\\..\\code\\Stubs\\Platform_Types.h',0,0,0,0,0
+_43:
+_41:
+	; End of section
+
+'.debug_info'	.segment	debug cluster('EcuM_Init')
+	.rseg	'.debug_info'	debug cluster('EcuM_Init')
+_14:
+	.dl	192
+	.dw	3
+	.dl	_15
+	.db	4,1
+	.db	'../../code/Stubs/EcuM.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_17,_16
+	.db	2
+	.dl	_10
+	.db	3
+	.db	'EcuM_Init',0,1,139,1,6,10,132,128,4,1,1
+	.dl	_3,_19,_2
+	.db	2,145,0,4
+	.dl	_3,_19
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('EcuM_Init')
+	.rseg	'.debug_abbrev'	debug cluster('EcuM_Init')
+_15:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('EcuM_Init')
+	.rseg	'.debug_line'	debug cluster('EcuM_Init')
+_16:
+	.dl	_45-_44
+_44:
+	.dw	3
+	.dl	_47-_46
+_46:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/Stubs/EcuM.c',0,0,0,0,0
+_47:
+	.db	5,16,7,0,5,2
+	.dl	_3
+	.db	3,205,1,1,5,1,9
+	.dw	_19-_3
+	.db	3,1,0,1,1
+_45:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('EcuM_Init')
+	.rseg	'.debug_ranges'	debug cluster('EcuM_Init')
+_17:
+	.dl	-1,_18,0,_19-_18,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('EcuM_StartupTwo')
+	.rseg	'.debug_info'	debug cluster('EcuM_StartupTwo')
+_20:
+	.dl	198
+	.dw	3
+	.dl	_21
+	.db	4,1
+	.db	'../../code/Stubs/EcuM.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_23,_22
+	.db	2
+	.dl	_10
+	.db	3
+	.db	'EcuM_StartupTwo',0,1,209,1,6,10,132,128,4,1,1
+	.dl	_5,_25,_4
+	.db	2,145,0,4
+	.dl	_5,_25
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('EcuM_StartupTwo')
+	.rseg	'.debug_abbrev'	debug cluster('EcuM_StartupTwo')
+_21:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('EcuM_StartupTwo')
+	.rseg	'.debug_line'	debug cluster('EcuM_StartupTwo')
+_22:
+	.dl	_49-_48
+_48:
+	.dw	3
+	.dl	_51-_50
+_50:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/Stubs/EcuM.c',0,0,0,0,0
+_51:
+	.db	5,12,7,0,5,2
+	.dl	_5
+	.db	3,210,1,1,9
+	.dw	_52-_5
+	.db	3,36,1,5,1,9
+	.dw	_25-_52
+	.db	3,1,0,1,1
+_49:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('EcuM_StartupTwo')
+	.rseg	'.debug_ranges'	debug cluster('EcuM_StartupTwo')
+_23:
+	.dl	-1,_24,0,_25-_24,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('EcuM_Shutdown')
+	.rseg	'.debug_info'	debug cluster('EcuM_Shutdown')
+_26:
+	.dl	196
+	.dw	3
+	.dl	_27
+	.db	4,1
+	.db	'../../code/Stubs/EcuM.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_29,_28
+	.db	2
+	.dl	_10
+	.db	3
+	.db	'EcuM_Shutdown',0,1,250,1,6,10,132,128,4,1,1
+	.dl	_7,_31,_6
+	.db	2,145,0,4
+	.dl	_7,_31
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('EcuM_Shutdown')
+	.rseg	'.debug_abbrev'	debug cluster('EcuM_Shutdown')
+_27:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('EcuM_Shutdown')
+	.rseg	'.debug_line'	debug cluster('EcuM_Shutdown')
+_28:
+	.dl	_54-_53
+_53:
+	.dw	3
+	.dl	_56-_55
+_55:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/Stubs/EcuM.c',0,0,0,0,0
+_56:
+	.db	5,1,7,0,5,2
+	.dl	_7
+	.db	3,252,1,1,7,9
+	.dw	_31-_7
+	.db	0,1,1
+_54:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('EcuM_Shutdown')
+	.rseg	'.debug_ranges'	debug cluster('EcuM_Shutdown')
+_29:
+	.dl	-1,_30,0,_31-_30,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('EcuM_StartOS')
+	.rseg	'.debug_info'	debug cluster('EcuM_StartOS')
+_32:
+	.dl	217
+	.dw	3
+	.dl	_33
+	.db	4,1
+	.db	'../../code/Stubs/EcuM.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_35,_34
+	.db	2
+	.dl	_10
+	.db	3
+	.db	'EcuM_StartOS',0,1,255,1,6,10,132,128,4,1,1
+	.dl	_9,_37,_8
+	.db	2,145,0,4
+	.db	'appMode',0,1,255,1,31,8
+	.dl	_38,_39
+	.db	5
+	.dl	_9,_37
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('EcuM_StartOS')
+	.rseg	'.debug_abbrev'	debug cluster('EcuM_StartOS')
+_33:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,5,0,3,8,58,15,59,15,57,15,51,15,73,16,2,6,0,0,5,11,0,17,1
+	.db	18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('EcuM_StartOS')
+	.rseg	'.debug_line'	debug cluster('EcuM_StartOS')
+_34:
+	.dl	_58-_57
+_57:
+	.dw	3
+	.dl	_60-_59
+_59:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/Stubs/EcuM.c',0,0,0,0,0
+_60:
+	.db	5,11,7,0,5,2
+	.dl	_9
+	.db	3,144,2,1,5,1,9
+	.dw	_37-_9
+	.db	3,3,0,1,1
+_58:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('EcuM_StartOS')
+	.rseg	'.debug_ranges'	debug cluster('EcuM_StartOS')
+_35:
+	.dl	-1,_36,0,_37-_36,0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('EcuM_Init')
+	.rseg	'.debug_loc'	debug cluster('EcuM_Init')
+_2:
+	.dl	-1,_3,0,_19-_3
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('EcuM_Shutdown')
+	.rseg	'.debug_loc'	debug cluster('EcuM_Shutdown')
+_6:
+	.dl	-1,_7,0,_31-_7
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('EcuM_StartOS')
+	.rseg	'.debug_loc'	debug cluster('EcuM_StartOS')
+_8:
+	.dl	-1,_9,0,_37-_9
+	.dw	2
+	.db	123,0
+	.dl	0,0
+_39:
+	.dl	-1,_9,0,_37-_9
+	.dw	1
+	.db	87
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('EcuM_StartupTwo')
+	.rseg	'.debug_loc'	debug cluster('EcuM_StartupTwo')
+_4:
+	.dl	-1,_5,0,_25-_5
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_frame'	.segment	debug
+	.rseg	'.debug_frame'	debug
+_61:
+	.dl	64
+	.dl	-1
+	.db	3,0,1,1,145,1,15,10,123,0,54,8,020H,36,34,9,-2,34,22,145,1,14,49,34,148,02H,18,56,37,22,8,0ffH,26,56,36
+	.db	34,8,10,22,11,3,19,123,126,8,12,8,16,8,17,8,18,8,19,8,144,1,0,0,0
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('EcuM_Init')
+	.rseg	'.debug_frame'	debug cluster('EcuM_Init')
+	.dl	12
+	.dl	_61,_3,_19-_3
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('EcuM_StartupTwo')
+	.rseg	'.debug_frame'	debug cluster('EcuM_StartupTwo')
+	.dl	12
+	.dl	_61,_5,_25-_5
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('EcuM_Shutdown')
+	.rseg	'.debug_frame'	debug cluster('EcuM_Shutdown')
+	.dl	32
+	.dl	_61,_7,_31-_7
+	.db	8,7,8,8,8,9,8,0,8,1,8,2,8,3,8,4,8,5,8,6
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('EcuM_StartOS')
+	.rseg	'.debug_frame'	debug cluster('EcuM_StartOS')
+	.dl	12
+	.dl	_61,_9,_37-_9
+	; End of section
+
+	; Module end
+	.end

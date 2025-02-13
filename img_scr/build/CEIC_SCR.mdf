@@ -1,0 +1,24 @@
+# space <name> <id> <mau size>
+space	mpe:xc800:data	1	8
+space	mpe:xc800:xdata	5	8
+space	mpe:xc800:pdata	6	8
+space	mpe:xc800:bdata	3	8
+space	mpe:xc800:code	7	8
+space	mpe:xc800:romdata	8	8
+space	mpe:xc800:bit	4	1
+space	mpe:xc800:idata	2	8
+# chip <name> <id> <mau size> <size> <type>
+chip	mpe:scr_bootrom	2	8	2048	rom
+chip	mpe:scr_iram	0	8	256	ram
+chip	mpe:scr_xram	1	8	8192	nvram
+# map <space id> <start in space> <size in space> <chip id> <start on chip>
+map	2	0	256	0	0
+map	1	0	128	0	0
+map	3	32	16	0	32
+map	4	0	128	0	32
+map	5	0	8192	1	0
+map	6	0	256	1	0
+map	7	0	8192	1	0
+map	8	0	8192	1	0
+map	7	53248	2048	2	0
+map	8	53248	2048	2	0

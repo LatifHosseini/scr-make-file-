@@ -1,0 +1,4028 @@
+	; Module start
+	.compiler_version	"TASKING VX-toolset for 8051: C compiler v6.3r1 Build 19041558 SN 09466227"
+	.compiler_invocation	"c51 -Ml --registerbank=0 --core=scr2g -D__CPU__=tc39x -DBRS_DERIVATIVE_tc39x -DBRS_CPU_CORE_ -DBRS_OS_USECASE_BRS -DBRS_PLATFORM_XC800 -DBRS_COMP_TASKING -I../../code/int/inc -I../../code/stubs -I../build/bsw/_common -Ic:/progra~1/tasking/tricor~1.3r1/c51/include -Igendata -Iinclude -ps --fp-model=clnrTz -g2 -o obj\\ScrWakeupEcu.src ../../code/int/src/ScrWakeupEcu.c"
+	.compiler_name		"c51"
+'code_ScrEthWupCallback'	.segment	code cluster('ScrEthWupCallback')
+	.rseg	'code_ScrEthWupCallback'	code cluster('ScrEthWupCallback')
+	.public	_ScrEthWupCallback
+; Function _ScrEthWupCallback
+_50:
+_ScrEthWupCallback:
+	.using 0
+_15:
+	mov	AR0,R7
+_138:
+	mov	DPTR,#_ScrData
+	movx	A,@DPTR
+_150:
+	mov	R6,A
+	mov	AR1,R0
+_137:
+	gdjnz	R1,_2
+_139:
+	clr	A
+	mov	R5,#254
+_151:
+	mov	R7,#1
+_152:
+	gcall	__STOREBC
+	mov	R6,A
+_2:
+	gcjne	R0,#2,_3
+_140:
+	mov	A,#1
+	mov	R5,#253
+_153:
+	mov	R7,A
+_154:
+	gcall	__STOREBC
+	mov	R6,A
+_3:
+	mov	DPTR,#_ScrData+1
+_155:
+	mov	A,#20
+	movx	@DPTR,A
+_156:
+	mov	DPTR,#_ScrData
+_157:
+	mov	A,R6
+	movx	@DPTR,A
+_158:
+	mov	R5,#1
+_159:
+	clr	A
+	mov	R7,A
+_160:
+	gjmp	_DioPortWrite
+_51:
+	; End of function
+	; End of section
+
+'code_ScrCanWupCallback'	.segment	code cluster('ScrCanWupCallback')
+	.rseg	'code_ScrCanWupCallback'	code cluster('ScrCanWupCallback')
+	.public	_ScrCanWupCallback
+; Function _ScrCanWupCallback
+_56:
+_ScrCanWupCallback:
+	.using 0
+_17:
+	mov	DPTR,#_ScrData
+_165:
+	mov	R7,#1
+_166:
+	mov	A,#2
+	mov	R5,#251
+	gjmp	__STOREBCXD
+_57:
+	; End of function
+	; End of section
+
+'code_ScrFrWupCallback'	.segment	code cluster('ScrFrWupCallback')
+	.rseg	'code_ScrFrWupCallback'	code cluster('ScrFrWupCallback')
+	.public	_ScrFrWupCallback
+; Function _ScrFrWupCallback
+_62:
+_ScrFrWupCallback:
+	.using 0
+_19:
+	mov	DPTR,#_ScrData
+_171:
+	mov	R7,#1
+_172:
+	mov	A,#3
+	mov	R5,#247
+	gjmp	__STOREBCXD
+_63:
+	; End of function
+	; End of section
+
+'code_ScrLinWupCallback'	.segment	code cluster('ScrLinWupCallback')
+	.rseg	'code_ScrLinWupCallback'	code cluster('ScrLinWupCallback')
+	.public	_ScrLinWupCallback
+; Function _ScrLinWupCallback
+_68:
+_ScrLinWupCallback:
+	.using 0
+_21:
+	mov	DPTR,#_ScrData
+_177:
+	mov	R7,#1
+_178:
+	mov	A,#4
+	mov	R5,#239
+	gjmp	__STOREBCXD
+_69:
+	; End of function
+	; End of section
+
+'code_ScrWupCallback'	.segment	code cluster('ScrWupCallback')
+	.rseg	'code_ScrWupCallback'	code cluster('ScrWupCallback')
+	.public	_ScrWupCallback
+; Function _ScrWupCallback
+_23:
+_ScrWupCallback:
+	gjmp	_$cocofun_1
+_74:
+	; End of function
+	; End of section
+
+'code__cocofun_1'	.segment	code cluster('$cocofun_1')
+	.rseg	'code__cocofun_1'	code cluster('$cocofun_1')
+; Function _$cocofun_1
+_108:
+_$cocofun_1:
+; Function body _$cocofun_1, coco_iter:0
+	.using 0
+	.using 0
+_25:
+	mov	DPTR,#_ScrData+1
+_238:
+	mov	A,#20
+	movx	@DPTR,A
+_239:
+	clr	A
+	mov	R7,A
+_240:
+	mov	R5,#1
+	gjmp	_DioPortWrite
+_109:
+	; End of function
+	; End of section
+
+'code_ScrKeepSwitchAwake'	.segment	code cluster('ScrKeepSwitchAwake')
+	.rseg	'code_ScrKeepSwitchAwake'	code cluster('ScrKeepSwitchAwake')
+	.public	_ScrKeepSwitchAwake
+; Function _ScrKeepSwitchAwake
+_27:
+_ScrKeepSwitchAwake:
+	gjmp	_$cocofun_1
+_91:
+	; End of function
+	; End of section
+
+'_ScrHandleWakeup'	.segment	data overlay('stack_data') cluster('ScrHandleWakeup')
+	.rseg	'_ScrHandleWakeup'	data overlay('stack_data') cluster('ScrHandleWakeup')
+__999001_$9:
+	.ds	2
+	%define(__REG)(__999001_$9)
+	; End of section
+
+'code_ScrHandleWakeup'	.segment	code cluster('ScrHandleWakeup')
+	.rseg	'code_ScrHandleWakeup'	code cluster('ScrHandleWakeup')
+; Function _ScrHandleWakeup
+_96:
+_ScrHandleWakeup:
+	.using 0
+_29:
+	gcall	_WupGetData
+_203:
+	mov	AR3,R7
+	mov	AR2,R6
+_141:
+	mov	A,R3
+	add	A,#20
+	mov	%__REG+1,A
+	clr	A
+	addc	A,R2
+	mov	%__REG+0,A
+	mov	DPL,%__REG+1
+	mov	DPH,%__REG+0
+	clr	A
+	mov	R5,#254
+	gcall	__LOADBCXD
+	mov	A,R7
+_204:
+	gjnz	_4
+_205:
+	mov	DPTR,#_ScrData
+	movx	A,@DPTR
+	mov	R7,A
+	clr	A
+	mov	R5,#254
+	gcall	__LDBC
+	mov	A,R7
+_206:
+	gjz	_5
+_207:
+	mov	DPTR,#_ScrData
+_208:
+	clr	A
+	mov	R5,#254
+_209:
+	gcall	_$cocofun_3
+_210:
+	mov	R7,#16
+	gcall	_$cocofun_2
+_211:
+	gjnc	_6
+_212:
+	mov	DPTR,#_WUL1CntBad
+	gcall	_$cocofun_4
+_6:
+_5:
+_4:
+	mov	DPL,%__REG+1
+	mov	DPH,%__REG+0
+	mov	A,#1
+	mov	R5,#253
+	gcall	__LOADBCXD
+	mov	A,R7
+_213:
+	gjnz	_8
+_214:
+	mov	DPTR,#_ScrData
+	movx	A,@DPTR
+	mov	R7,A
+	mov	A,#1
+	mov	R5,#253
+	gcall	__LDBC
+	mov	A,R7
+_215:
+	gjz	_9
+_216:
+	mov	DPTR,#_ScrData
+_217:
+	mov	A,#1
+	mov	R5,#253
+_218:
+	gcall	_$cocofun_3
+_219:
+	mov	R7,#18
+	gcall	_$cocofun_2
+_220:
+	gjnc	_10
+_221:
+	mov	DPTR,#_WUL2CntBad
+	gcall	_$cocofun_4
+_10:
+_9:
+_8:
+	ret
+_97:
+	; End of function
+	%undef(__REG)
+	; End of section
+
+	%define(__REG)(__999001_$9)
+'code__cocofun_4'	.segment	code cluster('$cocofun_4')
+	.rseg	'code__cocofun_4'	code cluster('$cocofun_4')
+; Function _$cocofun_4
+_126:
+_$cocofun_4:
+; Function body _$cocofun_4, coco_iter:0
+	.using 0
+_31:
+	movx	A,@DPTR
+	mov	R0,A
+_258:
+	inc	A
+	add	A,#255
+	clr	A
+	rlc	A
+	mov	R1,A
+_259:
+	add	A,R0
+	movx	@DPTR,A
+_260:
+	ret
+_127:
+	; End of function
+	%undef(__REG)
+	; End of section
+
+	%define(__REG)(__999001_$9)
+'code__cocofun_3'	.segment	code cluster('$cocofun_3')
+	.rseg	'code__cocofun_3'	code cluster('$cocofun_3')
+; Function _$cocofun_3
+_120:
+_$cocofun_3:
+; Function body _$cocofun_3, coco_iter:0
+	.using 0
+_33:
+	mov	R7,#0
+_251:
+	gcall	__STOREBCXD
+_252:
+	mov	DPL,R3
+	mov	DPH,R2
+	clr	A
+	mov	R6,A
+_253:
+	ret
+_121:
+	; End of function
+	%undef(__REG)
+	; End of section
+
+	%define(__REG)(__999001_$9)
+'code__cocofun_2'	.segment	code cluster('$cocofun_2')
+	.rseg	'code__cocofun_2'	code cluster('$cocofun_2')
+; Function _$cocofun_2
+_114:
+_$cocofun_2:
+; Function body _$cocofun_2, coco_iter:0
+	.using 0
+_35:
+	gcall	__IDXPI
+	movx	A,@DPTR
+	mov	R0,A
+	inc	DPTR
+	movx	A,@DPTR
+_245:
+	add	A,#23
+	mov	A,R0
+	addc	A,#252
+_246:
+	ret
+_115:
+	; End of function
+	%undef(__REG)
+	; End of section
+
+'code_ScrResetPmicHandler'	.segment	code cluster('ScrResetPmicHandler')
+	.rseg	'code_ScrResetPmicHandler'	code cluster('ScrResetPmicHandler')
+	.public	_ScrResetPmicHandler
+; Function _ScrResetPmicHandler
+_85:
+_ScrResetPmicHandler:
+	.using 0
+_37:
+	mov	DPTR,#_ScrData+1
+_192:
+	clr	A
+	movx	@DPTR,A
+_193:
+	mov	R7,A
+_194:
+	mov	R5,A
+	gjmp	_DioPortWrite
+_86:
+	; End of function
+	; End of section
+
+'code_ScrHandlePmic'	.segment	code cluster('ScrHandlePmic')
+	.rseg	'code_ScrHandlePmic'	code cluster('ScrHandlePmic')
+; Function _ScrHandlePmic
+_102:
+_ScrHandlePmic:
+	.using 0
+_39:
+	mov	DPTR,#_ScrData+1
+	movx	A,@DPTR
+	mov	R0,A
+_226:
+	gjz	_12
+_227:
+	dec	R0
+_228:
+	mov	DPTR,#_ScrData+1
+_229:
+	mov	A,R0
+	movx	@DPTR,A
+_230:
+	mov	R5,#1
+_231:
+	clr	A
+_232:
+	gjmp	_13
+_12:
+	clr	A
+	mov	R5,A
+_13:
+	mov	R7,A
+_233:
+	gjmp	_DioPortWrite
+_103:
+	; End of function
+	; End of section
+
+'code_ScrWakeupEcuTask50'	.segment	code cluster('ScrWakeupEcuTask50')
+	.rseg	'code_ScrWakeupEcuTask50'	code cluster('ScrWakeupEcuTask50')
+	.public	_ScrWakeupEcuTask50
+; Function _ScrWakeupEcuTask50
+_79:
+_ScrWakeupEcuTask50:
+	.using 0
+_41:
+	gcall	_ScrHandleWakeup
+_187:
+	gjmp	_ScrHandlePmic
+_80:
+	; End of function
+	; End of section
+
+'xdata_ScrData'	.segment	xdata clear cluster('ScrData')
+	.rseg	'xdata_ScrData'	xdata clear cluster('ScrData')
+_ScrData:
+	.ds	2
+	; End of section
+
+	.calls	'_ScrEthWupCallback','__STOREBC'
+	.calls	'_ScrCanWupCallback','__STOREBCXD'
+	.calls	'_ScrFrWupCallback','__STOREBCXD'
+	.calls	'_ScrLinWupCallback','__STOREBCXD'
+	.calls	'_ScrHandleWakeup','__LOADBCXD'
+	.calls	'_ScrHandleWakeup','__LDBC'
+	.calls	'_$cocofun_3','__STOREBCXD'
+	.calls	'_$cocofun_2','__IDXPI'
+	.calls	'_ScrEthWupCallback','_DioPortWrite'
+	.calls	'_ScrWupCallback','_$cocofun_1'
+	.calls	'_$cocofun_1','_DioPortWrite'
+	.calls	'_ScrKeepSwitchAwake','_$cocofun_1'
+	.calls	'_ScrHandleWakeup','_WupGetData'
+	.calls	'_ScrHandleWakeup','_$cocofun_3'
+	.calls	'_ScrHandleWakeup','_$cocofun_2'
+	.calls	'_ScrHandleWakeup','_$cocofun_4'
+	.calls	'_ScrResetPmicHandler','_DioPortWrite'
+	.calls	'_ScrHandlePmic','_DioPortWrite'
+	.calls	'_ScrWakeupEcuTask50','_ScrHandleWakeup'
+	.calls	'_ScrWakeupEcuTask50','_ScrHandlePmic'
+	.calls	'_ScrEthWupCallback','',2
+	.calls	'_ScrCanWupCallback','',2
+	.calls	'_ScrFrWupCallback','',2
+	.calls	'_ScrLinWupCallback','',2
+	.calls	'_ScrWupCallback','',2
+	.calls	'_$cocofun_1','',2
+	.calls	'_ScrKeepSwitchAwake','',2
+	.calls	'_ScrHandleWakeup','',2
+	.calls	'_$cocofun_4','',2
+	.calls	'_$cocofun_3','',2
+	.calls	'_$cocofun_2','',2
+	.calls	'_ScrResetPmicHandler','',2
+	.calls	'_ScrHandlePmic','',2
+	.calls	'_ScrWakeupEcuTask50','',2
+	.extrn	code(_DioPortWrite)
+	.extrn	xdata(_WUL1CntBad)
+	.extrn	xdata(_WUL2CntBad)
+	.extrn	code(_WupGetData)
+	.extrn	code(__STOREBC)
+	.extrn	code(__STOREBCXD)
+	.extrn	code(__LOADBCXD)
+	.extrn	code(__LDBC)
+	.extrn	code(__IDXPI)
+'.debug_info'	.segment	debug
+	.rseg	'.debug_info'	debug
+_43:
+	.dl	19047
+	.dw	3
+	.dl	_44
+	.db	4
+_42:
+	.db	1
+	.db	'../../code/int/src/ScrWakeupEcu.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_45
+_130:
+	.db	2
+	.db	'unsigned char',0,1,8,3
+	.db	'DioPortWrite',0,1,78,6,10,132,128,4,1,1,1,4
+	.db	'PortNr',0,1,78,26,8
+	.dl	150
+	.db	4
+	.db	'NewState',0,1,78,40,8
+	.dl	150
+	.db	0,2
+	.db	'unsigned long int',0,4,7,2
+	.db	'unsigned short int',0,2,7,5,2,12,9,21,6
+	.db	'fineTimeWul1',0
+	.dl	226
+	.db	4,2,35,0,6
+	.db	'rawTimeWul1',0
+	.dl	226
+	.db	4,2,35,4,6
+	.db	'fineTimeWul2',0
+	.dl	226
+	.db	4,2,35,8,6
+	.db	'rawTimeWul2',0
+	.dl	226
+	.db	4,2,35,12,6
+	.db	'msTimeWul1',0
+	.dl	247
+	.db	2,2,35,16,6
+	.db	'msTimeWul2',0
+	.dl	247
+	.db	2,2,35,18,7
+	.db	'isBusyWul1',0,1
+	.dl	150
+	.db	1,7,2,35,20,7
+	.db	'isBusyWul2',0,1
+	.dl	150
+	.db	1,6,2,35,20,7
+	.db	'unused',0,1
+	.dl	150
+	.db	6,0,2,35,20,0
+_134:
+	.db	8,8
+	.dl	269
+	.db	9
+	.db	'WupGetData',0,2,27,12,10
+	.dl	463
+	.db	132,128,4,1,1,1,10
+	.db	'void',0,8,8
+	.dl	495
+	.db	11
+	.db	'__prof_adm',0,3,1,1
+	.dl	501
+	.db	2
+	.db	'unsigned int',0,2,7,11
+	.db	'__codeptr',0,3,1,1
+	.dl	526
+	.db	11
+	.db	'uint8',0,4,101,40
+	.dl	150
+	.db	11
+	.db	'uint16',0,4,103,40
+	.dl	247
+	.db	11
+	.db	'uint32',0,4,105,40
+	.dl	226
+	.db	11
+	.db	'Ifx_UReg_8Bit',0,5,42,24
+	.dl	150
+	.db	2
+	.db	'char',0,1,6,11
+	.db	'Ifx_SReg_8Bit',0,5,45,24
+	.dl	626
+	.db	12
+	.db	'_Ifx_SCR_ACC_Bits',0,6,75,16,1,7
+	.db	'ACC',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_ACC_Bits',0,6,78,3
+	.dl	656
+	.db	12
+	.db	'_Ifx_SCR_ADCOMP_CON_Bits',0,6,81,16,1,7
+	.db	'ADCENREQ',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'ADCEN',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'ADCIEN',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'ADCCHSEL',0,1
+	.dl	150
+	.db	2,3,2,35,0,7
+	.db	'VF',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'EOCSAMPLE',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'SOC',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_ADCOMP_CON_Bits',0,6,90,3
+	.dl	720
+	.db	12
+	.db	'_Ifx_SCR_ADCOMP_RES_Bits',0,6,93,16,1,7
+	.db	'ADRES',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_ADCOMP_RES_Bits',0,6,96,3
+	.dl	908
+	.db	12
+	.db	'_Ifx_SCR_B_Bits',0,6,99,16,1,7
+	.db	'B',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_B_Bits',0,6,102,3
+	.dl	988
+	.db	12
+	.db	'_Ifx_SCR_DATA_CTRL_Bits',0,6,105,16,1,7
+	.db	'DATA',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_DATA_CTRL_Bits',0,6,108,3
+	.dl	1046
+	.db	12
+	.db	'_Ifx_SCR_DBG_MODSUSP_Bits',0,6,111,16,1,7
+	.db	'WDTSUSP',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'RTCSUSP',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'T2SUSP',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'CCTSUSP',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'reserved_4',0,1
+	.dl	150
+	.db	4,0,2,35,0,0,11
+	.db	'Ifx_SCR_DBG_MODSUSP_Bits',0,6,118,3
+	.dl	1123
+	.db	12
+	.db	'_Ifx_SCR_DPH_Bits',0,6,121,16,1,7
+	.db	'DPH',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_DPH_Bits',0,6,124,3
+	.dl	1285
+	.db	12
+	.db	'_Ifx_SCR_DPL_Bits',0,6,127,16,1,7
+	.db	'DPL',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_DPL_Bits',0,6,130,1,3
+	.dl	1349
+	.db	12
+	.db	'_Ifx_SCR_EO_Bits',0,6,133,1,16,1,7
+	.db	'DPSEL',0,1
+	.dl	150
+	.db	3,5,2,35,0,7
+	.db	'reserved_3',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'TRAP_EN',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'reserved_5',0,1
+	.dl	150
+	.db	3,0,2,35,0,0,11
+	.db	'Ifx_SCR_EO_Bits',0,6,139,1,3
+	.dl	1414
+	.db	12
+	.db	'_Ifx_SCR_EXICON0_Bits',0,6,142,1,16,1,7
+	.db	'EXINT0',0,1
+	.dl	150
+	.db	2,6,2,35,0,7
+	.db	'EXINT1',0,1
+	.dl	150
+	.db	2,4,2,35,0,7
+	.db	'EXINT2',0,1
+	.dl	150
+	.db	2,2,2,35,0,7
+	.db	'EXINT3',0,1
+	.dl	150
+	.db	2,0,2,35,0,0,11
+	.db	'Ifx_SCR_EXICON0_Bits',0,6,148,1,3
+	.dl	1543
+	.db	12
+	.db	'_Ifx_SCR_EXICON1_Bits',0,6,151,1,16,1,7
+	.db	'EXINT4',0,1
+	.dl	150
+	.db	2,6,2,35,0,7
+	.db	'EXINT5',0,1
+	.dl	150
+	.db	2,4,2,35,0,7
+	.db	'EXINT6',0,1
+	.dl	150
+	.db	2,2,2,35,0,7
+	.db	'EXINT7',0,1
+	.dl	150
+	.db	2,0,2,35,0,0,11
+	.db	'Ifx_SCR_EXICON1_Bits',0,6,157,1,3
+	.dl	1674
+	.db	12
+	.db	'_Ifx_SCR_EXICON2_Bits',0,6,160,1,16,1,7
+	.db	'EXINT8',0,1
+	.dl	150
+	.db	2,6,2,35,0,7
+	.db	'EXINT9',0,1
+	.dl	150
+	.db	2,4,2,35,0,7
+	.db	'EXINT10',0,1
+	.dl	150
+	.db	2,2,2,35,0,7
+	.db	'EXINT11',0,1
+	.dl	150
+	.db	2,0,2,35,0,0,11
+	.db	'Ifx_SCR_EXICON2_Bits',0,6,166,1,3
+	.dl	1805
+	.db	12
+	.db	'_Ifx_SCR_EXICON3_Bits',0,6,169,1,16,1,7
+	.db	'EXINT12',0,1
+	.dl	150
+	.db	2,6,2,35,0,7
+	.db	'EXINT13',0,1
+	.dl	150
+	.db	2,4,2,35,0,7
+	.db	'EXINT14',0,1
+	.dl	150
+	.db	2,2,2,35,0,7
+	.db	'EXINT15',0,1
+	.dl	150
+	.db	2,0,2,35,0,0,11
+	.db	'Ifx_SCR_EXICON3_Bits',0,6,175,1,3
+	.dl	1938
+	.db	12
+	.db	'_Ifx_SCR_IEN0_Bits',0,6,178,1,16,1,7
+	.db	'EX0',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'ET0',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'EX1',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'ET1',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'ES',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'ET2',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'reserved_6',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'EA',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_IEN0_Bits',0,6,188,1,3
+	.dl	2073
+	.db	12
+	.db	'_Ifx_SCR_IEN1_Bits',0,6,191,1,16,1,7
+	.db	'EWCAN',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'ESSC',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'EX2',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'EXM',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'ECCIP0',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'ECCIP1',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'ECCIP2',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'ECCIP3',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_IEN1_Bits',0,6,201,1,3
+	.dl	2251
+	.db	12
+	.db	'_Ifx_SCR_IO_PAGE_Bits',0,6,204,1,16,1,7
+	.db	'PAGE',0,1
+	.dl	150
+	.db	3,5,2,35,0,7
+	.db	'reserved_3',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'STNR',0,1
+	.dl	150
+	.db	2,2,2,35,0,7
+	.db	'OP',0,1
+	.dl	150
+	.db	2,0,2,35,0,0,11
+	.db	'Ifx_SCR_IO_PAGE_Bits',0,6,210,1,3
+	.dl	2439
+	.db	12
+	.db	'_Ifx_SCR_IP_Bits',0,6,213,1,16,1,7
+	.db	'PX0',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'PT0',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'PX1',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'PT1',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'PS',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'PT2',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'reserved_6',0,1
+	.dl	150
+	.db	2,0,2,35,0,0,11
+	.db	'Ifx_SCR_IP_Bits',0,6,222,1,3
+	.dl	2566
+	.db	12
+	.db	'_Ifx_SCR_IP1_Bits',0,6,225,1,16,1,7
+	.db	'PWCAN',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'PSSC',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'PX2',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'PXM',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'PCCIP0',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'PCCIP1',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'PCCIP2',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'PCCIP3',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_IP1_Bits',0,6,235,1,3
+	.dl	2726
+	.db	12
+	.db	'_Ifx_SCR_IPH_Bits',0,6,238,1,16,1,7
+	.db	'PX0H',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'PT0H',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'PX1H',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'PT1H',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'PSH',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'PT2H',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'reserved_6',0,1
+	.dl	150
+	.db	2,0,2,35,0,0,11
+	.db	'Ifx_SCR_IPH_Bits',0,6,247,1,3
+	.dl	2912
+	.db	12
+	.db	'_Ifx_SCR_IPH1_Bits',0,6,250,1,16,1,7
+	.db	'PWCANH',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'PSSCH',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'PX2H',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'PXMH',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'PCCIP0H',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'PCCIP1H',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'PCCIP2H',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'PCCIP3H',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_IPH1_Bits',0,6,132,2,3
+	.dl	3080
+	.db	12
+	.db	'_Ifx_SCR_IRCON0_Bits',0,6,135,2,16,1,7
+	.db	'reserved_0',0,1
+	.dl	150
+	.db	2,6,2,35,0,7
+	.db	'EXINT2',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'EXINT3',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'EXINT4',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'EXINT5',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'EXINT6',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'EXINT7',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_IRCON0_Bits',0,6,144,2,3
+	.dl	3276
+	.db	12
+	.db	'_Ifx_SCR_IRCON1_Bits',0,6,147,2,16,1,7
+	.db	'EIR',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'TIR',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'RIR',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'reserved_3',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'ADCIR',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'RER',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'RFR',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'reserved_7',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_IRCON1_Bits',0,6,157,2,3
+	.dl	3463
+	.db	12
+	.db	'_Ifx_SCR_IRCON2_Bits',0,6,160,2,16,1,7
+	.db	'EXINT8',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'EXINT9',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'EXINT10',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'EXINT11',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'EXINT12',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'EXINT13',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'EXINT14',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'EXINT15',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_IRCON2_Bits',0,6,170,2,3
+	.dl	3656
+	.db	12
+	.db	'_Ifx_SCR_MODPISEL0_Bits',0,6,173,2,16,1,7
+	.db	'URRIS',0,1
+	.dl	150
+	.db	4,4,2,35,0,7
+	.db	'WCANRXDIS',0,1
+	.dl	150
+	.db	4,0,2,35,0,0,11
+	.db	'Ifx_SCR_MODPISEL0_Bits',0,6,177,2,3
+	.dl	3863
+	.db	12
+	.db	'_Ifx_SCR_MODPISEL1_Bits',0,6,180,2,16,1,7
+	.db	'reserved_0',0,1
+	.dl	150
+	.db	2,6,2,35,0,7
+	.db	'EXINT0IS',0,1
+	.dl	150
+	.db	2,4,2,35,0,7
+	.db	'EXINT1IS',0,1
+	.dl	150
+	.db	2,2,2,35,0,7
+	.db	'EXINT2IS',0,1
+	.dl	150
+	.db	2,0,2,35,0,0,11
+	.db	'Ifx_SCR_MODPISEL1_Bits',0,6,186,2,3
+	.dl	3964
+	.db	12
+	.db	'_Ifx_SCR_MODPISEL2_Bits',0,6,189,2,16,1,7
+	.db	'T2CC0EXINT3IS',0,1
+	.dl	150
+	.db	2,6,2,35,0,7
+	.db	'T2CC1EXINT4IS',0,1
+	.dl	150
+	.db	2,4,2,35,0,7
+	.db	'T2CC2EXINT5IS',0,1
+	.dl	150
+	.db	2,2,2,35,0,7
+	.db	'T2CC3EXINT6IS',0,1
+	.dl	150
+	.db	2,0,2,35,0,0,11
+	.db	'Ifx_SCR_MODPISEL2_Bits',0,6,195,2,3
+	.dl	4109
+	.db	12
+	.db	'_Ifx_SCR_MODPISEL3_Bits',0,6,198,2,16,1,7
+	.db	'T2EXIS',0,1
+	.dl	150
+	.db	3,5,2,35,0,7
+	.db	'T2IS',0,1
+	.dl	150
+	.db	2,3,2,35,0,7
+	.db	'CIS',0,1
+	.dl	150
+	.db	3,0,2,35,0,0,11
+	.db	'Ifx_SCR_MODPISEL3_Bits',0,6,203,2,3
+	.dl	4272
+	.db	12
+	.db	'_Ifx_SCR_MODPISEL4_Bits',0,6,206,2,16,1,7
+	.db	'MIS',0,1
+	.dl	150
+	.db	3,5,2,35,0,7
+	.db	'SIS',0,1
+	.dl	150
+	.db	3,2,2,35,0,7
+	.db	'reserved_6',0,1
+	.dl	150
+	.db	2,0,2,35,0,0,11
+	.db	'Ifx_SCR_MODPISEL4_Bits',0,6,211,2,3
+	.dl	4384
+	.db	12
+	.db	'_Ifx_SCR_MODPISEL5_Bits',0,6,214,2,16,1,7
+	.db	'T1IS',0,1
+	.dl	150
+	.db	2,6,2,35,0,7
+	.db	'T0IS',0,1
+	.dl	150
+	.db	2,4,2,35,0,7
+	.db	'reserved_4',0,1
+	.dl	150
+	.db	4,0,2,35,0,0,11
+	.db	'Ifx_SCR_MODPISEL5_Bits',0,6,219,2,3
+	.dl	4499
+	.db	12
+	.db	'_Ifx_SCR_NMICON_Bits',0,6,222,2,16,1,7
+	.db	'NMIWDT',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'NMIRAMECC',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'NMIEXTNMI',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'NMIOCDS',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'NMIMAINC',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'reserved_5',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'NMIWKP',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'SCRINTTC',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_NMICON_Bits',0,6,232,2,3
+	.dl	4616
+	.db	12
+	.db	'_Ifx_SCR_NMISR_Bits',0,6,235,2,16,1,7
+	.db	'FNMIWDT',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'FNMIRAMECC',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'FNMIEXTNMI',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'FNMIOCDS',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'FNMIMAINC',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'reserved_5',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'FNMIWKP',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'reserved_7',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_NMISR_Bits',0,6,245,2,3
+	.dl	4832
+	.db	12
+	.db	'_Ifx_SCR_PASSWD_Bits',0,6,248,2,16,1,7
+	.db	'MODE',0,1
+	.dl	150
+	.db	2,6,2,35,0,7
+	.db	'PROTECT_S',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'PASS',0,1
+	.dl	150
+	.db	5,0,2,35,0,0,11
+	.db	'Ifx_SCR_PASSWD_Bits',0,6,253,2,3
+	.dl	5054
+	.db	12
+	.db	'_Ifx_SCR_PCON_Bits',0,6,128,3,16,1,7
+	.db	'IDLE',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'reserved_1',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'GF0',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'GF1',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'reserved_4',0,1
+	.dl	150
+	.db	3,1,2,35,0,7
+	.db	'SMOD',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_PCON_Bits',0,6,136,3,3
+	.dl	5164
+	.db	12
+	.db	'_Ifx_SCR_PSW_Bits',0,6,139,3,16,1,7
+	.db	'P',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'F1',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'OV',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'RS',0,1
+	.dl	150
+	.db	2,3,2,35,0,7
+	.db	'F0',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'AC',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'CY',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_PSW_Bits',0,6,148,3,3
+	.dl	5323
+	.db	12
+	.db	'_Ifx_SCR_P_IN_Bits',0,6,151,3,16,1,7
+	.db	'P0',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'P1',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'P2',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'P3',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'P4',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'P5',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'P6',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'P7',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_P_IN_Bits',0,6,161,3,3
+	.dl	5471
+	.db	12
+	.db	'_Ifx_SCR_P_IOCR_Bits',0,6,164,3,16,1,7
+	.db	'reserved_0',0,1
+	.dl	150
+	.db	3,5,2,35,0,7
+	.db	'PC',0,1
+	.dl	150
+	.db	5,0,2,35,0,0,11
+	.db	'Ifx_SCR_P_IOCR_Bits',0,6,168,3,3
+	.dl	5636
+	.db	12
+	.db	'_Ifx_SCR_P_OMCR_Bits',0,6,171,3,16,1,7
+	.db	'PCL0',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'PCL1',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'PCL2',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'PCL3',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'PCL4',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'PCL5',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'PCL6',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'PCL7',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_P_OMCR_Bits',0,6,181,3,3
+	.dl	5729
+	.db	12
+	.db	'_Ifx_SCR_P_OMSR_Bits',0,6,184,3,16,1,7
+	.db	'PS0',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'PS1',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'PS2',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'PS3',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'PS4',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'PS5',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'PS6',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'PS7',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_P_OMSR_Bits',0,6,194,3,3
+	.dl	5914
+	.db	12
+	.db	'_Ifx_SCR_P_OMTR_Bits',0,6,197,3,16,1,7
+	.db	'PTL0',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'PTL1',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'PTL2',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'PTL3',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'PTL4',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'PTL5',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'PTL6',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'PTL7',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_P_OMTR_Bits',0,6,207,3,3
+	.dl	6091
+	.db	12
+	.db	'_Ifx_SCR_P_OUT_Bits',0,6,210,3,16,1,7
+	.db	'P0',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'P1',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'P2',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'P3',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'P4',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'P5',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'P6',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'P7',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_P_OUT_Bits',0,6,220,3,3
+	.dl	6276
+	.db	12
+	.db	'_Ifx_SCR_P_PDISC_Bits',0,6,223,3,16,1,7
+	.db	'PDIS0',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'PDIS1',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'PDIS2',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'PDIS3',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'PDIS4',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'PDIS5',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'PDIS6',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'PDIS7',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_P_PDISC_Bits',0,6,233,3,3
+	.dl	6443
+	.db	12
+	.db	'_Ifx_SCR_P_PDR0_Bits',0,6,236,3,16,1,7
+	.db	'PD0',0,1
+	.dl	150
+	.db	2,6,2,35,0,7
+	.db	'PL0',0,1
+	.dl	150
+	.db	2,4,2,35,0,7
+	.db	'PD1',0,1
+	.dl	150
+	.db	2,2,2,35,0,7
+	.db	'PL1',0,1
+	.dl	150
+	.db	2,0,2,35,0,0,11
+	.db	'Ifx_SCR_P_PDR0_Bits',0,6,242,3,3
+	.dl	6638
+	.db	12
+	.db	'_Ifx_SCR_P_PDR2_Bits',0,6,245,3,16,1,7
+	.db	'PD2',0,1
+	.dl	150
+	.db	2,6,2,35,0,7
+	.db	'PL2',0,1
+	.dl	150
+	.db	2,4,2,35,0,7
+	.db	'PD3',0,1
+	.dl	150
+	.db	2,2,2,35,0,7
+	.db	'PL3',0,1
+	.dl	150
+	.db	2,0,2,35,0,0,11
+	.db	'Ifx_SCR_P_PDR2_Bits',0,6,251,3,3
+	.dl	6755
+	.db	12
+	.db	'_Ifx_SCR_P_PDR4_Bits',0,6,254,3,16,1,7
+	.db	'PD4',0,1
+	.dl	150
+	.db	2,6,2,35,0,7
+	.db	'PL4',0,1
+	.dl	150
+	.db	2,4,2,35,0,7
+	.db	'PD5',0,1
+	.dl	150
+	.db	2,2,2,35,0,7
+	.db	'PL5',0,1
+	.dl	150
+	.db	2,0,2,35,0,0,11
+	.db	'Ifx_SCR_P_PDR4_Bits',0,6,132,4,3
+	.dl	6872
+	.db	12
+	.db	'_Ifx_SCR_P_PDR6_Bits',0,6,135,4,16,1,7
+	.db	'PD6',0,1
+	.dl	150
+	.db	2,6,2,35,0,7
+	.db	'PL6',0,1
+	.dl	150
+	.db	2,4,2,35,0,7
+	.db	'PD7',0,1
+	.dl	150
+	.db	2,2,2,35,0,7
+	.db	'PL7',0,1
+	.dl	150
+	.db	2,0,2,35,0,0,11
+	.db	'Ifx_SCR_P_PDR6_Bits',0,6,141,4,3
+	.dl	6989
+	.db	12
+	.db	'_Ifx_SCR_RTC_CNT_Bits',0,6,144,4,16,1,7
+	.db	'CNT_VAL',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_RTC_CNT_Bits',0,6,147,4,3
+	.dl	7106
+	.db	12
+	.db	'_Ifx_SCR_RTC_CON_Bits',0,6,150,4,16,1,7
+	.db	'RTCC',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'RTCCLKSEL',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'RTPBYP',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'RTCCT',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'ECRTC',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'RTC32SEL',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'CFRTC',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'INIT32',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_RTC_CON_Bits',0,6,160,4,3
+	.dl	7184
+	.db	12
+	.db	'_Ifx_SCR_RTC_CR_Bits',0,6,163,4,16,1,7
+	.db	'CC_VAL',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_RTC_CR_Bits',0,6,166,4,3
+	.dl	7387
+	.db	12
+	.db	'_Ifx_SCR_SCRINTEXCHG_Bits',0,6,169,4,16,1,7
+	.db	'SCRINT',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_SCRINTEXCHG_Bits',0,6,172,4,3
+	.dl	7462
+	.db	12
+	.db	'_Ifx_SCR_SCU_CMCON_Bits',0,6,175,4,16,1,7
+	.db	'DIV',0,1
+	.dl	150
+	.db	4,4,2,35,0,7
+	.db	'OSCWAKE',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'OSCPD',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'reserved_6',0,1
+	.dl	150
+	.db	2,0,2,35,0,0,11
+	.db	'Ifx_SCR_SCU_CMCON_Bits',0,6,181,4,3
+	.dl	7547
+	.db	12
+	.db	'_Ifx_SCR_SCU_MODIEN_Bits',0,6,184,4,16,1,7
+	.db	'EIREN',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'TIREN',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'RIREN',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'FEEN',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'FFEN',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'reserved_5',0,1
+	.dl	150
+	.db	3,0,2,35,0,0,11
+	.db	'Ifx_SCR_SCU_MODIEN_Bits',0,6,192,4,3
+	.dl	7683
+	.db	12
+	.db	'_Ifx_SCR_SCU_MRSTST_Bits',0,6,195,4,16,1,7
+	.db	'SMURST',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'RST',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'reserved_2',0,1
+	.dl	150
+	.db	6,0,2,35,0,0,11
+	.db	'Ifx_SCR_SCU_MRSTST_Bits',0,6,200,4,3
+	.dl	7853
+	.db	12
+	.db	'_Ifx_SCR_SCU_PAGE_Bits',0,6,203,4,16,1,7
+	.db	'PAGE',0,1
+	.dl	150
+	.db	3,5,2,35,0,7
+	.db	'reserved_3',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'STNR',0,1
+	.dl	150
+	.db	2,2,2,35,0,7
+	.db	'OP',0,1
+	.dl	150
+	.db	2,0,2,35,0,0,11
+	.db	'Ifx_SCR_SCU_PAGE_Bits',0,6,209,4,3
+	.dl	7973
+	.db	12
+	.db	'_Ifx_SCR_SCU_PMCON1_Bits',0,6,212,4,16,1,7
+	.db	'SSC_DIS',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'T2CCU_DIS',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'RTC_DIS',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'WCAN_DIS',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'WDT_DIS',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'LIN_DIS',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'OCDS_DIS',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'reserved_7',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_SCU_PMCON1_Bits',0,6,222,4,3
+	.dl	8102
+	.db	12
+	.db	'_Ifx_SCR_SCU_RSTCON_Bits',0,6,225,4,16,1,7
+	.db	'ECCRSTEN',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'WDTRSTEN',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'reserved_2',0,1
+	.dl	150
+	.db	5,1,2,35,0,7
+	.db	'SWRQ',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_SCU_RSTCON_Bits',0,6,231,4,3
+	.dl	8326
+	.db	12
+	.db	'_Ifx_SCR_SCU_RSTST_Bits',0,6,234,4,16,1,7
+	.db	'ECCRST',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'WDTRST',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'SOFTRST',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'reserved_3',0,1
+	.dl	150
+	.db	5,0,2,35,0,0,11
+	.db	'Ifx_SCR_SCU_RSTST_Bits',0,6,240,4,3
+	.dl	8469
+	.db	12
+	.db	'_Ifx_SCR_SCU_SR_Bits',0,6,243,4,16,1,7
+	.db	'reserved_0',0,1
+	.dl	150
+	.db	3,5,2,35,0,7
+	.db	'STBY',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'reserved_4',0,1
+	.dl	150
+	.db	4,0,2,35,0,0,11
+	.db	'Ifx_SCR_SCU_SR_Bits',0,6,248,4,3
+	.dl	8609
+	.db	12
+	.db	'_Ifx_SCR_SCU_STDBYWKP_Bits',0,6,251,4,16,1,7
+	.db	'SCRWKP',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'RTCWKSEL',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'WCANWKSEL',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'WDTWKSEL',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'ECCWKSEL',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'reserved_5',0,1
+	.dl	150
+	.db	3,0,2,35,0,0,11
+	.db	'Ifx_SCR_SCU_STDBYWKP_Bits',0,6,131,5,3
+	.dl	8726
+	.db	12
+	.db	'_Ifx_SCR_SP_Bits',0,6,134,5,16,1,7
+	.db	'SP',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_SP_Bits',0,6,137,5,3
+	.dl	8916
+	.db	12
+	.db	'_Ifx_SCR_SSC_BRH_Bits',0,6,140,5,16,1,7
+	.db	'BR_VALUE',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_SSC_BRH_Bits',0,6,143,5,3
+	.dl	8979
+	.db	12
+	.db	'_Ifx_SCR_SSC_BRL_Bits',0,6,146,5,16,1,7
+	.db	'BR_VALUE',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_SSC_BRL_Bits',0,6,149,5,3
+	.dl	9058
+	.db	12
+	.db	'_Ifx_SCR_SSC_CONOH_Bits',0,6,152,5,16,1,7
+	.db	'TE',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'RE',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'RFE',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'BE',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'BSY',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'RFF',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'MS',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'EN',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_SSC_CONOH_Bits',0,6,162,5,3
+	.dl	9137
+	.db	12
+	.db	'_Ifx_SCR_SSC_CONOL_Bits',0,6,165,5,16,1,7
+	.db	'BC',0,1
+	.dl	150
+	.db	4,4,2,35,0,7
+	.db	'reserved_4',0,1
+	.dl	150
+	.db	4,0,2,35,0,0,11
+	.db	'Ifx_SCR_SSC_CONOL_Bits',0,6,169,5,3
+	.dl	9315
+	.db	12
+	.db	'_Ifx_SCR_SSC_CONPH_Bits',0,6,172,5,16,1,7
+	.db	'TEN',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'REN',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'reserved_2',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'BEN',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'reserved_4',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'reserved_5',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'MS',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'EN',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_SSC_CONPH_Bits',0,6,182,5,3
+	.dl	9414
+	.db	12
+	.db	'_Ifx_SCR_SSC_CONPL_Bits',0,6,185,5,16,1,7
+	.db	'BM',0,1
+	.dl	150
+	.db	3,5,2,35,0,7
+	.db	'reserved_3',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'HB',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'PH',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'PO',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'LB',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_SSC_CONPL_Bits',0,6,193,5,3
+	.dl	9616
+	.db	12
+	.db	'_Ifx_SCR_SSC_RBL_Bits',0,6,196,5,16,1,7
+	.db	'RB_VALUE',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_SSC_RBL_Bits',0,6,199,5,3
+	.dl	9771
+	.db	12
+	.db	'_Ifx_SCR_SSC_TBL_Bits',0,6,202,5,16,1,7
+	.db	'TB_VALUE',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_SSC_TBL_Bits',0,6,205,5,3
+	.dl	9850
+	.db	12
+	.db	'_Ifx_SCR_SYSCON0_Bits',0,6,208,5,16,1,7
+	.db	'RMAP',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'reserved_1',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'AMSEL',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'reserved_3',0,1
+	.dl	150
+	.db	5,0,2,35,0,0,11
+	.db	'Ifx_SCR_SYSCON0_Bits',0,6,214,5,3
+	.dl	9929
+	.db	12
+	.db	'_Ifx_SCR_T01_TCON_Bits',0,6,217,5,16,1,7
+	.db	'IT0',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'IE0',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'IT1',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'IE1',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'TR0',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'TF0',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'TR1',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'TF1',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_T01_TCON_Bits',0,6,227,5,3
+	.dl	10065
+	.db	12
+	.db	'_Ifx_SCR_T01_TH0_Bits',0,6,230,5,16,1,7
+	.db	'VAL',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_T01_TH0_Bits',0,6,233,5,3
+	.dl	10246
+	.db	12
+	.db	'_Ifx_SCR_T01_TH1_Bits',0,6,236,5,16,1,7
+	.db	'VAL',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_T01_TH1_Bits',0,6,239,5,3
+	.dl	10320
+	.db	12
+	.db	'_Ifx_SCR_T01_TL0_Bits',0,6,242,5,16,1,7
+	.db	'VAL',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_T01_TL0_Bits',0,6,245,5,3
+	.dl	10394
+	.db	12
+	.db	'_Ifx_SCR_T01_TL1_Bits',0,6,248,5,16,1,7
+	.db	'VAL',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_T01_TL1_Bits',0,6,251,5,3
+	.dl	10468
+	.db	12
+	.db	'_Ifx_SCR_T01_TMOD_Bits',0,6,254,5,16,1,7
+	.db	'T0M',0,1
+	.dl	150
+	.db	2,6,2,35,0,7
+	.db	'T0S',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'GATE0',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'T1M',0,1
+	.dl	150
+	.db	2,2,2,35,0,7
+	.db	'T1S',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'GATE1',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_T01_TMOD_Bits',0,6,134,6,3
+	.dl	10542
+	.db	12
+	.db	'_Ifx_SCR_T2CCU_CC02_CCXH_Bits',0,6,137,6,16,1,7
+	.db	'CCVALH',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_T2CCU_CC02_CCXH_Bits',0,6,140,6,3
+	.dl	10697
+	.db	12
+	.db	'_Ifx_SCR_T2CCU_CC02_CCXL_Bits',0,6,143,6,16,1,7
+	.db	'CCVALL',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_T2CCU_CC02_CCXL_Bits',0,6,146,6,3
+	.dl	10790
+	.db	12
+	.db	'_Ifx_SCR_T2CCU_CC35_CCXH_Bits',0,6,149,6,16,1,7
+	.db	'CCVALH',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_T2CCU_CC35_CCXH_Bits',0,6,152,6,3
+	.dl	10883
+	.db	12
+	.db	'_Ifx_SCR_T2CCU_CC35_CCXL_Bits',0,6,155,6,16,1,7
+	.db	'CCVALL',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_T2CCU_CC35_CCXL_Bits',0,6,158,6,3
+	.dl	10976
+	.db	12
+	.db	'_Ifx_SCR_T2CCU_CCEN_Bits',0,6,161,6,16,1,7
+	.db	'CCM0',0,1
+	.dl	150
+	.db	2,6,2,35,0,7
+	.db	'CCM1',0,1
+	.dl	150
+	.db	2,4,2,35,0,7
+	.db	'CCM2',0,1
+	.dl	150
+	.db	2,2,2,35,0,7
+	.db	'CCM3',0,1
+	.dl	150
+	.db	2,0,2,35,0,0,11
+	.db	'Ifx_SCR_T2CCU_CCEN_Bits',0,6,167,6,3
+	.dl	11069
+	.db	12
+	.db	'_Ifx_SCR_T2CCU_CCTBSEL_Bits',0,6,170,6,16,1,7
+	.db	'CCTB0',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'CCTB1',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'CCTB2',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'CCTB3',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'CCTB4',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'CCTB5',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'CCTTOV',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'CASC',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_T2CCU_CCTBSEL_Bits',0,6,180,6,3
+	.dl	11198
+	.db	12
+	.db	'_Ifx_SCR_T2CCU_CCTCON_Bits',0,6,183,6,16,1,7
+	.db	'CCTST',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'TIMSYN',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'CCTOVEN',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'CCTOVF',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'CCTPRE',0,1
+	.dl	150
+	.db	4,0,2,35,0,0,11
+	.db	'Ifx_SCR_T2CCU_CCTCON_Bits',0,6,190,6,3
+	.dl	11405
+	.db	12
+	.db	'_Ifx_SCR_T2CCU_CCTDTCH_Bits',0,6,193,6,16,1,7
+	.db	'DTE0',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'DTE1',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'DTE2',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'DTLEV',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'DTR0',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'DTR1',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'DTR2',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'DTRES',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_T2CCU_CCTDTCH_Bits',0,6,203,6,3
+	.dl	11564
+	.db	12
+	.db	'_Ifx_SCR_T2CCU_CCTDTCL_Bits',0,6,206,6,16,1,7
+	.db	'DTM',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_T2CCU_CCTDTCL_Bits',0,6,209,6,3
+	.dl	11765
+	.db	12
+	.db	'_Ifx_SCR_T2CCU_CCTH_Bits',0,6,212,6,16,1,7
+	.db	'CCT',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_T2CCU_CCTH_Bits',0,6,215,6,3
+	.dl	11851
+	.db	12
+	.db	'_Ifx_SCR_T2CCU_CCTL_Bits',0,6,218,6,16,1,7
+	.db	'CCT',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_T2CCU_CCTL_Bits',0,6,221,6,3
+	.dl	11931
+	.db	12
+	.db	'_Ifx_SCR_T2CCU_CCTRELH_Bits',0,6,224,6,16,1,7
+	.db	'CCTREL',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_T2CCU_CCTRELH_Bits',0,6,227,6,3
+	.dl	12011
+	.db	12
+	.db	'_Ifx_SCR_T2CCU_CCTRELL_Bits',0,6,230,6,16,1,7
+	.db	'CCTREL',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_T2CCU_CCTRELL_Bits',0,6,233,6,3
+	.dl	12100
+	.db	12
+	.db	'_Ifx_SCR_T2CCU_COCON_Bits',0,6,236,6,16,1,7
+	.db	'COMOD',0,1
+	.dl	150
+	.db	2,6,2,35,0,7
+	.db	'POLA',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'POLB',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'CM4F',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'CM5F',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'CCM4',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'CCM5',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_T2CCU_COCON_Bits',0,6,245,6,3
+	.dl	12189
+	.db	12
+	.db	'_Ifx_SCR_T2CCU_COSHDW_Bits',0,6,248,6,16,1,7
+	.db	'COOUT0',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'COOUT1',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'COOUT2',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'COOUT3',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'COOUT4',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'COOUT5',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'TXOV',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'ENSHDW',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_T2CCU_COSHDW_Bits',0,6,130,7,3
+	.dl	12369
+	.db	12
+	.db	'_Ifx_SCR_T2CCU_PAGE_Bits',0,6,133,7,16,1,7
+	.db	'PAGE',0,1
+	.dl	150
+	.db	3,5,2,35,0,7
+	.db	'reserved_3',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'STNR',0,1
+	.dl	150
+	.db	2,2,2,35,0,7
+	.db	'OP',0,1
+	.dl	150
+	.db	2,0,2,35,0,0,11
+	.db	'Ifx_SCR_T2CCU_PAGE_Bits',0,6,139,7,3
+	.dl	12580
+	.db	12
+	.db	'_Ifx_SCR_T2_CON_Bits',0,6,142,7,16,1,7
+	.db	'CP_RL2',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'C_T2',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'TR2',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'EXEN2',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'reserved_4',0,1
+	.dl	150
+	.db	2,2,2,35,0,7
+	.db	'EXF2',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'TF2',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_T2_CON_Bits',0,6,151,7,3
+	.dl	12713
+	.db	12
+	.db	'_Ifx_SCR_T2_CON1_Bits',0,6,154,7,16,1,7
+	.db	'EXF2EN',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'TF2EN',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'reserved_2',0,1
+	.dl	150
+	.db	6,0,2,35,0,0,11
+	.db	'Ifx_SCR_T2_CON1_Bits',0,6,159,7,3
+	.dl	12889
+	.db	12
+	.db	'_Ifx_SCR_T2_MOD_Bits',0,6,162,7,16,1,7
+	.db	'DCEN',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'T2PRE',0,1
+	.dl	150
+	.db	3,4,2,35,0,7
+	.db	'PREN',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'EDGESEL',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'T2RHEN',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'T2REGS',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_T2_MOD_Bits',0,6,170,7,3
+	.dl	13005
+	.db	12
+	.db	'_Ifx_SCR_T2_RC2H_Bits',0,6,173,7,16,1,7
+	.db	'RC2',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_T2_RC2H_Bits',0,6,176,7,3
+	.dl	13166
+	.db	12
+	.db	'_Ifx_SCR_T2_RC2L_Bits',0,6,179,7,16,1,7
+	.db	'RC2',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_T2_RC2L_Bits',0,6,182,7,3
+	.dl	13240
+	.db	12
+	.db	'_Ifx_SCR_T2_T2H_Bits',0,6,185,7,16,1,7
+	.db	'THL2',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_T2_T2H_Bits',0,6,188,7,3
+	.dl	13314
+	.db	12
+	.db	'_Ifx_SCR_T2_T2L_Bits',0,6,191,7,16,1,7
+	.db	'THL2',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_T2_T2L_Bits',0,6,194,7,3
+	.dl	13387
+	.db	12
+	.db	'_Ifx_SCR_TCINTEXCHG_Bits',0,6,197,7,16,1,7
+	.db	'TCINT',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_TCINTEXCHG_Bits',0,6,200,7,3
+	.dl	13460
+	.db	12
+	.db	'_Ifx_SCR_UART_BCON_Bits',0,6,203,7,16,1,7
+	.db	'R',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'BRPRE',0,1
+	.dl	150
+	.db	3,4,2,35,0,7
+	.db	'BRDIS',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'reserved_5',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'BGSEL',0,1
+	.dl	150
+	.db	2,0,2,35,0,0,11
+	.db	'Ifx_SCR_UART_BCON_Bits',0,6,210,7,3
+	.dl	13542
+	.db	12
+	.db	'_Ifx_SCR_UART_BGH_Bits',0,6,213,7,16,1,7
+	.db	'BR_VALUE',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_UART_BGH_Bits',0,6,216,7,3
+	.dl	13691
+	.db	12
+	.db	'_Ifx_SCR_UART_BGL_Bits',0,6,219,7,16,1,7
+	.db	'FD_SEL',0,1
+	.dl	150
+	.db	5,3,2,35,0,7
+	.db	'BR_VALUE',0,1
+	.dl	150
+	.db	3,0,2,35,0,0,11
+	.db	'Ifx_SCR_UART_BGL_Bits',0,6,223,7,3
+	.dl	13772
+	.db	12
+	.db	'_Ifx_SCR_UART_LINST_Bits',0,6,226,7,16,1,7
+	.db	'reserved_0',0,1
+	.dl	150
+	.db	3,5,2,35,0,7
+	.db	'BRK',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'EOFSYN',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'ERRSYN',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'SYNEN',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'reserved_7',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_UART_LINST_Bits',0,6,234,7,3
+	.dl	13871
+	.db	12
+	.db	'_Ifx_SCR_UART_SBUF_Bits',0,6,237,7,16,1,7
+	.db	'VAL',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_UART_SBUF_Bits',0,6,240,7,3
+	.dl	14048
+	.db	12
+	.db	'_Ifx_SCR_UART_SCON_Bits',0,6,243,7,16,1,7
+	.db	'RI',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'TI',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'RB8',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'TB8',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'REN',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'SM2',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'SM01',0,1
+	.dl	150
+	.db	2,0,2,35,0,0,11
+	.db	'Ifx_SCR_UART_SCON_Bits',0,6,252,7,3
+	.dl	14126
+	.db	12
+	.db	'_Ifx_SCR_WCAN_BTL1_CTRL_Bits',0,6,255,7,16,1,7
+	.db	'TBIT',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_WCAN_BTL1_CTRL_Bits',0,6,130,8,3
+	.dl	14293
+	.db	12
+	.db	'_Ifx_SCR_WCAN_BTL2_CTRL_Bits',0,6,133,8,16,1,7
+	.db	'SP',0,1
+	.dl	150
+	.db	6,2,2,35,0,7
+	.db	'BRP',0,1
+	.dl	150
+	.db	2,0,2,35,0,0,11
+	.db	'Ifx_SCR_WCAN_BTL2_CTRL_Bits',0,6,137,8,3
+	.dl	14382
+	.db	12
+	.db	'_Ifx_SCR_WCAN_CDR_CTRL_Bits',0,6,140,8,16,1,7
+	.db	'CDREN',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'reserved_1',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'ESF',0,1
+	.dl	150
+	.db	2,4,2,35,0,7
+	.db	'reserved_4',0,1
+	.dl	150
+	.db	4,0,2,35,0,0,11
+	.db	'Ifx_SCR_WCAN_CDR_CTRL_Bits',0,6,146,8,3
+	.dl	14484
+	.db	12
+	.db	'_Ifx_SCR_WCAN_CDR_LOWER_CTRL_Bits',0,6,149,8,16,1,7
+	.db	'LOWER',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_WCAN_CDR_LOWER_CTRL_Bits',0,6,152,8,3
+	.dl	14631
+	.db	12
+	.db	'_Ifx_SCR_WCAN_CDR_MEAS_HIGH_Bits',0,6,155,8,16,1,7
+	.db	'HIGH',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_WCAN_CDR_MEAS_HIGH_Bits',0,6,158,8,3
+	.dl	14731
+	.db	12
+	.db	'_Ifx_SCR_WCAN_CDR_MEAS_LOW_Bits',0,6,161,8,16,1,7
+	.db	'LOW',0,1
+	.dl	150
+	.db	6,2,2,35,0,7
+	.db	'reserved_6',0,1
+	.dl	150
+	.db	2,0,2,35,0,0,11
+	.db	'Ifx_SCR_WCAN_CDR_MEAS_LOW_Bits',0,6,165,8,3
+	.dl	14828
+	.db	12
+	.db	'_Ifx_SCR_WCAN_CDR_UPPER_CTRL_Bits',0,6,168,8,16,1,7
+	.db	'UPPER',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_WCAN_CDR_UPPER_CTRL_Bits',0,6,171,8,3
+	.dl	14944
+	.db	12
+	.db	'_Ifx_SCR_WCAN_CFG_Bits',0,6,174,8,16,1,7
+	.db	'WCAN_EN',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'reserved_1',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'SELWK_EN',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'CCE',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'reserved_4',0,1
+	.dl	150
+	.db	4,0,2,35,0,0,11
+	.db	'Ifx_SCR_WCAN_CFG_Bits',0,6,181,8,3
+	.dl	15044
+	.db	12
+	.db	'_Ifx_SCR_WCAN_DLC_CTRL_Bits',0,6,184,8,16,1,7
+	.db	'DLC',0,1
+	.dl	150
+	.db	4,4,2,35,0,7
+	.db	'reserved_4',0,1
+	.dl	150
+	.db	4,0,2,35,0,0,11
+	.db	'Ifx_SCR_WCAN_DLC_CTRL_Bits',0,6,188,8,3
+	.dl	15203
+	.db	12
+	.db	'_Ifx_SCR_WCAN_FD_CTRL_Bits',0,6,191,8,16,1,7
+	.db	'FDEN',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'FDFILT',0,1
+	.dl	150
+	.db	3,4,2,35,0,7
+	.db	'reserved_4',0,1
+	.dl	150
+	.db	4,0,2,35,0,0,11
+	.db	'Ifx_SCR_WCAN_FD_CTRL_Bits',0,6,196,8,3
+	.dl	15311
+	.db	12
+	.db	'_Ifx_SCR_WCAN_FRMERRCNT_Bits',0,6,199,8,16,1,7
+	.db	'ECNT',0,1
+	.dl	150
+	.db	6,2,2,35,0,7
+	.db	'FDEC_DIS',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'ECNTCLR',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_WCAN_FRMERRCNT_Bits',0,6,204,8,3
+	.dl	15436
+	.db	12
+	.db	'_Ifx_SCR_WCAN_ID0_CTRL_Bits',0,6,207,8,16,1,7
+	.db	'ID',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_WCAN_ID0_CTRL_Bits',0,6,210,8,3
+	.dl	15564
+	.db	12
+	.db	'_Ifx_SCR_WCAN_ID1_CTRL_Bits',0,6,213,8,16,1,7
+	.db	'ID',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_WCAN_ID1_CTRL_Bits',0,6,216,8,3
+	.dl	15649
+	.db	12
+	.db	'_Ifx_SCR_WCAN_ID2_CTRL_Bits',0,6,219,8,16,1,7
+	.db	'ID',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_WCAN_ID2_CTRL_Bits',0,6,222,8,3
+	.dl	15734
+	.db	12
+	.db	'_Ifx_SCR_WCAN_ID3_CTRL_Bits',0,6,225,8,16,1,7
+	.db	'IDE',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'reserved_1',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'ID',0,1
+	.dl	150
+	.db	5,1,2,35,0,7
+	.db	'reserved_7',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_WCAN_ID3_CTRL_Bits',0,6,231,8,3
+	.dl	15819
+	.db	12
+	.db	'_Ifx_SCR_WCAN_INTESCLR0_Bits',0,6,234,8,16,1,7
+	.db	'reserved_0',0,1
+	.dl	150
+	.db	2,6,2,35,0,7
+	.db	'SYSERRCLR',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'CANTOCLR',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'ECOFLCLR',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'MORCCLR',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'ERSELCLR',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'WUPCLR',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_WCAN_INTESCLR0_Bits',0,6,243,8,3
+	.dl	15963
+	.db	12
+	.db	'_Ifx_SCR_WCAN_INTESCLR1_Bits',0,6,246,8,16,1,7
+	.db	'WUFCLR',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'SYNCCLR',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'reserved_2',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'CANSILCLR',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'reserved_4',0,1
+	.dl	150
+	.db	4,0,2,35,0,0,11
+	.db	'Ifx_SCR_WCAN_INTESCLR1_Bits',0,6,253,8,3
+	.dl	16176
+	.db	12
+	.db	'_Ifx_SCR_WCAN_INTESTAT0_Bits',0,6,128,9,16,1,7
+	.db	'SWACK',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'MODE',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'SYSERR',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'CANTO',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'ECOFL',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'MORC',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'ERSEL',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'WUP',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_WCAN_INTESTAT0_Bits',0,6,138,9,3
+	.dl	16351
+	.db	12
+	.db	'_Ifx_SCR_WCAN_INTESTAT1_Bits',0,6,141,9,16,1,7
+	.db	'WUF',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'SYNC',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'SWKSET',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'CANSIL',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'FDF',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'RXDF',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'RXDS',0,1
+	.dl	150
+	.db	1,1,2,35,0,7
+	.db	'reserved_7',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_WCAN_INTESTAT1_Bits',0,6,151,9,3
+	.dl	16557
+	.db	12
+	.db	'_Ifx_SCR_WCAN_INTMRSLT_Bits',0,6,154,9,16,1,7
+	.db	'CANTOMASK',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'ERRMASK',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'WUFMASK',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'WUPMASK',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'reserved_4',0,1
+	.dl	150
+	.db	4,0,2,35,0,0,11
+	.db	'Ifx_SCR_WCAN_INTMRSLT_Bits',0,6,161,9,3
+	.dl	16766
+	.db	12
+	.db	'_Ifx_SCR_WCAN_MASK_ID0_CTRL_Bits',0,6,164,9,16,1,7
+	.db	'MID',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_WCAN_MASK_ID0_CTRL_Bits',0,6,167,9,3
+	.dl	16937
+	.db	12
+	.db	'_Ifx_SCR_WCAN_MASK_ID1_CTRL_Bits',0,6,170,9,16,1,7
+	.db	'MID',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_WCAN_MASK_ID1_CTRL_Bits',0,6,173,9,3
+	.dl	17033
+	.db	12
+	.db	'_Ifx_SCR_WCAN_MASK_ID2_CTRL_Bits',0,6,176,9,16,1,7
+	.db	'MID',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_WCAN_MASK_ID2_CTRL_Bits',0,6,179,9,3
+	.dl	17129
+	.db	12
+	.db	'_Ifx_SCR_WCAN_MASK_ID3_CTRL_Bits',0,6,182,9,16,1,7
+	.db	'reserved_0',0,1
+	.dl	150
+	.db	2,6,2,35,0,7
+	.db	'MID',0,1
+	.dl	150
+	.db	5,1,2,35,0,7
+	.db	'reserved_7',0,1
+	.dl	150
+	.db	1,0,2,35,0,0,11
+	.db	'Ifx_SCR_WCAN_MASK_ID3_CTRL_Bits',0,6,187,9,3
+	.dl	17225
+	.db	12
+	.db	'_Ifx_SCR_WCAN_PAGE_Bits',0,6,190,9,16,1,7
+	.db	'PAGE',0,1
+	.dl	150
+	.db	3,5,2,35,0,7
+	.db	'reserved_3',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'STNR',0,1
+	.dl	150
+	.db	2,2,2,35,0,7
+	.db	'OP',0,1
+	.dl	150
+	.db	2,0,2,35,0,0,11
+	.db	'Ifx_SCR_WCAN_PAGE_Bits',0,6,196,9,3
+	.dl	17365
+	.db	12
+	.db	'_Ifx_SCR_WDT_CON_Bits',0,6,199,9,16,1,7
+	.db	'WDTIN',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'WDTRS',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'WDTEN',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'WDTCLK',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'WDTPR',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'WINBEN',0,1
+	.dl	150
+	.db	1,2,2,35,0,7
+	.db	'reserved_6',0,1
+	.dl	150
+	.db	2,0,2,35,0,0,11
+	.db	'Ifx_SCR_WDT_CON_Bits',0,6,208,9,3
+	.dl	17496
+	.db	12
+	.db	'_Ifx_SCR_WDT_H_Bits',0,6,211,9,16,1,7
+	.db	'WDT',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_WDT_H_Bits',0,6,214,9,3
+	.dl	17681
+	.db	12
+	.db	'_Ifx_SCR_WDT_L_Bits',0,6,217,9,16,1,7
+	.db	'WDT',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_WDT_L_Bits',0,6,220,9,3
+	.dl	17751
+	.db	12
+	.db	'_Ifx_SCR_WDT_REL_Bits',0,6,223,9,16,1,7
+	.db	'WDTREL',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_WDT_REL_Bits',0,6,226,9,3
+	.dl	17821
+	.db	12
+	.db	'_Ifx_SCR_WDT_WINB_Bits',0,6,229,9,16,1,7
+	.db	'WDTWINB',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_WDT_WINB_Bits',0,6,232,9,3
+	.dl	17898
+	.db	12
+	.db	'_Ifx_SCR_XADDRH_Bits',0,6,235,9,16,1,7
+	.db	'ADDRH',0,1
+	.dl	150
+	.db	8,0,2,35,0,0,11
+	.db	'Ifx_SCR_XADDRH_Bits',0,6,238,9,3
+	.dl	17978
+	.db	13,6,150,10,9,1,6
+	.db	'U',0
+	.dl	150
+	.db	1,2,35,0,6
+	.db	'I',0
+	.dl	626
+	.db	1,2,35,0,6
+	.db	'B',0
+	.dl	1046
+	.db	1,2,35,0,0,11
+	.db	'Ifx_SCR_DATA_CTRL',0,6,155,10,3
+	.dl	18052
+	.db	13,6,142,12,9,1,6
+	.db	'U',0
+	.dl	150
+	.db	1,2,35,0,6
+	.db	'I',0
+	.dl	626
+	.db	1,2,35,0,6
+	.db	'B',0
+	.dl	5636
+	.db	1,2,35,0,0,11
+	.db	'Ifx_SCR_P_IOCR',0,6,147,12,3
+	.dl	18119
+	.db	13,6,166,12,9,1,6
+	.db	'U',0
+	.dl	150
+	.db	1,2,35,0,6
+	.db	'I',0
+	.dl	626
+	.db	1,2,35,0,6
+	.db	'B',0
+	.dl	6091
+	.db	1,2,35,0,0,11
+	.db	'Ifx_SCR_P_OMTR',0,6,171,12,3
+	.dl	18183
+	.db	13,6,182,12,9,1,6
+	.db	'U',0
+	.dl	150
+	.db	1,2,35,0,6
+	.db	'I',0
+	.dl	626
+	.db	1,2,35,0,6
+	.db	'B',0
+	.dl	6443
+	.db	1,2,35,0,0,11
+	.db	'Ifx_SCR_P_PDISC',0,6,187,12,3
+	.dl	18247
+	.db	13,6,198,12,9,1,6
+	.db	'U',0
+	.dl	150
+	.db	1,2,35,0,6
+	.db	'I',0
+	.dl	626
+	.db	1,2,35,0,6
+	.db	'B',0
+	.dl	6755
+	.db	1,2,35,0,0,11
+	.db	'Ifx_SCR_P_PDR2',0,6,203,12,3
+	.dl	18312
+	.db	13,6,206,12,9,1,6
+	.db	'U',0
+	.dl	150
+	.db	1,2,35,0,6
+	.db	'I',0
+	.dl	626
+	.db	1,2,35,0,6
+	.db	'B',0
+	.dl	6872
+	.db	1,2,35,0,0,11
+	.db	'Ifx_SCR_P_PDR4',0,6,211,12,3
+	.dl	18376
+	.db	13,6,214,12,9,1,6
+	.db	'U',0
+	.dl	150
+	.db	1,2,35,0,6
+	.db	'I',0
+	.dl	626
+	.db	1,2,35,0,6
+	.db	'B',0
+	.dl	6989
+	.db	1,2,35,0,0,11
+	.db	'Ifx_SCR_P_PDR6',0,6,219,12,3
+	.dl	18440
+	.db	13,6,198,14,9,1,6
+	.db	'U',0
+	.dl	150
+	.db	1,2,35,0,6
+	.db	'I',0
+	.dl	626
+	.db	1,2,35,0,6
+	.db	'B',0
+	.dl	10697
+	.db	1,2,35,0,0,11
+	.db	'Ifx_SCR_T2CCU_CC02_CCXH',0,6,203,14,3
+	.dl	18504
+	.db	13,6,206,14,9,1,6
+	.db	'U',0
+	.dl	150
+	.db	1,2,35,0,6
+	.db	'I',0
+	.dl	626
+	.db	1,2,35,0,6
+	.db	'B',0
+	.dl	10790
+	.db	1,2,35,0,0,11
+	.db	'Ifx_SCR_T2CCU_CC02_CCXL',0,6,211,14,3
+	.dl	18577
+	.db	13,6,214,14,9,1,6
+	.db	'U',0
+	.dl	150
+	.db	1,2,35,0,6
+	.db	'I',0
+	.dl	626
+	.db	1,2,35,0,6
+	.db	'B',0
+	.dl	10883
+	.db	1,2,35,0,0,11
+	.db	'Ifx_SCR_T2CCU_CC35_CCXH',0,6,219,14,3
+	.dl	18650
+	.db	13,6,222,14,9,1,6
+	.db	'U',0
+	.dl	150
+	.db	1,2,35,0,6
+	.db	'I',0
+	.dl	626
+	.db	1,2,35,0,6
+	.db	'B',0
+	.dl	10976
+	.db	1,2,35,0,0,11
+	.db	'Ifx_SCR_T2CCU_CC35_CCXL',0,6,227,14,3
+	.dl	18723
+	.db	14
+	.db	'WUL1CntBad',0,7,78,14,8
+	.dl	150
+	.db	1,1,14
+	.db	'WUL2CntBad',0,7,79,14,8
+	.dl	150
+	.db	1,1,11
+	.db	'WupData_t',0,2,23,3
+	.dl	269
+_136:
+	.db	5,3,44,9,2,7
+	.db	'EthWUL1Detected',0,1
+	.dl	150
+	.db	1,7,2,35,0,7
+	.db	'EthWUL2Detected',0,1
+	.dl	150
+	.db	1,6,2,35,0,7
+	.db	'CanWupDetected',0,1
+	.dl	150
+	.db	1,5,2,35,0,7
+	.db	'FrWupDetected',0,1
+	.dl	150
+	.db	1,4,2,35,0,7
+	.db	'LinWupDetected',0,1
+	.dl	150
+	.db	1,3,2,35,0,7
+	.db	'unused',0,1
+	.dl	150
+	.db	3,0,2,35,0,6
+	.db	'PmicTimer',0
+	.dl	150
+	.db	1,2,35,1,0,11
+	.db	'ScrData_t',0,3,52,3
+	.dl	18858
+	.db	0
+	; End of section
+
+'.debug_abbrev'	.segment	debug
+	.rseg	'.debug_abbrev'	debug
+_44:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,36,0,3,8,11,15,62,15,0,0,3,46,1,3,8,58,15,59,15,57,15
+	.db	51,15,54,15,39,12,63,12,60,12,0,0,4,5,0,3,8,58,15,59,15,57,15,51,15,73,19,0,0,5,19,1,58,15,59,15,57,15
+	.db	11,15,0,0,6,13,0,3,8,73,19,11,15,56,9,0,0,7,13,0,3,8,11,15,73,19,13,15,12,15,56,9,0,0,8,15,0,51,15,73
+	.db	19,0,0,9,46,0,3,8,58,15,59,15,57,15,51,15,73,19,54,15,39,12,63,12,60,12,0,0,10,59,0,3,8,0,0,11,22,0,3
+	.db	8,58,15,59,15,57,15,73,19,0,0,12,19,1,3,8,58,15,59,15,57,15,11,15,0,0,13,23,1,58,15,59,15,57,15,11,15
+	.db	0,0,14,52,0,3,8,58,15,59,15,57,15,51,15,73,19,63,12,60,12,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug
+	.rseg	'.debug_line'	debug
+_45:
+	.dl	_143-_142
+_142:
+	.dw	3
+	.dl	_145-_144
+_144:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'..\\..\\code\\int\\inc\\ScrDioPort.h',0,0,0,0
+	.db	'..\\..\\code\\int\\inc\\ScrWakeUpDetection.h',0,0,0,0
+	.db	'../../code/int/src/ScrWakeupEcu.c',0,0,0,0
+	.db	'..\\..\\code\\stubs\\Platform_Types.h',0,0,0,0
+	.db	'..\\..\\code\\int\\inc\\Ifx_TypesReg.h',0,0,0,0
+	.db	'..\\..\\code\\int\\inc\\IfxScr_regdef.h',0,0,0,0
+	.db	'..\\..\\code\\int\\inc\\TricoreScrIf.h',0,0,0,0,0
+_145:
+_143:
+	; End of section
+
+'.debug_info'	.segment	debug cluster('ScrEthWupCallback')
+	.rseg	'.debug_info'	debug cluster('ScrEthWupCallback')
+_46:
+	.dl	235
+	.dw	3
+	.dl	_47
+	.db	4,1
+	.db	'../../code/int/src/ScrWakeupEcu.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_49,_48
+	.db	2
+	.dl	_42
+	.db	3
+	.db	'ScrEthWupCallback',0,1,71,6,10,132,128,4,1,1
+	.dl	_15,_51,_14
+	.db	2,145,0,4
+	.db	'EthWUchannel',0,1,71,31,8
+	.dl	_130,_131
+	.db	5
+	.dl	_15,_51
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('ScrEthWupCallback')
+	.rseg	'.debug_abbrev'	debug cluster('ScrEthWupCallback')
+_47:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,5,0,3,8,58,15,59,15,57,15,51,15,73,16,2,6,0,0,5,11,0,17,1
+	.db	18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('ScrEthWupCallback')
+	.rseg	'.debug_line'	debug cluster('ScrEthWupCallback')
+_48:
+	.dl	_147-_146
+_146:
+	.dw	3
+	.dl	_149-_148
+_148:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/ScrWakeupEcu.c',0,0,0,0,0
+_149:
+	.db	5,6,7,0,5,2
+	.dl	_15
+	.db	3,198,0,1,5,12,9
+	.dw	_138-_15
+	.db	3,4,1,5,3,9
+	.dw	_150-_138
+	.db	3,126,1,5,29,9
+	.dw	_139-_150
+	.db	3,2,1,5,31,9
+	.dw	_151-_139
+	.db	1,5,29,9
+	.dw	_152-_151
+	.db	1,5,3,9
+	.dw	_2-_152
+	.db	3,2,1,5,29,7,9
+	.dw	_140-_2
+	.db	3,2,1,5,31,9
+	.dw	_153-_140
+	.db	1,5,29,9
+	.dw	_154-_153
+	.db	1,5,10,9
+	.dw	_3-_154
+	.db	3,3,1,5,21,9
+	.dw	_155-_3
+	.db	1,5,12,9
+	.dw	_156-_155
+	.db	3,121,1,5,38,9
+	.dw	_157-_156
+	.db	3,8,1,5,35,9
+	.dw	_158-_157
+	.db	1,5,17,9
+	.dw	_159-_158
+	.db	1,5,35,9
+	.dw	_160-_159
+	.db	1,5,1,9
+	.dw	_51-_160
+	.db	3,1,0,1,1
+_147:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('ScrEthWupCallback')
+	.rseg	'.debug_ranges'	debug cluster('ScrEthWupCallback')
+_49:
+	.dl	-1,_50,0,_51-_50,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('ScrCanWupCallback')
+	.rseg	'.debug_info'	debug cluster('ScrCanWupCallback')
+_52:
+	.dl	209
+	.dw	3
+	.dl	_53
+	.db	4,1
+	.db	'../../code/int/src/ScrWakeupEcu.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_55,_54
+	.db	2
+	.dl	_42
+	.db	3
+	.db	'ScrCanWupCallback',0,1,85,6,10,132,128,4,1,1
+	.dl	_17,_57,_16
+	.db	2,145,0,4
+	.dl	_17,_57
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('ScrCanWupCallback')
+	.rseg	'.debug_abbrev'	debug cluster('ScrCanWupCallback')
+_53:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('ScrCanWupCallback')
+	.rseg	'.debug_line'	debug cluster('ScrCanWupCallback')
+_54:
+	.dl	_162-_161
+_161:
+	.dw	3
+	.dl	_164-_163
+_163:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/ScrWakeupEcu.c',0,0,0,0,0
+_164:
+	.db	5,10,7,0,5,2
+	.dl	_17
+	.db	3,214,0,1,5,28,9
+	.dw	_165-_17
+	.db	1,5,26,9
+	.dw	_166-_165
+	.db	1,5,1,9
+	.dw	_57-_166
+	.db	3,6,0,1,1
+_162:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('ScrCanWupCallback')
+	.rseg	'.debug_ranges'	debug cluster('ScrCanWupCallback')
+_55:
+	.dl	-1,_56,0,_57-_56,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('ScrFrWupCallback')
+	.rseg	'.debug_info'	debug cluster('ScrFrWupCallback')
+_58:
+	.dl	208
+	.dw	3
+	.dl	_59
+	.db	4,1
+	.db	'../../code/int/src/ScrWakeupEcu.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_61,_60
+	.db	2
+	.dl	_42
+	.db	3
+	.db	'ScrFrWupCallback',0,1,94,6,10,132,128,4,1,1
+	.dl	_19,_63,_18
+	.db	2,145,0,4
+	.dl	_19,_63
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('ScrFrWupCallback')
+	.rseg	'.debug_abbrev'	debug cluster('ScrFrWupCallback')
+_59:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('ScrFrWupCallback')
+	.rseg	'.debug_line'	debug cluster('ScrFrWupCallback')
+_60:
+	.dl	_168-_167
+_167:
+	.dw	3
+	.dl	_170-_169
+_169:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/ScrWakeupEcu.c',0,0,0,0,0
+_170:
+	.db	5,10,7,0,5,2
+	.dl	_19
+	.db	3,223,0,1,5,27,9
+	.dw	_171-_19
+	.db	1,5,25,9
+	.dw	_172-_171
+	.db	1,5,1,9
+	.dw	_63-_172
+	.db	3,6,0,1,1
+_168:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('ScrFrWupCallback')
+	.rseg	'.debug_ranges'	debug cluster('ScrFrWupCallback')
+_61:
+	.dl	-1,_62,0,_63-_62,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('ScrLinWupCallback')
+	.rseg	'.debug_info'	debug cluster('ScrLinWupCallback')
+_64:
+	.dl	209
+	.dw	3
+	.dl	_65
+	.db	4,1
+	.db	'../../code/int/src/ScrWakeupEcu.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_67,_66
+	.db	2
+	.dl	_42
+	.db	3
+	.db	'ScrLinWupCallback',0,1,103,6,10,132,128,4,1,1
+	.dl	_21,_69,_20
+	.db	2,145,0,4
+	.dl	_21,_69
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('ScrLinWupCallback')
+	.rseg	'.debug_abbrev'	debug cluster('ScrLinWupCallback')
+_65:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('ScrLinWupCallback')
+	.rseg	'.debug_line'	debug cluster('ScrLinWupCallback')
+_66:
+	.dl	_174-_173
+_173:
+	.dw	3
+	.dl	_176-_175
+_175:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/ScrWakeupEcu.c',0,0,0,0,0
+_176:
+	.db	5,10,7,0,5,2
+	.dl	_21
+	.db	3,232,0,1,5,28,9
+	.dw	_177-_21
+	.db	1,5,26,9
+	.dw	_178-_177
+	.db	1,5,1,9
+	.dw	_69-_178
+	.db	3,6,0,1,1
+_174:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('ScrLinWupCallback')
+	.rseg	'.debug_ranges'	debug cluster('ScrLinWupCallback')
+_67:
+	.dl	-1,_68,0,_69-_68,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('ScrWupCallback')
+	.rseg	'.debug_info'	debug cluster('ScrWupCallback')
+_70:
+	.dl	202
+	.dw	3
+	.dl	_71
+	.db	4,1
+	.db	'../../code/int/src/ScrWakeupEcu.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_73,_72
+	.db	2
+	.dl	_42
+	.db	3
+	.db	'ScrWupCallback',0,1,112,6,10,132,128,4,1,1
+	.dl	_23,_74,_22
+	.db	2,145,0,4
+	.dl	_132
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('ScrWupCallback')
+	.rseg	'.debug_abbrev'	debug cluster('ScrWupCallback')
+_71:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,85,6,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('ScrWupCallback')
+	.rseg	'.debug_line'	debug cluster('ScrWupCallback')
+_72:
+	.dl	_180-_179
+_179:
+	.dw	3
+	.dl	_182-_181
+_181:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/ScrWakeupEcu.c',0,0,0,0,0
+_182:
+	.db	5,6,7,0,5,2
+	.dl	_23
+	.db	3,239,0,1,5,1,9
+	.dw	_74-_23
+	.db	3,5,0,1,1
+_180:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('ScrWupCallback')
+	.rseg	'.debug_ranges'	debug cluster('ScrWupCallback')
+_73:
+	.dl	-1,_23,0,_74-_23,0,0
+_132:
+	.dl	-1,_23,0,_74-_23,-1,_25,0,_109-_25,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('ScrWakeupEcuTask50')
+	.rseg	'.debug_info'	debug cluster('ScrWakeupEcuTask50')
+_75:
+	.dl	211
+	.dw	3
+	.dl	_76
+	.db	4,1
+	.db	'../../code/int/src/ScrWakeupEcu.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_78,_77
+	.db	2
+	.dl	_42
+	.db	3
+	.db	'ScrWakeupEcuTask50',0,1,242,1,6,10,132,128,4,1,1
+	.dl	_41,_80,_40
+	.db	2,145,0,4
+	.dl	_41,_80
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('ScrWakeupEcuTask50')
+	.rseg	'.debug_abbrev'	debug cluster('ScrWakeupEcuTask50')
+_76:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('ScrWakeupEcuTask50')
+	.rseg	'.debug_line'	debug cluster('ScrWakeupEcuTask50')
+_77:
+	.dl	_184-_183
+_183:
+	.dw	3
+	.dl	_186-_185
+_185:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/ScrWakeupEcu.c',0,0,0,0,0
+_186:
+	.db	5,19,7,0,5,2
+	.dl	_41
+	.db	3,243,1,1,5,17,9
+	.dw	_187-_41
+	.db	3,1,1,5,1,9
+	.dw	_80-_187
+	.db	3,1,0,1,1
+_184:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('ScrWakeupEcuTask50')
+	.rseg	'.debug_ranges'	debug cluster('ScrWakeupEcuTask50')
+_78:
+	.dl	-1,_79,0,_80-_79,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('ScrResetPmicHandler')
+	.rseg	'.debug_info'	debug cluster('ScrResetPmicHandler')
+_81:
+	.dl	212
+	.dw	3
+	.dl	_82
+	.db	4,1
+	.db	'../../code/int/src/ScrWakeupEcu.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_84,_83
+	.db	2
+	.dl	_42
+	.db	3
+	.db	'ScrResetPmicHandler',0,1,178,1,6,10,132,128,4,1,1
+	.dl	_37,_86,_36
+	.db	2,145,0,4
+	.dl	_37,_86
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('ScrResetPmicHandler')
+	.rseg	'.debug_abbrev'	debug cluster('ScrResetPmicHandler')
+_82:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('ScrResetPmicHandler')
+	.rseg	'.debug_line'	debug cluster('ScrResetPmicHandler')
+_83:
+	.dl	_189-_188
+_188:
+	.dw	3
+	.dl	_191-_190
+_190:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/ScrWakeupEcu.c',0,0,0,0,0
+_191:
+	.db	5,10,7,0,5,2
+	.dl	_37
+	.db	3,179,1,1,5,21,9
+	.dw	_192-_37
+	.db	1,5,16,9
+	.dw	_193-_192
+	.db	3,1,1,5,34,9
+	.dw	_194-_193
+	.db	1,5,1,9
+	.dw	_86-_194
+	.db	3,1,0,1,1
+_189:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('ScrResetPmicHandler')
+	.rseg	'.debug_ranges'	debug cluster('ScrResetPmicHandler')
+_84:
+	.dl	-1,_85,0,_86-_85,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('ScrKeepSwitchAwake')
+	.rseg	'.debug_info'	debug cluster('ScrKeepSwitchAwake')
+_87:
+	.dl	210
+	.dw	3
+	.dl	_88
+	.db	4,1
+	.db	'../../code/int/src/ScrWakeupEcu.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_90,_89
+	.db	2
+	.dl	_42
+	.db	3
+	.db	'ScrKeepSwitchAwake',0,1,118,6,10,132,128,4,1,1
+	.dl	_27,_91,_26
+	.db	2,145,0,4
+	.dl	_27,_91
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('ScrKeepSwitchAwake')
+	.rseg	'.debug_abbrev'	debug cluster('ScrKeepSwitchAwake')
+_88:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,63,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('ScrKeepSwitchAwake')
+	.rseg	'.debug_line'	debug cluster('ScrKeepSwitchAwake')
+_89:
+	.dl	_196-_195
+_195:
+	.dw	3
+	.dl	_198-_197
+_197:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/ScrWakeupEcu.c',0,0,0,0,0
+_198:
+	.db	5,6,7,0,5,2
+	.dl	_27
+	.db	3,245,0,1,5,1,9
+	.dw	_91-_27
+	.db	3,4,0,1,1
+_196:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('ScrKeepSwitchAwake')
+	.rseg	'.debug_ranges'	debug cluster('ScrKeepSwitchAwake')
+_90:
+	.dl	-1,_27,0,_91-_27,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('ScrHandleWakeup')
+	.rseg	'.debug_info'	debug cluster('ScrHandleWakeup')
+_92:
+	.dl	227
+	.dw	3
+	.dl	_93
+	.db	4,1
+	.db	'../../code/int/src/ScrWakeupEcu.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_95,_94
+	.db	2
+	.dl	_42
+	.db	3
+	.db	'ScrHandleWakeup',0,1,135,1,13,10,132,128,4,1
+	.dl	_29,_97,_28
+	.db	2,145,0,4
+	.dl	_133
+	.db	5
+	.db	'pWupData',0,1,137,1,14,8
+	.dl	_134,_135
+	.db	0,0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('ScrHandleWakeup')
+	.rseg	'.debug_abbrev'	debug cluster('ScrHandleWakeup')
+_93:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,17,1,18,1,64,6,42,9,0,0,4,11,1,85,6,0,0,5,52,0,3,8,58,15,59,15,57,15,51,15,73,16,2,6,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('ScrHandleWakeup')
+	.rseg	'.debug_line'	debug cluster('ScrHandleWakeup')
+_94:
+	.dl	_200-_199
+_199:
+	.dw	3
+	.dl	_202-_201
+_201:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/ScrWakeupEcu.c',0,0,0,0,0
+_202:
+	.db	5,25,7,0,5,2
+	.dl	_29
+	.db	3,138,1,1,5,12,9
+	.dw	_203-_29
+	.db	1,5,16,9
+	.dw	_141-_203
+	.db	3,2,1,5,7,9
+	.dw	_204-_141
+	.db	1,5,47,7,9
+	.dw	_205-_204
+	.db	1,5,64,9
+	.dw	_206-_205
+	.db	1,5,12,7,9
+	.dw	_207-_206
+	.db	3,2,1,5,29,9
+	.dw	_208-_207
+	.db	1,5,31,9
+	.dw	_209-_208
+	.db	1,5,17,9
+	.dw	_210-_209
+	.db	3,1,1,5,5,9
+	.dw	_211-_210
+	.db	1,5,11,7,9
+	.dw	_212-_211
+	.db	3,3,1,5,16,9
+	.dw	_4-_212
+	.db	3,7,1,5,7,9
+	.dw	_213-_4
+	.db	1,5,47,7,9
+	.dw	_214-_213
+	.db	1,5,64,9
+	.dw	_215-_214
+	.db	1,5,12,7,9
+	.dw	_216-_215
+	.db	3,2,1,5,29,9
+	.dw	_217-_216
+	.db	1,5,31,9
+	.dw	_218-_217
+	.db	1,5,17,9
+	.dw	_219-_218
+	.db	3,1,1,5,5,9
+	.dw	_220-_219
+	.db	1,5,11,7,9
+	.dw	_221-_220
+	.db	3,3,1,5,1,9
+	.dw	_8-_221
+	.db	3,6,1,7,9
+	.dw	_97-_8
+	.db	0,1,1
+_200:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('ScrHandleWakeup')
+	.rseg	'.debug_ranges'	debug cluster('ScrHandleWakeup')
+_95:
+	.dl	-1,_96,0,_97-_96,0,0
+_133:
+	.dl	-1,_29,0,_97-_29,-1,_31,0,_127-_31,-1,_33,0,_121-_33,-1,_35,0,_115-_35,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('ScrHandlePmic')
+	.rseg	'.debug_info'	debug cluster('ScrHandlePmic')
+_98:
+	.dl	205
+	.dw	3
+	.dl	_99
+	.db	4,1
+	.db	'../../code/int/src/ScrWakeupEcu.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_101,_100
+	.db	2
+	.dl	_42
+	.db	3
+	.db	'ScrHandlePmic',0,1,194,1,13,10,132,128,4,1
+	.dl	_39,_103,_38
+	.db	2,145,0,4
+	.dl	_39,_103
+	.db	0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('ScrHandlePmic')
+	.rseg	'.debug_abbrev'	debug cluster('ScrHandlePmic')
+_99:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,39,12,17,1,18,1,64,6,42,9,0,0,4,11,0,17,1,18,1,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('ScrHandlePmic')
+	.rseg	'.debug_line'	debug cluster('ScrHandlePmic')
+_100:
+	.dl	_223-_222
+_222:
+	.dw	3
+	.dl	_225-_224
+_224:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/ScrWakeupEcu.c',0,0,0,0,0
+_225:
+	.db	5,14,7,0,5,2
+	.dl	_39
+	.db	3,196,1,1,5,3,9
+	.dw	_226-_39
+	.db	1,5,22,7,9
+	.dw	_227-_226
+	.db	3,2,1,5,12,9
+	.dw	_228-_227
+	.db	1,5,22,9
+	.dw	_229-_228
+	.db	1,5,37,9
+	.dw	_230-_229
+	.db	3,1,1,5,19,9
+	.dw	_231-_230
+	.db	1,5,24,9
+	.dw	_232-_231
+	.db	3,127,1,5,37,9
+	.dw	_12-_232
+	.db	3,6,1,5,19,9
+	.dw	_13-_12
+	.db	1,5,37,9
+	.dw	_233-_13
+	.db	1,5,1,9
+	.dw	_103-_233
+	.db	3,24,0,1,1
+_223:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('ScrHandlePmic')
+	.rseg	'.debug_ranges'	debug cluster('ScrHandlePmic')
+_101:
+	.dl	-1,_102,0,_103-_102,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('$cocofun_1')
+	.rseg	'.debug_info'	debug cluster('$cocofun_1')
+_104:
+	.dl	190
+	.dw	3
+	.dl	_105
+	.db	4,1
+	.db	'../../code/int/src/ScrWakeupEcu.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_107,_106
+	.db	2
+	.dl	_42
+	.db	3
+	.db	'.cocofun_1',0,1,112,6,10,132,128,4
+	.dl	_25,_109,_24
+	.db	2,145,0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('$cocofun_1')
+	.rseg	'.debug_abbrev'	debug cluster('$cocofun_1')
+_105:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,0,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,17,1,18,1,64,6,42,9,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('$cocofun_1')
+	.rseg	'.debug_line'	debug cluster('$cocofun_1')
+_106:
+	.dl	_235-_234
+_234:
+	.dw	3
+	.dl	_237-_236
+_236:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/ScrWakeupEcu.c',0,0,0,0,0
+_237:
+	.db	5,10,7,0,5,2
+	.dl	_25
+	.db	3,242,0,1,5,21,9
+	.dw	_238-_25
+	.db	1,5,17,9
+	.dw	_239-_238
+	.db	3,1,1,5,35,9
+	.dw	_240-_239
+	.db	1,9
+	.dw	_109-_240
+	.db	0,1,1,5,10,0,5,2
+	.dl	_25
+	.db	3,247,0,1,5,21,9
+	.dw	_238-_25
+	.db	1,5,17,9
+	.dw	_239-_238
+	.db	3,1,1,5,35,9
+	.dw	_240-_239
+	.db	1,9
+	.dw	_109-_240
+	.db	0,1,1
+_235:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('$cocofun_1')
+	.rseg	'.debug_ranges'	debug cluster('$cocofun_1')
+_107:
+	.dl	-1,_108,0,_109-_108,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('$cocofun_2')
+	.rseg	'.debug_info'	debug cluster('$cocofun_2')
+_110:
+	.dl	191
+	.dw	3
+	.dl	_111
+	.db	4,1
+	.db	'../../code/int/src/ScrWakeupEcu.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_113,_112
+	.db	2
+	.dl	_42
+	.db	3
+	.db	'.cocofun_2',0,1,135,1,13,10,132,128,4
+	.dl	_35,_115,_34
+	.db	2,145,0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('$cocofun_2')
+	.rseg	'.debug_abbrev'	debug cluster('$cocofun_2')
+_111:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,0,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,17,1,18,1,64,6,42,9,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('$cocofun_2')
+	.rseg	'.debug_line'	debug cluster('$cocofun_2')
+_112:
+	.dl	_242-_241
+_241:
+	.dw	3
+	.dl	_244-_243
+_243:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/ScrWakeupEcu.c',0,0,0,0,0
+_244:
+	.db	5,17,7,0,5,2
+	.dl	_35
+	.db	3,143,1,1,5,30,9
+	.dw	_245-_35
+	.db	1,9
+	.dw	_115-_245
+	.db	0,1,1,5,17,0,5,2
+	.dl	_35
+	.db	3,156,1,1,5,30,9
+	.dw	_245-_35
+	.db	1,9
+	.dw	_246-_245
+	.db	3,115,1,7,9
+	.dw	_115-_246
+	.db	0,1,1
+_242:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('$cocofun_2')
+	.rseg	'.debug_ranges'	debug cluster('$cocofun_2')
+_113:
+	.dl	-1,_114,0,_115-_114,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('$cocofun_3')
+	.rseg	'.debug_info'	debug cluster('$cocofun_3')
+_116:
+	.dl	191
+	.dw	3
+	.dl	_117
+	.db	4,1
+	.db	'../../code/int/src/ScrWakeupEcu.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_119,_118
+	.db	2
+	.dl	_42
+	.db	3
+	.db	'.cocofun_3',0,1,135,1,13,10,132,128,4
+	.dl	_33,_121,_32
+	.db	2,145,0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('$cocofun_3')
+	.rseg	'.debug_abbrev'	debug cluster('$cocofun_3')
+_117:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,0,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,17,1,18,1,64,6,42,9,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('$cocofun_3')
+	.rseg	'.debug_line'	debug cluster('$cocofun_3')
+_118:
+	.dl	_248-_247
+_247:
+	.dw	3
+	.dl	_250-_249
+_249:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/ScrWakeupEcu.c',0,0,0,0,0
+_250:
+	.db	5,31,7,0,5,2
+	.dl	_33
+	.db	3,142,1,1,5,29,9
+	.dw	_251-_33
+	.db	1,5,17,9
+	.dw	_252-_251
+	.db	3,1,1,9
+	.dw	_121-_252
+	.db	0,1,1,5,31,0,5,2
+	.dl	_33
+	.db	3,155,1,1,5,29,9
+	.dw	_251-_33
+	.db	1,5,17,9
+	.dw	_252-_251
+	.db	3,1,1,9
+	.dw	_253-_252
+	.db	3,115,1,7,9
+	.dw	_121-_253
+	.db	0,1,1
+_248:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('$cocofun_3')
+	.rseg	'.debug_ranges'	debug cluster('$cocofun_3')
+_119:
+	.dl	-1,_120,0,_121-_120,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('$cocofun_4')
+	.rseg	'.debug_info'	debug cluster('$cocofun_4')
+_122:
+	.dl	191
+	.dw	3
+	.dl	_123
+	.db	4,1
+	.db	'../../code/int/src/ScrWakeupEcu.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1
+	.dl	_125,_124
+	.db	2
+	.dl	_42
+	.db	3
+	.db	'.cocofun_4',0,1,135,1,13,10,132,128,4
+	.dl	_31,_127,_30
+	.db	2,145,0,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('$cocofun_4')
+	.rseg	'.debug_abbrev'	debug cluster('$cocofun_4')
+_123:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,0,3,8,58,15,59,15,57,15,51,15
+	.db	54,15,17,1,18,1,64,6,42,9,0,0,0
+	; End of section
+
+'.debug_line'	.segment	debug cluster('$cocofun_4')
+	.rseg	'.debug_line'	debug cluster('$cocofun_4')
+_124:
+	.dl	_255-_254
+_254:
+	.dw	3
+	.dl	_257-_256
+_256:
+	.db	1,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.db	'../../code/int/src/ScrWakeupEcu.c',0,0,0,0,0
+_257:
+	.db	5,11,7,0,5,2
+	.dl	_31
+	.db	3,146,1,1,5,22,9
+	.dw	_258-_31
+	.db	1,5,19,9
+	.dw	_259-_258
+	.db	3,2,1,9
+	.dw	_127-_259
+	.db	0,1,1,5,11,0,5,2
+	.dl	_31
+	.db	3,159,1,1,5,22,9
+	.dw	_258-_31
+	.db	1,5,19,9
+	.dw	_259-_258
+	.db	3,2,1,9
+	.dw	_260-_259
+	.db	3,115,1,7,9
+	.dw	_127-_260
+	.db	0,1,1
+_255:
+	; End of section
+
+'.debug_ranges'	.segment	debug cluster('$cocofun_4')
+	.rseg	'.debug_ranges'	debug cluster('$cocofun_4')
+_125:
+	.dl	-1,_126,0,_127-_126,0,0
+	; End of section
+
+'.debug_info'	.segment	debug cluster('ScrData')
+	.rseg	'.debug_info'	debug cluster('ScrData')
+_128:
+	.dl	176
+	.dw	3
+	.dl	_129
+	.db	4,1
+	.db	'../../code/int/src/ScrWakeupEcu.c',0
+	.db	'TASKING VX-toolset for 8051: C compiler',0
+	.db	'C:\\Users\\hol2wi\\Desktop\\CEIC_SCR_SW\\img_scr\\makeEnv\\make\\',0,12,1,2
+	.dl	_42
+	.db	3
+	.db	'ScrData',0,3,54,19,8
+	.dl	_136
+	.db	10,3
+	.dl	_ScrData
+	.db	56,8,020H,36,33,0
+	; End of section
+
+'.debug_abbrev'	.segment	debug cluster('ScrData')
+	.rseg	'.debug_abbrev'	debug cluster('ScrData')
+_129:
+	.db	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,51,15,73,16,2,9
+	.db	0,0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('$cocofun_1')
+	.rseg	'.debug_loc'	debug cluster('$cocofun_1')
+_24:
+	.dl	-1,_25,0,_109-_25
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('$cocofun_2')
+	.rseg	'.debug_loc'	debug cluster('$cocofun_2')
+_34:
+	.dl	-1,_35,0,_115-_35
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('$cocofun_3')
+	.rseg	'.debug_loc'	debug cluster('$cocofun_3')
+_32:
+	.dl	-1,_33,0,_121-_33
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('$cocofun_4')
+	.rseg	'.debug_loc'	debug cluster('$cocofun_4')
+_30:
+	.dl	-1,_31,0,_127-_31
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('ScrCanWupCallback')
+	.rseg	'.debug_loc'	debug cluster('ScrCanWupCallback')
+_16:
+	.dl	-1,_17,0,_57-_17
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('ScrEthWupCallback')
+	.rseg	'.debug_loc'	debug cluster('ScrEthWupCallback')
+_131:
+	.dl	-1,_15,0,_137-_15
+	.dw	1
+	.db	87
+	.dl	_138-_15,_139-_15
+	.dw	1
+	.db	80
+	.dl	_137-_15,_51-_15
+	.dw	1
+	.db	81
+	.dl	_2-_15,_140-_15
+	.dw	1
+	.db	80
+	.dl	0,0
+_14:
+	.dl	-1,_15,0,_51-_15
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('ScrFrWupCallback')
+	.rseg	'.debug_loc'	debug cluster('ScrFrWupCallback')
+_18:
+	.dl	-1,_19,0,_63-_19
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('ScrHandlePmic')
+	.rseg	'.debug_loc'	debug cluster('ScrHandlePmic')
+_38:
+	.dl	-1,_39,0,_103-_39
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('ScrHandleWakeup')
+	.rseg	'.debug_loc'	debug cluster('ScrHandleWakeup')
+_28:
+	.dl	-1,_29,0,_97-_29
+	.dw	2
+	.db	123,0
+	.dl	0,0
+_135:
+	.dl	-1,_29,_33-_29,_121-_29
+	.dw	6
+	.db	82,147,1,83,147,1
+	.dl	_35-_29,_115-_29
+	.dw	6
+	.db	82,147,1,83,147,1
+	.dl	_31-_29,_127-_29
+	.dw	6
+	.db	82,147,1,83,147,1
+	.dl	_141-_29,_97-_29
+	.dw	6
+	.db	82,147,1,83,147,1
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('ScrKeepSwitchAwake')
+	.rseg	'.debug_loc'	debug cluster('ScrKeepSwitchAwake')
+_26:
+	.dl	-1,_27,0,_91-_27
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('ScrLinWupCallback')
+	.rseg	'.debug_loc'	debug cluster('ScrLinWupCallback')
+_20:
+	.dl	-1,_21,0,_69-_21
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('ScrResetPmicHandler')
+	.rseg	'.debug_loc'	debug cluster('ScrResetPmicHandler')
+_36:
+	.dl	-1,_37,0,_86-_37
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('ScrWakeupEcuTask50')
+	.rseg	'.debug_loc'	debug cluster('ScrWakeupEcuTask50')
+_40:
+	.dl	-1,_41,0,_80-_41
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_loc'	.segment	debug cluster('ScrWupCallback')
+	.rseg	'.debug_loc'	debug cluster('ScrWupCallback')
+_22:
+	.dl	-1,_23,0,_74-_23
+	.dw	2
+	.db	123,0
+	.dl	0,0
+	; End of section
+
+'.debug_frame'	.segment	debug
+	.rseg	'.debug_frame'	debug
+_261:
+	.dl	64
+	.dl	-1
+	.db	3,0,1,1,145,1,15,10,123,0,54,8,020H,36,34,9,-2,34,22,145,1,14,49,34,148,02H,18,56,37,22,8,0ffH,26,56,36
+	.db	34,8,10,22,11,3,19,123,126,8,12,8,16,8,17,8,18,8,19,8,144,1,0,0,0
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('ScrEthWupCallback')
+	.rseg	'.debug_frame'	debug cluster('ScrEthWupCallback')
+	.dl	12
+	.dl	_261,_15,_51-_15
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('ScrCanWupCallback')
+	.rseg	'.debug_frame'	debug cluster('ScrCanWupCallback')
+	.dl	28
+	.dl	_261,_17,_57-_17
+	.db	8,9,8,0,8,1,8,2,8,3,8,4,8,6,0,0
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('ScrFrWupCallback')
+	.rseg	'.debug_frame'	debug cluster('ScrFrWupCallback')
+	.dl	28
+	.dl	_261,_19,_63-_19
+	.db	8,9,8,0,8,1,8,2,8,3,8,4,8,6,0,0
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('ScrLinWupCallback')
+	.rseg	'.debug_frame'	debug cluster('ScrLinWupCallback')
+	.dl	28
+	.dl	_261,_21,_69-_21
+	.db	8,9,8,0,8,1,8,2,8,3,8,4,8,6,0,0
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('ScrWupCallback')
+	.rseg	'.debug_frame'	debug cluster('ScrWupCallback')
+	.dl	12
+	.dl	_261,_23,_74-_23
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('$cocofun_1')
+	.rseg	'.debug_frame'	debug cluster('$cocofun_1')
+	.dl	32
+	.dl	_261,_25,_109-_25
+	.db	8,7,8,8,8,9,8,0,8,1,8,2,8,3,8,4,8,5,8,6
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('ScrKeepSwitchAwake')
+	.rseg	'.debug_frame'	debug cluster('ScrKeepSwitchAwake')
+	.dl	12
+	.dl	_261,_27,_91-_27
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('ScrHandleWakeup')
+	.rseg	'.debug_frame'	debug cluster('ScrHandleWakeup')
+	.dl	12
+	.dl	_261,_29,_97-_29
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('$cocofun_4')
+	.rseg	'.debug_frame'	debug cluster('$cocofun_4')
+	.dl	32
+	.dl	_261,_31,_127-_31
+	.db	8,7,8,8,8,9,8,0,8,1,8,2,8,3,8,4,8,5,8,6
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('$cocofun_3')
+	.rseg	'.debug_frame'	debug cluster('$cocofun_3')
+	.dl	32
+	.dl	_261,_33,_121-_33
+	.db	8,7,8,8,8,9,8,0,8,1,8,2,8,3,8,4,8,5,8,6
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('$cocofun_2')
+	.rseg	'.debug_frame'	debug cluster('$cocofun_2')
+	.dl	32
+	.dl	_261,_35,_115-_35
+	.db	8,7,8,8,8,9,8,0,8,1,8,2,8,3,8,4,8,5,8,6
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('ScrResetPmicHandler')
+	.rseg	'.debug_frame'	debug cluster('ScrResetPmicHandler')
+	.dl	12
+	.dl	_261,_37,_86-_37
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('ScrHandlePmic')
+	.rseg	'.debug_frame'	debug cluster('ScrHandlePmic')
+	.dl	12
+	.dl	_261,_39,_103-_39
+	; End of section
+
+'.debug_frame'	.segment	debug cluster('ScrWakeupEcuTask50')
+	.rseg	'.debug_frame'	debug cluster('ScrWakeupEcuTask50')
+	.dl	12
+	.dl	_261,_41,_80-_41
+	; End of section
+
+	; Module end
+	.end

@@ -1,0 +1,1 @@
+ant QAC9.MISRA2012 –Dconfiguration=img_scr

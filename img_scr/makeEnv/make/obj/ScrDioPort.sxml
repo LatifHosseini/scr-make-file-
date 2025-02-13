@@ -1,0 +1,83 @@
+<file name="ScrDioPort.c">
+  <function name="DioPortInit" linkage="external">
+    <srcPos file="../../code/int/src/ScrDioPort.c" line="59" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrDioPort.c" line="62" column="26" />
+    </block>
+  </function>
+  <function name="DioPortWrite" linkage="external">
+    <srcPos file="../../code/int/src/ScrDioPort.c" line="112" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrDioPort.c" line="116" column="6" />
+    </block>
+    <block lfreq="0.50">
+      <srcPos file="../../code/int/src/ScrDioPort.c" line="116" column="38" />
+    </block>
+    <block lfreq="0.22">
+      <srcPos file="../../code/int/src/ScrDioPort.c" line="119" column="30" />
+    </block>
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrDioPort.c" line="124" column="3" />
+    </block>
+    <block lfreq="0.50">
+      <srcPos file="../../code/int/src/ScrDioPort.c" line="126" column="23" />
+    </block>
+    <block lfreq="0.25">
+      <srcPos file="../../code/int/src/ScrDioPort.c" line="130" column="33" />
+    </block>
+    <block lfreq="0.25">
+      <srcPos file="../../code/int/src/ScrDioPort.c" line="134" column="36" />
+    </block>
+    <block lfreq="0.50">
+      <srcPos file="../../code/int/src/ScrDioPort.c" line="139" column="43" />
+    </block>
+    <block lfreq="0.25">
+      <srcPos file="../../code/int/src/ScrDioPort.c" line="143" column="33" />
+    </block>
+    <block lfreq="0.25">
+      <srcPos file="../../code/int/src/ScrDioPort.c" line="147" column="36" />
+    </block>
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrDioPort.c" line="151" column="6" />
+    </block>
+    <block lfreq="0.50">
+      <srcPos file="../../code/int/src/ScrDioPort.c" line="151" column="38" />
+    </block>
+    <block lfreq="0.22">
+      <srcPos file="../../code/int/src/ScrDioPort.c" line="154" column="30" />
+    </block>
+  </function>
+  <function name="DioPortRead" linkage="external">
+    <srcPos file="../../code/int/src/ScrDioPort.c" line="171" column="7" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrDioPort.c" line="174" column="3" />
+    </block>
+    <block lfreq="0.50">
+      <srcPos file="../../code/int/src/ScrDioPort.c" line="176" column="23" />
+    </block>
+    <block lfreq="0.50">
+      <srcPos file="../../code/int/src/ScrDioPort.c" line="181" column="23" />
+    </block>
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrDioPort.c" line="185" column="3" />
+    </block>
+  </function>
+  <function name="SetDioPortsForNormalOperation" linkage="external">
+    <srcPos file="../../code/int/src/ScrDioPort.c" line="198" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrDioPort.c" line="200" column="49" />
+    </block>
+    <call callee="DioPortWrite" lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrDioPort.c" line="200" column="18" />
+    </call>
+  </function>
+  <function name="SetDioPortsForSleepOperation" linkage="external">
+    <srcPos file="../../code/int/src/ScrDioPort.c" line="213" column="6" />
+    <block lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrDioPort.c" line="215" column="49" />
+    </block>
+    <call callee="DioPortWrite" lfreq="1.00">
+      <srcPos file="../../code/int/src/ScrDioPort.c" line="215" column="18" />
+    </call>
+  </function>
+</file>
